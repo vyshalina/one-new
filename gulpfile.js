@@ -98,7 +98,7 @@ gulp.task('sprite', function () {
 
 // html builder
 gulp.task('html:build', function () {
-	gulp.src('app/*.html')
+	gulp.src('app/**/*.html')
 	.pipe(rigger())
 	.pipe(gulp.dest('dist'))
 	.pipe(browserSync.reload({stream: true}));
