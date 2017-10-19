@@ -11,7 +11,7 @@
 		}
 	}
 
-	&-shop {
+	&-company {
 		ul {
 			display: flex; justify-content: center;
 			@include respond-to(md) {flex-direction: column;}
@@ -80,7 +80,7 @@
 		background: #e6f2f8; border-radius: 100px;
 
 		///Временно
-		display: block; width: 415px; margin: 25px auto 35px auto;
+		display: block; width: 415px; margin: 0 auto 35px auto;
 		
 
 		@include respond-to(xs) {width: 100%; padding: 20px 25px 20px 70px;}
@@ -115,8 +115,8 @@
 		}
 	}
 
-	//TABS-SHOP - http://prntscr.com/gtkuci
-	&-shop {
+	//TABS-company - http://prntscr.com/gtkuci
+	&-company {
 		a.js-toggle-menu {
 			@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
 			position: relative; width: 100%; padding-bottom: 20px; margin-bottom: 25px;
@@ -173,6 +173,6 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-main, &-shop {ul {transition: max-height 0.7s linear;}}
+	&-main, &-company {ul {transition: max-height 0.7s linear;}}
 	&-inner {li a {transition: 0.3s ease-out;}}
 }

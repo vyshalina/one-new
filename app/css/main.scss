@@ -3,6 +3,9 @@
 @import 'settings';
 @import 'sprite';
 @import '../views/libs';
+@import '../views/theme';
+@import '../views/users/tabs';
+@import '../views/users/users';
 
 @import '../views/ui/header';
 @import '../views/ui/breadcrumbs';
@@ -22,7 +25,7 @@
 
 @import '../views/ux/buttons';
 @import '../views/ux/select';
-@import '../views/ux/tabs';
+//@import '../views/ux/tabs';
 @import '../views/ux/parallax';
 @import '../views/ux/carousel';
 @import '../views/ux/forms';
@@ -34,4 +37,4 @@
 //@import '../views/ui/booking';
 
 // @import '../views/popup/popup';
-@import '../views/theme';
+
