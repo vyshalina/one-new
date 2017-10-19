@@ -1,17 +1,18 @@
 @import 'reset';
-@import 'variables';
+@import '../views/variables';
 @import 'settings';
 @import 'sprite';
-@import 'libs';
-@import 'header';
-@import 'breadcrumbs';
-@import 'partners';
-@import 'footer';
-@import 'landing2';
+@import '../views/libs';
+
+@import '../views/ui/header';
+@import '../views/ui/breadcrumbs';
+@import '../views/ui/partners';
+@import '../views/ui/footer';
+@import '../views/ui/landing2';
 
 
 @import '../views/style';
-@import '../views/landing';
+@import '../views/ui/landing';
 @import '../views/animation';
 // @import '../views/oldbase/filter';
 // @import '../views/oldbase/intro';
