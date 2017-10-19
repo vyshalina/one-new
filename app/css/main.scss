@@ -4,6 +4,8 @@
 @import 'sprite';
 @import 'libs';
 @import 'header';
+@import 'breadcrumbs';
+@import 'partners';
 @import 'footer';
 @import 'landing2';
 
@@ -11,16 +13,11 @@
 @import '../views/style';
 @import '../views/landing';
 @import '../views/animation';
-
-//@import '../views/base/header';
-@import '../views/base/filter';
-@import '../views/base/breadcrumbs';
-@import '../views/base/partners';
-//@import '../views/base/footer';
-@import '../views/base/intro';
-@import '../views/base/slide';
-@import '../views/base/share';
-@import '../views/base/new_post';
+@import '../views/oldbase/filter';
+@import '../views/oldbase/intro';
+@import '../views/oldbase/slide';
+@import '../views/oldbase/share';
+@import '../views/oldbase/new_post';
 
 @import '../views/ux/buttons';
 @import '../views/ux/select';

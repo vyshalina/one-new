@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	//= ../../head.html
+	<body class="on-load">
+		//= ../../counter.html
+
+		<!-- Application -->
+		<div class="app company">
+			//= ../../header.html
+			//= ../../breadcrumbs.html
+
+			<section class="wr bg_white">
+				<div class="container">
+					<div class="content-block">
+						<div class="row">
+							<div class="col-md-12">
+
+								<a href="#" class="shop_logo">
+									<figure>
+										<img src="assets/img/logo_shop.png" alt="">
+										<figcaption>Обновить логотип</figcaption>
+									</figure>
+								</a>
+
+								<div class="tabs-shop js-tab_direct">
+									<a href="#" class="js-toggle-menu">Меню магазина <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li class="active"><a href="#tab-I">О магазине</a></li>
+										<li><a href="#tab-II">Добрые дела</a></li>
+										<li><a href="#tab-III">Отзывы</a></li>
+										<li><a href="#tab-IV">Каталог</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="wr bg_white wr-shop">
+
+				<div class="js-tab_direct-wr">
+
+					<!-- TAB I О магазине-->
+					<div id="tab-I" class="tab tab--active">
+						<div class="shop-me figure">
+							<figure>
+								<img src="assets/img/shop-img.png">
+							</figure>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<!--О магазине-->
+									//= shop-me.html
+									//= shop-about.html
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB II Добрые дела-->
+					<div id="tab-II" class="tab wr">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<!--Добрые дела-->
+									//= list-projects_1.html
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB III Отзывы-->
+					<div id="tab-III" class="tab wr">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<!--Отзывы-->
+									//= list-rated.html
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- TAB III Каталог-->
+					<div id="tab-IV" class="tab wr">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									//= components/ui/list-goods_1.html
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- TAB V -->
+					<div id="tab-V" class="tab">
+						<div class="shop-me_edit figure">
+							<figure>
+								<img src="assets/img/shop-me_edit.png">
+								<figcaption><a href="#" class="btn white">Обновить изображение</a>
+								</figcaption>
+							</figure>	
+						</div>
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+
+									//= components/ui/shop-about_edit.html
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+			</section>
+
+			
+			//= ../../partners.html
+			//= ../../footer.html
+		</div>
+
+		<!-- Scripts -->
+		//= ../../scripts.html
+	</body>
+</html>
