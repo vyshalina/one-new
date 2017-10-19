@@ -31,19 +31,19 @@ gulp.task('sass', function () {
 		browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
 		cascade: false
 	}))
-	.pipe(gulp.dest('dist/assets/css'))
+	.pipe(gulp.dest('dist/web/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
 // min css
 // gulp.task('css:min', function () {
-// 	return gulp.src('dist/assets/main.css')
+// 	return gulp.src('dist/web/main.css')
 // 	pipe(uncss({
 // 		html: ['dist/*.html']
 // 	}))
 // 	.pipe(cssmin())
 // 	.pipe(rename({suffix: '.min'}))
-// 	.pipe(gulp.dest('dist/assets/css'))
+// 	.pipe(gulp.dest('dist/web/css'))
 // 	.pipe(browserSync.reload({stream: true}));
 // });
 
@@ -61,7 +61,7 @@ gulp.task('js:libs', function () {
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('dist/assets/js/'));
+	.pipe(gulp.dest('dist/web/js/'));
 });
 
 // main js
@@ -70,7 +70,7 @@ gulp.task('js:main', function () {
 	.pipe(babel({
 		presets: ["es2015"]
 	}))
-	.pipe(gulp.dest('dist/assets/js/'))
+	.pipe(gulp.dest('dist/web/js/'))
 	.pipe(browserSync.reload({stream:true}));
 });
 
@@ -86,7 +86,7 @@ gulp.task('sprite', function () {
 	var imgStream = spriteData.img
 	.pipe(buffer())
 	// .pipe(imagemin())
-	.pipe(gulp.dest('dist/assets/img'));
+	.pipe(gulp.dest('dist/web/img'));
 
 	// sprite css
 	var cssStream = spriteData.css
@@ -98,9 +98,9 @@ gulp.task('sprite', function () {
 
 // html builder
 gulp.task('html:build', function () {
-	gulp.src('app/**/*.html')
+	gulp.src('app/views/**/*.html')
 	.pipe(rigger())
-	.pipe(gulp.dest('dist'))
+	.pipe(gulp.dest('dist/views'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
