@@ -1,0 +1,40 @@
+@import 'reset';
+@import 'variables';
+@import 'settings';
+@import 'sprite';
+@import 'libs';
+@import 'header';
+@import 'footer';
+@import 'landing2';
+
+
+@import '../views/style';
+@import '../views/landing';
+@import '../views/animation';
+
+//@import '../views/base/header';
+@import '../views/base/filter';
+@import '../views/base/breadcrumbs';
+@import '../views/base/partners';
+//@import '../views/base/footer';
+@import '../views/base/intro';
+@import '../views/base/slide';
+@import '../views/base/share';
+@import '../views/base/new_post';
+
+@import '../views/ux/buttons';
+@import '../views/ux/select';
+@import '../views/ux/tabs';
+@import '../views/ux/parallax';
+@import '../views/ux/carousel';
+@import '../views/ux/forms';
+
+@import '../views/ui/list';
+@import '../views/ui/user';
+@import '../views/ui/found';
+@import '../views/ui/shop';
+@import '../views/ui/booking';
+
+@import '../views/popup/popup';
+
+@import '../views/theme';
