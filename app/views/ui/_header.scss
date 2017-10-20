@@ -30,7 +30,9 @@
 	.menu {
 		&-top {
 			
-			@include respond-to(md) {width: calc(100% - 86px);}
+			@include respond-to(md) {
+				width: calc(100% - 86px);
+			}
 
 			&:before {
 				content: '';
@@ -86,7 +88,7 @@
 
 				@include respond-to(md) {
 					padding-top: 75px; padding-bottom: 20px;
-					top: 0; height: auto; width: auto;
+					top: 0; height: auto; width: auto; position: absolute;
 					transition: 0.4s ease-out;
 					transform: translateX(-200%);
 				}
