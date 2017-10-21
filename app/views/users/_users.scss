@@ -489,14 +489,14 @@
 				ul {
 					& > li {
 						font-family: $HelveticaL; font-size: 16px; letter-spacing: 0.2px;
-						position: relative; height: 80px; width: 150px;
+						position: relative; height: auto; width: 20%;
 						box-sizing: border-box;
-						@include respond-to(md) {width: 25%;}
+						@include respond-to(md) {width: 25%; padding-bottom: 20px!important;}
 						@include respond-to(xs) {width: 50%;}
 						
 						&:after {
 							content: '';
-							height: 50%; width: 1px; position: absolute; right: 0;
+							height: 50px; width: 1px; position: absolute; right: 0; top: 50%; margin-top: -25px;
 							background: #d9e4ea;
 						}
 						&.img, &.name, &.edit, &:last-child {
@@ -507,19 +507,20 @@
 						}
 
 						&.img {
-							width: 80px;
+							width: 80px; margin-right: 20px;
+							@include respond-to(md) {margin-bottom: 20px;}
 						}
 						&.name {
 							justify-content: start;
 							@include font-type ($CormacEL, 22px, 32px, 0); color: #000;
-							width: 420px; padding-left: 20px; 
+							width: 420px;
 							@include respond-to(lg) {width: 320px;}
-							@include respond-to(md) {width: calc(50% - 40px);}
-							@include respond-to(sm) {width: calc(100% - 80px);}
+							@include respond-to(md) {width: calc(100% - 180px);}
+							@include respond-to(sm) {width: calc(100% - 80px); padding-left: 100px; margin-bottom: 30px;}
 						}
 						&.view {
 							@include font-type ($HelveticaR, 16px, 24px, 0.4px);
-							width: 314px; padding-top: 4px; padding-left: 76px;
+							width: 314px; padding-top: 4px; padding-left: 35px;
 							@include respond-to(lg) {padding-left: 30px;}
 							.date {
 								display: flex; justify-content: space-between;
@@ -533,7 +534,7 @@
 						}
 
 						&.donation {
-							padding-right: 12px; flex-direction: row;
+							padding-right: 12px; flex-direction: row; flex-direction: column;
 							@media (max-width: 1250px) {flex-direction: column;}
 							@include respond-to(md) {flex-direction: row;}
 							
@@ -574,14 +575,15 @@
 				//////////////////////////////////////////////////////////////
 				//////////////////////////////////////////////////////////////
 				//////////////////////////////////////////////////////////////
-				display: flex; flex-wrap: wrap;
+				display: flex; flex-wrap: wrap; justify-content: space-between;
 
 				//////////////////////////////////////////////////////////////
 				//////////////////////////////////////////////////////////////
 				//////////////////////////////////////////////////////////////
+				margin-left: -10px; margin-right: -10px;
 				& > li {
 					position: relative;
-					width: calc(25% - 20px) ; margin: 10px; overflow: hidden;
+					width: calc(25% - 20px) ; margin: 10px !important; overflow: hidden;
 					background: #fff; border-radius: 5px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
 
 					@include respond-to(md) {width: calc(50% - 10px); margin: 5px;}

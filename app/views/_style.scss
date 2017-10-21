@@ -9,6 +9,12 @@ p {font-family: $HelveticaL;}
 a {color: $link-color; outline: none;}
 span.rub {font-family: $ruble !important;}
 
+ol, ul {margin-bottom: 0;}
+a { 
+	text-decoration: none; 
+	&:active, &:hover, &:visited, &:link {text-decoration: none !important;}
+}
+
 /*********************************/
 /************ Forms **************/
 /*********************************/
