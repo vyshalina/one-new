@@ -50,15 +50,15 @@ table {
 /***********************/
 @font-face {
   font-family: Cormac-ExtraLight;
-  src: url("../fonts/cormac-extralight/cormac-extralight.eot");
-  src: url("../fonts/cormac-extralight/cormac-extralight.eot") format("embedded-opentype"), url("../fonts/cormac-extralight/cormac-extralight.woff") format("woff"), url("../fonts/cormac-extralight/cormac-extralight.ttf") format("truetype"), url("../fonts/cormac-extralight/cormac-extralight.svg#cormac-extralight") format("svg");
+  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot");
+  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff") format("woff"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.ttf") format("truetype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: Cormac-ExtraLight;
-    src: url("../fonts/cormac-extralight/cormac-extralight.svg#cormac-extralight") format("svg"); } }
+    src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg"); } }
 
 @font-face {
   font-family: cormac-book;
@@ -6101,8 +6101,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9809,7 +9809,7 @@ button.close {
     background: #fff; } }
 
 .tabs-main a.js-toggle-menu {
-  font-family: "cormac-extralight", sans-serif;
+  font-family: "Cormac-ExtraLight", sans-serif;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -9849,7 +9849,7 @@ button.close {
       padding-bottom: 3px; } }
 
 .tabs-main ul li a {
-  font-family: "cormac-extralight", sans-serif;
+  font-family: "Cormac-ExtraLight", sans-serif;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -9889,7 +9889,7 @@ button.close {
       padding: 20px 25px 20px 70px; } }
   .tabs-inner li {
     color: #616060;
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     display: inline-block; }
     @media (max-width: 480px) {
       .tabs-inner li {
@@ -9906,7 +9906,7 @@ button.close {
       color: #616060;
       display: inline-block;
       padding: 3px 18px 6px;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       border: 1px solid transparent;
       -webkit-border-radius: 100px;
       border-radius: 100px; }
@@ -9925,7 +9925,7 @@ button.close {
       cursor: default; }
 
 .tabs-company a.js-toggle-menu {
-  font-family: "cormac-extralight", sans-serif;
+  font-family: "Cormac-ExtraLight", sans-serif;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -9970,7 +9970,7 @@ button.close {
   .tabs-company ul li.active a:before, .tabs-company ul li.active a:after {
     width: 50%; }
   .tabs-company ul li a {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0;
@@ -10153,7 +10153,7 @@ button.close {
 
 .company-edit {
   text-align: right;
-  font-family: "cormac-extralight", sans-serif;
+  font-family: "Cormac-ExtraLight", sans-serif;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0;
@@ -10206,7 +10206,7 @@ button.close {
   .company_logo.edit {
     margin: 0 0 41px; }
   .company_logo figure figcaption {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.1px;
@@ -10253,7 +10253,7 @@ button.close {
       font-size: 34px;
       margin: 44px 0 26px 0; }
     .company-me section p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 32px;
       letter-spacing: 0.1px; }
@@ -10297,7 +10297,7 @@ button.close {
       font-size: 16px;
       line-height: 24px; }
     .company-about address > a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 20px;
       letter-spacing: 0;
@@ -10488,13 +10488,13 @@ button.close {
       .company-deeds li article ul li:last-child {
         border-bottom: 1px solid #D9E4EA; }
       .company-deeds li article ul li h4 {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 19px;
         letter-spacing: 0.2px;
         color: #000; }
       .company-deeds li article ul li dl dt, .company-deeds li article ul li dl dd {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 18px;
         font-weight: 100;
         text-align: right; }
@@ -10517,7 +10517,7 @@ button.close {
         letter-spacing: 0.2px;
         color: #89A1B3; }
         .company-deeds li article footer h4 strong {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 22px;
           line-height: 28px;
           letter-spacing: -0.2px;
@@ -10555,7 +10555,7 @@ button.close {
     .filter .select:last-child {
       margin-bottom: 0; } }
   .filter .select > a {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 26px;
     line-height: 32px;
     letter-spacing: 0;
@@ -10678,51 +10678,59 @@ button.close {
       font-size: 16px;
       letter-spacing: 0.2px;
       position: relative;
-      height: 80px;
-      width: 150px;
+      height: auto;
+      width: 20%;
       -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       @media (max-width: 991px) {
         .filter-result_goods > li ul > li {
-          width: 25%; } }
+          width: 25%;
+          padding-bottom: 20px !important; } }
       @media (max-width: 480px) {
         .filter-result_goods > li ul > li {
           width: 50%; } }
       .filter-result_goods > li ul > li:after {
         content: '';
-        height: 50%;
+        height: 50px;
         width: 1px;
         position: absolute;
         right: 0;
+        top: 50%;
+        margin-top: -25px;
         background: #d9e4ea; }
       .filter-result_goods > li ul > li.img:after, .filter-result_goods > li ul > li.name:after, .filter-result_goods > li ul > li.edit:after, .filter-result_goods > li ul > li:last-child:after {
         content: '';
         display: none !important; }
       .filter-result_goods > li ul > li.img {
-        width: 80px; }
+        width: 80px;
+        margin-right: 20px; }
+        @media (max-width: 991px) {
+          .filter-result_goods > li ul > li.img {
+            margin-bottom: 20px; } }
       .filter-result_goods > li ul > li.name {
         -webkit-box-pack: start;
         -webkit-justify-content: start;
         -ms-flex-pack: start;
         justify-content: start;
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 22px;
         line-height: 32px;
         letter-spacing: 0;
         color: #000;
-        width: 420px;
-        padding-left: 20px; }
+        width: 420px; }
         @media (max-width: 1199px) {
           .filter-result_goods > li ul > li.name {
             width: 320px; } }
         @media (max-width: 991px) {
           .filter-result_goods > li ul > li.name {
-            width: -webkit-calc(50% - 40px);
-            width: calc(50% - 40px); } }
+            width: -webkit-calc(100% - 180px);
+            width: calc(100% - 180px); } }
         @media (max-width: 767px) {
           .filter-result_goods > li ul > li.name {
             width: -webkit-calc(100% - 80px);
-            width: calc(100% - 80px); } }
+            width: calc(100% - 80px);
+            padding-left: 100px;
+            margin-bottom: 30px; } }
       .filter-result_goods > li ul > li.view {
         font-family: "HelveticaRegular", sans-serif;
         font-size: 16px;
@@ -10730,7 +10738,7 @@ button.close {
         letter-spacing: 0.4px;
         width: 314px;
         padding-top: 4px;
-        padding-left: 76px; }
+        padding-left: 35px; }
         @media (max-width: 1199px) {
           .filter-result_goods > li ul > li.view {
             padding-left: 30px; } }
@@ -10765,7 +10773,8 @@ button.close {
         -webkit-box-direction: normal;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
-        flex-direction: row; }
+        flex-direction: row;
+        flex-direction: column; }
         @media (max-width: 1250px) {
           .filter-result_goods > li ul > li.donation {
             -webkit-box-orient: vertical;
@@ -10830,12 +10839,18 @@ button.close {
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px; }
     .filter-result_goods.type_1 > li {
       position: relative;
       width: -webkit-calc(25% - 20px);
       width: calc(25% - 20px);
-      margin: 10px;
+      margin: 10px !important;
       overflow: hidden;
       background: #fff;
       -webkit-border-radius: 5px;
@@ -10886,7 +10901,7 @@ button.close {
               width: 100%;
               padding-right: 5px; } }
           .filter-result_goods.type_1 > li a article h2 {
-            font-family: "cormac-extralight", sans-serif;
+            font-family: "Cormac-ExtraLight", sans-serif;
             font-size: 18px;
             line-height: 1;
             letter-spacing: -0.5px;
@@ -10924,7 +10939,7 @@ button.close {
                 letter-spacing: 0.5px;
                 display: block; }
             .filter-result_goods.type_1 > li a article div > span {
-              font-family: "cormac-extralight", sans-serif;
+              font-family: "Cormac-ExtraLight", sans-serif;
               font-size: 18px;
               line-height: 1;
               letter-spacing: -0.5px;
@@ -11109,7 +11124,7 @@ button.close {
         .user-me section ul li {
           margin: 25px 0 0 0; } }
       .user-me section ul li span {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 22px;
         line-height: 1;
         letter-spacing: 0.2px;
@@ -11207,7 +11222,7 @@ button.close {
           letter-spacing: 0.8px;
           color: #000; }
         .user-founds li article ul li dl dt, .user-founds li article ul li dl dd {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 18px;
           font-weight: 100;
           text-align: right; }
@@ -11234,7 +11249,7 @@ button.close {
           text-transform: uppercase;
           padding: 0 16px; }
           .user-founds li article footer h4 strong {
-            font-family: "cormac-extralight", sans-serif;
+            font-family: "Cormac-ExtraLight", sans-serif;
             font-size: 22px;
             line-height: 28px;
             letter-spacing: -0.2px;
@@ -11412,7 +11427,7 @@ button.close {
         padding-right: 50px; }
     .user-ads tr td {
       text-align: right;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       padding: 20px 0; }
       @media (max-width: 991px) {
         .user-ads tr td {
@@ -11453,7 +11468,7 @@ button.close {
           .user-ads tr td span.value {
             display: block; } }
       .user-ads tr td > a {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.3px;
@@ -11698,7 +11713,7 @@ button.close {
         padding-right: 50px; }
     .user-goods tr td {
       text-align: right;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       padding: 20px 0; }
       @media (max-width: 991px) {
         .user-goods tr td {
@@ -11739,7 +11754,7 @@ button.close {
           .user-goods tr td span.value {
             display: block; } }
       .user-goods tr td > a {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.3px;
@@ -11904,7 +11919,7 @@ button.close {
         .user-bookmarks > li > ul > li ul li i {
           margin-right: 10px; }
       .user-bookmarks > li > ul > li p {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 0.3px;
@@ -12000,7 +12015,7 @@ button.close {
         .booking-stap ul li:before {
           counter-increment: list;
           content: counter(list);
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 22px;
           line-height: 22px;
           color: #000;
@@ -12337,7 +12352,7 @@ button.close {
         .booking-proc section .verification > .form .wr-input {
           margin-bottom: 27px; }
         .booking-proc section .verification > .form-btn-group a {
-          font-family: "cormac-extralight", sans-serif; }
+          font-family: "Cormac-ExtraLight", sans-serif; }
         .booking-proc section .verification p.success {
           font-family: "cormac-book", sans-serif;
           font-size: 22px;
@@ -12520,12 +12535,12 @@ button.close {
             line-height: 26px;
             padding-right: 0; } }
       .booking-proc section .info .btn-gr {
-        font-family: "cormac-extralight", sans-serif; }
+        font-family: "Cormac-ExtraLight", sans-serif; }
         @media (max-width: 767px) {
           .booking-proc section .info .btn-gr {
             text-align: center; } }
         .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           margin-right: 33px;
           padding: 15px 28px; }
           @media (max-width: 767px) {
@@ -12697,7 +12712,7 @@ button.close {
         margin: 25px 0 0 0; } }
     .found-me section ul li span {
       color: #000;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 24px; }
       @media (max-width: 991px) {
         .found-me section ul li span {
@@ -12810,7 +12825,7 @@ button.close {
       .founds-menu:after {
         display: none; } }
   .founds-menu > a {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 22px;
     line-height: 24px;
     letter-spacing: -0.5px;
@@ -12854,7 +12869,7 @@ button.close {
         .founds-menu > ul li {
           text-align: left; } }
       .founds-menu > ul li a {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 14px;
         line-height: 19px;
         letter-spacing: -0.5px;
@@ -13026,7 +13041,7 @@ button.close {
             width: 100%;
             padding-right: 5px; } }
         .list-goods.type_1 > li a article h2 {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 18px;
           line-height: 1;
           letter-spacing: -0.5px;
@@ -13064,7 +13079,7 @@ button.close {
               letter-spacing: 0.5px;
               display: block; }
           .list-goods.type_1 > li a article div > span {
-            font-family: "cormac-extralight", sans-serif;
+            font-family: "Cormac-ExtraLight", sans-serif;
             font-size: 18px;
             line-height: 1;
             letter-spacing: -0.5px;
@@ -13124,7 +13139,7 @@ button.close {
       letter-spacing: 0.1px;
       line-height: 22px; }
     .list-projects.type_2 > li article > a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 0.3px;
@@ -13157,7 +13172,7 @@ button.close {
         font-size: 14px;
         display: block; }
       .list-projects.type_2 > li .info .price p {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 34px;
         line-height: 38px;
         letter-spacing: 0.5px; }
@@ -13175,7 +13190,7 @@ button.close {
         width: 50%;
         height: 47px; }
         .list-projects.type_2 > li .info .progress-wrapp ul li p {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 18px;
           line-height: 22px;
           letter-spacing: 0;
@@ -13202,7 +13217,7 @@ button.close {
         color: #000;
         font-weight: 600; }
     .list-projects.type_2 > li .info a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 0;
@@ -13241,7 +13256,7 @@ button.close {
       letter-spacing: 0.1px;
       line-height: 22px; }
     .list-reports > li article > a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 0.3px;
@@ -13313,7 +13328,7 @@ button.close {
       .list-bookmarks > li > ul > li ul li i {
         margin-right: 10px; }
     .list-bookmarks > li > ul > li p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.3px;
@@ -13379,7 +13394,7 @@ button.close {
       .intro hgroup {
         width: 270px; } }
     .intro hgroup h1, .intro hgroup h2 {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 44px !important;
       line-height: 54px;
       letter-spacing: -0.4px;
@@ -13410,7 +13425,7 @@ button.close {
       .intro figure img {
         width: 20%; } }
     .intro figure figcaption {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 34px;
       line-height: 40px;
       letter-spacing: 0.2px;
@@ -13612,7 +13627,7 @@ a.down {
       .found-info h2 {
         text-align: left; } }
   .found-info a {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px; }
     .found-info a i {
       position: relative;
@@ -13754,7 +13769,7 @@ a.down {
       .carousel-found .carousel-item figure figcaption {
         margin-top: 16px;
         letter-spacing: 0.2px;
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.4px;
@@ -13771,7 +13786,7 @@ a.down {
   left: 0;
   width: 100%; }
   .carousel-testimonials_1 .carousel-item figure figcaption, .carousel-testimonials_2 .carousel-item figure figcaption {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 34px;
     line-height: 43px;
     letter-spacing: 0; }
@@ -13779,7 +13794,7 @@ a.down {
       .carousel-testimonials_1 .carousel-item figure figcaption br, .carousel-testimonials_2 .carousel-item figure figcaption br {
         display: none; } }
     .carousel-testimonials_1 .carousel-item figure figcaption span, .carousel-testimonials_2 .carousel-item figure figcaption span {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
@@ -14142,7 +14157,7 @@ a.down {
       margin-bottom: 20px;
       letter-spacing: 0; }
     .ads-item section p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0;
@@ -14153,7 +14168,7 @@ a.down {
       line-height: 32px;
       margin-bottom: 12px; }
     .ads-item a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       letter-spacing: 0; }
 
@@ -14288,7 +14303,7 @@ a.down {
         -webkit-border-radius: 50%;
         border-radius: 50%; }
       .thanks-item figure figcaption {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 22px;
         line-height: 32px;
         letter-spacing: 0px;
@@ -14308,7 +14323,7 @@ a.down {
   .about.style2 .btn-wrapp {
     margin-bottom: 105px; }
     .about.style2 .btn-wrapp a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 0px;
@@ -14381,7 +14396,7 @@ a.down {
     padding: 30px 0 0;
     margin: 0; }
     .about.style2 .about-tell p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 0px; }
@@ -14444,7 +14459,7 @@ footer.footer.style2 {
     footer.footer.style2 .footer-contacts:after {
       background: #e7edf2; }
     footer.footer.style2 .footer-contacts a {
-      font-family: "cormac-extralight", sans-serif; }
+      font-family: "Cormac-ExtraLight", sans-serif; }
     footer.footer.style2 .footer-contacts > ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -14670,7 +14685,7 @@ footer.footer.style2 {
     .working-wrapp > div > section a {
       margin-top: 12px;
       font-size: 16px;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       letter-spacing: 0; }
       .working-wrapp > div > section a i {
         position: relative;
@@ -14990,7 +15005,7 @@ footer.footer.style2 {
       .header .menu-top > ul > li:last-child {
         margin-bottom: 0; }
       .header .menu-top > ul > li a {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 15px;
         letter-spacing: 0.1px;
@@ -15470,14 +15485,14 @@ footer.footer.style2 {
             text-align: center;
             padding-right: 0; } }
         .footer-info li:first-child p {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 23px;
           line-height: 29px;
           letter-spacing: -0.5px;
           color: #000;
           margin-bottom: 7px; }
         .footer-info li:first-child a {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 16px;
           line-height: 22px;
           letter-spacing: 0;
@@ -15555,7 +15570,7 @@ footer.footer.style2 {
       height: 1px;
       background: #e7edf2; }
     .footer-contacts a {
-      font-family: "cormac-extralight", sans-serif; }
+      font-family: "Cormac-ExtraLight", sans-serif; }
     .footer-contacts > ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -15720,7 +15735,7 @@ footer.footer.style2 {
       margin-bottom: 20px;
       letter-spacing: 0; }
     .ads-item section p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0;
@@ -15731,7 +15746,7 @@ footer.footer.style2 {
       line-height: 32px;
       margin-bottom: 12px; }
     .ads-item a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       letter-spacing: 0; }
 
@@ -15866,7 +15881,7 @@ footer.footer.style2 {
         -webkit-border-radius: 50%;
         border-radius: 50%; }
       .thanks-item figure figcaption {
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 22px;
         line-height: 32px;
         letter-spacing: 0px;
@@ -15886,7 +15901,7 @@ footer.footer.style2 {
   .about.style2 .btn-wrapp {
     margin-bottom: 105px; }
     .about.style2 .btn-wrapp a {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 0px;
@@ -15959,7 +15974,7 @@ footer.footer.style2 {
     padding: 30px 0 0;
     margin: 0; }
     .about.style2 .about-tell p {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 0px; }
@@ -16088,7 +16103,7 @@ footer.footer.style2 {
 /*********************************/
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "cormac-extralight", sans-serif;
+  font-family: "Cormac-ExtraLight", sans-serif;
   letter-spacing: 0; }
 
 h1 {
@@ -16107,6 +16122,14 @@ a {
 
 span.rub {
   font-family: "rouble" !important; }
+
+ol, ul {
+  margin-bottom: 0; }
+
+a {
+  text-decoration: none; }
+  a:active, a:hover, a:visited, a:link {
+    text-decoration: none !important; }
 
 /*********************************/
 /************ Forms **************/
@@ -16505,7 +16528,7 @@ span.rub {
       -ms-flex-direction: column;
       flex-direction: column; } }
   .main-title h1 {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.5px;
@@ -16728,7 +16751,7 @@ span.rub {
     .working-wrapp > div > section a {
       margin-top: 12px;
       font-size: 16px;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       letter-spacing: 0; }
       .working-wrapp > div > section a i {
         position: relative;
@@ -18483,7 +18506,7 @@ span.rub {
       margin-bottom: 35px; }
     .new_post-contacts h3 {
       color: #000000;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 24px;
       line-height: 38px;
       letter-spacing: -1px;
@@ -18630,7 +18653,7 @@ span.rub {
             width: 100%;
             padding-right: 5px; } }
         .market .goods > li a article h2 {
-          font-family: "cormac-extralight", sans-serif;
+          font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 18px;
           line-height: 1;
           letter-spacing: -0.5px;
@@ -18668,7 +18691,7 @@ span.rub {
               letter-spacing: 0.5px;
               display: block; }
           .market .goods > li a article div > span {
-            font-family: "cormac-extralight", sans-serif;
+            font-family: "Cormac-ExtraLight", sans-serif;
             font-size: 18px;
             line-height: 1;
             letter-spacing: -0.5px;
@@ -18751,7 +18774,7 @@ span.rub {
     -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
   .land .btn, .land .new_post-confirm li button, .new_post-confirm li .land button {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.5px;
@@ -18774,7 +18797,7 @@ span.rub {
     .land .btn:hover i.icon-header_search-white, .land .new_post-confirm li button:hover i.icon-header_search-white, .new_post-confirm li .land button:hover i.icon-header_search-white {
       background: url("../img/header_search.png") 0 0 no-repeat; }
   .btn.white, .new_post-confirm li button.white {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.5px;
@@ -18814,7 +18837,7 @@ span.rub {
   -ms-flex-align: center;
   align-items: center; }
   .donation p {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px;
     line-height: 1;
     letter-spacing: 0; }
@@ -19061,7 +19084,7 @@ span.rub {
       .found-info h2 {
         text-align: left; } }
   .found-info a {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 16px; }
     .found-info a i {
       position: relative;
@@ -19203,7 +19226,7 @@ span.rub {
       .carousel-found .carousel-item figure figcaption {
         margin-top: 16px;
         letter-spacing: 0.2px;
-        font-family: "cormac-extralight", sans-serif;
+        font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.4px;
@@ -19220,7 +19243,7 @@ span.rub {
   left: 0;
   width: 100%; }
   .carousel-testimonials_1 .carousel-item figure figcaption, .carousel-testimonials_2 .carousel-item figure figcaption {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 34px;
     line-height: 43px;
     letter-spacing: 0; }
@@ -19228,7 +19251,7 @@ span.rub {
       .carousel-testimonials_1 .carousel-item figure figcaption br, .carousel-testimonials_2 .carousel-item figure figcaption br {
         display: none; } }
     .carousel-testimonials_1 .carousel-item figure figcaption span, .carousel-testimonials_2 .carousel-item figure figcaption span {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
@@ -19587,7 +19610,7 @@ form.form {
       top: 0;
       left: 10px; }
   form.form .wr-input.big input {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 34px;
     line-height: 38px;
     letter-spacing: 0;
@@ -19598,7 +19621,7 @@ form.form {
       form.form .wr-input.big input {
         font-size: 14px; } }
   form.form .wr-input.big label {
-    font-family: "cormac-extralight", sans-serif;
+    font-family: "Cormac-ExtraLight", sans-serif;
     font-size: 34px;
     line-height: 38px;
     letter-spacing: 0;
@@ -19636,13 +19659,13 @@ form.form {
       margin-bottom: 5px; }
     form.form .wr-textarea.short-desc textarea {
       padding: 14px 10px;
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 32px;
       letter-spacing: 0;
       color: #000; }
     form.form .wr-textarea.short-desc label {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 32px;
       letter-spacing: 0;
@@ -19667,7 +19690,7 @@ form.form {
   form.form .form-btn-group {
     margin-top: 52px; }
     form.form .form-btn-group .btn, form.form .form-btn-group .new_post-confirm li button, .new_post-confirm li form.form .form-btn-group button {
-      font-family: "cormac-extralight", sans-serif;
+      font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       width: 220px;
       position: relative;
