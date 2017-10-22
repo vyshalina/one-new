@@ -1,3 +1,10 @@
+//стили для твиговских шаблонов
+.user-info {
+	display: flex;
+	figure {margin-right: 30px;}
+}
+
+
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -15,9 +22,43 @@ a {
 	&:active, &:hover, &:visited, &:link {text-decoration: none !important;}
 }
 
+.page_title {margin-bottom: 30px;}
+.page_content {
+	padding-bottom: 30px;
+	p {
+		font-size: 16px; line-height: 26px; letter-spacing: 0.8px;
+		margin-bottom: 15px;
+	}
+}
+
 /*********************************/
 /************ Forms **************/
 /*********************************/
+
+//для страници магазина/кнопка на сайт
+#buttons {padding-top: 30px;}
+#shareButton {
+	padding: 20px 0 50px 0;
+	form {margin-bottom: 20px;}
+	.selectstyle {
+		position: relative; padding-right: 10px; margin-right: 25px;
+		&:last-child {margin-right: 0;}
+		&:after {
+			content: '\203A';
+			color: $link-color; font-size: 24px; text-align: center;
+			width: 23px; height: 31px; position: absolute; right: 4px; top: -7px;
+			background: #fff; 
+			transform: rotate(90deg);
+		}
+		select {border: none; cursor: pointer;}
+	}
+	.form {
+		width: 50%; margin: 30px 0 0 0;
+		input {
+			margin-bottom: 20px;
+		}
+	}
+}
 
 // – http://prntscr.com/gg2bw7
 .styled_checkbox-1 {
