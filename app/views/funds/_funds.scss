@@ -1,6 +1,20 @@
 .p-tb {
 	padding: 30px 0;
 }
+//контент в твиговском шаблоне - http://prntscr.com/h0urms
+.desc-about {p {font-size: 16px; letter-spacing: 0.5px;}}
+
+//кнопка пожертвований - http://prntscr.com/h0v0y1
+.donation-wr {
+	padding-top: 30px;
+	.donation {
+		justify-content: center;
+		transition: .4s all ease;
+		&:hover {
+			color: $link-color;
+		}
+	}
+}
 
 .found {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,7 +87,7 @@
 			
 			@include respond-to(sm) {width: 72px; height: 72px; margin-right: 20px; margin-bottom: 10px;}
 
-			img {width: 100%;}
+			img {width: 100%; min-width: 130px;}
 		}
 
 		section {
@@ -83,16 +97,23 @@
 				@include respond-to(sm) {font-size: 28px; margin-bottom: 0;}
 			}
 
+			h5 {
+				font-size: 18px; font-family: $HelveticaL;
+				margin-bottom: 15px;
+				span {font-family: $HelveticaR;}
+			}
+
 			ul {
 				li {
-					@include font-type($HelveticaL, 12px, 1, 0.2px); color: #89A1B3;
+					@include font-type($HelveticaL, 12px, 1, 1px); color: #89A1B3;
 					margin-right: 25px;
 					
 					@include respond-to(sm) {margin: 25px 0 0 0;}
 
-					span {
+					& > span {
 						color: #000; font-family: $CormacEL; font-size: 24px;
 						@include respond-to(md) {display: block; margin-bottom: 10px;}
+						&.rub {@include respond-to(md) {display: inline-block;}}
 					}
 				}
 			}
@@ -131,6 +152,7 @@
 			section {
 				span {
 					font-family: $HelveticaR;
+					margin-top: 20px;
 					&.region {color: #9d9d9d;}	
 				}
 				

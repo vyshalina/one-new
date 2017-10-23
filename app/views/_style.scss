@@ -35,22 +35,29 @@ a {
 /************ Forms **************/
 /*********************************/
 
-//для страници магазина/кнопка на сайт
+//для твиговских шаблонов кнопка на сайт - http://prntscr.com/h0v8x0
 #buttons {padding-top: 30px;}
 #shareButton {
 	padding: 20px 0 50px 0;
-	form {margin-bottom: 20px;}
+	form {
+		margin-bottom: 20px;
+		& > div {
+			display: inline-block;
+			@include respond-to(lg) {display: block; margin-bottom: 15px;}
+		}
+	}
+	 
 	.selectstyle {
 		position: relative; padding-right: 10px; margin-right: 25px;
 		&:last-child {margin-right: 0;}
 		&:after {
-			content: '\203A';
+			content: '\203A'; 
 			color: $link-color; font-size: 24px; text-align: center;
 			width: 23px; height: 31px; position: absolute; right: 4px; top: -7px;
 			background: #fff; 
-			transform: rotate(90deg);
+			transform: rotate(90deg); pointer-events: none;
 		}
-		select {border: none; cursor: pointer;}
+		select {border: none; cursor: pointer; outline:none;}
 	}
 	.form {
 		width: 50%; margin: 30px 0 0 0;
@@ -407,7 +414,10 @@ a {
 		&.bg_blue {background: $btn-color;}
 		&.border {border-bottom: 1px solid #d9e4ea;}
 		&.border_grey {border-bottom: 1px solid #e8eaee;}
-		&.shadow {border-bottom: 3px solid #eff3f5;}
+		&.shadow {
+			border-bottom: 3px solid #eff3f5;
+			@include respond-to(md) {border: none;}
+		}
 		&.bg-left {background: url(../img/left-bg.png) no-repeat left 0 #edf2f8;}
 		&.bg-right {background: url(../img/right-bg.png) no-repeat right bottom #edf2f8;}
 	}

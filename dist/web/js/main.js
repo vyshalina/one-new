@@ -15,6 +15,14 @@ var app = function ($) {
       $('.booking-proc section .verification > .form').addClass('hide');
       $('.reservation .booking-proc').addClass('active');
     });
+
+    //popUp
+    $('.js-poPup').click(function () {
+      $('body .popup-main').addClass('active');
+    });
+    $('.js-close_popup').click(function () {
+      $('body .popup-main').removeClass('active');
+    });
   });
 
   // ======================================================================== //

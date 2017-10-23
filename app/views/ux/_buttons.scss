@@ -99,7 +99,9 @@
 	text-align: center; color: rgba(0, 0, 0, 0.7); 
 	display: block; margin: 30px 0;
 	
-	span {}
+	span {
+		display: block; margin-bottom: 10px;
+	}
 	em {
 		text-align: left;
 		display: block; width: 33px; height: 33px; position: relative; padding: 11px 0 0 11px; margin: 0 auto;
@@ -107,4 +109,12 @@
 		
 		i {vertical-align: top;}
 	}
+	.ladda-label {
+		position: relative;
+	}
+	.ladda-spinner {
+		width: 10px; margin: 0 auto; position: absolute; bottom: 0; left: 50%;
+		@include respond-to(md) {bottom: -20px;}
+	}
+	
 }

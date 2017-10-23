@@ -1,3 +1,55 @@
+//стили для твиговского шаблона: размеры картинок - http://prntscr.com/h0wgee
+.main_menu_wrapp {
+	.main_menu {
+		.owl-stage-outer {
+			.owl-stage {
+				& > div {
+					img[alt="Charity Shop"] {height: 55px; position: relative; top: -6px;}
+					img[alt="Звезды"] {height: 67px; position: relative; top: -12px;}
+				}
+			}
+		}
+	}
+}
+
+//стили для адаптации чекбоксоа и выпадающих списков - http://prntscr.com/h0x9br
+.market {
+	.main_menu_wrapp {
+		@include respond-to(sm) {padding-left: 0; padding-right: 0;}
+		.main_menu {@include respond-to(sm) {display: none;}}
+		.show_mob {
+			position: relative;
+			&:after {
+				content: '\203A';
+				color: #fff; text-align: center; font-size: 30px;
+				position: absolute; top: 10px; right: -10px; display: block; width: 50px; height: 30px;
+				background: $link-color;
+				transform: rotate(90deg); pointer-events: none;
+			} 
+			select {
+				@include font-type($CormacEL, 20px, 1, 0.2px);
+				display: block; width: 100%; height: 50px; padding: 0 10px;
+				border: 1px solid #4489ff;
+				cursor: pointer; outline:none;
+			}
+		}
+	}
+	.filter {
+		@include respond-to(lg) {padding-bottom: 0;}
+		@include respond-to(sm) {flex-direction: column;}
+		.select {
+			@include respond-to(sm) {margin-bottom: 25px;}
+			&:last-child {@include respond-to(sm) {margin-bottom: 0;}}
+		}
+	}
+	.checkboxes {
+		float: right;
+		@include respond-to(lg) {float: left; clear: both; padding-bottom: 30px;}
+	}
+}
+
+
+
 // NEW POST
 .new_post {
 
@@ -293,9 +345,22 @@
 
 // LISTS
 .market {
+	.breadcrumbs {
+		.navigation {display: none;}
+		ul.share {
+			@include respond-to(md) {margin: 10px auto;}
+
+			li {
+				@include respond-to(md) {margin-left: 15px;}
+				i {
+					@include respond-to(md) {font-size: 22px;}
+				}
+			}
+		}
+	}
 	.goods {
 		display: flex; flex-wrap: wrap;
-		margin: -10px;
+		margin: -10px; width: 100%;
 
 		& > li {
 			position: relative;
@@ -309,43 +374,45 @@
 			// ITEM – http://prntscr.com/gg2pz0
 			a {
 				display: block;
-
-				figure {
-					position: relative;
-					@include respond-to(xs) {width: 100%;}
-
-					img {width: 100%;}
-
-					figcaption {
-						position: absolute; right: 10px; top: 10px;
-						@include respond-to(xs) {display: none;}
-					}
-				}
-
-				article {
-					padding: 20px;
-					@include respond-to(xs) {display: flex; flex-direction: column; position: relative; width: 100%; padding-right: 5px;}
-
-					h2 {@include font-type($CormacEL, 18px, 1, -0.5px); color: $main-color-text; color: #000; margin-bottom: 10px;}
-
-					div {
-						display: flex; justify-content: space-between;
-						@include respond-to(xs) {flex-direction: column; height: 100%;}
-
-						p {
-							@include font-type($HelveticaL, 10px, 16px, 0.8px); color: #8d8d8d; text-transform: uppercase;
-							span {
-								@include font-type($HelveticaL, 12px, 16px, 0.5px);
-								display: block;
-							}
-						}
-
-						& > span {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000;}
-					}
-				}
-
 				&:hover {article {h2 {color: #4489ff;}}}
 			}
+
+			figure {
+				position: relative;
+				@include respond-to(xs) {width: 100%;}
+
+				img {width: 100%;}
+
+				figcaption {
+					position: absolute; right: 10px; top: 10px;
+					@include respond-to(xs) {display: none;}
+				}
+			}
+
+			article {
+				padding: 20px;
+				@include respond-to(xs) {display: flex; flex-direction: column; position: relative; width: 100%; padding-right: 5px;}
+
+				h2 {@include font-type($CormacEL, 18px, 26px, -0.5px); color: $main-color-text; color: #000; margin-bottom: 10px;}
+
+				div {
+					display: flex; justify-content: space-between;
+					@include respond-to(xs) {flex-direction: column; height: 100%;}
+
+					p {
+						@include font-type($HelveticaL, 10px, 16px, 0.8px); color: #8d8d8d; text-transform: uppercase;
+						span {
+							@include font-type($HelveticaL, 12px, 16px, 0.5px);
+							display: block;
+						}
+					}
+
+					& > span {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000;}
+				}
+				.icon {margin-right: 10px;}
+				.price {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000; padding-top: 10px;}
+			}
+				
 			
 			.like {
 				display: none; width: 45px; height: 45px; padding: 15px; 
@@ -491,7 +558,7 @@
 					}
 					.icon-wr {
 						text-align: center;
-						position: absolute; display: inline-block; width: 28px; height: 28px;
+						position: absolute; display: inline-block; width: 28px; height: 28px; padding-top: 6px;
 						background: $btn-color; border-radius: 50%; top: -5px; right: -1px;
 						@include respond-to(sm){display: none;}
 						i {color: #000;}
@@ -499,6 +566,7 @@
 					figure, section {float: left;}
 					figure {
 						margin-right: 36px; padding-top: 5px;
+						border-radius: 50%;
 						@include respond-to(md){margin-right: 10px;}
 						@include respond-to(sm) {padding-top: 15px;}
 					}

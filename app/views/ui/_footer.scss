@@ -54,7 +54,7 @@
 			}
 
 			&.logo {
-				img {filter: grayscale(100%);}
+				img {filter: grayscale(100%); width: auto; max-width: 100%;}
 				@include respond-to(sm) {text-align: center; padding-left: 0;}
 			}
 		}

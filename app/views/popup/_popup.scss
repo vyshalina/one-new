@@ -1,3 +1,33 @@
+//http://prntscr.com/h0zgpy
+.popup-main {
+	position: fixed; z-index: 10000; width: 100%; height: 100%; padding-top: 10%;
+	background: rgba(192,209,221,0.9);
+	opacity: 0; 
+	transition: .4s all ease;
+	pointer-events: none;
+	&.active {
+		opacity: 1; transform: translate(0); pointer-events: auto;
+		.popup-main_body {
+			opacity: 1; transform: translate(0);
+		}
+	}
+	&_body {
+		transition: .6s all ease;
+		opacity: 0; transform: translate(-150px, -150px);
+		@extend .neo-bg;
+		width: 50%; margin: 0 auto; padding: 50px 30px 30px 30px; position: relative;
+		overflow-y: auto; 
+		@include respond-to(md) {width: 90%;}
+		.close {position: absolute; right: 20px; top: 20px;}
+		p {
+			@include font-type($HelveticaR, 16px, 24px, 0.5px); color: #000;
+		}
+	}
+	&_top {
+		width: 100%; text-align: center;
+	}
+}
+
 // POPUP WINDOWS
 .popup {
 	// LOGIN POPUP – http://prntscr.com/gg2gi8

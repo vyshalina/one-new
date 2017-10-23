@@ -302,7 +302,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -159px -76px;
+  background-position: -158px -127px;
   width: 11px;
   height: 12px; }
 
@@ -326,7 +326,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-buy-easel {
   background-image: url(../img/sprite.png);
-  background-position: -205px 0px;
+  background-position: -205px -38px;
   width: 26px;
   height: 38px; }
 
@@ -368,33 +368,33 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -145px -125px;
+  background-position: -155px -153px;
   width: 11px;
   height: 11px; }
 
 .icon-clock2 {
   background-image: url(../img/sprite.png);
-  background-position: -156px -125px;
-  width: 11px;
-  height: 11px; }
+  background-position: -154px -95px;
+  width: 13px;
+  height: 13px; }
 
 .icon-close-lit {
   background-image: url(../img/sprite.png);
-  background-position: -217px -177px;
+  background-position: -74px -105px;
   width: 9px;
   height: 9px; }
 
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -28px -187px;
+  background-position: -56px -187px;
   width: 28px;
   height: 28px; }
 
 .icon-comment {
   background-image: url(../img/sprite.png);
-  background-position: -157px -114px;
-  width: 11px;
-  height: 11px; }
+  background-position: -145px -114px;
+  width: 13px;
+  height: 13px; }
 
 .icon-disabled {
   background-image: url(../img/sprite.png);
@@ -416,9 +416,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-eye {
   background-image: url(../img/sprite.png);
-  background-position: -205px -177px;
-  width: 12px;
-  height: 9px; }
+  background-position: -188px -140px;
+  width: 14px;
+  height: 11px; }
 
 .icon-f {
   background-image: url(../img/sprite.png);
@@ -434,25 +434,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-header_plus-white {
   background-image: url(../img/sprite.png);
-  background-position: -160px -153px;
+  background-position: -215px -177px;
   width: 10px;
   height: 10px; }
 
 .icon-header_plus {
   background-image: url(../img/sprite.png);
-  background-position: -150px -153px;
+  background-position: -205px -177px;
   width: 10px;
   height: 10px; }
 
 .icon-header_search-white {
   background-image: url(../img/sprite.png);
-  background-position: -145px -114px;
+  background-position: -158px -114px;
   width: 12px;
   height: 11px; }
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -188px -140px;
+  background-position: -143px -153px;
   width: 12px;
   height: 11px; }
 
@@ -470,7 +470,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -154px -95px;
+  background-position: -130px -153px;
   width: 13px;
   height: 12px; }
 
@@ -482,9 +482,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-map {
   background-image: url(../img/sprite.png);
-  background-position: -130px -153px;
-  width: 10px;
-  height: 12px; }
+  background-position: -159px -76px;
+  width: 11px;
+  height: 13px; }
 
 .icon-marker {
   background-image: url(../img/sprite.png);
@@ -494,7 +494,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-ok {
   background-image: url(../img/sprite.png);
-  background-position: -205px -38px;
+  background-position: -205px 0px;
   width: 26px;
   height: 38px; }
 
@@ -512,9 +512,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-pencil {
   background-image: url(../img/sprite.png);
-  background-position: -140px -153px;
-  width: 10px;
-  height: 10px; }
+  background-position: -145px -127px;
+  width: 13px;
+  height: 13px; }
 
 .icon-plus-add {
   background-image: url(../img/sprite.png);
@@ -524,13 +524,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-quotes-left {
   background-image: url(../img/sprite.png);
-  background-position: 0px -187px;
+  background-position: -28px -187px;
   width: 28px;
   height: 28px; }
 
 .icon-quotes-right {
   background-image: url(../img/sprite.png);
-  background-position: -56px -187px;
+  background-position: 0px -187px;
   width: 28px;
   height: 28px; }
 
@@ -566,7 +566,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -170px -153px;
+  background-position: -166px -153px;
   width: 10px;
   height: 10px; }
 
@@ -9773,7 +9773,7 @@ button.close {
 .lity-hide {
   display: none; }
 
-.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .booking-proc, .found-about, .list-bookmarks > li {
+.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .booking-proc, .found-about, .list-bookmarks > li, .popup-main_body {
   margin: 10px;
   padding: 20px;
   background: #fff;
@@ -12602,6 +12602,22 @@ button.close {
 .p-tb {
   padding: 30px 0; }
 
+.desc-about p {
+  font-size: 16px;
+  letter-spacing: 0.5px; }
+
+.donation-wr {
+  padding-top: 30px; }
+  .donation-wr .donation {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: .4s all ease;
+    transition: .4s all ease; }
+    .donation-wr .donation:hover {
+      color: #4489ff; }
+
 .found-about {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12723,31 +12739,41 @@ button.close {
         margin-right: 20px;
         margin-bottom: 10px; } }
     .found-me figure img {
-      width: 100%; }
+      width: 100%;
+      min-width: 130px; }
   .found-me section h1 {
     margin-bottom: 25px; }
     @media (max-width: 767px) {
       .found-me section h1 {
         font-size: 28px;
         margin-bottom: 0; } }
+  .found-me section h5 {
+    font-size: 18px;
+    font-family: "HelveticaLight", sans-serif;
+    margin-bottom: 15px; }
+    .found-me section h5 span {
+      font-family: "HelveticaRegular", sans-serif; }
   .found-me section ul li {
     font-family: "HelveticaLight", sans-serif;
     font-size: 12px;
     line-height: 1;
-    letter-spacing: 0.2px;
+    letter-spacing: 1px;
     color: #89A1B3;
     margin-right: 25px; }
     @media (max-width: 767px) {
       .found-me section ul li {
         margin: 25px 0 0 0; } }
-    .found-me section ul li span {
+    .found-me section ul li > span {
       color: #000;
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 24px; }
       @media (max-width: 991px) {
-        .found-me section ul li span {
+        .found-me section ul li > span {
           display: block;
           margin-bottom: 10px; } }
+      @media (max-width: 991px) {
+        .found-me section ul li > span.rub {
+          display: inline-block; } }
 
 .founds-list {
   display: -webkit-box;
@@ -12819,7 +12845,8 @@ button.close {
         width: 130px;
         height: auto; }
     .founds-list > li section span {
-      font-family: "HelveticaRegular", sans-serif; }
+      font-family: "HelveticaRegular", sans-serif;
+      margin-top: 20px; }
       .founds-list > li section span.region {
         color: #9d9d9d; }
 
@@ -14860,6 +14887,57 @@ footer.footer.style2 {
 .btn-wrapp {
   margin-top: 0 !important; }
 
+.popup-main {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  background: rgba(192, 209, 221, 0.9);
+  opacity: 0;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+  pointer-events: none; }
+  .popup-main.active {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+    pointer-events: auto; }
+    .popup-main.active .popup-main_body {
+      opacity: 1;
+      -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+      transform: translate(0); }
+  .popup-main_body {
+    -webkit-transition: .6s all ease;
+    transition: .6s all ease;
+    opacity: 0;
+    -webkit-transform: translate(-150px, -150px);
+    -ms-transform: translate(-150px, -150px);
+    transform: translate(-150px, -150px);
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 30px 30px 30px;
+    position: relative;
+    overflow-y: auto; }
+    @media (max-width: 991px) {
+      .popup-main_body {
+        width: 90%; } }
+    .popup-main_body .close {
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+    .popup-main_body p {
+      font-family: "HelveticaRegular", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      color: #000; }
+  .popup-main_top {
+    width: 100%;
+    text-align: center; }
+
 .popup-login > ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15759,7 +15837,9 @@ footer.footer.style2 {
             display: none; } }
       .footer-info li.logo img {
         -webkit-filter: grayscale(100%);
-        filter: grayscale(100%); }
+        filter: grayscale(100%);
+        width: auto;
+        max-width: 100%; }
       @media (max-width: 767px) {
         .footer-info li.logo {
           text-align: center;
@@ -16383,6 +16463,12 @@ a {
   padding: 20px 0 50px 0; }
   #shareButton form {
     margin-bottom: 20px; }
+    #shareButton form > div {
+      display: inline-block; }
+      @media (max-width: 1199px) {
+        #shareButton form > div {
+          display: block;
+          margin-bottom: 15px; } }
   #shareButton .selectstyle {
     position: relative;
     padding-right: 10px;
@@ -16402,10 +16488,12 @@ a {
       background: #fff;
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      transform: rotate(90deg);
+      pointer-events: none; }
     #shareButton .selectstyle select {
       border: none;
-      cursor: pointer; }
+      cursor: pointer;
+      outline: none; }
   #shareButton .form {
     width: 50%;
     margin: 30px 0 0 0; }
@@ -16892,6 +16980,9 @@ a {
       border-bottom: 1px solid #e8eaee; }
     .app .wr.shadow {
       border-bottom: 3px solid #eff3f5; }
+      @media (max-width: 991px) {
+        .app .wr.shadow {
+          border: none; } }
     .app .wr.bg-left {
       background: url(../img/left-bg.png) no-repeat left 0 #edf2f8; }
     .app .wr.bg-right {
@@ -17243,6 +17334,84 @@ a {
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+.main_menu_wrapp .main_menu .owl-stage-outer .owl-stage > div img[alt="Charity Shop"] {
+  height: 55px;
+  position: relative;
+  top: -6px; }
+
+.main_menu_wrapp .main_menu .owl-stage-outer .owl-stage > div img[alt="Звезды"] {
+  height: 67px;
+  position: relative;
+  top: -12px; }
+
+@media (max-width: 767px) {
+  .market .main_menu_wrapp {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (max-width: 767px) {
+  .market .main_menu_wrapp .main_menu {
+    display: none; } }
+
+.market .main_menu_wrapp .show_mob {
+  position: relative; }
+  .market .main_menu_wrapp .show_mob:after {
+    content: '\203A';
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    display: block;
+    width: 50px;
+    height: 30px;
+    background: #4489ff;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    pointer-events: none; }
+  .market .main_menu_wrapp .show_mob select {
+    font-family: "Cormac-ExtraLight", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #4489ff;
+    cursor: pointer;
+    outline: none; }
+
+@media (max-width: 1199px) {
+  .market .filter {
+    padding-bottom: 0; } }
+
+@media (max-width: 767px) {
+  .market .filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+@media (max-width: 767px) {
+  .market .filter .select {
+    margin-bottom: 25px; } }
+
+@media (max-width: 767px) {
+  .market .filter .select:last-child {
+    margin-bottom: 0; } }
+
+.market .checkboxes {
+  float: right; }
+  @media (max-width: 1199px) {
+    .market .checkboxes {
+      float: left;
+      clear: both;
+      padding-bottom: 30px; } }
+
 .new_post {
   overflow: hidden;
   padding: 0 200px;
@@ -18867,6 +19036,21 @@ a {
       opacity: 1;
       pointer-events: all; }
 
+.market .breadcrumbs .navigation {
+  display: none; }
+
+@media (max-width: 991px) {
+  .market .breadcrumbs ul.share {
+    margin: 10px auto; } }
+
+@media (max-width: 991px) {
+  .market .breadcrumbs ul.share li {
+    margin-left: 15px; } }
+
+@media (max-width: 991px) {
+  .market .breadcrumbs ul.share li i {
+    font-size: 22px; } }
+
 .market .goods {
   display: -webkit-box;
   display: -webkit-flex;
@@ -18875,7 +19059,8 @@ a {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -10px; }
+  margin: -10px;
+  width: 100%; }
   .market .goods > li {
     position: relative;
     width: -webkit-calc(25% - 20px);
@@ -18900,82 +19085,91 @@ a {
         margin-bottom: 25px; } }
     .market .goods > li a {
       display: block; }
-      .market .goods > li a figure {
-        position: relative; }
+      .market .goods > li a:hover article h2 {
+        color: #4489ff; }
+    .market .goods > li figure {
+      position: relative; }
+      @media (max-width: 480px) {
+        .market .goods > li figure {
+          width: 100%; } }
+      .market .goods > li figure img {
+        width: 100%; }
+      .market .goods > li figure figcaption {
+        position: absolute;
+        right: 10px;
+        top: 10px; }
         @media (max-width: 480px) {
-          .market .goods > li a figure {
-            width: 100%; } }
-        .market .goods > li a figure img {
-          width: 100%; }
-        .market .goods > li a figure figcaption {
-          position: absolute;
-          right: 10px;
-          top: 10px; }
-          @media (max-width: 480px) {
-            .market .goods > li a figure figcaption {
-              display: none; } }
-      .market .goods > li a article {
-        padding: 20px; }
+          .market .goods > li figure figcaption {
+            display: none; } }
+    .market .goods > li article {
+      padding: 20px; }
+      @media (max-width: 480px) {
+        .market .goods > li article {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          position: relative;
+          width: 100%;
+          padding-right: 5px; } }
+      .market .goods > li article h2 {
+        font-family: "Cormac-ExtraLight", sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+        color: #000;
+        color: #000;
+        margin-bottom: 10px; }
+      .market .goods > li article div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
         @media (max-width: 480px) {
-          .market .goods > li a article {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
+          .market .goods > li article div {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -webkit-flex-direction: column;
             -ms-flex-direction: column;
             flex-direction: column;
-            position: relative;
-            width: 100%;
-            padding-right: 5px; } }
-        .market .goods > li a article h2 {
+            height: 100%; } }
+        .market .goods > li article div p {
+          font-family: "HelveticaLight", sans-serif;
+          font-size: 10px;
+          line-height: 16px;
+          letter-spacing: 0.8px;
+          color: #8d8d8d;
+          text-transform: uppercase; }
+          .market .goods > li article div p span {
+            font-family: "HelveticaLight", sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+            display: block; }
+        .market .goods > li article div > span {
           font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 18px;
           line-height: 1;
           letter-spacing: -0.5px;
-          color: #000;
-          color: #000;
-          margin-bottom: 10px; }
-        .market .goods > li a article div {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: justify;
-          -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-          justify-content: space-between; }
-          @media (max-width: 480px) {
-            .market .goods > li a article div {
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-              -webkit-flex-direction: column;
-              -ms-flex-direction: column;
-              flex-direction: column;
-              height: 100%; } }
-          .market .goods > li a article div p {
-            font-family: "HelveticaLight", sans-serif;
-            font-size: 10px;
-            line-height: 16px;
-            letter-spacing: 0.8px;
-            color: #8d8d8d;
-            text-transform: uppercase; }
-            .market .goods > li a article div p span {
-              font-family: "HelveticaLight", sans-serif;
-              font-size: 12px;
-              line-height: 16px;
-              letter-spacing: 0.5px;
-              display: block; }
-          .market .goods > li a article div > span {
-            font-family: "Cormac-ExtraLight", sans-serif;
-            font-size: 18px;
-            line-height: 1;
-            letter-spacing: -0.5px;
-            color: #000; }
-      .market .goods > li a:hover article h2 {
-        color: #4489ff; }
+          color: #000; }
+      .market .goods > li article .icon {
+        margin-right: 10px; }
+      .market .goods > li article .price {
+        font-family: "Cormac-ExtraLight", sans-serif;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: -0.5px;
+        color: #000;
+        padding-top: 10px; }
     .market .goods > li .like {
       display: none;
       width: 45px;
@@ -19178,6 +19372,7 @@ a {
           display: inline-block;
           width: 28px;
           height: 28px;
+          padding-top: 6px;
           background: #4489ff;
           -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -19192,7 +19387,9 @@ a {
           float: left; }
         .product-body > section .btn-company .btn-reserve figure {
           margin-right: 36px;
-          padding-top: 5px; }
+          padding-top: 5px;
+          -webkit-border-radius: 50%;
+          border-radius: 50%; }
           @media (max-width: 991px) {
             .product-body > section .btn-company .btn-reserve figure {
               margin-right: 10px; } }
@@ -19393,6 +19590,9 @@ a {
   color: rgba(0, 0, 0, 0.7);
   display: block;
   margin: 30px 0; }
+  .show_more span {
+    display: block;
+    margin-bottom: 10px; }
   .show_more em {
     text-align: left;
     display: block;
@@ -19406,6 +19606,17 @@ a {
     border-radius: 50%; }
     .show_more em i {
       vertical-align: top; }
+  .show_more .ladda-label {
+    position: relative; }
+  .show_more .ladda-spinner {
+    width: 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%; }
+    @media (max-width: 991px) {
+      .show_more .ladda-spinner {
+        bottom: -20px; } }
 
 .select {
   position: relative;
@@ -20075,6 +20286,61 @@ a {
     transform: translateY(0); }
     .carousel .navigation li.active:hover, .carousel .navigation .owl-dot.active:hover, .carousel .owl-dots li.active:hover, .carousel .owl-dots .owl-dot.active:hover {
       cursor: default; }
+
+.checkboxes {
+  padding-top: 7px; }
+  .checkboxes section {
+    float: left;
+    margin-right: 20px; }
+    .checkboxes section:last-child {
+      margin-right: 0; }
+
+.check {
+  opacity: 0;
+  height: 1px;
+  margin: 0; }
+
+.check-label {
+  letter-spacing: 0.7px;
+  font-family: "HelveticaRegular", sans-serif;
+  position: relative;
+  padding-left: 40px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease; }
+
+.check + .check-label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  left: 6px;
+  top: 0;
+  border: 2px solid #678198;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease; }
+
+.check + .check-label:after {
+  content: '';
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease; }
+
+.check:checked + .check-label:after {
+  content: '\2714';
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  left: 10px;
+  top: -1px; }
+
+.check:checked + .check-label:before {
+  background: #4489ff;
+  border-color: #4489ff; }
 
 .form {
   width: 580px;
