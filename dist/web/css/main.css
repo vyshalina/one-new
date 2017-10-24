@@ -15128,12 +15128,11 @@ footer.footer.style2 {
   .popup-notice ul li a:hover {
     border: solid 1px #4489ff; }
 
-.item {
-  width: 20%;
+.product, .list-products article {
   background: #fff;
   margin-left: 50px;
   margin-top: 50px; }
-  .item section ul {
+  .product section ul, .list-products article section ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15141,7 +15140,7 @@ footer.footer.style2 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .item footer {
+  .product footer, .list-products article footer {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15154,7 +15153,7 @@ footer.footer.style2 {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-    .item footer figure {
+    .product footer figure, .list-products article footer figure {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -15163,13 +15162,13 @@ footer.footer.style2 {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-  .item header a:hover figcaption {
+  .product header a:hover figcaption, .list-products article header a:hover figcaption {
     opacity: 1; }
-  .item header figure {
+  .product header figure, .list-products article header figure {
     position: relative; }
-    .item header figure img {
+    .product header figure img, .list-products article header figure img {
       max-width: 100%; }
-    .item header figure figcaption {
+    .product header figure figcaption, .list-products article header figure figcaption {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -15179,9 +15178,9 @@ footer.footer.style2 {
       opacity: 0;
       -webkit-transition: .4s all ease;
       transition: .4s all ease; }
-      .item header figure figcaption span {
+      .product header figure figcaption span, .list-products article header figure figcaption span {
         position: absolute; }
-        .item header figure figcaption span.favorites {
+        .product header figure figcaption span.favorites, .list-products article header figure figcaption span.favorites {
           text-align: center;
           font-family: "Cormac-ExtraLight", sans-serif;
           font-size: 16px;
@@ -15198,54 +15197,65 @@ footer.footer.style2 {
           left: 50%;
           margin-left: -39px;
           background: url(../../web/img/heart.png); }
-  .item section {
+  .product section, .list-products article section {
     padding: 0 15px; }
-    .item section h2 {
+    .product section h2, .list-products article section h2 {
       margin-top: 0; }
-      .item section h2 a {
+      .product section h2 a, .list-products article section h2 a {
         font-family: "cormac-book", sans-serif;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.5px;
         color: #000; }
-    .item section p {
+    .product section p, .list-products article section p {
       font-family: "HelveticaRegular", sans-serif;
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 0.5px;
       color: #000; }
-    .item section ul li {
+    .product section ul li, .list-products article section ul li {
       display: inline-block;
       padding: 2px 5px;
       margin-right: 5px;
       background: #efefef;
       -webkit-border-radius: 9px;
       border-radius: 9px; }
-      .item section ul li:last-child {
+      .product section ul li:last-child, .list-products article section ul li:last-child {
         margin-right: 0; }
-      .item section ul li a {
+      .product section ul li a, .list-products article section ul li a {
         color: #000; }
-  .item footer {
+  .product footer, .list-products article footer {
     padding: 15px; }
-    .item footer a figure img {
+    .product footer a figure img, .list-products article footer a figure img {
       width: 31px;
       height: 31px;
       margin-right: 10px;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
-    .item footer a figure figcaption {
+    .product footer a figure figcaption, .list-products article footer a figure figcaption {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 12px;
       line-height: 1px;
       letter-spacing: 0.5px;
       color: #000; }
-    .item footer p {
+    .product footer p, .list-products article footer p {
       font-family: "cormac-book", sans-serif;
       font-size: 16px;
       line-height: 1;
       letter-spacing: 0.5px;
       color: #000;
       margin-bottom: 0; }
+
+.list-products {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
 
 .header {
   width: 100%;
@@ -17453,6 +17463,124 @@ a {
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+.product, .list-products article {
+  background: #fff;
+  margin-left: 50px;
+  margin-top: 50px; }
+  .product section ul, .list-products article section ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .product footer, .list-products article footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .product footer figure, .list-products article footer figure {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .product header a:hover figcaption, .list-products article header a:hover figcaption {
+    opacity: 1; }
+  .product header figure, .list-products article header figure {
+    position: relative; }
+    .product header figure img, .list-products article header figure img {
+      max-width: 100%; }
+    .product header figure figcaption, .list-products article header figure figcaption {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      -webkit-transition: .4s all ease;
+      transition: .4s all ease; }
+      .product header figure figcaption span, .list-products article header figure figcaption span {
+        position: absolute; }
+        .product header figure figcaption span.favorites, .list-products article header figure figcaption span.favorites {
+          text-align: center;
+          font-family: "Cormac-ExtraLight", sans-serif;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 0.5px;
+          color: #fff;
+          width: 78px;
+          height: 68px;
+          display: block;
+          padding-top: 20px;
+          padding-left: 7px;
+          top: 50%;
+          margin-top: -34px;
+          left: 50%;
+          margin-left: -39px;
+          background: url(../../web/img/heart.png); }
+  .product section, .list-products article section {
+    padding: 0 15px; }
+    .product section h2, .list-products article section h2 {
+      margin-top: 0; }
+      .product section h2 a, .list-products article section h2 a {
+        font-family: "cormac-book", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: #000; }
+    .product section p, .list-products article section p {
+      font-family: "HelveticaRegular", sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      color: #000; }
+    .product section ul li, .list-products article section ul li {
+      display: inline-block;
+      padding: 2px 5px;
+      margin-right: 5px;
+      background: #efefef;
+      -webkit-border-radius: 9px;
+      border-radius: 9px; }
+      .product section ul li:last-child, .list-products article section ul li:last-child {
+        margin-right: 0; }
+      .product section ul li a, .list-products article section ul li a {
+        color: #000; }
+  .product footer, .list-products article footer {
+    padding: 15px; }
+    .product footer a figure img, .list-products article footer a figure img {
+      width: 31px;
+      height: 31px;
+      margin-right: 10px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+    .product footer a figure figcaption, .list-products article footer a figure figcaption {
+      font-family: "Cormac-ExtraLight", sans-serif;
+      font-size: 12px;
+      line-height: 1px;
+      letter-spacing: 0.5px;
+      color: #000; }
+    .product footer p, .list-products article footer p {
+      font-family: "cormac-book", sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      color: #000;
+      margin-bottom: 0; }
+
 .main_menu_wrapp .main_menu .owl-stage-outer .owl-stage > div img[alt="Charity Shop"] {
   height: 55px;
   position: relative;

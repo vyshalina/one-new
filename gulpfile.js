@@ -57,7 +57,8 @@ gulp.task('js:libs', function () {
 		'node_modules/dropzone/dist/dropzone.js',
 		'bower_components/smooth-scrollbar/dist/smooth-scrollbar.js',
 		'node_modules/lity/dist/lity.min.js',
-		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js'
+		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
+		'plugins/bpopup/jquery.bpopup.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
