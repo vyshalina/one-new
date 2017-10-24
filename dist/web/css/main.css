@@ -15128,6 +15128,125 @@ footer.footer.style2 {
   .popup-notice ul li a:hover {
     border: solid 1px #4489ff; }
 
+.item {
+  width: 20%;
+  background: #fff;
+  margin-left: 50px;
+  margin-top: 50px; }
+  .item section ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .item footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .item footer figure {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .item header a:hover figcaption {
+    opacity: 1; }
+  .item header figure {
+    position: relative; }
+    .item header figure img {
+      max-width: 100%; }
+    .item header figure figcaption {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      -webkit-transition: .4s all ease;
+      transition: .4s all ease; }
+      .item header figure figcaption span {
+        position: absolute; }
+        .item header figure figcaption span.favorites {
+          text-align: center;
+          font-family: "Cormac-ExtraLight", sans-serif;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 0.5px;
+          color: #fff;
+          width: 78px;
+          height: 68px;
+          display: block;
+          padding-top: 20px;
+          padding-left: 7px;
+          top: 50%;
+          margin-top: -34px;
+          left: 50%;
+          margin-left: -39px;
+          background: url(../../web/img/heart.png); }
+  .item section {
+    padding: 0 15px; }
+    .item section h2 {
+      margin-top: 0; }
+      .item section h2 a {
+        font-family: "cormac-book", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: #000; }
+    .item section p {
+      font-family: "HelveticaRegular", sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      color: #000; }
+    .item section ul li {
+      display: inline-block;
+      padding: 2px 5px;
+      margin-right: 5px;
+      background: #efefef;
+      -webkit-border-radius: 9px;
+      border-radius: 9px; }
+      .item section ul li:last-child {
+        margin-right: 0; }
+      .item section ul li a {
+        color: #000; }
+  .item footer {
+    padding: 15px; }
+    .item footer a figure img {
+      width: 31px;
+      height: 31px;
+      margin-right: 10px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+    .item footer a figure figcaption {
+      font-family: "Cormac-ExtraLight", sans-serif;
+      font-size: 12px;
+      line-height: 1px;
+      letter-spacing: 0.5px;
+      color: #000; }
+    .item footer p {
+      font-family: "cormac-book", sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      color: #000;
+      margin-bottom: 0; }
+
 .header {
   width: 100%;
   height: 65px;
@@ -19060,7 +19179,11 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: -10px;
-  width: 100%; }
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px); }
+  @media (max-width: 767px) {
+    .market .goods {
+      margin: 0 auto; } }
   .market .goods > li {
     position: relative;
     width: -webkit-calc(25% - 20px);
@@ -19080,8 +19203,7 @@ a {
     @media (max-width: 480px) {
       .market .goods > li {
         display: block;
-        width: -webkit-calc(100% - 20px);
-        width: calc(100% - 20px);
+        width: 100%;
         margin-bottom: 25px; } }
     .market .goods > li a {
       display: block; }
@@ -19218,7 +19340,7 @@ a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    @media (max-width: 480px) {
+    @media (max-width: 991px) {
       .product-body ul.info {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -19261,8 +19383,13 @@ a {
         display: block; }
       .product-body header figure:last-child {
         margin-bottom: 0; }
+      .product-body header figure img {
+        max-width: 100%; }
   .product-body > section {
     padding-left: 28px; }
+    @media (max-width: 1199px) {
+      .product-body > section {
+        width: 49%; } }
     @media (max-width: 991px) {
       .product-body > section {
         padding-left: 15px; } }
@@ -19272,7 +19399,7 @@ a {
     .product-body > section h2 {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 34px;
-      line-height: 1;
+      line-height: 38px;
       letter-spacing: 0;
       margin-bottom: 31px; }
     .product-body > section ul.info {
@@ -19285,13 +19412,13 @@ a {
         color: #79879e;
         text-transform: uppercase;
         margin-right: 25px; }
-        @media (max-width: 480px) {
+        @media (max-width: 991px) {
           .product-body > section ul.info li {
             margin-right: 0;
             margin-bottom: 15px; } }
         .product-body > section ul.info li:last-child {
           margin-right: 0; }
-          @media (max-width: 480px) {
+          @media (max-width: 991px) {
             .product-body > section ul.info li:last-child {
               margin-bottom: 0; } }
         .product-body > section ul.info li i {
@@ -19430,7 +19557,7 @@ a {
         width: 218px;
         padding: 20px 0;
         margin-right: 57px; }
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
           .product-body > section .btn-gr .btn, .product-body > section .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section .btn-gr button {
             width: 100%;
             margin-bottom: 25px; } }
@@ -19439,7 +19566,7 @@ a {
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.2px; }
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
           .product-body > section .btn-gr a {
             width: 100%;
             text-align: center;

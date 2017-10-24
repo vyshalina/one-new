@@ -360,7 +360,9 @@
 	}
 	.goods {
 		display: flex; flex-wrap: wrap;
-		margin: -10px; width: 100%;
+
+		margin: -10px; width: calc(100% + 20px);
+		@include respond-to(sm) {margin: 0 auto;}
 
 		& > li {
 			position: relative;
@@ -368,7 +370,7 @@
 			background: #fff; border-radius: 5px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
 
 			@include respond-to(md) {width: calc(50% - 10px); margin: 5px;}
-			@include respond-to(xs) {display: block; width: calc(100% - 20px); margin-bottom: 25px;}
+			@include respond-to(xs) {display: block; width: 100%; margin-bottom: 25px;}
 			
 
 			// ITEM – http://prntscr.com/gg2pz0
@@ -447,7 +449,7 @@
 
 		ul.info {
 			display: flex;
-			@include respond-to(xs) {flex-direction: column;}
+			@include respond-to(md) {flex-direction: column;}
 			li {
 				display: flex; align-items: center;
 			}
@@ -477,17 +479,19 @@
 				&:first-child {display: block;}
 				&:last-child {margin-bottom: 0;}
 
+				img {max-width: 100%;}
 
 			}
 		}
 
 		& > section {
 			padding-left: 28px;
+			@include respond-to(lg) {width: 49%;}
 			@include respond-to(md){padding-left: 15px;}
 			@include respond-to(sm){padding-left: 0;}
 
 			h2 {
-				@include font-type($CormacEL, 34px, 1, 0);
+				@include font-type($CormacEL, 34px, 38px, 0);
 				margin-bottom: 31px;
 			}
 
@@ -496,12 +500,12 @@
 				li {
 					@include font-type($HelveticaL, 10px, 1, 1px); color: #79879e; text-transform: uppercase;
 					margin-right: 25px;
-					@include respond-to(xs) {
+					@include respond-to(md) {
 						margin-right: 0; margin-bottom: 15px;
 					}
 					&:last-child {
 						margin-right: 0;
-						@include respond-to(xs) {margin-bottom: 0;}
+						@include respond-to(md) {margin-bottom: 0;}
 					}
 					i {font-size: 16px; margin-right: 3px;}
 				}
@@ -591,13 +595,13 @@
 				.btn {
 					@include font-type($CormacEL, 16px, 1, 0.2px);
 					width: 218px; padding: 20px 0; margin-right: 57px;
-					@include respond-to(sm) {
+					@include respond-to(md) {
 						width: 100%; margin-bottom: 25px;
 					}
 				}
 				a {
 					@include font-type($CormacEL, 16px, 1, 0.2px);
-					@include respond-to(sm) {width: 100%; text-align: center; display: block;}
+					@include respond-to(md) {width: 100%; text-align: center; display: block;}
 					i {font-weight: 600; font-size: 20px; margin-right: 5px;}
 				}
 			}
