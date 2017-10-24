@@ -1,3 +1,8 @@
+.popup {
+	width: 80%; display: none;
+	@include respond-to(xs) {width: 70%;}
+}
+
 //http://prntscr.com/h0zgpy
 .popup-main {
 	position: fixed; z-index: 10000; width: 100%; height: 100%; padding-top: 10%;
@@ -56,10 +61,14 @@
 	
 	// LOGIN POPUP – http://prntscr.com/gg2gi8
 	&-login {
-		padding: 70px 0;
+		padding: 70px 0; position: relative;
 		background: #fff; box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
 		@include respond-to(sm) {width: 90%; margin: 0 auto; padding: 40px 0;}
-		@include respond-to(xs) {width: 100%; min-width: 320px;}
+		@include respond-to(xs) {width: 100%; min-width: 300px;}
+
+		&-close {
+			position: absolute; right: 25px; top: 25px;
+		}
 
 		h2 {
 			@include font-type($CormacEL, 32px, 36px, -0.5px); color: $main-color-text; text-align: center;

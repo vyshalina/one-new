@@ -114,6 +114,29 @@
 						text-align: center; 
 						margin: 0 0 25px 0; width: auto;
 					}
+					&.drop-down {
+						position: relative;
+						& > a {
+							&:before, &:after {display: none;}
+							span {
+								display: block; height: 2px; width: 22px; margin: 4px 0;
+								background: #000;
+							}
+						}
+						ul {
+							
+							width: 150px; height: 0; max-height: 0; position: absolute; left: -100px; top: 40px;  overflow: hidden;
+							background: #fff; 
+							transition:max-height 0.7s linear;
+							&.active {
+								height: auto; max-height: 1000px; padding: 10px;
+							}
+							li {margin-bottom: 15px; &:last-child {margin-bottom: 0;}}
+							a {
+								height: 30px; padding-right: 0;
+							}
+						}	
+					}
 					&:first-child {
 						margin-left: 0;
 					}
@@ -122,12 +145,15 @@
 					}
 					
 					a {
-						@include font-type($CormacEL, 16px, 15px, 0.1px); color: $link-color;
+						@include font-type($CormacB, 15px, 1, 0.1px); color: #000;
 						height: 41px; position: relative; display: inline-block; width: auto;
 						cursor: pointer;
 						box-sizing: border-box;
 						transition: .3s ease-out;
-						i {margin-right: 5px; color: $link-color;}
+						i {
+							font-weight: 200; color: #000; font-size: 14px;
+							margin-right: 10px;
+						}
 						&:before, &:after {
 							content: ''; 
 							display: block; height: 3px; width: 0; position: absolute; bottom: 0; 

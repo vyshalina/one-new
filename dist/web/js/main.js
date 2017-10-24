@@ -23,6 +23,23 @@ var app = function ($) {
     $('.js-close_popup').click(function () {
       $('body .popup-main').removeClass('active');
     });
+
+    //dropDown menu - http://prntscr.com/h1da0x
+    $('.js-dropDown').click(function () {
+      $('.menu-top ul .drop-down > ul').toggleClass('active');
+    });
+
+    $('.js-popupButton').click(function () {
+      $('.popup').bPopup({
+        speed: 450,
+        transition: 'slideDown'
+      });
+    });
+
+    $('js-popup-close').bPopup({
+      closeClass: 'popup',
+      follow: [false, false] //x, y
+    });
   });
 
   // ======================================================================== //
