@@ -12609,10 +12609,10 @@ button.close {
 .donation-wr {
   padding-top: 30px; }
   .donation-wr .donation {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
     -webkit-transition: .4s all ease;
     transition: .4s all ease; }
     .donation-wr .donation:hover {
