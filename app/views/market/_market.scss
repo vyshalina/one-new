@@ -363,16 +363,18 @@
 	.goods {
 		display: flex; flex-wrap: wrap;
 
-		margin: -10px; width: calc(100% + 20px);
+		margin: -10px;
 		@include respond-to(sm) {margin: 0 auto;}
 
 		& > li {
 			position: relative;
-			width: calc(25% - 20px); margin: 10px; overflow: hidden;
+			width: 23%; margin: 10px; overflow: hidden;
 			background: #fff; border-radius: 5px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
-
-			@include respond-to(md) {width: calc(50% - 10px); margin: 5px;}
-			@include respond-to(xs) {display: block; width: 100%; margin-bottom: 25px;}
+			
+			@include respond-to(desctop) {width: 23%; margin: 10px;}
+			@include respond-to(lg) {width: 32%; margin: 5px;}
+			@include respond-to(md) {width: 48%; margin: 5px;}
+			@include respond-to(sm) {display: block; width: 100%; margin-bottom: 25px;}
 			
 
 			// ITEM – http://prntscr.com/gg2pz0
@@ -397,7 +399,7 @@
 				padding: 20px;
 				@include respond-to(xs) {display: flex; flex-direction: column; position: relative; width: 100%; padding-right: 5px;}
 
-				h2 {@include font-type($CormacEL, 18px, 26px, -0.5px); color: $main-color-text; color: #000; margin-bottom: 10px;}
+				h2 {@include font-type($CormacEL, 18px, 26px, -0.5px); color: $main-color-text; color: #000; min-height: 60px; margin-bottom: 10px;}
 
 				div {
 					display: flex; justify-content: space-between;
@@ -491,7 +493,7 @@
 			padding-left: 28px;
 			@include respond-to(lg) {width: 49%;}
 			@include respond-to(md){padding-left: 15px;}
-			@include respond-to(sm){padding-left: 0;}
+			@include respond-to(sm){padding-left: 0; width: 100%;}
 
 			h2 {
 				@include font-type($CormacEL, 34px, 38px, 0);
@@ -536,8 +538,10 @@
 					border: 1px solid #edf3f6; border-radius: 5px;
 				}
 				.btn-reserve {
+					display: flex; flex-flow: row nowrap; align-items: center; min-height: 90px;
+					padding: 0 20px; margin: 0 0 15px 0; 
+					background: white; border-radius: 40px;
 					line-height: 1; position: relative;
-					height: auto; display: inline-block; padding: 20px 56px 20px 28px; margin-bottom: 5px;
 					@include respond-to(sm){
 						float: left; padding: 0;
 						background: transparent; box-shadow: none;
@@ -545,9 +549,7 @@
 					}
 					&:first-child {
 						@include respond-to(sm) {width: 48%;}
-						@include respond-to(xs) {
-							width: 100%; margin-bottom: 40px;
-						}	
+						@include respond-to(xs) {width: 100%;}	
 					}
 					&:last-child {
 						margin-bottom: 0; 
@@ -570,21 +572,15 @@
 						@include respond-to(sm){display: none;}
 						i {color: #000;}
 					}
-					figure, section {float: left;}
 					figure {
-						margin-right: 36px; padding-top: 5px;
-						border-radius: 50%;
+						margin-right: 36px;
+						border-radius: 50%; background-size: cover; width: 60px; height: 60px;
 						@include respond-to(md){margin-right: 10px;}
-						@include respond-to(sm) {padding-top: 15px;}
 					}
 					section {
-						@include respond-to(sm) {
-							position: relative; padding-top: 25px; width: calc(100% - 50px)
-						}
 						small {
 							@include font-type($HelveticaL, 10px, 1, 1px); color: #79879e; text-transform: uppercase;
 							display: block; margin-bottom: 8px;
-							@include respond-to(sm) {position: absolute; top: 0; left: -37px;}
 						}
 						
 					}
