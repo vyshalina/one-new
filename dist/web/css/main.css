@@ -18319,6 +18319,7 @@ a {
       margin-bottom: 19px;
       padding: 24px 0;
       clear: both;
+      outline: none;
       border-top: 1px solid #f2f2f2;
       border-bottom: 1px solid #f2f2f2; }
       .product-body > section .btn-gr .btn, .product-body > section .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section .btn-gr button {
@@ -18326,6 +18327,7 @@ a {
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.2px;
+        outline: none;
         width: 218px;
         padding: 20px 0;
         margin-right: 57px; }
