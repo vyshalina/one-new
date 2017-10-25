@@ -7,9 +7,9 @@
 @import '../views/users/tabs';
 @import '../views/users/users';
 @import '../views/funds/funds';
-//@import '../views/funds/funds';
+@import '../views/funds/fund';
 @import '../views/order/booking';
-@import '../views/default/default';
+@import '../views/index/index';
 @import '../views/popup/popup';
 
 
@@ -35,6 +35,8 @@
 // @import '../views/oldbase/new_post';
 
 @import '../views/market/market';
+@import '../views/market/product';
+@import '../views/market/add';
 
 @import '../views/ux/buttons';
 @import '../views/ux/select';
