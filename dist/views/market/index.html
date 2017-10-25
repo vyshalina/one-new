@@ -63,7 +63,7 @@
 		<!-- Application -->
 		<div class="app market">
 			<header class="header header-shop_edit js-header active">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
 							<a href="index.html" class="logo"><img src="../../assets/img/logoBlue.svg"></a>
@@ -102,7 +102,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="filter">
-								<ul class="category">
+								<ul class="filter-category">
 									<li>
 										<input type="checkbox" id="private-ads">
 										<label for="private-ads">Частные объявления</label>
@@ -138,26 +138,34 @@
 
 								 <button class="reset">Сбросить все параметры</button>
 
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="wr">
+			<section class="wr border-b">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="filter">
-								<form class="search">
-									<input type="search">
-									<button type="submit"></button>
+								<form class="filter-search">
+									<input type="search" placeholder="Найти вещь">
+									<button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> Искать</button>
 								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-								<div class="range">
+			<section class="wr border-b">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="filter">
+								<div class="filter-range">
 									<div>
-
 										<div class="select">
 											<a href="#" class="js-selectToogle">В москве<i></i></a>
 											<div class="js-selectLists">
@@ -226,33 +234,13 @@
 				</div>
 			</section>
 
-
-
 			<section class="wr">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="filter">
-								<form>
-									<input type="search">
-									<input type="submit" value="Искать">
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>			
-
-
-			<!-- Search Result -->
-			<section class="wr bg-base">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-
-							<div class="main-title">
 								<div class="select">
-									<a href="#" class="js-selectToogle">Категория товара<i></i></a>
+									<a href="#" class="js-selectToogle">В москве<i></i></a>
 									<div class="js-selectLists">
 										<ul>
 											<li><a href="#">Личные вещи</a></li>
@@ -265,14 +253,24 @@
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Search Result -->
+			<section class="wr bg-base">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
 
 							<ul class="list-products">
 								<li>
 									<article>
 									  <header>
 									    <a href="#">
-									      <figure>
-									        <img src="../../web/img/search-item-6.jpg" alt="">
+									      <figure style="background: url(../../web/img/search-item-6.jpg) center; background-size: cover; width: 280px; height: 280px;">
 									        <figcaption>
 									          <span class="favorites">94%</span>
 									          <span class="sale"></span>
@@ -292,7 +290,7 @@
 									  <footer>
 									    <a href="#">
 									      <figure>
-									        <img src="../../web/img/participant-2.png" alt="">
+									        <span style="background: url(../../web/img/participant-2.png)"></span>
 									        <figcaption>Мария</figcaption>
 									      </figure>
 									    </a>
