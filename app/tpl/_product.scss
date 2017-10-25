@@ -1,25 +1,5 @@
 .product {
-	///////////////////////////////////////////////
-	///////////////////////////////////////////////
-	///////////////////////////////////////////////
-	section {
-		ul {
-			display: flex; flex-wrap: wrap;
-		}
-	}
-
-	footer {
-		display: flex; justify-content: space-between; align-items: center;
-		figure {
-			display: flex; align-items: center;
-		}
-	}
-
-	///////////////////////////////////////////////
-	///////////////////////////////////////////////
-	///////////////////////////////////////////////
 	background: #fff;
-	margin-left: 50px; margin-top: 50px;
 
 	header {
 		a{
@@ -63,7 +43,9 @@
 			@include font-type($HelveticaR, 12px, 16px, 0.5px); color: #000;
 		}
 
-		ul {
+		& > ul {
+			display: flex; flex-wrap: wrap;
+
 			li {
 				display: inline-block; padding: 2px 5px; margin-right: 5px;
 				background: #efefef; border-radius: 9px;
@@ -74,9 +56,13 @@
 	}
 
 	footer {
+		display: flex; justify-content: space-between; align-items: center;
+
 		padding: 15px;
 		a {
 			figure {
+				display: flex; align-items: center;
+
 				img {
 					width: 31px; height: 31px; margin-right: 10px;
 					border-radius: 50%;

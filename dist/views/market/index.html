@@ -32,7 +32,34 @@
 		
 		<!-- Preloader -->
 		<div class="preloader"></div>
-
+		<div class="popup">
+			<!-- Login Form -->
+			<div class="popup-login">
+				<a href="#" class="popup-login-close b-close">
+					<i class="icon icon-close"></i>
+				</a>
+				<h2>Вход</h2>
+				<ul>
+					<li>
+						<form action="#">
+							<input name="email" type="text" placeholder="E-mail">
+							<input name="password" type="password" placeholder="Пароль">
+							<a href="#">Напомнить пароль</a>
+							<ul>
+								<li><a href="#" class="link">Зарегистрироваться</a></li>
+								<li><a href="#" class="btn js-login">Войти</a></li>
+							</ul>
+						</form>
+					</li>
+					<li class="sep"></li>
+					<li>
+						<a href="#" class="social"><i class="fa fa-vk"></i>В контакте</a>
+						<a href="#" class="social"><i class="fa fa-facebook"></i>Facebook</a>
+					</li>
+				</ul>
+			</div>
+		
+		</div>
 		<!-- Application -->
 		<div class="app market">
 			<header class="header header-shop_edit js-header active">
@@ -48,11 +75,20 @@
 									<span></span>
 								</a>
 								<ul>
-									<li><a href="#">О проекте</a></li>
-									<li><a href="#">Фонды</a></li>
-									<li class="active drop-down"><a href="#">Charity Shop <i class="fa fa-angle-down"></i></a></li>
-									<li class="active3"><a href="#">Подать объявление</a></li>
-									<li class="active3"><a href="#">Вещи</a></li>
+									<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Найти вещь</a></li>
+									<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Продать</a></li>
+									<li><a href="#" class="js-popupButton">Войти</a></li>
+									<li class="drop-down">
+										<a href="#" class="js-dropDown">
+											<span></span>
+											<span></span>
+											<span></span>
+										</a>
+										<ul>
+											<li><a href="#">О проекте</a></li>
+											<li><a href="#">Фонды</a></li>
+										</ul>
+									</li>
 								</ul>
 							</nav>
 							
@@ -156,50 +192,7 @@
 				</div>
 			</section>
 
-			<section class="wr bg_white pb_30 mobile_hide">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-			
-							<!-- Partners -->
-							<div class="partners">
-								<ul>
-									<li>
-										<h4>18 фондов уже с нами</h4>
-										<ul>
-											<li><a href="#"><img src="../../assets/img/footer-found_1.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_2.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_3.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_4.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_5.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_6.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_7.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_8.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_9.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_10.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_11.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_12.jpg" alt=""></a></li>
-			                                <li><a href="#"><img src="../../assets/img/footer-found_13.jpg" alt=""></a></li>
-										</ul>
-									</li>
-									<li class="sep"></li>
-									<li>
-										<h4>Партнеры</h4>
-										<ul>
-											<li><a href="#"><img src="../../assets/img/footer-partner_1.png"></a></li>
-											<li><a href="#"><img src="../../assets/img/footer-partner_2.png"></a></li>
-											<li><a href="#"><img src="../../assets/img/footer-partner_3.png"></a></li>
-											<li><a href="#"><img src="../../assets/img/footer-partner_4.png"></a></li>
-											<!-- <li><a href="#"><img src="../../assets/img/footer-partner_5.png"></a></li> -->
-										</ul>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</section>
+			<!--//= ./ui/partners.html-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
