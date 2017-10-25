@@ -17187,14 +17187,11 @@ a {
   background: #F8FAFD; }
   .app .wr {
     position: relative;
-
     padding: 25px 0 23px 0;
-
     background: #fff;
     /*********************************/
     /******** Class Helpers **********/
     /*********************************/ }
-
     .app .wr.bg-base {
       background: #f4f7fb;
       padding: 41px 0; }
@@ -17208,14 +17205,8 @@ a {
       box-shadow: inset 0 0px 11px rgba(0, 0, 0, 0.1); }
     .app .wr.border-b {
       border-bottom: 1px solid #ebebeb; }
-
-    .app .wr .bg-base {
-      background: #f4f7fb; }
-    .app .wr .bg-dark {
-      background: #e9edf5; }
     .app .wr .js-tab_direct-wr {
       background: #f4f7fb; }
-
     .app .wr-light {
       background: #f6f8fb; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
