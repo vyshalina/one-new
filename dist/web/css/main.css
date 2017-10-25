@@ -17057,8 +17057,13 @@ a {
           box-shadow: none; } }
     .app .wr .filter .select > div.active {
       width: 240px; }
-    .app .wr .main_menu.owl-carousel .owl-dots.disabled, .app .wr .owl-carousel .owl-nav.disabled {
-      display: block !important; }
+    @media (min-width: 992px) {
+      .app .wr .main_menu.owl-carousel .owl-dots.disabled, .app .wr .owl-carousel .owl-nav.disabled {
+        display: block !important; }
+        .app .wr .main_menu.owl-carousel .owl-dots.disabled .owl-prev, .app .wr .owl-carousel .owl-nav.disabled .owl-prev {
+          left: -10px; }
+        .app .wr .main_menu.owl-carousel .owl-dots.disabled .owl-next, .app .wr .owl-carousel .owl-nav.disabled .owl-next {
+          right: -10px; } }
     .app .wr-light {
       background: #f6f8fb; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
