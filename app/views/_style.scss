@@ -369,7 +369,9 @@ a {
 
 	.wr {
 		position: relative;
-		background: #EDF2F8;
+		background: #fff;
+		.bg-base {background: #f4f7fb;}
+		.bg-dark {background: #e9edf5;}
 
 		&-light {
 			background: #f6f8fb;
