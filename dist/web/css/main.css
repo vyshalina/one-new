@@ -12837,22 +12837,28 @@ button.close {
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
     -webkit-border-radius: 5px;
     border-radius: 5px; }
+    @media (max-width: 1199px) {
+      .founds-list > li {
+        width: 32%; } }
     @media (max-width: 991px) {
       .founds-list > li {
-        width: 48.5%; } }
+        width: 48.5%;
+        padding: 20px 40px; } }
     @media (max-width: 480px) {
       .founds-list > li {
-        width: 100%; } }
+        width: 100%;
+        padding: 10px; } }
     .founds-list > li a {
       color: #474A4B;
       padding: 20px; }
     .founds-list > li figure {
-      height: 150px; }
+      height: 100px;
+      margin-bottom: 15px; }
       .founds-list > li figure img {
         max-height: 80px; }
     .founds-list > li section span {
       font-family: "HelveticaRegular", sans-serif;
-      margin-top: 20px; }
+      margin-bottom: 15px; }
       .founds-list > li section span.region {
         color: #9d9d9d; }
 
@@ -17107,10 +17113,14 @@ a {
   background: #F8FAFD; }
   .app .wr {
     position: relative;
-    background: #EDF2F8;
+    background: #fff;
     /*********************************/
     /******** Class Helpers **********/
     /*********************************/ }
+    .app .wr .bg-base {
+      background: #f4f7fb; }
+    .app .wr .bg-dark {
+      background: #e9edf5; }
     .app .wr-light {
       background: #f6f8fb; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
