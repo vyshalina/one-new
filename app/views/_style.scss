@@ -387,8 +387,14 @@ a {
 		@media (min-width: 992px) {
 			.main_menu.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
 			    display: block !important;
-			    .owl-prev {left: -10px;}
-			    .owl-next {right: -10px;}
+			    .owl-prev {left: -20px;}
+			    .owl-next {right: -20px;}
+			}
+		}
+		@media (max-width: 991px) {
+			.main_menu.owl-carousel {
+				.owl-prev {left: -10px;}
+				.owl-next {right: -10px;}
 			}
 		}
 
