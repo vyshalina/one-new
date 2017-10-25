@@ -379,7 +379,15 @@ a {
 			border-bottom: 1px solid #ebebeb;
 		}
 
-		.js-tab_direct-wr {background: #f4f7fb;}
+		.js-tab_direct-wr, 
+		&.p-tb {background: #f4f7fb;}
+		.js-selectToogle {font-size: 18px; i {top: 5px;}}
+		.selects.filter {padding: 20px 0;}
+		.main_menu_wrapp {box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.05); position: relative; z-index: 2; @include respond-to(sm) {box-shadow: none;}}
+		.filter .select > div.active {width: 240px;}
+		.main_menu.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+		    display: block !important;
+		}
 
 		&-light {
 			background: #f6f8fb;
@@ -431,4 +439,19 @@ a {
 		&.bg-left {background: url(../img/left-bg.png) no-repeat left 0 #edf2f8;}
 		&.bg-right {background: url(../img/right-bg.png) no-repeat right bottom #edf2f8;}
 	}
+}
+
+
+
+
+
+
+/*********************************/
+/********* DEV ***********/
+/*********************************/
+.donation-wr {
+  padding-top: 30px; }
+
+.donation-wr a{
+  float: right;
 }
