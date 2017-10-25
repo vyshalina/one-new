@@ -19,20 +19,14 @@
 // LISTS
 .founds {
 	&-list {
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		display: flex; justify-content: space-between; flex-wrap: wrap;
-		li {
 
+		li {
 			display: flex; flex-direction: column; justify-content: space-around;
 			figure {display: flex; align-items: center; justify-content: center;}
 			section {display: flex; flex-direction: column;}
 		}
 
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		& > li {
 			text-align: center;
 			width: 23.5%; height: 270px; margin: 10px 0;
@@ -54,7 +48,6 @@
 						margin-bottom: 15px;
 						&.region {color: #9d9d9d;}	
 					}
-					
 				}
 
 				&:hover {.direction {text-decoration: underline;}}
@@ -63,8 +56,6 @@
 	}
 
 	&-menu {
-		& > ul {display: flex; justify-content: space-around;}
-		& > a {align-items: center; justify-content: space-between;}
 
 		position: relative; padding-bottom: 1px;
 
@@ -76,6 +67,7 @@
 		}
 
 		& > a {
+			align-items: center; justify-content: space-between;
 			@include font-type($CormacEL, 22px, 24px, -0.5px); color: #000; letter-spacing: 0.5px;
 			display: none; width: 100%; padding: 20px 10px;
 			border-bottom: 1px solid #d9e4ea;
@@ -92,6 +84,7 @@
 		}
 
 		& > ul {
+			display: flex; justify-content: space-around;
 			padding-top: 25px;
 
 			@include respond-to(md) {
@@ -127,34 +120,15 @@
 	}
 
 	& > a {i {transform: rotate(0deg); transition: .3s ease-in-out;}
-			&.active {i {transform: rotate(-180deg);}}	
-		}
+			&.active {i {transform: rotate(-180deg);}
+		}	
+	}
 
-		& > ul {transition: max-height .3s cubic-bezier(.42,.6,.61,.42);}
+	& > ul {transition: max-height .3s cubic-bezier(.42,.6,.61,.42);}
 }
 
 // LISTS
 .list { 
-	
-	&-projects {
-
-		&.type_2 {
-			display: flex; flex-direction: column;
-			& > li {
-				display: flex; justify-content: space-between;
-				@include respond-to(md) {flex-direction: column;}
-			}
-		}
-	}
-	&-reports {
-		& > li {display: flex; justify-content: space-between;}
-		@include respond-to(md) {flex-direction: column;}
-	}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	&-goods {
 		// ALL GOODS – http://prntscr.com/gg28ww
@@ -238,8 +212,11 @@
 	&-projects {
 		// – http://prntscr.com/goynff
 		&.type_2 {
+			display: flex; flex-direction: column;
 			& > li {
+				display: flex; justify-content: space-between;
 				margin-bottom: 10px; padding: 20px 80px 20px 100px; overflow: hidden;
+				@include respond-to(md) {flex-direction: column;}
 				//@extend .neo-bg; 
 				background: #f6f8fb; border-radius: 5px;
 				@include respond-to(sm) {padding: 20px 25px 20px 25px;}
@@ -309,8 +286,9 @@
 	
 	// 	FOUND-REPORT http://prntscr.com/ggtwon
 	&-reports {
-
+		@include respond-to(md) {flex-direction: column;}
 		& > li {
+			display: flex; justify-content: space-between;
 			padding: 0 0 0 100px; margin-bottom: 10px;
 			&:last-child {margin-bottom: 0;}
 			//@extend .neo-bg;
@@ -339,15 +317,6 @@
 	&-bookmarks {
 
 		& > li {
-			& > ul {display: flex; justify-content: space-between; 
-				& > li {
-					width: 48%; display: flex; flex-flow: column nowrap; justify-content: center;
-					@include respond-to(mobile) {width: 100%;}
-				}
-			@include respond-to(md) {display: flex; flex-direction: column;}}
-		}
-
-		& > li {
 			position: relative; min-height: 137px; padding: 0 101px 0 180px; @extend .neo-bg;
 			@include respond-to(md) {padding-left: 160px; padding-right: 0;}
 			@include respond-to(mobile) {padding: 0;}
@@ -362,13 +331,18 @@
 			}
 
 			& > ul {
+				display: flex; justify-content: space-between; 
 				padding: 30px 0;
-				@include respond-to(md) {padding: 5px 0;}
+				@include respond-to(md) {
+					display: flex; flex-direction: column;
+					padding: 5px 0;
+				}
 				@include respond-to(mobile) {padding: 20px;}
 				
 				& > li {
+					width: 48%; display: flex; flex-flow: column nowrap; justify-content: center;
 					@include respond-to(sm) {background: #fff;}
-					@include respond-to(mobile) {padding: 0; margin-bottom: 25px;}
+					@include respond-to(mobile) {width: 100%;padding: 0; margin-bottom: 25px;}
 
 					&:last-child {text-align: right;}
 
@@ -384,7 +358,6 @@
 							color: #4b5769;
 							display: inline-block; margin-right: 15px;
 							@include respond-to(md) {display: block;}
-
 
 							i {margin-right: 10px;}
 						}

@@ -1,15 +1,6 @@
 // NEW POST
 .new_post {
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	overflow: hidden; padding: 0 200px; padding-bottom: 60px;
 	background: #ffffff; box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
 
@@ -60,6 +51,13 @@
 		padding: 115px 0 0;
 		position: absolute; left: -100px; top: -44px; width: 980px; z-index: 5; overflow: hidden;
 		background: #ffffff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+		transform: translateY(20px);
+		opacity: 0; pointer-events: none;
+
+		&.active {
+			transform: translateY(0);
+			opacity: 1; pointer-events: all;
+		}
 
 		@include respond-to(lg) {width: 920px; left: -190px;}
 		@include respond-to(md) {width: 700px; left: -40px;}
@@ -161,6 +159,13 @@
 			margin: 0 -200px; padding:55px 0;
 			background: #f4fcff;
 			width: 1180px;
+			display: none;
+
+			&.active {
+				display: block;
+				animation: slideUp 0.8s;
+				pointer-events: all;
+			}
 
 			@media (max-width: 1249px) {width: 1140px;}
 			@include respond-to(lg) {width: 940px;}
@@ -196,6 +201,11 @@
 				font-size: 18px; line-height: 22px;
 				i {top: 5px;}
 			}
+		}
+
+		.photos {
+			transition: background 0.4s ease; background: #f7f9ff;
+			&:hover {background: #fff;}
 		}
 
 	}
@@ -252,39 +262,6 @@
 				&:disabled,
 				&[disabled] {&:hover {background: #4489ff; color: #ffffff;}}
 			}
-		}
-	}
-
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-participants {
-		&-wrapper {
-			display: none;
-
-			&.active {
-				display: block;
-				animation: slideUp 0.8s;
-				pointer-events: all;
-			}
-		}
-	}
-
-	&-product {
-		.photos {
-			transition: background 0.4s ease; background: #f7f9ff;
-			&:hover {background: #fff;}
-		}
-	}
-
-	&-dropdown {
-		transform: translateY(20px);
-		opacity: 0; pointer-events: none;
-
-		&.active {
-			transform: translateY(0);
-			opacity: 1; pointer-events: all;
 		}
 	}
 }

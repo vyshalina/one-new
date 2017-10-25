@@ -63,23 +63,7 @@
 }
 
 .company {
-	//////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////
-	&-me {
-		display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center;
-		//@include respond-to(sm) {flex-direction: column; align-items: start;}
-	}
 
-	&-about {
-		display: flex; justify-content: center;
-		address {ul {display: flex;} }
-		@include respond-to(md) {flex-direction: column;}
-	}
-
-	//////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////
 	&-edit {
 		text-align: right;  @include font-type ($CormacEL, 16px, 22px, 0); color: #4b5769; font-weight: 200;
 		margin: 18px 0 10px 0; 
@@ -129,7 +113,9 @@
 	}
 
 	&-me {
+		display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center;
 		text-align: center; margin-bottom: 66px;
+		//@include respond-to(sm) {flex-direction: column; align-items: start;}
 
 		&.figure {
 			margin-bottom: 0;
@@ -170,7 +156,9 @@
 	}
 
 	&-about {
+		display: flex; justify-content: center;
 		padding-bottom: 53px;
+		@include respond-to(md) {flex-direction: column;}
 		section {
 			width: 580px; padding-top: 6px; margin-right: 125px;
 			@include respond-to(md) {width: 100%; padding-left: 0;}
@@ -215,6 +203,7 @@
 				}
 			}
 			ul {
+				display: flex;
 				padding-top: 5px; margin-bottom: 44px;
 				&:last-child {
 					margin-bottom: 0;
@@ -376,19 +365,10 @@
 
 //Filter -- http://prntscr.com/gygctg
 .filter {
-	/////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////////////////////////////////////////////////////////////
+
 	display: flex;
 	@include respond-to(xs) {flex-direction: column;}
-	form {
-		display: flex;
-		.price {display: flex;}
-	}
-
-	/////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////////////////////////////////////////////////////////////
+	
 	padding: 20px 0 40px 0;
 	.select {
 		@include respond-to(xs) {
@@ -410,7 +390,9 @@
 			}
 		}
 	}
+
 	form {
+		display: flex;
 		.search, .price {
 			input {
 				@include font-type ($CormacB, 14px, 20px, 0); 
@@ -424,6 +406,8 @@
 			}
 		}
 		.price {
+			display: flex;
+
 			input {
 				color: #9e9e9e;
 			}
@@ -437,33 +421,6 @@
 	}
 
 	&-result {
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		&_goods {
-			& > li {
-				& > ul {
-					display: flex; align-items: center; justify-content: space-between;
-					@include respond-to(md) {flex-wrap: wrap;}
-
-					& > li {
-						display: flex; align-items: center; justify-content: center;
-						&.view {
-						 flex-direction: column; align-items: start; justify-content: center;
-						}
-					}
-				}
-			}
-		}
-		
-		&_pagination {
-			display: flex; justify-content: center;
-		}
-
-			 
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
 
 		.filter-add {
 			@extend .neo-bg; 
@@ -485,9 +442,12 @@
 			& > li {
 				@extend .neo-bg;
 				display: block; margin: 10px 0 !important; padding: 0 !important; overflow: hidden;
-				
+
 				ul {
+					display: flex; align-items: center; justify-content: space-between;
+					@include respond-to(md) {flex-wrap: wrap;}
 					& > li {
+						display: flex; align-items: center; justify-content: center;
 						font-family: $HelveticaL; font-size: 16px; letter-spacing: 0.2px;
 						position: relative; height: auto; width: 20%;
 						box-sizing: border-box;
@@ -519,6 +479,7 @@
 							@include respond-to(sm) {width: calc(100% - 80px); padding-left: 100px; margin-bottom: 30px;}
 						}
 						&.view {
+							flex-direction: column; align-items: start; justify-content: center;
 							@include font-type ($HelveticaR, 16px, 24px, 0.4px);
 							width: 314px; padding-top: 4px; padding-left: 35px;
 							@include respond-to(lg) {padding-left: 30px;}
@@ -655,6 +616,7 @@
 		}
 
 		&_pagination {
+			display: flex; justify-content: center;
 			padding-top: 25px;
 			li {
 				padding: 0 10px;
@@ -706,20 +668,11 @@
 	}
 
 	&-me {
-		////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////
+
 		display: flex; flex-direction: row; flex-wrap: nowrap;
-		@include respond-to(sm) {flex-direction: column; align-items: start;}
-
-		section {ul {display: flex; @include respond-to(sm) {flex-direction: column; overflow: hidden;}}}
-
-		////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////
 		padding: 40px 0;
-
 		@include respond-to(sm) {
+			flex-direction: column; align-items: start;
 			width: calc(100% + 30px); padding-left: 15px; margin-left: -15px;
 			background: #fff;
 		}
@@ -741,6 +694,8 @@
 			}
 
 			ul {
+				display: flex;
+				@include respond-to(sm) {flex-direction: column; overflow: hidden;}
 				li {
 					@include font-type($HelveticaL, 10px, 1, 1px); color: #89A1B3; text-transform: uppercase;
 					margin-right: 86px;
@@ -835,15 +790,6 @@
 	}
 
 	&-ads {
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		tr {
-			@include respond-to(md) {display: flex; flex-wrap: wrap;}	
-		}
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
 
 		// TABLE
 		font-family: $HelveticaL;
@@ -856,8 +802,8 @@
 
 		tr {
 			position: relative; width: 100%;
-
 			@include respond-to(md) {
+				display: flex; flex-wrap: wrap;
 				width: 100%; margin: 10px 0 !important; padding: 0 10%;
 				border-radius: 5px; background: #f6f8fb;
 			}
@@ -915,7 +861,6 @@
 							}
 						}
 					}
-					
 				}
 				td {
 					@include respond-to(md) {width: 50%;}
@@ -1051,9 +996,7 @@
 										li:last-child {
 											margin-right: 0;
 										}
-
 									}
-
 								}
 
 								span {
@@ -1077,14 +1020,7 @@
 	}
 
 	&-goods {
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		tr {@include respond-to(md) {display: flex; flex-wrap: wrap;}}
 
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
 		font-family: $HelveticaL;
 		width: 100%;
 		border-spacing: 0 10px;  border-collapse: separate;
@@ -1093,8 +1029,9 @@
 
 		tr {
 			position: relative;
-
+			
 			@include respond-to(md) {
+				display: flex; flex-wrap: wrap;
 				width: 100%; margin: 10px 0 !important; padding: 0 10%;
 				border-radius: 5px; background: #f6f8fb;
 			}
@@ -1311,17 +1248,7 @@
 	}
 
 	&-bookmarks {
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		& > li {
-			& > ul {display: flex; justify-content: space-between;
-			@include respond-to(md) {display: flex; flex-direction: column;}}
-		}
-
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////////////////////////////////////
+		
 		margin-top: 25px;
 
 		& > li {
@@ -1339,8 +1266,12 @@
 			}
 
 			& > ul {
+				display: flex; justify-content: space-between;
 				padding: 30px 0;
-				@include respond-to(md) {padding: 5px 0;}
+				@include respond-to(md) {
+					display: flex; flex-direction: column;
+					padding: 5px 0;
+				}
 				@include respond-to(mobile) {padding: 20px;}
 				
 				& > li {

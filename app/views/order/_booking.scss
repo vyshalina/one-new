@@ -3,20 +3,12 @@
 		box-shadow: none; border-bottom: 1px solid #e4e7ea;
 	}
 	&-stap {
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		ul {
-			display: flex;
-			@include respond-to(md) {flex-direction: column;}
-		}
 
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		padding: 27px 0 27px 11px;
 		ul {
+			display: flex;
 			counter-reset: list;
+			@include respond-to(md) {flex-direction: column;}
 			li {
 				font-family: $CormacB; font-size: 22px;
 				position: relative; padding-left: 58px;
@@ -45,35 +37,6 @@
 			}
 		}
 	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-proc {
-		display: flex; justify-content: space-between;
-		@include respond-to(md) {flex-direction: column;}
-
-		header {
-			.wr-soc {
-				ul.soc {
-					display: flex; 
-				}
-			}
-		}
-		
-		section {
-			ul.score {
-				display: flex; 
-				@include respond-to(md) {display: block;}
-			}
-		}
-
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 	&-registration {
 		padding-top: 41px; 
@@ -141,9 +104,11 @@
 		}
 	}
 	
-	
 	&-proc {
+		display: flex; justify-content: space-between;
 		@extend .neo-bg;
+		@include respond-to(md) {flex-direction: column;}
+
 		width: calc(100% + 3px); position: relative; left: -12px; padding-top: 43px !important;
 		& > * {
 			opacity: 0.3; pointer-events: none;
@@ -163,7 +128,7 @@
 				padding-left: 30px;
 			}
 		}
-
+		
 		header {
 			padding-left: 60px; width: 44%;
 			@include respond-to(md) {width: 100%; margin-bottom: 30px;}
@@ -189,6 +154,7 @@
 
 				ul.soc {
 					padding: 7px 0 0 10px;
+					display: flex;
 					li {
 						margin-right: 42px;
 						@include respond-to(xs) {margin-right: 35px;}
@@ -271,11 +237,10 @@
 
 						&:after {
 							content: ''; 
-							display: block; height: 3px; width: 0; position: absolute; bottom: -10px;  transform: translateX(-50%);
+							display: block; height: 3px; width: 0%; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
 							background: $link-color; 
 							transition: width 0.3s ease-in-out;
-						} 
-						&:after {width: 0%; left: 50%;}
+						}
 
 						&:hover {
 							&:after {width: 100%;}
@@ -345,7 +310,9 @@
 			}
 
 			ul.score {
+				display: flex;
 				margin-bottom: 5px;
+				@include respond-to(md) {display: block;}
 				li {
 					margin-right: 99px;
 					@include respond-to(sm) {margin-bottom: 50px;}

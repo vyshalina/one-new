@@ -1,34 +1,13 @@
 // TABS – http://prntscr.com/ggiqj8
 .tabs {
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-main {
-		ul {
-			display: flex; justify-content: space-between;
-			@include respond-to(md) {flex-direction: column;}
-		}
-	}
-
-	&-company {
-		ul {
-			display: flex; justify-content: center;
-			@include respond-to(md) {flex-direction: column;}
-		}
-	}
-
 	&-book {
 		ul {
 			display: flex;
 			@include respond-to(md) {flex-direction: column;}
 		}
 	}
-
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	&-main {
 		@include respond-to(sm) {
 			width: calc(100% + 30px); padding: 0 15px 20px 15px; margin-left: -15px;
@@ -51,7 +30,13 @@
 		}
 
 		ul {
-			@include respond-to(md) {border-bottom: none; @include slide_me();}
+			transition: max-height 0.7s linear;
+			display: flex; justify-content: space-between;
+
+			@include respond-to(md) {
+				flex-direction: column;
+				border-bottom: none; @include slide_me();
+			}
 
 			li {
 				@include respond-to(md) {margin-bottom: 10px; &:last-child {margin-bottom: 0; padding-bottom: 3px;}}
@@ -73,7 +58,7 @@
 			}
 		}
 	}
-
+	
 	&-inner {
 		/*display: inline-block; margin: 25px 0 35px 0;*/
 		padding-left: 20px; 
@@ -98,6 +83,7 @@
 				color: #616060;
 				display: inline-block; padding: 3px 18px 6px; font-family: $CormacEL;
 				border: 1px solid transparent; border-radius: 100px;
+				transition: 0.3s ease-out;
 				
 				&:hover {
 					/*color: $link-color; border-color: $link-color;*/
@@ -105,13 +91,14 @@
 					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 				}
 			}
-			&.active {a {
-				/*color: $link-color; border-color: $link-color;*/
-				color: #4b5769;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-				background: #fff; cursor: default;
-
-				}}
+			&.active {
+				a {
+					/*color: $link-color; border-color: $link-color;*/
+					color: #4b5769;
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+					background: #fff; cursor: default;
+				}
+			}
 		}
 	}
 
@@ -133,7 +120,12 @@
 		}
 
 		ul {
-			@include respond-to(md) {border-bottom: none; @include slide_me();}
+			display: flex; justify-content: center;
+			transition: max-height 0.7s linear;
+			@include respond-to(md) {
+				flex-direction: column;
+				border-bottom: none; @include slide_me();
+			}
 
 			li {
 				text-align: center;
@@ -164,15 +156,8 @@
 						&:after {width: 50%;}
 
 					}
-					
 				}
 			}
 		}
 	}
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-main, &-company {ul {transition: max-height 0.7s linear;}}
-	&-inner {li a {transition: 0.3s ease-out;}}
 }

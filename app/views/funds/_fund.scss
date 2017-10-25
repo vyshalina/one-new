@@ -1,22 +1,7 @@
 .found {
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	&-about {
 		display: flex; @include  respond-to(md) {flex-direction: column;}
-	}
-
-	&-me {
-		display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center;
-		@include respond-to(sm) {flex-direction: column; align-items: start;}
-
-		section {ul {display: flex; @include respond-to(sm) {flex-direction: column; overflow: hidden;}}}
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-about {
 		@extend .neo-bg; padding: 20px 40px 40px 40px;
 
 		header {
@@ -56,9 +41,10 @@
 	}
 
 	&-me {
+		display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center;
 		padding: 40px 0;
-
 		@include respond-to(sm) {
+			flex-direction: column; align-items: start;
 			width: calc(100% + 30px); padding-left: 15px; margin-left: -15px;
 			background: #fff;
 		}
@@ -86,6 +72,9 @@
 			}
 
 			ul {
+				display: flex; 
+				@include respond-to(sm) {flex-direction: column; overflow: hidden;}
+
 				li {
 					@include font-type($HelveticaL, 12px, 1, 1px); color: #89A1B3;
 					margin-right: 25px;
