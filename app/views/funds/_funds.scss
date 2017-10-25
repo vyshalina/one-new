@@ -145,10 +145,10 @@
 			@include respond-to(md) {width: 48.5%;}
 			@include respond-to(xs) {width: 100%;}
 			
-			a {color: ##474A4B; padding: 20px;}
+			a {color: #474A4B; padding: 20px;}
 			figure {
 				height: 150px;
-				img {height: 90px;}
+				img {max-height: 80px;}
 			}
 			section {
 				span {

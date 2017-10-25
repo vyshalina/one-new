@@ -12843,11 +12843,13 @@ button.close {
     @media (max-width: 480px) {
       .founds-list > li {
         width: 100%; } }
+    .founds-list > li a {
+      color: #474A4B;
+      padding: 20px; }
     .founds-list > li figure {
-      height: 100px; }
+      height: 150px; }
       .founds-list > li figure img {
-        width: 130px;
-        height: auto; }
+        max-height: 80px; }
     .founds-list > li section span {
       font-family: "HelveticaRegular", sans-serif;
       margin-top: 20px; }
