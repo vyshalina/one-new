@@ -21,7 +21,7 @@
 	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
 
 	a.logo {
-		margin-top: 20px;
+		padding: 18px 0 0 35px;
 		@include respond-to(md) {
 			z-index: 9995;
 		}
@@ -117,9 +117,10 @@
 					&.drop-down {
 						position: relative;
 						& > a {
+							padding-right: 0;
 							&:before, &:after {display: none;}
 							span {
-								display: block; height: 2px; width: 22px; margin: 4px 0;
+								display: block; height: 2px; width: 23px; margin-bottom: 5px;
 								background: #000;
 							}
 						}
