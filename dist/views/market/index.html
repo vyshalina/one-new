@@ -96,41 +96,78 @@
 					</div>
 				</div>
 			</header>
-			<section class="wr bg_white">
+
+			<section class="wr bg-dark">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-			
-							<!-- Breadcrumbs -->
-							<nav class="breadcrumbs">
-								<ul class="navigation">
-									<li><a href="#">Главная</a></li>
-									<li><a href="#">Фонды</a></li>
-									<li><a href="#">Животные</a></li>
-									<li><a href="#">Ника</a></li>
+							<div class="filter">
+								<ul class="category">
+									<li>
+										<input type="checkbox" id="private-ads">
+										<label for="private-ads">Частные объявления</label>
+									</li>
+
+									<li>
+										<input type="checkbox" id="from-shop">
+										<label for="from-shop">От магазинов</label>
+									</li>
+									<li>
+										<input type="checkbox" id="auction">
+										<label for="auction">Аукционы</label>
+									</li>
+									<li>
+										<input type="checkbox" id="stars">
+										<label for="stars">От звезд</label>
+									</li>
 								</ul>
-								<ul class="share">
-									<li>Поделиться:</li>
-									<li><a href="#"><i class="fa fa-vk"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								</ul>
-							</nav>
-			
+
+								<div class="select">
+									<a href="#" class="js-selectToogle">В москве<i></i></a>
+									<div class="js-selectLists">
+										<ul>
+											<li><a href="#">Личные вещи</a></li>
+											<li><a href="#">Электроника</a></li>
+											<li><a href="#">Спорт</a></li>
+											<li><a href="#">Дом и дача</a></li>
+											<li><a href="#">Детям</a></li>
+											<li><a href="#">Бизнесу</a></li>
+										</ul>
+									</div>
+								</div>
+
+								 <button class="reset"></button>
+
+
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Search Result -->
 			<section class="wr">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="filter">
+								<form>
+									<input type="search">
+									<input type="submit" value="Искать">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
+
+
+			<!-- Search Result -->
+			<section class="wr bg-base">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 
 							<div class="main-title">
-								<h1>Личные вещи</h1>
 								<div class="select">
 									<a href="#" class="js-selectToogle">Категория товара<i></i></a>
 									<div class="js-selectLists">
