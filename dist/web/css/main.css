@@ -13378,7 +13378,8 @@ button.close {
     -webkit-border-bottom-left-radius: 4px;
     border-bottom-left-radius: 4px;
     -webkit-border-top-left-radius: 4px;
-    border-top-left-radius: 4px; }
+    border-top-left-radius: 4px;
+    background-size: cover; }
     @media (max-width: 400px) {
       .list-bookmarks > li figure {
         width: 100%;
@@ -13412,6 +13413,8 @@ button.close {
           margin-bottom: 10px; } }
       .list-bookmarks > li > ul > li h3 a {
         color: #000; }
+        .list-bookmarks > li > ul > li h3 a:hover {
+          text-decoration: underline; }
     .list-bookmarks > li > ul > li ul li {
       color: #4b5769;
       display: inline-block;
@@ -13459,6 +13462,8 @@ button.close {
     background: #ffffff;
     -webkit-border-radius: 50%;
     border-radius: 50%; }
+    .list-bookmarks > li > a.fav:hover {
+      border: 1px solid #ccc; }
     @media (max-width: 991px) {
       .list-bookmarks > li > a.fav {
         position: absolute;
@@ -17148,6 +17153,8 @@ a {
       background: #f4f7fb; }
     .app .wr .bg-dark {
       background: #e9edf5; }
+    .app .wr .js-tab_direct-wr {
+      background: #f4f7fb; }
     .app .wr-light {
       background: #f6f8fb; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
@@ -19493,6 +19500,8 @@ a {
           line-height: 1;
           letter-spacing: -0.5px;
           color: #000; }
+      .market .goods > li article ul.item-info li:first-child {
+        min-height: 120px; }
       .market .goods > li article .icon {
         margin-right: 10px; }
       .market .goods > li article .price {
@@ -19501,7 +19510,7 @@ a {
         line-height: 1;
         letter-spacing: -0.5px;
         color: #000;
-        padding-top: 10px; }
+        padding-top: 20px; }
     .market .goods > li .like {
       display: none;
       width: 45px;
