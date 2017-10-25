@@ -144,10 +144,11 @@
 			background: #fff; box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05); border-radius: 5px;
 			@include respond-to(md) {width: 48.5%;}
 			@include respond-to(xs) {width: 100%;}
-
+			
+			a {color: ##474A4B; padding: 20px;}
 			figure {
-				height: 100px;
-				img {width: 130px; height: auto;}
+				height: 150px;
+				img {height: 90px;}
 			}
 			section {
 				span {
