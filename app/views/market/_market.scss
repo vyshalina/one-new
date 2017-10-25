@@ -413,8 +413,9 @@
 
 					& > span {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000;}
 				}
+				ul.item-info {li:first-child {min-height: 120px;}}
 				.icon {margin-right: 10px;}
-				.price {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000; padding-top: 10px;}
+				.price {@include font-type($CormacEL, 18px, 1, -0.5px); color: #000; padding-top: 20px;}
 			}
 				
 			
