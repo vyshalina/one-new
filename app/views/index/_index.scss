@@ -1,3 +1,12 @@
+//ПЕРЕНЕСТИ В ОБЩИЕ СТИЛИ!!
+.container {
+	@media all and (min-width: 1250px) {
+		width: 1210px;
+	}
+}
+////////////////////////////
+
+
 .app.index 	{
 	padding-top: 0;
 	.header {
@@ -24,8 +33,215 @@
 
 // INTRO LANDING - http://prntscr.com/h2bdli
 .intro {
-	width: 100%; height: 300px;
-	background: url(../../web/img/index/intro.png) no-repeat; background-size: cover;	
+	width: 100%; height: auto; position: relative;
+	background: url(../../web/img/index/intro.png) no-repeat center; background-size: cover;
+
+	&-body {
+		color: #fff;
+		position: relative; padding: 145px 0 64px 100px;
+		header {
+			h1 {
+				@include font-type($CormacB, 42px, 56px, 0px); 
+				color: #fff; margin-top: 0; margin-bottom: 23px;
+			}
+			p {
+				@include font-type($CormacB, 26px, 32px, 0px); 
+				margin-bottom: 87px;
+			}
+			a {
+				@include font-type($CormacB, 16px, 1px, 0px); color: #fff;
+				&:after {
+					content: '';
+					position: absolute; top: 100%;
+					border-bottom: 1px solid #fff;
+					transition: all 0.4s;
+				}
+				&:after {right: 100%; left: 0;}
+				&:hover:after {right: 0;}
+				&:hover i {transform: translateX(5px);}
+
+				i {color: #fff; transition: all 0.4s; transform: translateX(0);}	
+			}
+		}
+
+		section {
+			position: absolute; right: 24px; top: 184px;
+			p {
+				@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
+				position: relative;
+				span {
+					position: absolute; top: -22px; left: -26px; 
+					@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
+					i {margin-right: 11px;}
+				}
+			}
+		}
+	}
+
+	.help-menu {
+		position: relative; z-index: 2; bottom: -28px;
+	}
+
+}
+
+//MENU IN INTRO http://prntscr.com/h2dmhm
+.help-menu {
+	display: flex;
+	
+	width: 984px; height: 64px; margin: 0 auto;
+	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+	li {
+		height: inherit; margin-right: 11px;
+		transition: all .4s ease;
+	
+		&.active, &:hover {
+			a {
+				color: #fff;
+				background: $btn-color; border-radius: 100px; 
+
+				i {color: #fff;}
+			}
+		}
+		&:last-child {margin-right: 0;}
+
+		a {
+			color: $link-color; @include font-type($CormacEL, 18px, 1px, 0px);
+			display: inline-block; height: inherit; width: 238px; padding: 28px 0 0 35px; position: relative;
+			transition: all .5s ease;
+
+			i {
+				color: $link-color; font-size: 30px;
+				position: absolute; right: 21px; top: 16px;
+				transition: all .5s ease;
+			} 
+		}
+	}
+}
+
+
+.list {
+	&-promotion {
+		display: flex; justify-content: space-around;
+	}
+}
+
+//PROMOTION - http://prntscr.com/h2dye8
+.promotion {
+	section {
+		display: flex; justify-content: center;
+		padding-top: 61px; margin-bottom: 15px;
+
+		p {
+			color: #000;
+			position: relative;
+			@include font-type($CormacB, 64px, 1, 0px);
+
+			& > i {
+				color: $link-color; font-size: 24px; font-weight: 600;
+				position: absolute; top: 22px; left: -20px;
+			}
+			span {
+				position: absolute; top: 7px; right: -96px; width: 90px;
+				@include font-type($CormacEL, 18px, 1, 0px);
+				i {color: #000; font-size: 15px; font-weight: 600;}
+			}
+		}
+	}
+	& > p {
+		@include font-type($HelveticaR, 16px, 22px, 0.3px); text-align: center; color: #000;
+	}
+}
+
+// NEWS in Index - http://prntscr.com/h2fk7d
+.news {
+	display: flex;
+	&-block {
+		&_single, &_several header {
+			& > a {
+				position: relative; display: inline-block;
+				transition: all .4s ease;
+				&:hover {box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);}
+
+				section {
+					display: flex; flex-direction: column; justify-content: end;
+
+					position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+				}
+			}
+		}
+
+		&_single {
+			section {
+				padding-left: 47px; padding-bottom: 40px;
+				h2 {
+					@include font-type($CormacB, 54px, 1, 0); color: #fff;
+					margin-bottom: 24px;
+				}
+				p {
+					@include font-type($CormacB, 18px, 24px, 0); color: #fff;
+					padding-left: 4px;
+				}
+			}
+		}
+
+		&_several {
+			section {
+				padding-left: 39px;
+				h2 {
+					@include font-type($CormacB, 38px, 46px, 0px); color: #fff;
+					margin-bottom: 17px;
+
+				}
+				p {
+					@include font-type($CormacB, 18px, 24px, 0); color: #fff;
+				}
+			}
+
+			header {
+				section {
+					padding-bottom: 29px;
+				}
+			}
+			footer {
+				display: flex; justify-content: space-between;
+				
+				& > a {
+					position: relative;
+					transition: all .4s ease;
+					&:hover {box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);}
+
+					section {
+						display: flex; flex-direction: column;
+
+						position: absolute; bottom: 11px; left: 0; min-height: 163px;
+						h2 {margin-bottom: 11px;}
+						
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+.main-category {
+	display: flex; justify-content: space-between;
+	&-block {
+		& > a {
+			position: relative; display: inline-block;
+			transition: all .4s ease;
+			&:hover {box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2)}
+
+			section {
+				display: flex; flex-direction: column;
+				position: absolute;
+
+				h2 {@include font-type($CormacB, 54px, 1, 0); color: #fff;}
+				p {@include font-type($CormacB, 22px, 1, 0); color: #fff;}
+			}
+		}
+	}
 }
 
 

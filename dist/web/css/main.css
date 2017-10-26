@@ -302,7 +302,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -158px -127px;
+  background-position: -159px -114px;
   width: 11px;
   height: 12px; }
 
@@ -368,7 +368,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -155px -153px;
+  background-position: -168px -153px;
   width: 11px;
   height: 11px; }
 
@@ -392,7 +392,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-comment {
   background-image: url(../img/sprite.png);
-  background-position: -145px -114px;
+  background-position: -130px -153px;
   width: 13px;
   height: 13px; }
 
@@ -446,13 +446,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-header_search-white {
   background-image: url(../img/sprite.png);
-  background-position: -158px -114px;
+  background-position: -158px -131px;
   width: 12px;
   height: 11px; }
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -143px -153px;
+  background-position: -156px -153px;
   width: 12px;
   height: 11px; }
 
@@ -470,7 +470,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -130px -153px;
+  background-position: -143px -153px;
   width: 13px;
   height: 12px; }
 
@@ -512,7 +512,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-pencil {
   background-image: url(../img/sprite.png);
-  background-position: -145px -127px;
+  background-position: -145px -131px;
   width: 13px;
   height: 13px; }
 
@@ -524,13 +524,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-quotes-left {
   background-image: url(../img/sprite.png);
-  background-position: -28px -187px;
+  background-position: 0px -187px;
   width: 28px;
   height: 28px; }
 
 .icon-quotes-right {
   background-image: url(../img/sprite.png);
-  background-position: 0px -187px;
+  background-position: -28px -187px;
   width: 28px;
   height: 28px; }
 
@@ -545,6 +545,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -37px -77px;
   width: 37px;
   height: 37px; }
+
+.icon-shield {
+  background-image: url(../img/sprite.png);
+  background-position: -145px -114px;
+  width: 14px;
+  height: 17px; }
 
 .icon-tape {
   background-image: url(../img/sprite.png);
@@ -566,7 +572,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -166px -153px;
+  background-position: -179px -153px;
   width: 10px;
   height: 10px; }
 
@@ -13426,6 +13432,10 @@ button.close {
         .booking-proc section .info .btn-gr a:hover:after {
           width: 50%; }
 
+@media all and (min-width: 1250px) {
+  .container {
+    width: 1210px; } }
+
 .app.index {
   padding-top: 0; }
   .app.index .header {
@@ -13446,9 +13456,328 @@ button.close {
 
 .intro {
   width: 100%;
-  height: 300px;
-  background: url(../../web/img/index/intro.png) no-repeat;
+  height: auto;
+  position: relative;
+  background: url(../../web/img/index/intro.png) no-repeat center;
   background-size: cover; }
+  .intro-body {
+    color: #fff;
+    position: relative;
+    padding: 145px 0 64px 100px; }
+    .intro-body header h1 {
+      font-family: "cormac-book", sans-serif;
+      font-size: 42px;
+      line-height: 56px;
+      letter-spacing: 0px;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 23px; }
+    .intro-body header p {
+      font-family: "cormac-book", sans-serif;
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      margin-bottom: 87px; }
+    .intro-body header a {
+      font-family: "cormac-book", sans-serif;
+      font-size: 16px;
+      line-height: 1px;
+      letter-spacing: 0px;
+      color: #fff; }
+      .intro-body header a:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        border-bottom: 1px solid #fff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s; }
+      .intro-body header a:after {
+        right: 100%;
+        left: 0; }
+      .intro-body header a:hover:after {
+        right: 0; }
+      .intro-body header a:hover i {
+        -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+        transform: translateX(5px); }
+      .intro-body header a i {
+        color: #fff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0); }
+    .intro-body section {
+      position: absolute;
+      right: 24px;
+      top: 184px; }
+      .intro-body section p {
+        font-family: "HelveticaMedium", sans-serif;
+        font-size: 26px;
+        line-height: 1;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        position: relative; }
+        .intro-body section p span {
+          position: absolute;
+          top: -22px;
+          left: -26px;
+          font-family: "cormac-book", sans-serif;
+          font-size: 18px;
+          line-height: 1px;
+          letter-spacing: 0px;
+          text-transform: none; }
+          .intro-body section p span i {
+            margin-right: 11px; }
+  .intro .help-menu {
+    position: relative;
+    z-index: 2;
+    bottom: -28px; }
+
+.help-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 984px;
+  height: 64px;
+  margin: 0 auto;
+  background: #fff;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+  .help-menu li {
+    height: inherit;
+    margin-right: 11px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease; }
+    .help-menu li.active a, .help-menu li:hover a {
+      color: #fff;
+      background: #4489ff;
+      -webkit-border-radius: 100px;
+      border-radius: 100px; }
+      .help-menu li.active a i, .help-menu li:hover a i {
+        color: #fff; }
+    .help-menu li:last-child {
+      margin-right: 0; }
+    .help-menu li a {
+      color: #4489ff;
+      font-family: "Cormac-ExtraLight", sans-serif;
+      font-size: 18px;
+      line-height: 1px;
+      letter-spacing: 0px;
+      display: inline-block;
+      height: inherit;
+      width: 238px;
+      padding: 28px 0 0 35px;
+      position: relative;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+      .help-menu li a i {
+        color: #4489ff;
+        font-size: 30px;
+        position: absolute;
+        right: 21px;
+        top: 16px;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease; }
+
+.list-promotion {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.promotion section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 61px;
+  margin-bottom: 15px; }
+  .promotion section p {
+    color: #000;
+    position: relative;
+    font-family: "cormac-book", sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 0px; }
+    .promotion section p > i {
+      color: #4489ff;
+      font-size: 24px;
+      font-weight: 600;
+      position: absolute;
+      top: 22px;
+      left: -20px; }
+    .promotion section p span {
+      position: absolute;
+      top: 7px;
+      right: -96px;
+      width: 90px;
+      font-family: "Cormac-ExtraLight", sans-serif;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: 0px; }
+      .promotion section p span i {
+        color: #000;
+        font-size: 15px;
+        font-weight: 600; }
+
+.promotion > p {
+  font-family: "HelveticaRegular", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #000; }
+
+.news {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .news-block_single > a, .news-block_several header > a {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease; }
+    .news-block_single > a:hover, .news-block_several header > a:hover {
+      -webkit-box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); }
+    .news-block_single > a section, .news-block_several header > a section {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -webkit-justify-content: end;
+      -ms-flex-pack: end;
+      justify-content: end;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; }
+  .news-block_single section {
+    padding-left: 47px;
+    padding-bottom: 40px; }
+    .news-block_single section h2 {
+      font-family: "cormac-book", sans-serif;
+      font-size: 54px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #fff;
+      margin-bottom: 24px; }
+    .news-block_single section p {
+      font-family: "cormac-book", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #fff;
+      padding-left: 4px; }
+  .news-block_several section {
+    padding-left: 39px; }
+    .news-block_several section h2 {
+      font-family: "cormac-book", sans-serif;
+      font-size: 38px;
+      line-height: 46px;
+      letter-spacing: 0px;
+      color: #fff;
+      margin-bottom: 17px; }
+    .news-block_several section p {
+      font-family: "cormac-book", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #fff; }
+  .news-block_several header section {
+    padding-bottom: 29px; }
+  .news-block_several footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .news-block_several footer > a {
+      position: relative;
+      -webkit-transition: all .4s ease;
+      transition: all .4s ease; }
+      .news-block_several footer > a:hover {
+        -webkit-box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); }
+      .news-block_several footer > a section {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        bottom: 11px;
+        left: 0;
+        min-height: 163px; }
+        .news-block_several footer > a section h2 {
+          margin-bottom: 11px; }
+
+.main-category {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .main-category-block > a {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease; }
+    .main-category-block > a:hover {
+      -webkit-box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); }
+    .main-category-block > a section {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute; }
+      .main-category-block > a section h2 {
+        font-family: "cormac-book", sans-serif;
+        font-size: 54px;
+        line-height: 1;
+        letter-spacing: 0;
+        color: #fff; }
+      .main-category-block > a section p {
+        font-family: "cormac-book", sans-serif;
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: 0;
+        color: #fff; }
 
 .carousel .navigation {
   display: -webkit-box;
