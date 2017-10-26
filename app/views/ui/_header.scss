@@ -21,6 +21,7 @@
 	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;}
 
 	a.logo {
+		&.white {display: none;}
 		@include respond-to(md) {
 			z-index: 9995;
 		}
