@@ -67,6 +67,12 @@ a {
 	}
 }
 
+.container {
+	@media all and (min-width: 1250px) {
+		width: 1210px;
+	}
+}
+
 // – http://prntscr.com/gg2bw7
 .styled_checkbox-1 {
 

@@ -1,11 +1,9 @@
-.btn-new {
-	&.white {
-		@include font-type($CormacB, 16px, 1, 0); color: #000;
-		padding: 20px 23px 21px 27px;
-		background: #fff;  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 100px;
+.btn-white {
+	@include font-type($CormacB, 16px, 1, 0); color: #000;
+	padding: 20px 23px 21px 27px;
+	background: #fff;  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 100px;
 
-		i {margin-left: 12px;}
-	}
+	i {margin-left: 12px;}
 }
 .btn-wrapp {
 	display: flex; justify-content: center;
@@ -42,21 +40,6 @@
 
 	&.shadow {
 		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-	}
-
-	.land & {
-		@include font-type($CormacEL, 20px, 20px, 0.5px); letter-spacing: -0.5px;
-		padding: 16px 30px 14px 30px; margin: 0 10px;
-		@include respond-to(sm) {margin: 10px auto; width: 60%;}
-		@include respond-to(xs) {width: 90%;}
-		i {
-			margin-right: 15px; position: relative; top: -1px;
-		}
-
-		&:hover {
-			i.icon-header_plus-white {background: url('../img/header_plus.png') 0 0 no-repeat;}
-			i.icon-header_search-white {background: url('../img/header_search.png') 0 0 no-repeat;}
-		}
 	}
 
 	&.white {
