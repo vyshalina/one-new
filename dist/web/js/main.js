@@ -5,41 +5,44 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 var app = function ($) {
 
   $(function () {
-    $('#js-registration').click(function () {
-      $('.booking-proc section > form').addClass('hide');
-      $('.booking-proc section .verification').addClass('active');
-    });
+    // $('#js-registration').click(function(){
+    //     $('.booking-proc section > form').addClass('hide');
+    //     $('.booking-proc section .verification').addClass('active');
+    // });
 
-    $('#js-confirm').click(function () {
-      $('.booking-proc section .verification > p').addClass('active');
-      $('.booking-proc section .verification > .form').addClass('hide');
-      $('.reservation .booking-proc').addClass('active');
-    });
+    // $('#js-confirm').click(function(){
+    //     $('.booking-proc section .verification > p').addClass('active');
+    //     $('.booking-proc section .verification > .form').addClass('hide');
+    //     $('.reservation .booking-proc').addClass('active');
+    // });
 
     //popUp
     $('.js-poPup').click(function () {
       $('body .popup-main').addClass('active');
+      return false;
     });
     $('.js-close_popup').click(function () {
       $('body .popup-main').removeClass('active');
+      return false;
     });
 
     //dropDown menu - http://prntscr.com/h1da0x
-    $('.js-dropDown').click(function () {
-      $('.menu-top ul .drop-down > ul').toggleClass('active');
-    });
+    // $('.js-dropDown').click(function(){
+    //     $('.menu-top ul .drop-down > ul').toggleClass('active');
+    // });
 
-    $('.js-popupButton').click(function () {
-      $('.popup').bPopup({
-        speed: 450,
-        transition: 'slideDown'
-      });
-    });
+    // $('.js-popupButton').click(function() {
+    //   $('.popup').bPopup({
+    //     speed: 450,
+    //     transition: 'slideDown'
+    //   });
 
-    $('js-popup-close').bPopup({
-      closeClass: 'popup',
-      follow: [false, false] //x, y
-    });
+    // });  
+
+    // $('js-popup-close').bPopup({
+    //       closeClass:'popup',
+    //       follow: [false, false]
+    //   });
   });
 
   // ======================================================================== //

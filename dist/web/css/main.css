@@ -16972,15 +16972,26 @@ a {
           @media (max-width: 991px) {
             .product-body > section .btn-company .btn-reserve figure {
               margin-right: 10px; } }
-        .product-body > section .btn-company .btn-reserve section small {
-          font-family: "HelveticaLight", sans-serif;
-          font-size: 10px;
-          line-height: 1;
-          letter-spacing: 1px;
-          color: #79879e;
-          text-transform: uppercase;
-          display: block;
-          margin-bottom: 8px; }
+        .product-body > section .btn-company .btn-reserve section {
+          padding: 20px 0; }
+          .product-body > section .btn-company .btn-reserve section a {
+            margin-bottom: 10px;
+            display: block; }
+          .product-body > section .btn-company .btn-reserve section small {
+            font-family: "HelveticaLight", sans-serif;
+            font-size: 10px;
+            line-height: 1;
+            letter-spacing: 1px;
+            color: #79879e;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px; }
+          .product-body > section .btn-company .btn-reserve section div a {
+            font-size: 12px;
+            color: #000;
+            text-decoration: underline; }
+            .product-body > section .btn-company .btn-reserve section div a:hover {
+              text-decoration: none; }
     .product-body > section .btn-gr {
       margin-bottom: 19px;
       padding: 24px 0;
@@ -18735,7 +18746,6 @@ a {
     font-size: 16px;
     line-height: 80px;
     letter-spacing: 0;
-    height: 80px;
     background: #fff;
     -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
