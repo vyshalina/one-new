@@ -29,6 +29,24 @@
 			&.white {display: inline-block;}
 		}
 	}
+
+	//Секция с выпадающими списками на главной - http://prntscr.com/h2ns22
+	.section-group {
+		display: flex; justify-content: center;
+
+		padding-top: 27px;
+		.select-catalog {
+			margin: 0 31px;
+			& > a {
+				font-size: 18px; letter-spacing: 0;
+				i {
+					font-size: 16px; color: #000;
+				}
+			}
+		}
+	}
+
+
 }
 
 // INTRO LANDING - http://prntscr.com/h2bdli
@@ -78,22 +96,22 @@
 		}
 	}
 
-	.help-menu {
-		position: relative; z-index: 2; bottom: -28px;
-	}
 
 }
 
 //MENU IN INTRO http://prntscr.com/h2dmhm
 .help-menu {
 	display: flex;
+	position: relative; z-index: 2; bottom: -28px; width: 984px; height: 64px; margin: 0 auto;
+	@include respond-to(lg) {width: 95%;}
 	
-	width: 984px; height: 64px; margin: 0 auto;
+	
 	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 
 	li {
 		height: inherit; margin-right: 11px;
 		transition: all .4s ease;
+		@include respond-to(lg) {width: 25%;}
 	
 		&.active, &:hover {
 			a {
@@ -109,6 +127,7 @@
 			color: $link-color; @include font-type($CormacEL, 18px, 1px, 0px);
 			display: inline-block; height: inherit; width: 238px; padding: 28px 0 0 35px; position: relative;
 			transition: all .5s ease;
+			@include respond-to(lg) {width: 100%;}
 
 			i {
 				color: $link-color; font-size: 30px;
@@ -168,11 +187,15 @@
 
 					position: absolute; left: 0; right: 0; top: 0; bottom: 0;
 				}
+				figure {max-width: 100%;}
 			}
 		}
 
 		&_single {
+			width: 50%;
+			& > a {width: 100%;}
 			section {
+				width: 100%;
 				padding-left: 47px; padding-bottom: 40px;
 				h2 {
 					@include font-type($CormacB, 54px, 1, 0); color: #fff;
@@ -186,6 +209,7 @@
 		}
 
 		&_several {
+			width: 50%;
 			section {
 				padding-left: 39px;
 				h2 {
@@ -199,6 +223,7 @@
 			}
 
 			header {
+				& > a {width: 100%;}
 				section {
 					padding-bottom: 29px;
 				}
@@ -207,7 +232,7 @@
 				display: flex; justify-content: space-between;
 				
 				& > a {
-					position: relative;
+					position: relative; width: 100%;
 					transition: all .4s ease;
 					&:hover {box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);}
 
@@ -218,6 +243,7 @@
 						h2 {margin-bottom: 11px;}
 						
 					}
+					figure {max-width: 100%;}
 				}
 				
 			}
@@ -227,7 +253,11 @@
 
 .main-category {
 	display: flex; justify-content: space-between;
+
+	padding-top: 27px;
 	&-block {
+		&.first {width: 58%;}
+		&.second {width: 41%;}
 		& > a {
 			position: relative; display: inline-block;
 			transition: all .4s ease;
@@ -235,9 +265,12 @@
 
 			section {
 				display: flex; flex-direction: column;
-				position: absolute;
+				position: absolute; left: 50px; bottom: 47px; width: 90%;
 
-				h2 {@include font-type($CormacB, 54px, 1, 0); color: #fff;}
+				h2 {
+					@include font-type($CormacB, 54px, 1, 0); color: #fff;
+					margin-bottom: 19px;
+				}
 				p {@include font-type($CormacB, 22px, 1, 0); color: #fff;}
 			}
 		}
@@ -250,111 +283,27 @@
 //-----//!!!ПОЧИСТИТЬ .carousel КАК ЗАРАБОТАЕТ!!!//------//
 .carousel {
 	.navigation {display: flex; justify-content: center;}
-	.owl-dots {
-		display: flex; justify-content: start;
-		@include respond-to(md) {justify-content: center;}
-	}
-
-	&-testimonials_1,
-	&-testimonials_2 {
-		.carousel-item {
-			display: flex; justify-content: space-around;
-			@include respond-to(sm) {flex-direction: column;}
-		}
-
-		.navigation {margin-top: 50px !important;}
-	}
-
-	&-testimonials_1 {
-		figure {
-			display: flex;
-			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
-		}
-	}
-}
-.carousel {
-	.carousel-wrap {}
-	.carousel-item {}
-	
 	// nav + owl styles
-	.navigation,
-	.owl-dots {
-		margin-top: 20px;
+	.navigation, .owl-dots {
+		margin-top: 55px;
 
-		li, 
-		.owl-dot {
+		li,  .owl-dot {
 			width: 19px; height: 8px; margin: 0 5px;
 			background: #cdeaf6; border-radius: 10px; cursor: pointer;
+			transition: all .2s ease; transform: translateY(0);
 
 			&.active {background: #4489ff; &:hover {cursor: default;}}
-		}
-	}
-	.owl-dots {
-		padding-left: 60px;
-		@include respond-to(md) {padding-left: 0;}
-	}
-	
-	// modules
-	&-found {
-		width: 630px; position: relative; left: -19px;
-		@include respond-to(md) {width: 100%; padding-top: 40px; clear: both; left: 0;}
-		.carousel-item {
-			text-align: center;
-			@include respond-to(lg) {padding: 20px;}
-
-			figure {
-				width: 140px; margin: 0 auto 48px auto;
-				border-radius: 50%;
-
-				img {
-					width: 140px; height: 140px; overflow: hidden;
-				}
-				figcaption {
-					margin-top: 16px; letter-spacing: 0.2px;
-					@include font-type($CormacEL, 16px, 1, 0.4px); font-weight: 200;
-				}
-			}
-		}
-
-		.owl-dots {
-			padding-left: 50px;
-		}
-	}
-
-	&-testimonials_1,
-	&-testimonials_2 {
-		.carousel-wrap {position: relative;}
-		.carousel-item {
-			position: absolute; top: 0; left: 0; width: 100%;
-
-			figure {
-				figcaption {
-					@include font-type($CormacEL, 34px, 43px, 0);
-					@include respond-to(sm) {br {display: none;}}
-
-					span {
-						@include font-type($CormacEL, 16px, 24px, 0.5px); color: #4b5769;
-						width: 180px; color: #4b5769 !important;
-						display: block; margin-top: 20px;
-						@include respond-to(sm) {width: 100%;}
-					}
-				}
-			}
-
-			section {
-				width: 55%;
-				@include respond-to(sm) {width: 100%;}
-				p {
-					font-size: 16px; line-height: 28px; letter-spacing: 1px; color: #4b5769; font-family: $HelveticaL;;
-					@include respond-to(sm) {text-align: center; margin: 0 20px;}
-				}
-			}
+			&:hover {background: #4489ff; transform: translateY(-3px);}
+			&:active {transform: translateY(0);}
+			&.active {transform: translateY(0); &:hover {cursor: default;}}
 		}
 	}
 
 	&-testimonials_1 {
+		padding: 55px 0 32px 0;
 		.carousel-wrap {
-			min-height: 160px;
+			position: relative;
+			min-height: 160px; 
 			@include respond-to(md) {height: 250px;}
 			@include respond-to(sm) {height: 380px;}
 			@media (max-width: 620px) {height: 420px;}
@@ -366,151 +315,51 @@
 			@media (max-width: 333px) {height: 790px;}
 		}
 		.carousel-item {
-			justify-content: flex-start; padding-left: 8.5%;
+			display: flex; justify-content: start;
+
+			position: absolute; top: 0; left: 0; width: 100%; padding-left: 102px;
+			@include respond-to(sm) {flex-direction: column;}
+
 			figure {
+				display: flex;
 				text-align: left;
+				@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
-				
 				img {
 					width: 80px; height: 80px; margin-right: 20px; margin-top: 5px;
 					@include respond-to(sm) {margin: 0 0 15px 0;}
 				}
-
 				figcaption {
+					@include font-type($CormacB, 34px, 43px, 0);
+					padding-top: 4px;
+					@include respond-to(sm) {br {display: none;}}
+
 					span {
-						letter-spacing: 0;
-						margin-top: 13px;
+						@include font-type($CormacEL, 16px, 24px, 1px); color: #4b5769 !important;
+						width: 180px; 
+						display: block; padding-top: 7px;
+						@include respond-to(sm) {width: 100%;}
 					}
 				}
 			}
 
 			section {
-				padding-left: 5.2%; width: 58.8%;
+				width: 53%; padding-left: 118px;  position: relative; top: -8px;
 				p {
-					line-height: 24px; letter-spacing: 0.8px;
-					padding: 11px 50px 0; position: relative;
-					
-					i {
-						content: '';
-						display: block; width: 28px; height: 28px; position: absolute;
-						&.icon-quotes-left {left: -2px; top: -1px;}
-						&.icon-quotes-right {right: 1px; bottom: -16px;}
-					}
-				}
-			}
-		}
-		.navigation {
-			margin-top: 48px !important;
-		}
-	}
-
-	&-testimonials_2 {
-		.carousel-wrap {
-			min-height: 200px;
-			@include respond-to(lg) {height: 250px;}
-			@include respond-to(md) {height: 360px;}
-			@include respond-to(sm) {height: 450px;} 
-			@media (max-width: 530px) {height: 500px;}
-			@include respond-to(xs) {height: 550px;}
-			@media (max-width: 430px) {height: 600px;}
-			@media (max-width: 390px) {height: 650px;}
-			@media (max-width: 330px) {height: 690px;}
-		}
-		.carousel-item {
-			justify-content: flex-start; padding-left: 86px;
-			figure { 
-				text-align: center; width: 19%;
-				@include respond-to(sm) {width: 100%; margin-bottom: 30px;}
-
-				img {
-					width: 180px; height: 180px; overflow: hidden;
-					border-radius: 50%;
-				}
-			}
-			section {
-				width: 69.7%; padding-left: 9.7%;
-				@include respond-to(sm) {width: 100%; padding-left: 0;}
-
-				h2 {
-					text-align: left; letter-spacing: 0;
-					margin-bottom: 34px;
+					@include font-type($HelveticaM, 18px, 28px, 1.5px); color: #4b5769; font-family: $HelveticaL;
+					position: relative;
 					@include respond-to(sm) {text-align: center;}
-
-				}
-
-				p {
-					line-height: 24px; letter-spacing: 0.7px;
-				}
-			}
-		}
-		.navigation {
-			margin-top: 25px !important;
-		}
-	}
-
-	// – http://prntscr.com/goyhax
-	&-kids {
-		display: inline-block; vertical-align: top; margin: 0 40px; cursor: pointer;
-
-		label {
-			display: block; width: 180px;
-			
-			.ava {
-				width: 180px; height: 180px;
-				position: relative;
-				
-				figure {
-					width: 180px; height: 180px; position: relative;
-					border-radius: 50%; border: solid 2px transparent;
-					overflow: hidden;
-					
-					img {width: calc(100% + 2px); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
-				}
-
-				span {
-					display: block; width: 28px; height: 28px; position: absolute; top: 7px; right: 18px;
-					border: 2px solid #4489ff; background-color: #f8f8f8; border-radius: 50%;
-					
-					&:after {
-						content: '';
-						width: 10px; height: 7px; position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%,-50%) rotate(-45deg);
-						border-left: 2px solid #4489ff; border-bottom: 2px solid #4489ff;
-						opacity: 0;
-					}
-				}
-			}
-
-			p {
-				color: #000000; font-family: $HelveticaL; font-size: 15px; font-weight: 300; text-align: center;
-				padding: 0 15px; margin-top: 30px;
-			}
-		}
-		
-		input {display: none;}
-		input:checked + label {
-			.ava {
-				figure {border-color: #4489ff;}
-				span {&:after {opacity: 1;}
 				}
 			}
 		}
 	}
-}
-.carousel {
-	&.carousel-testimonials {
-		&_1 {
-			padding: 98px 0 86px;
-		}
-		&_2 {
-			padding: 84px 0 53px;
-		}
-	}
-	&-testimonials_1,
-	&-testimonials_2 {
-		.carousel-item {
+
+
+	//FOE JS
+	.carousel-item {
 			figure {opacity: 0; transition: all .8s;}
 			section {
-				//transform: translateX(150px);
+				transform: translateX(150px);
 				opacity: 0;
 				transition: 0.5s ease-out;
 			}
@@ -521,56 +370,37 @@
 				}
 				section {
 					opacity: 1;
-					// transform: translateX(0);  width: 100%;
+					transform: translateX(0);
 				}
 			}
 			&.left {
 				section {
-					// opacity: 0;
-					// transform: translateX(-150px); width: 70%;
-					// @include respond-to(sm) {
-					// 	transform: translateX(-75px);
-					// }
-					// @include respond-to(xs) {
-					// 	transform: translateX(-30px);
-					// }
+					opacity: 0;
+					transform: translateX(-150px); width: 70%;
+					@include respond-to(sm) {
+					transform: translateX(-75px);
+					}
+					@include respond-to(xs) {
+						transform: translateX(-30px);
+					}
 				}
 			}
 			&.right {
 				section {
-					// opacity: 0;
-					// transform: translateX(150px); width: 70%;
-					// @include respond-to(sm) {
-					// 	transform: translateX(75px);
-					// }
-					// @include respond-to(xs) {
-					// 	transform: translateX(30px);
-					// }
+					opacity: 0;
+					transform: translateX(150px); width: 70%;
+					@include respond-to(sm) {
+					transform: translateX(75px);
+					}
+					@include respond-to(xs) {
+					transform: translateX(30px);
+					}
 				}
 			}
 		}
-	}
 
-	&-kids {
-		label {
-			.ava {
-				figure {transition: 0.3s ease-out;}
-				span {&:after {transition: 0.3s ease-out;}}
-			}
-		}
-	}
-
-	.navigation, .owl-dots {
-
-		li, .owl-dot {
-			transition: all .2s ease; transform: translateY(0);
-
-			&:hover {background: #4489ff; transform: translateY(-3px);}
-			&:active {transform: translateY(0);}
-			&.active {transform: translateY(0); &:hover {cursor: default;}}
-		}
-	}
 }
+
 //-----/////////////////////////////////------//
 
 
@@ -588,10 +418,11 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-
+	padding: 30px 0;
 	&-item {
 		width: 32%;
-		background: #fff; border: 1px solid #d9e4ea; cursor: pointer;
+		background: #fff; cursor: pointer;
+		&:hover {box-shadow: 0 0 20px rgba(57, 60, 66, 0.1);}
 		@include respond-to(md) {width: 100%; margin: 10px 0;}
 		@media (max-width: 580px){flex-direction: column;}
 
@@ -607,12 +438,12 @@
 		}
 
 		section {
-			padding: 36px 20px 40px 27px;
+			padding: 35px 20px 40px 50px;
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
-				font-size: 22px; line-height: 32px; letter-spacing: 0;
-				margin-bottom: 25px;
+				@include font-type($CormacB, 22px, 32px, 0);  font-size: 22px; line-height: 32px; letter-spacing: 0;
+				margin-bottom: 14px;
 			}
 			p {
 				@include font-type($HelveticaL, 16px, 24px, 0.7px); color: #4b5769;
@@ -622,13 +453,12 @@
 		}
 	}
 }
+
 .wr {
 	.col-md-12 {
 		& > section {
-			padding: 80px 0;
-
 			&.doings {
-				padding: 67px 0 86px;
+				
 
 				h2 {
 					letter-spacing: 0;
