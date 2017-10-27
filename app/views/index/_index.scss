@@ -16,9 +16,27 @@
 
 		background: transparent; box-shadow: none;
 		.menu-top { 
+			a.burger {
+				&.active {
+					span {
+						@include respond-to(md) {background: $link-color;}
+					}
+				}
+				span {
+					@include respond-to(md) {background: #fff;}
+				}
+				
+			}
 			& > ul { 
+
 				& > li { 
-					a { color: #fff; i {color: #fff;} } 
+					a { 
+						color: #fff; i {color: #fff;} 
+						@include respond-to(md) {
+							color: $link-color;
+							i {color: $link-color;}
+						}
+					} 
 					&.drop-down { & > a { span {background: #fff;} } }
 				} 
 			} 
@@ -26,17 +44,21 @@
 
 		a.logo {
 			display: none;
-			&.white {display: inline-block;}
+			&.white {display: inline-block; position: relative; top: -2px; padding-left: 31px;}
 		}
 	}
 
 	//Секция с выпадающими списками на главной - http://prntscr.com/h2ns22
 	.section-group {
 		display: flex; justify-content: center;
+		@include respond-to(md) {flex-direction: column;}
 
 		padding-top: 27px;
 		.select-catalog {
 			margin: 0 31px;
+			@include respond-to(md) {margin-bottom: 25px;}
+
+			&:last-child {margin-bottom: 0}
 			& > a {
 				font-size: 18px; letter-spacing: 0;
 				i {
@@ -45,22 +67,31 @@
 			}
 		}
 	}
+}
 
-
+.gradient-vert {
+	position: absolute; width: 100%; height: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 16%,rgba(0,0,0,0.49) 98%,rgba(0,0,0,0.5) 100%);
 }
 
 // INTRO LANDING - http://prntscr.com/h2bdli
 .intro {
 	width: 100%; height: auto; position: relative;
 	background: url(../../web/img/index/intro.png) no-repeat center; background-size: cover;
-
+	.gradient {
+		position: absolute; width: 100%; height: 100%; 
+		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
+	}
 	&-body {
 		color: #fff;
 		position: relative; padding: 145px 0 64px 100px;
+		@include respond-to(sm) {padding: 145px 0 64px 20px;}
+		@include respond-to(xs) {padding-left: 0;}
 		header {
 			h1 {
 				@include font-type($CormacB, 42px, 56px, 0px); 
 				color: #fff; margin-top: 0; margin-bottom: 23px;
+				@include respond-to(sm) {font-size: 36px; line-height: 48px;}
 			}
 			p {
 				@include font-type($CormacB, 26px, 32px, 0px); 
@@ -68,6 +99,7 @@
 			}
 			a {
 				@include font-type($CormacB, 16px, 1px, 0px); color: #fff;
+				position: relative;
 				&:after {
 					content: '';
 					position: absolute; top: 100%;
@@ -84,6 +116,9 @@
 
 		section {
 			position: absolute; right: 24px; top: 184px;
+			@include respond-to(md) {
+				position: static; margin-top: 50px; padding-left: 26px;
+			}
 			p {
 				@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
 				position: relative;
@@ -104,7 +139,8 @@
 	display: flex;
 	position: relative; z-index: 2; bottom: -28px; width: 984px; height: 64px; margin: 0 auto;
 	@include respond-to(lg) {width: 95%;}
-	
+	@media (max-width: 650px) {flex-wrap: wrap; align-items: center; width: 100%;}
+	@include respond-to(xs) {height: auto; padding-bottom: 25px;}
 	
 	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 
@@ -112,48 +148,105 @@
 		height: inherit; margin-right: 11px;
 		transition: all .4s ease;
 		@include respond-to(lg) {width: 25%;}
+		@media (max-width: 650px) {text-align: center; margin-right: 0;}
+		@include respond-to(xs) {width: 50%;}
 	
-		&.active, &:hover {
+		&:hover {
 			a {
-				color: #fff;
+				color: #fff; text-align: center;
 				background: $btn-color; border-radius: 100px; 
+				@media (max-width: 650px) {background: transparent; color: $link-color;}
 
-				i {color: #fff;}
+				i {
+					color: #fff;
+				}
+			}
+		}
+		&.active {
+			a {
+				text-align: left; color: #fff;
+				padding: 20px 0 0 35px;
+				background: $btn-color; border-radius: 100px; 
+				@media (max-width: 650px) {
+					color: $link-color; text-align: center; 
+					padding-left: 0; display: inline-block; 
+					background: transparent;  border-radius: 0;
+				}
+				@include respond-to(xs) {height: 55px;}
+				&:after {
+					content: '';
+					position: absolute; bottom: 12px;
+					border-bottom: 1px solid $link-color;
+					transition: all 0.4s;
+				}
+				i {
+					color: #fff;
+					@media (max-width: 650px) {display: none;}
+				}
 			}
 		}
 		&:last-child {margin-right: 0;}
+		
 
 		a {
-			color: $link-color; @include font-type($CormacEL, 18px, 1px, 0px);
-			display: inline-block; height: inherit; width: 238px; padding: 28px 0 0 35px; position: relative;
+			color: $link-color; text-align: center; @include font-type($CormacEL, 18px, 1, 0px);
+			display: inline-block; height: inherit; width: 238px; padding-top: 20px; padding-right: 14px;  position: relative;
 			transition: all .5s ease;
 			@include respond-to(lg) {width: 100%;}
+			@media (max-width: 650px) {
+				display: inline-block; width: 80%; position: relative; text-align: center;
+				&:after {
+					content: '';
+					position: absolute; bottom: 12px;
+					border-bottom: 1px solid $link-color;
+					transition: all 0.4s;
+				}
+				&:after {right: 100%; left: 0;}
+				&:hover:after {right: 0;}
+				&:hover i {transform: translateX(5px);}
+				}
+				@include respond-to(xs) {height: 55px;}
+			
 
 			i {
 				color: $link-color; font-size: 30px;
 				position: absolute; right: 21px; top: 16px;
 				transition: all .5s ease;
+				@media (max-width: 650px) {display: none;}
 			} 
 		}
 	}
 }
 
 
+//PROMOTION - http://prntscr.com/h2dye8
 .list {
 	&-promotion {
 		display: flex; justify-content: space-around;
+		margin: 0px -7px 0 -9px;
+		@include respond-to(md) {flex-wrap: wrap;}
+
+		li {
+			width: 25%;
+			@include respond-to(md) {width: 50%;}
+			@include respond-to(xs) {width: 100%;}
+
+			&:nth-child(2), &:nth-child(3) {
+				p {left: 10px;}
+			}
+		}
 	}
 }
 
-//PROMOTION - http://prntscr.com/h2dye8
 .promotion {
 	section {
 		display: flex; justify-content: center;
 		padding-top: 61px; margin-bottom: 15px;
 
 		p {
-			color: #000;
-			position: relative;
+			color: #000; text-align: center;
+			position: relative; left: 15px; margin-bottom: 9px;
+
 			@include font-type($CormacB, 64px, 1, 0px);
 
 			& > i {
@@ -161,8 +254,9 @@
 				position: absolute; top: 22px; left: -20px;
 			}
 			span {
-				position: absolute; top: 7px; right: -96px; width: 90px;
 				@include font-type($CormacEL, 18px, 1, 0px);
+				position: relative; top: 7px; display: inline-block; margin-left: -10px;  vertical-align: top;
+				
 				i {color: #000; font-size: 15px; font-weight: 600;}
 			}
 		}
@@ -175,6 +269,8 @@
 // NEWS in Index - http://prntscr.com/h2fk7d
 .news {
 	display: flex;
+	@include respond-to(md) {flex-direction: column;}
+
 	&-block {
 		&_single, &_several header {
 			& > a {
@@ -187,19 +283,32 @@
 
 					position: absolute; left: 0; right: 0; top: 0; bottom: 0;
 				}
-				figure {max-width: 100%;}
+				figure {
+					img {
+						max-width: 100%;
+						@include respond-to(sm) {width: 100%;}
+					}
+				}
 			}
 		}
 
 		&_single {
 			width: 50%;
+			@include respond-to(md) {width: 80%; margin: 0 auto;}
+			@include respond-to(sm) {width: 100%;}
+
 			& > a {width: 100%;}
 			section {
 				width: 100%;
 				padding-left: 47px; padding-bottom: 40px;
+				@include respond-to(xs) {padding-left: 10px;}
+
 				h2 {
 					@include font-type($CormacB, 54px, 1, 0); color: #fff;
 					margin-bottom: 24px;
+					@include respond-to(xs) {
+						font-size: 32px;
+					}
 				}
 				p {
 					@include font-type($CormacB, 18px, 24px, 0); color: #fff;
@@ -210,15 +319,21 @@
 
 		&_several {
 			width: 50%;
+			@include respond-to(md) {width: 80%; margin: 0 auto;}
+			@include respond-to(sm) {width: 100%;}
+
 			section {
-				padding-left: 39px;
+				padding-left: 20px;
 				h2 {
 					@include font-type($CormacB, 38px, 46px, 0px); color: #fff;
 					margin-bottom: 17px;
+					@include respond-to(sm) {font-size: 30px; line-height: 38px;}
+					@include respond-to(xs) {font-size: 22px; line-height: 28px; margin-bottom: 0;}
 
 				}
 				p {
 					@include font-type($CormacB, 18px, 24px, 0); color: #fff;
+					@include respond-to(sm) {font-size: 16px;}
 				}
 			}
 
@@ -226,10 +341,12 @@
 				& > a {width: 100%;}
 				section {
 					padding-bottom: 29px;
+					@include respond-to(xs) {padding-bottom: 0;}
 				}
 			}
 			footer {
 				display: flex; justify-content: space-between;
+				@include respond-to(xs) {flex-direction: column;} 
 				
 				& > a {
 					position: relative; width: 100%;
@@ -243,7 +360,12 @@
 						h2 {margin-bottom: 11px;}
 						
 					}
-					figure {max-width: 100%;}
+					figure {
+						img {
+							max-width: 100%;
+							@include respond-to(sm) {width: 100%;}
+						}
+					}
 				}
 				
 			}
@@ -251,29 +373,70 @@
 	}
 }
 
+// - http://prntscr.com/h2q6m0
 .main-category {
 	display: flex; justify-content: space-between;
 
-	padding-top: 27px;
+	padding-top: 27px; position: relative;
+	@include respond-to(md) {flex-direction: column;}
+
+	& > .btn-new {
+		position: absolute; z-index: 5; right: -28px; top: 204px;
+		@include respond-to(lg) {top: 70px; right: -20px;}
+		@include respond-to(xs) {top: -27px;}
+	}
 	&-block {
-		&.first {width: 58%;}
-		&.second {width: 41%;}
+		
+		&.first {
+			width: 58%;
+			@include respond-to(md) {width: 80%; margin: 0 auto;}
+			@include respond-to(sm) {width: 100%;}
+		}
+		&.second {
+			width: 41%;
+			@include respond-to(md) {width: 80%; margin: 0 auto;}
+			@include respond-to(sm) {width: 100%;}
+			section {
+				left: 44px;
+				@include respond-to(xs) {left: 15px;}
+			}
+		}
 		& > a {
-			position: relative; display: inline-block;
+			position: relative; display: inline-block; width: 100%;
 			transition: all .4s ease;
 			&:hover {box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2)}
 
 			section {
 				display: flex; flex-direction: column;
 				position: absolute; left: 50px; bottom: 47px; width: 90%;
+				@include respond-to(xs) {left: 25px; bottom: 20px;}
 
 				h2 {
 					@include font-type($CormacB, 54px, 1, 0); color: #fff;
 					margin-bottom: 19px;
+					@include respond-to(sm) {font-size: 40px}
+					@include respond-to(xs) {font-size: 30px; margin-bottom: 12px;}
 				}
+
 				p {@include font-type($CormacB, 22px, 1, 0); color: #fff;}
+				@include respond-to(sm) {font-size: 18px;}
+			}
+			figure {
+				img {
+					max-width: 100%;
+					@include respond-to(md) {width: 100%;}
+				}
 			}
 		}
+	}
+}
+
+
+.main-products {
+	position: relative;
+	.btn-new {
+		position: absolute; z-index: 5; top: 178px; right: -45px;
+		@include respond-to(lg) {right: -20px;}
 	}
 }
 
@@ -301,6 +464,7 @@
 
 	&-testimonials_1 {
 		padding: 55px 0 32px 0;
+
 		.carousel-wrap {
 			position: relative;
 			min-height: 160px; 
@@ -312,13 +476,14 @@
 			@media (max-width: 430px) {height: 545px;}
 			@media (max-width: 400px) {height: 595px;}
 			@media (max-width: 365px) {height: 695px;}
-			@media (max-width: 333px) {height: 790px;}
+			@media (max-width: 333px) {height: 590px;}
 		}
 		.carousel-item {
 			display: flex; justify-content: start;
 
 			position: absolute; top: 0; left: 0; width: 100%; padding-left: 102px;
-			@include respond-to(sm) {flex-direction: column;}
+			@include respond-to(lg) {padding-left: 40px;}
+			@include respond-to(sm) {flex-direction: column; padding-left: 0;}
 
 			figure {
 				display: flex;
@@ -345,6 +510,8 @@
 
 			section {
 				width: 53%; padding-left: 118px;  position: relative; top: -8px;
+				@include respond-to(lg) {width: 100%;}
+				@include respond-to(sm) {padding-left: 0;}
 				p {
 					@include font-type($HelveticaM, 18px, 28px, 1.5px); color: #4b5769; font-family: $HelveticaL;
 					position: relative;
@@ -418,7 +585,12 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-	padding: 30px 0;
+	padding: 30px 0 21px 0; position: relative;
+	.btn-new {
+		position: absolute; z-index: 5; right: -47px; top: 182px;
+		@include respond-to(lg) {right: -20px;}
+		@include respond-to(md) {top: -10px;}
+	}
 	&-item {
 		width: 32%;
 		background: #fff; cursor: pointer;
@@ -471,7 +643,7 @@
 
 //PARTNERS - http://prntscr.com/h2caw6
 .partners-style2 {
-	padding: 66px 0 53px;
+	padding: 65px 0 54px 0 !important;
 	border-top: 1px solid #e7edf2;
 
 	ul {

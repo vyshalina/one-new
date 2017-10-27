@@ -1,3 +1,12 @@
+.btn-new {
+	&.white {
+		@include font-type($CormacB, 16px, 1, 0); color: #000;
+		padding: 20px 23px 21px 27px;
+		background: #fff;  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 100px;
+
+		i {margin-left: 12px;}
+	}
+}
 .btn-wrapp {
 	display: flex; justify-content: center;
 	margin-top: 80px;
@@ -61,6 +70,7 @@
 
 	&-reserve {
 		@include font-type($CormacB, 16px, 80px, 0);
+		height: 80px; 
 		background: #fff; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 40px;
 		transition: .4s all ease;
 

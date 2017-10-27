@@ -144,7 +144,14 @@
 .list-catalog {
 	&-products {
 		display: flex; flex-flow: row wrap;	
-		& > li {width: calc(25% - 20px); margin: 10px;}	
+		@include respond-to(md) {flex-wrap: wrap;}
+
+		& > li {
+			width: calc(25% - 20px); margin: 10px;
+			@include respond-to(md) {width: calc(50% - 20px);}
+			@include respond-to(xs) {width: 100%;}
+		}	
+		
 		article {@extend .product-catalog;}
 	}
 }
