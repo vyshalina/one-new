@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	//= ./../tpl/head.html
+
 	<body class="on-load">
 		//= ./../tpl/counter.html
-		<section class="popup-main">
+		<section class="popup">
 
 			<div class="popup-main_body">
 				<a href="#" class="close js-close_popup">
@@ -29,7 +30,7 @@
 		//= ./../tpl/header.html
 		//= ./../tpl/breadcrumbs.html
 		
-		<section class="wr bg_white">
+		<section class="wr base">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -39,17 +40,15 @@
 								<figure>
 									<img src="../../web/img/iteamshop.png" alt="">
 								</figure>
-
-								<figure>
-									<img src="../../web/img/itenshop1.png" alt="">
-								</figure>
-								<figure>
-									<img src="../../web/img/itemshop2.png" alt="">
-								</figure>
+								<ul class="images-preview">
+									<li><a href="#" style="background: url(../../web/img/product/img1.png) no-repeat;"></a></li>
+									<li><a href="#" style="background: url(../../web/img/product/img1.png) no-repeat;"></a></li>
+									<li><a href="#" style="background: url(../../web/img/product/img2.png) no-repeat;"></a></li>
+								</ul>
+								
 							</header>
 
 							<section>
-
 								<h2>Cмартфон Irbis SP57</h2>
 
 								<ul class="info">
@@ -91,8 +90,8 @@
 								</ul>
 
 								<div class="btn-gr">
-									<button id="js-registration" class="btn shadow">Забронировать</button>
-									<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> В избранное</a>
+									<button id="js-registration" class="btn shadow">Купить</button>
+									<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i> Сохранить</a>
 								</div>
 
 								<p>Стильный <span class="thin">4G</span> смартфон <span class="thin">Irbis SP57</span> оснащен процессором от компании <span class="thin">Mediatek</span>, одного из мировых лидеров в производстве радиоэлектроники. <span class="thin">"Soft touch"</span> покрытие дарит приятные тактильные ощущения, а большой <span class="thin">HD IPS</span> дисплей вкупе с мощной батареей на <span class="thin">4000</span>мАч, обеспечивает долгую и стабильную работу устройства. Модель обладает полным набором современных беспроводных интерфейсов, а также богатыми мультимедийными возможностями. Устройство работает под управлением ОС <span class="thin">Android 6.0.</span></p>
@@ -105,6 +104,35 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="wr bg-grey">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Вас может заинтересовать</h3>
+							<div class="main-products">
+								<ul class="list-catalog-products">
+									<li>
+										//= ./../tpl/product-preview.html
+									</li>
+									<li>
+										//= ./../tpl/product-preview.html
+									</li>
+									<li>
+										//= ./../tpl/product-preview.html
+									</li>
+									<li>
+										//= ./../tpl/product-preview.html
+									</li>
+								</ul>
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+			</section>
+
 			
 		//= ./../tpl/footer.html
 		</div>

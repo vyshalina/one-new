@@ -98,6 +98,7 @@
 .list-catalog {
 	&-products {
 		display: flex; flex-flow: row wrap;	
+		margin: 0 -10px;
 		@include respond-to(md) {flex-wrap: wrap;}
 
 		& > li {

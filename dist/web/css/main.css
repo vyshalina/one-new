@@ -9779,7 +9779,7 @@ button.close {
 .lity-hide {
   display: none; }
 
-.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .list-bookmarks > li, .found-about, .booking-proc, .popup-main_body {
+.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .list-bookmarks > li, .found-about, .booking-proc, .popup_body {
   margin: 10px;
   padding: 20px;
   background: #fff;
@@ -13859,8 +13859,6 @@ button.close {
       justify-content: end;
       position: absolute;
       left: 0;
-      right: 0;
-      top: 0;
       bottom: 0; }
     .news-block_single > a figure img, .news-block_several header > a figure img {
       max-width: 100%; }
@@ -13868,7 +13866,7 @@ button.close {
         .news-block_single > a figure img, .news-block_several header > a figure img {
           width: 100%; } }
   .news-block_single {
-    width: 50%; }
+    width: 585px; }
     @media (max-width: 991px) {
       .news-block_single {
         width: 80%;
@@ -13880,6 +13878,7 @@ button.close {
       width: 100%; }
     .news-block_single section {
       width: 100%;
+      height: 229px;
       padding-left: 47px;
       padding-bottom: 40px; }
       @media (max-width: 480px) {
@@ -13903,7 +13902,7 @@ button.close {
         color: #fff;
         padding-left: 4px; }
   .news-block_several {
-    width: 50%; }
+    width: 590px; }
     @media (max-width: 991px) {
       .news-block_several {
         width: 80%;
@@ -14022,7 +14021,10 @@ button.close {
       .main-category > .btn-white {
         top: -27px; } }
   .main-category-block.first {
-    width: 58%; }
+    width: 680px; }
+    @media (max-width: 1199px) {
+      .main-category-block.first {
+        width: 57%; } }
     @media (max-width: 991px) {
       .main-category-block.first {
         width: 80%;
@@ -14031,7 +14033,11 @@ button.close {
       .main-category-block.first {
         width: 100%; } }
   .main-category-block.second {
-    width: 41%; }
+    width: 480px; }
+    @media (max-width: 1199px) {
+      .main-category-block.second {
+        width: 40.2%;
+        margin: 0 auto; } }
     @media (max-width: 991px) {
       .main-category-block.second {
         width: 80%;
@@ -14461,7 +14467,7 @@ button.close {
     .popup {
       width: 70%; } }
 
-.popup-main {
+.popup {
   position: fixed;
   z-index: 10000;
   width: 100%;
@@ -14472,18 +14478,18 @@ button.close {
   -webkit-transition: .4s all ease;
   transition: .4s all ease;
   pointer-events: none; }
-  .popup-main.active {
+  .popup.active {
     opacity: 1;
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
     pointer-events: auto; }
-    .popup-main.active .popup-main_body {
+    .popup.active .popup-main_body {
       opacity: 1;
       -webkit-transform: translate(0);
       -ms-transform: translate(0);
       transform: translate(0); }
-  .popup-main_body {
+  .popup_body {
     -webkit-transition: .6s all ease;
     transition: .6s all ease;
     opacity: 0;
@@ -14496,19 +14502,19 @@ button.close {
     position: relative;
     overflow-y: auto; }
     @media (max-width: 991px) {
-      .popup-main_body {
+      .popup_body {
         width: 90%; } }
-    .popup-main_body .close {
+    .popup_body .close {
       position: absolute;
       right: 20px;
       top: 20px; }
-    .popup-main_body p {
+    .popup_body p {
       font-family: "HelveticaRegular", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
       color: #000; }
-  .popup-main_top {
+  .popup_top {
     width: 100%;
     text-align: center; }
 
@@ -14876,7 +14882,8 @@ button.close {
   -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  margin: 0 -10px; }
   @media (max-width: 991px) {
     .list-catalog-products {
       -webkit-flex-wrap: wrap;
@@ -15849,12 +15856,12 @@ button.close {
           .footer-contacts > ul > li ul.soc li a:after {
             display: none; }
           .footer-contacts > ul > li ul.soc li a i {
-            color: #4489ff;
+            color: #b2b2b2;
             font-size: 24px;
             -webkit-transition: all 0.4s;
             transition: all 0.4s; }
           .footer-contacts > ul > li ul.soc li a:hover i {
-            color: #4b5769; }
+            color: #4489ff; }
       .footer-contacts > ul > li ul li {
         margin-bottom: 3px; }
         .footer-contacts > ul > li ul li:last-child {
@@ -15891,7 +15898,8 @@ button.close {
 h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-family: "Cormac-ExtraLight", sans-serif;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  margin-top: 0; }
 
 h1 {
   font-size: 34px;
@@ -16857,7 +16865,7 @@ a {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 29px;
+  padding-top: 3px;
   margin-bottom: 64px; }
   @media (max-width: 767px) {
     .product-body {
@@ -16871,23 +16879,50 @@ a {
     @media (max-width: 767px) {
       .product-body > header, .product-body > section {
         width: 100%; } }
-  .product-body header {
-    padding-top: 29px; }
-    .product-body header figure {
-      text-align: center;
+  @media (max-width: 1199px) {
+    .product-body .images {
+      width: 47%; } }
+  @media (max-width: 767px) {
+    .product-body .images {
       width: 100%;
-      margin-bottom: 53px; }
-      @media (max-width: 767px) {
-        .product-body header figure {
-          display: none; } }
-      .product-body header figure:first-child {
-        display: block; }
-      .product-body header figure:last-child {
-        margin-bottom: 0; }
-      .product-body header figure img {
-        max-width: 100%; }
+      margin-bottom: 50px; } }
+  .product-body .images figure {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center; }
+    @media (max-width: 767px) {
+      .product-body .images figure {
+        display: none; } }
+    .product-body .images figure:first-child {
+      display: block; }
+    .product-body .images figure:last-child {
+      margin-bottom: 0; }
+    .product-body .images figure img {
+      max-width: 100%; }
+  .product-body .images-preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .product-body .images-preview li {
+      margin-right: 20px; }
+      .product-body .images-preview li:last-child {
+        margin-right: 0; }
+      .product-body .images-preview li a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-size: cover;
+        background-position: center; }
   .product-body > section {
-    padding-left: 28px; }
+    padding-left: 10px;
+    padding-top: 6px;
+    position: relative; }
     @media (max-width: 1199px) {
       .product-body > section {
         width: 49%; } }
@@ -16898,18 +16933,31 @@ a {
       .product-body > section {
         padding: 0;
         width: 100%; } }
+    .product-body > section .auction-logo {
+      position: absolute;
+      right: -49px;
+      top: 12px;
+      padding: 9px 0;
+      background: #7937bf; }
+      @media (max-width: 1199px) {
+        .product-body > section .auction-logo {
+          right: -15px; } }
     .product-body > section h2 {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-book", sans-serif;
       font-size: 34px;
-      line-height: 38px;
+      line-height: 42px;
       letter-spacing: 0;
-      margin-bottom: 31px; }
+      margin-bottom: 29px; }
+      @media (max-width: 480px) {
+        .product-body > section h2 {
+          font-size: 30px;
+          line-height: 38px; } }
     .product-body > section ul.info {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      margin-bottom: 32px; }
+      margin-bottom: 40px; }
       @media (max-width: 991px) {
         .product-body > section ul.info {
           -webkit-box-orient: vertical;
@@ -16929,10 +16977,10 @@ a {
         font-family: "HelveticaLight", sans-serif;
         font-size: 10px;
         line-height: 1;
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
         color: #79879e;
         text-transform: uppercase;
-        margin-right: 25px; }
+        margin-right: 23px; }
         @media (max-width: 991px) {
           .product-body > section ul.info li {
             margin-right: 0;
@@ -16944,7 +16992,7 @@ a {
               margin-bottom: 0; } }
         .product-body > section ul.info li i {
           font-size: 16px;
-          margin-right: 3px; }
+          margin-right: 6px; }
     .product-body > section ul.price {
       display: -webkit-box;
       display: -webkit-flex;
@@ -16954,24 +17002,235 @@ a {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      margin-bottom: 43px; }
+      margin-bottom: 36px; }
       .product-body > section ul.price li {
         font-family: "cormac-book", sans-serif;
         font-size: 34px;
         line-height: 1;
         letter-spacing: 0.5px;
-        color: #4489ff;
-        margin-right: 28px; }
+        color: #000;
+        margin-right: 28px;
+        position: relative;
+        padding-top: 12px; }
         @media (max-width: 767px) {
           .product-body > section ul.price li {
             color: #000;
             font-family: "Cormac-ExtraLight", sans-serif; } }
+        .product-body > section ul.price li sup {
+          font-family: "HelveticaLight", sans-serif;
+          font-size: 9px;
+          line-height: 1;
+          letter-spacing: 1.8px;
+          color: #4b5769;
+          text-transform: uppercase;
+          position: absolute;
+          top: 0;
+          left: 0; }
         .product-body > section ul.price li i {
           color: #c6dbff;
           font-size: 26px;
           margin-right: 12px; }
+    .product-body > section .auction {
+      padding-left: 2px;
+      padding-top: 48px;
+      padding-bottom: 39px;
+      margin-bottom: 17px;
+      border-top: 1px solid #d9e4ea;
+      border-bottom: 1px solid #d9e4ea; }
+      .product-body > section .auction > ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 31px; }
+        @media (max-width: 991px) {
+          .product-body > section .auction > ul {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -webkit-align-items: start;
+            -ms-flex-align: start;
+            align-items: start; } }
+        .product-body > section .auction > ul li {
+          font-family: "cormac-book", sans-serif;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 0;
+          color: #4b5769;
+          text-align: center;
+          position: relative;
+          min-width: 100px;
+          padding-top: 17px;
+          margin-right: 29px; }
+          @media (max-width: 991px) {
+            .product-body > section .auction > ul li {
+              text-align: left;
+              margin-bottom: 25px;
+              margin-right: 0; } }
+          .product-body > section .auction > ul li:first-child {
+            text-align: left; }
+          .product-body > section .auction > ul li:last-child {
+            margin-right: 0; }
+            @media (max-width: 991px) {
+              .product-body > section .auction > ul li:last-child {
+                margin-bottom: 0; } }
+          .product-body > section .auction > ul li > a {
+            color: #4489ff; }
+          .product-body > section .auction > ul li sup {
+            font-family: "HelveticaLight", sans-serif;
+            font-size: 9px;
+            line-height: 1;
+            letter-spacing: 1.8px;
+            color: #4b5769;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0; }
+      .product-body > section .auction-rate .btn-gr {
+        position: relative;
+        padding-top: 16px;
+        left: -2px; }
+        .product-body > section .auction-rate .btn-gr > sup {
+          font-family: "HelveticaLight", sans-serif;
+          font-size: 9px;
+          line-height: 1;
+          letter-spacing: 1.7px;
+          color: #4b5769;
+          text-transform: uppercase;
+          position: absolute;
+          top: 0; }
+          .product-body > section .auction-rate .btn-gr > sup .rub {
+            text-transform: none; }
+        .product-body > section .auction-rate .btn-gr > .btn-grey {
+          display: inline-block;
+          padding: 0 0 0 18px;
+          margin-right: 13px;
+          position: relative;
+          left: -9px;
+          background: #f4f7fb;
+          -webkit-border-radius: 100px;
+          border-radius: 100px; }
+          @media (max-width: 480px) {
+            .product-body > section .auction-rate .btn-gr > .btn-grey {
+              padding-left: 11px;
+              margin-right: 0;
+              background: none; } }
+          .product-body > section .auction-rate .btn-gr > .btn-grey .price {
+            font-family: "cormac-book", sans-serif;
+            font-size: 22px;
+            line-height: 1;
+            letter-spacing: 0.5px;
+            color: #000;
+            display: inline-block;
+            padding: 19px 0;
+            margin-right: 80px; }
+            @media (max-width: 991px) {
+              .product-body > section .auction-rate .btn-gr > .btn-grey .price {
+                margin-right: 15px; } }
+          .product-body > section .auction-rate .btn-gr > .btn-grey .btn, .product-body > section .auction-rate .btn-gr > .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr > .btn-grey button {
+            margin-right: 0;
+            padding: 23px 36px;
+            letter-spacing: 0.7px; }
+            @media (max-width: 480px) {
+              .product-body > section .auction-rate .btn-gr > .btn-grey .btn, .product-body > section .auction-rate .btn-gr > .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr > .btn-grey button {
+                width: 100%; } }
+        .product-body > section .auction-rate .btn-gr > a {
+          font-family: "cormac-book", sans-serif;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 0.5px; }
+          @media (max-width: 1199px) {
+            .product-body > section .auction-rate .btn-gr > a {
+              display: block;
+              margin-top: 30px; } }
+          @media (max-width: 480px) {
+            .product-body > section .auction-rate .btn-gr > a {
+              text-align: center; } }
+          .product-body > section .auction-rate .btn-gr > a i {
+            font-size: 21px;
+            margin-right: 5px; }
+      .product-body > section .auction-info {
+        position: relative; }
+        .product-body > section .auction-info .promotion {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          position: absolute;
+          right: -50px;
+          top: 45px;
+          padding: 13px 30px 7px 3px;
+          background: #7937bf; }
+          @media (max-width: 1199px) {
+            .product-body > section .auction-info .promotion {
+              position: static;
+              margin-bottom: 30px; } }
+          @media (max-width: 480px) {
+            .product-body > section .auction-info .promotion {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              padding: 13px 15px 7px 15px; } }
+          .product-body > section .auction-info .promotion p {
+            font-family: "Cormac-ExtraLight", sans-serif;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0;
+            color: #fff;
+            text-align: left; }
+            @media (max-width: 480px) {
+              .product-body > section .auction-info .promotion p {
+                text-align: center; } }
+            .product-body > section .auction-info .promotion p i {
+              font-weight: 600; }
+        .product-body > section .auction-info > p {
+          font-family: "HelveticaThin", sans-serif;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 1.1px;
+          color: #000;
+          margin-bottom: 27px; }
+        .product-body > section .auction-info ol {
+          padding-top: 5px;
+          padding-left: 20px; }
+          .product-body > section .auction-info ol li {
+            font-family: "HelveticaThin", sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            letter-spacing: 1.1px;
+            color: #000;
+            margin-bottom: 7px;
+            list-style-type: decimal; }
+            .product-body > section .auction-info ol li:last-child {
+              margin-bottom: 0; }
     .product-body > section .btn-company {
-      margin-bottom: 26px; }
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -webkit-align-items: start;
+      -ms-flex-align: start;
+      align-items: start;
+      margin-bottom: 35px;
+      position: relative;
+      left: -11px; }
       @media (max-width: 767px) {
         .product-body > section .btn-company {
           display: inline-block;
@@ -16994,10 +17253,10 @@ a {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        min-height: 90px;
+        min-height: 82px;
         max-width: 380px;
-        padding: 0 30px;
-        margin: 10px 0;
+        padding: 0 34px 0 11px;
+        margin-bottom: 10px;
         background: white;
         -webkit-border-radius: 40px;
         border-radius: 40px;
@@ -17021,6 +17280,15 @@ a {
             border-top: 2px solid #edf3f6;
             -webkit-border-radius: 0;
             border-radius: 0; } }
+        .product-body > section .btn-company .btn-reserve.user {
+          padding: 0 33px 0 11px; }
+          .product-body > section .btn-company .btn-reserve.user figure {
+            width: 60px;
+            height: 60px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center; }
         @media (max-width: 767px) {
           .product-body > section .btn-company .btn-reserve a {
             color: #000;
@@ -17044,7 +17312,19 @@ a {
           .product-body > section .btn-company .btn-reserve .icon-wr i {
             color: #000; }
         .product-body > section .btn-company .btn-reserve figure {
-          margin-right: 36px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          margin-right: 20px;
           -webkit-border-radius: 50%;
           border-radius: 50%;
           background-size: cover;
@@ -17062,7 +17342,7 @@ a {
             font-family: "HelveticaLight", sans-serif;
             font-size: 10px;
             line-height: 1;
-            letter-spacing: 1px;
+            letter-spacing: 1.3px;
             color: #79879e;
             text-transform: uppercase;
             display: block;
@@ -17073,14 +17353,14 @@ a {
             text-decoration: underline; }
             .product-body > section .btn-company .btn-reserve section div a:hover {
               text-decoration: none; }
-    .product-body > section .btn-gr {
+    .product-body > section > .btn-gr {
       margin-bottom: 19px;
       padding: 24px 0;
       clear: both;
       outline: none;
       border-top: 1px solid #f2f2f2;
       border-bottom: 1px solid #f2f2f2; }
-      .product-body > section .btn-gr .btn, .product-body > section .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section .btn-gr button {
+      .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button {
         font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 1;
@@ -17090,22 +17370,21 @@ a {
         padding: 20px 0;
         margin-right: 57px; }
         @media (max-width: 991px) {
-          .product-body > section .btn-gr .btn, .product-body > section .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section .btn-gr button {
+          .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button {
             width: 100%;
             margin-bottom: 25px; } }
-      .product-body > section .btn-gr a {
+      .product-body > section > .btn-gr a {
         font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.2px; }
         @media (max-width: 991px) {
-          .product-body > section .btn-gr a {
+          .product-body > section > .btn-gr a {
             width: 100%;
             text-align: center;
             display: block; } }
-        .product-body > section .btn-gr a i {
-          font-weight: 600;
-          font-size: 20px;
+        .product-body > section > .btn-gr a i {
+          font-size: 22px;
           margin-right: 5px; }
     .product-body > section p {
       font-family: "HelveticaRegular", sans-serif;
@@ -17113,6 +17392,9 @@ a {
       line-height: 24px;
       letter-spacing: 0.3px;
       width: 90%; }
+      @media (max-width: 480px) {
+        .product-body > section p {
+          width: 100%; } }
       .product-body > section p .thin {
         font-family: "HelveticaLight", sans-serif; }
 

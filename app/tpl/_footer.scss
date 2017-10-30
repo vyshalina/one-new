@@ -98,10 +98,10 @@
 							a {
 								&:after {display: none;}
 								i {
-									color: $link-color; font-size: 24px;
+									color: #b2b2b2; font-size: 24px;
 									transition: all 0.4s;
 								}
-								&:hover {i {color: #4b5769;}}
+								&:hover {i {color: $link-color;}}
 							}
 						}
 					}
