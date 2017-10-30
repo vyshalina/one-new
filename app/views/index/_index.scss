@@ -136,7 +136,7 @@
 	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 
 	li {
-		height: inherit; margin-right: 11px;
+		height: 100%; margin-right: 11px;
 		transition: all .4s ease;
 		@include respond-to(lg) {width: 25%;}
 		@media (max-width: 650px) {text-align: center; margin-right: 0;}
@@ -156,7 +156,7 @@
 		&.active {
 			a {
 				text-align: left; color: #fff;
-				padding: 20px 0 0 35px;
+				padding: 20px 0 20px 35px;
 				background: $btn-color; border-radius: 100px; 
 				@media (max-width: 650px) {
 					color: $link-color; text-align: center; 
@@ -589,8 +589,14 @@
 			img {width: 100%;}
 		}
 
+		&:first-of-type {
+			section {
+				h4 {max-width: 220px;}
+			}
+		}
+
 		section {
-			padding: 35px 20px 40px 50px;
+			padding: 35px 23px 40px;
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
@@ -608,8 +614,8 @@
 
 
 //PARTNERS - http://prntscr.com/h2caw6
-.partners-style2 {
-	padding: 65px 0 54px 0 !important;
+.wr.base.partners-style2 {
+	padding: 65px 0 54px 0;
 	border-top: 1px solid #e7edf2;
 
 	ul {

@@ -137,7 +137,7 @@
 
 					&.favorites {
 						text-align: center; @include font-type($CormacEL, 16px, 1, 0.5px); color: #fff;
-						width: 78px; height: 68px; display: block; padding-top: 20px; padding-left: 7px; top: 50%; margin-top: -34px; left: 50%; margin-left: -39px;
+						width: 78px; height: 68px; padding-top: 20px; padding-left: 7px; top: 50%; margin-top: -34px; left: 50%; margin-left: -39px;
 						background: url(../../web/img/heart.png);
 					}
 				}
