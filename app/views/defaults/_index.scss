@@ -1,3 +1,123 @@
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
+.app.index {
+	&.pet, &.children {
+
+		//изменен размер текста и отступы - http://prntscr.com/h4c507
+		.intro-body {
+			padding: 169px 0 45px 9px;
+			header {
+				h1 {
+					font-size: 54px; line-height: 65px; margin-bottom: 41px;
+					@include respond-to(xs) {
+						font-size: 38px; line-height: 48px;
+					}
+				}
+				p {font-size: 18px; line-height: 28px; margin-bottom: 0;}
+			}
+			section {top: 214px;}
+		}
+		
+		//подкорректированы отступы
+		.list-promotion {padding-top: 16px;}
+		
+		//меняем цвета в футере - http://prntscr.com/h4dpcf
+		.footer {
+			&-contacts > ul > li ul.soc li a i {color: #000;}
+		}
+	}
+	
+	&.pet {
+		//меняем цвет меню - http://prntscr.com/h4ba6n
+		.help-menu {
+			bottom: -35px;
+			li {
+				&.active, &:hover {
+					a {
+						background: #96be46; color: #fff;
+						i {color: #fff;}
+					}
+				}
+				a {
+					color: #96be46;
+					i {color: #96be46;}
+				}
+			}
+		}
+
+		//меняем цвет стрелок - http://prntscr.com/h4bgop
+		.promotion section p > i {color: #96be46;}
+
+		//меняем цвет кнопок в карусели - http://prntscr.com/h4d0x7
+		.carousel .navigation li {
+			&.active, &:hover {
+				background: #96be46;
+			}
+		}
+
+		//меняем цвет кнопки в подписке - http://prntscr.com/h4d0n6
+		.subscription .form .btn {
+			background: #96be46; border-color: #96be46;
+			&:hover {
+				background: #fff; color: #96be46;
+			}
+		}
+
+		//меняем цвета в футере - http://prntscr.com/h4dpcf
+		.footer {
+			&-contacts > ul > li ul.soc li a {
+				&:hover {i {color: #96be46;}}
+			}  
+		}
+	}
+
+	&.children {
+		//меняем цвет меню - http://prntscr.com/h4bg0s
+		.help-menu {
+			bottom: -35px;
+			li {
+				&.active, &:hover {
+					a {
+						background: #e8b194; color: #fff;
+						i {color: #fff;}
+					}
+				}
+				a {
+					color: #e8b194;
+					i {color: #e8b194;}
+				}
+			}
+		}
+
+		//меняем цвет стрелок - http://prntscr.com/h4bgum
+		.promotion section p > i {color: #e8b194;}
+
+		//меняем цвет кнопок в карусели - http://prntscr.com/h4d2gb
+		.carousel .navigation li {
+			&.active, &:hover {background: #e8b194;}
+		}
+		
+		//меняем цвет кнопки в подписке - http://prntscr.com/h4d2pj
+		.subscription .form .btn {
+			background: #e8b194; border-color: #e8b194;
+			&:hover {
+				background: #fff; color: #e8b194;
+			}
+		}
+
+		//меняем цвета в футере - http://prntscr.com/h4dpcf
+		.footer {
+			&-contacts > ul > li ul.soc li a {
+				&:hover { i {color: #e8b194;}}
+			}  
+		}
+
+	}
+}
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
 .app.index 	{
 	padding-top: 0;
 	.header {
@@ -6,6 +126,16 @@
 		////////////////////////////////
 
 		background: transparent; box-shadow: none;
+		//Надписи возле лого - http://prntscr.com/h4bzp5
+		.subtitle {
+			position: relative; padding-left: 21px;
+			&:before {
+				content: '';
+				height: 26px; width: 2px; position: absolute; left: 5px; top: -8px;
+				background: #fff;
+			}
+		}
+		/////////////////////
 		.menu-top { 
 			a.burger {
 				&.active {
@@ -35,7 +165,10 @@
 
 		a.logo {
 			display: none;
-			&.white {display: inline-block; position: relative; top: -2px; padding-left: 31px;}
+			&.white {
+				display: inline-block; position: relative; top: -2px; padding-left: 31px;
+				@include respond-to(sm) {padding-left: 15px;}
+			}
 		}
 	}
 
@@ -121,7 +254,6 @@
 			}
 		}
 	}
-
 
 }
 
@@ -210,7 +342,7 @@
 }
 
 
-//PROMOTION - http://prntscr.com/h2dye8
+//PROMOTION LIST - http://prntscr.com/h2dye8
 .list {
 	&-promotion {
 		display: flex; justify-content: space-around;
@@ -229,6 +361,7 @@
 	}
 }
 
+//PROMOTION - http://prntscr.com/h4biip
 .promotion {
 	section {
 		display: flex; justify-content: center;
@@ -254,6 +387,62 @@
 	}
 	& > p {
 		@include font-type($HelveticaR, 16px, 22px, 0.3px); text-align: center; color: #000;
+	}
+}
+
+
+//http://prntscr.com/h4c7ee
+.action {
+	display: flex; flex-direction: column; justify-content: end;
+
+	width: 100%; min-height: 422px; padding: 0 0 59px 49px;
+	@include respond-to(xs) {padding: 0 15px 59px 15px;}
+
+	h2 {
+		display: flex; align-items: center;
+
+		@include font-type($CormacB, 54px, 1, 0); color: #fff;  
+		/*для хрома*/margin-top: auto;/**/ margin-bottom: 25px;
+		@include respond-to(xs) {font-size: 36px; line-height: 46px;}
+		i {
+			font-size: 27px; font-weight: bold;
+			margin-left: 21px; margin-top: 7px;
+		}
+	}
+	p {
+		@include font-type($CormacB, 22px, 32px, 0); color: #fff;
+		margin-bottom: 0; padding-left: 3px;
+		@include respond-to(xs) {font-size: 18px; line-height: 28px;}
+	}
+}
+
+//http://prntscr.com/h4c80l
+.joined {
+	padding-bottom: 51px; position: relative;
+	a.btn-white {
+		position: absolute; right: -29px; top: 145px;
+		@include respond-to(sm) {right: -15px;}
+
+		i {margin-left: 0;}
+	}
+	h2 {
+		@include font-type($CormacB, 16px, 1, 0); color: #7690a4; text-align: center;
+		padding-top: 20px; margin-bottom: 50px;
+	}
+	ul {
+		display: flex;
+		li {
+			margin-right: 19px; 
+			&:last-child {margin-right: 0;}
+			a {
+				&:hover {
+					img {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
+				}
+				img {
+					transition: all .4s ease;
+				}
+			}
+		}
 	}
 }
 
@@ -429,6 +618,8 @@
 	.btn-white {
 		position: absolute; z-index: 5; top: 178px; right: -45px;
 		@include respond-to(lg) {right: -20px;}
+		@include respond-to(xs) {top: -23px;}
+
 	}
 }
 
@@ -443,7 +634,7 @@
 
 		li,  .owl-dot {
 			width: 19px; height: 8px; margin: 0 5px;
-			background: #cdeaf6; border-radius: 10px; cursor: pointer;
+			background: #d9deea; border-radius: 10px; cursor: pointer;
 			transition: all .2s ease; transform: translateY(0);
 
 			&.active {background: #4489ff; &:hover {cursor: default;}}
@@ -561,7 +752,7 @@
 	.btn-white {
 		position: absolute; z-index: 5; right: -47px; top: 182px;
 		@include respond-to(lg) {right: -20px;}
-		@include respond-to(md) {top: -10px;}
+		@include respond-to(md) {top: 9px;}
 	}
 
 	&-wr {
@@ -623,3 +814,28 @@
 	}
 }
 
+
+//http://prntscr.com/h4cg2c
+.subscription {
+	padding-top: 79px; padding-bottom: 40px;
+	border-top: 1px solid #d9d9d9;
+	h2 {
+		@include font-type($CormacB, 34px, 51px, 0.3px); text-align: center;
+		margin-bottom: 16px;
+	}
+
+	.form {
+		display: flex; flex-direction: column; align-items: center;
+		& > span {
+			margin-bottom: 5px;
+			@include respond-to(sm) {width: 100%;}
+
+			input {
+				letter-spacing: 0.6px; width: 580px;
+				@include respond-to(sm) {width: 100%;}
+			}
+		}
+		
+		.btn {width: 203px; padding: 21px 20px;}
+	}
+}
