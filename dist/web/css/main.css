@@ -13450,6 +13450,11 @@ button.close {
 .app.index.pet .list-promotion, .app.index.children .list-promotion {
   padding-top: 16px; }
 
+.app.index.pet .footer-contacts > ul .logo, .app.index.children .footer-contacts > ul .logo {
+  display: none; }
+  .app.index.pet .footer-contacts > ul .logo-black, .app.index.children .footer-contacts > ul .logo-black {
+    display: inline-block; }
+
 .app.index.pet .footer-contacts > ul > li ul.soc li a i, .app.index.children .footer-contacts > ul > li ul.soc li a i {
   color: #000; }
 
@@ -13466,6 +13471,9 @@ button.close {
       color: #96be46; }
 
 .app.index.pet .promotion section p > i {
+  color: #96be46; }
+
+.app.index.pet .js-index-menu .js-toggle-menu i {
   color: #96be46; }
 
 .app.index.pet .carousel .navigation li.active, .app.index.pet .carousel .navigation li:hover {
@@ -13494,6 +13502,9 @@ button.close {
       color: #e8b194; }
 
 .app.index.children .promotion section p > i {
+  color: #e8b194; }
+
+.app.index.children .js-index-menu .js-toggle-menu i {
   color: #e8b194; }
 
 .app.index.children .carousel .navigation li.active, .app.index.children .carousel .navigation li:hover {
@@ -13691,6 +13702,86 @@ button.close {
           text-transform: none; }
           .intro-body section p span i {
             margin-right: 11px; }
+
+@media (max-width: 767px) {
+  .js-index-menu {
+    width: 90%;
+    padding-top: 25px;
+    position: relative;
+    bottom: -30px;
+    z-index: 5;
+    margin: 0 auto;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    background: #fff;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); } }
+
+.js-index-menu .js-toggle-menu {
+  display: none; }
+  @media (max-width: 767px) {
+    .js-index-menu .js-toggle-menu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      font-family: "cormac-book", sans-serif;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      color: #000;
+      width: 95%;
+      margin: 0 auto;
+      padding-bottom: 15px; }
+      .js-index-menu .js-toggle-menu i {
+        font-size: 28px;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease; }
+        .js-index-menu .js-toggle-menu i.active {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg); } }
+
+@media (max-width: 767px) {
+  .js-index-menu .help-menu {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px; }
+    .js-index-menu .help-menu.active {
+      height: auto;
+      max-height: 1000px; }
+    .js-index-menu .help-menu > li {
+      text-align: left;
+      width: 100%; }
+      .js-index-menu .help-menu > li:hover a, .js-index-menu .help-menu > li.active a {
+        text-align: left;
+        -webkit-border-radius: 0;
+        border-radius: 0; }
+      .js-index-menu .help-menu > li:first-child:hover a, .js-index-menu .help-menu > li:first-child.active a {
+        text-align: left; }
+      .js-index-menu .help-menu > li a {
+        text-align: left;
+        padding: 20px 0 20px 35px;
+        background: #fff; } }
 
 .help-menu {
   display: -webkit-box;
@@ -16080,6 +16171,8 @@ button.close {
           margin-bottom: 15px; }
           .footer-contacts > ul > li:last-child {
             margin-bottom: 0; } }
+      .footer-contacts > ul > li .logo-black {
+        display: none; }
       .footer-contacts > ul > li ul.soc {
         display: -webkit-box;
         display: -webkit-flex;

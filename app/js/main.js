@@ -22,6 +22,12 @@ let app = (function ($) {
           return false;
       });
 
+      //INDEX MENU
+      $('.js-index-menu').click(function(){
+          $('.js-index-menu .help-menu').toggleClass('active');
+          $('.js-index-menu .js-toggle-men i').addClass('active');
+       });
+
       //dropDown menu - http://prntscr.com/h1da0x
       // $('.js-dropDown').click(function(){
       //     $('.menu-top ul .drop-down > ul').toggleClass('active');
