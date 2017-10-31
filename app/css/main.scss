@@ -12,7 +12,8 @@
 @import '../views/defaults/index';
 @import '../views/popup/popup';
 
-@import '../tpl/market-new';
+
+@import '../tpl/preview';
 
 @import '../tpl//header';
 @import '../tpl/breadcrumbs';
@@ -25,6 +26,7 @@
 @import '../views/market/market';
 @import '../views/market/product';
 @import '../views/market/add';
+@import '../views/market/market-new';
 
 @import '../views/ux/buttons';
 @import '../views/ux/select';

@@ -3,6 +3,11 @@
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
 .app.index {
 	&.pet, &.children {
+		header.header {
+			.logo-block {
+				.subtitle {display: inline-block;}
+			}
+		}
 
 		//изменен размер текста и отступы - http://prntscr.com/h4c507
 		.intro-body {
@@ -285,7 +290,7 @@
 			@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
 			width: 95%; margin: 0 auto; padding-bottom: 15px;
 			i {
-				font-size: 28px;
+				font-size: 28px; color: $link-color;
 				transition: all .4s ease;
 				&.active {transform: rotate(180deg);}
 			}
@@ -330,8 +335,6 @@
 	position: relative; z-index: 2; bottom: -28px; width: 984px; height: 64px; margin: 0 auto;
 	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 	@include respond-to(lg) {width: 95%;}
-	@media (max-width: 650px) {flex-wrap: wrap; align-items: center; width: 100%;}
-	@include respond-to(xs) {height: auto; padding-bottom: 25px;}
 	
 	
 
@@ -339,14 +342,11 @@
 		height: 100%; margin-right: 11px;
 		transition: all .4s ease;
 		@include respond-to(lg) {width: 25%;}
-		@media (max-width: 650px) {text-align: center; margin-right: 0;}
-		@include respond-to(xs) {width: 50%;}
 	
 		&:hover {
 			a {
 				color: #fff; text-align: center;
 				background: $btn-color; border-radius: 100px; 
-				@media (max-width: 650px) {background: transparent; color: $link-color;}
 
 				i {
 					color: #fff;
@@ -358,12 +358,6 @@
 				text-align: left; color: #fff;
 				padding: 20px 0 20px 35px;
 				background: $btn-color; border-radius: 100px; 
-				@media (max-width: 650px) {
-					color: $link-color; text-align: center; 
-					padding-left: 0; display: inline-block; 
-					background: transparent;  border-radius: 0;
-				}
-				@include respond-to(xs) {height: 55px;}
 				&:after {
 					content: '';
 					position: absolute; bottom: 12px;
@@ -372,11 +366,18 @@
 				}
 				i {
 					color: #fff;
-					@media (max-width: 650px) {display: none;}
 				}
 			}
 		}
-		&:last-child {margin-right: 0;}
+		&:last-child {
+			margin-right: 0;
+			a {
+				i {
+					display: none;
+					@include respond-to(sm) {display: inline-block;}
+				}
+			}
+		}
 		
 
 		a {
@@ -384,26 +385,12 @@
 			display: inline-block; height: inherit; width: 238px; padding-top: 20px; padding-right: 14px;  position: relative;
 			transition: all .5s ease;
 			@include respond-to(lg) {width: 100%;}
-			@media (max-width: 650px) {
-				display: inline-block; width: 80%; position: relative; text-align: center;
-				&:after {
-					content: '';
-					position: absolute; bottom: 12px;
-					border-bottom: 1px solid $link-color;
-					transition: all 0.4s;
-				}
-				&:after {right: 100%; left: 0;}
-				&:hover:after {right: 0;}
-				&:hover i {transform: translateX(5px);}
-				}
-				@include respond-to(xs) {height: 55px;}
 			
 
 			i {
 				color: $link-color; font-size: 30px;
 				position: absolute; right: 21px; top: 16px;
 				transition: all .5s ease;
-				@media (max-width: 650px) {display: none;}
 			} 
 		}
 	}

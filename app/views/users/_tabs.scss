@@ -43,18 +43,23 @@
 
 				a {
 					@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
-					display: block; padding: 10px 0; margin-bottom: -3px;
+					display: block; padding: 10px 0; position: relative;
 
-					@include respond-to(md) {border-bottom: 3px solid #eff3f5; position: relative; z-index: 10;}
-
+					//@include respond-to(md) {border-bottom: 3px solid #eff3f5; position: relative; z-index: 10;}
+					&:after {
+						content: ''; 
+						display: block; height: 3px; width: 0%; position: absolute; left: 50%; bottom: -3px;
+						transform: translateX(-50%); 
+						background: $link-color;
+						transition: width 0.3s ease-in-out;
+					} 
 					&:hover {
-						border-bottom: 3px solid #4489ff;
-						@include respond-to(md) {border-bottom-color: $btn-color;}
+						&:after {width: 100%;}
 					}
 
 					span {color: #7690a4; margin-left: 5px;}
 				}
-				&.active {a {border-bottom: 3px solid #4489ff;}}
+				&.active { a {&:after {width: 100%;}}}
 			}
 		}
 	}
@@ -134,7 +139,7 @@
 
 				&.active {
 					a {
-						&:before, &:after {width: 50%;}
+						&:after {width: 100%;}
 					}
 				}
 				a {
@@ -142,18 +147,15 @@
 					display: inline-block; padding-bottom: 20px; position: relative;
 					@include respond-to(md) {width: 100%;}
 
-					&:before, &:after {
+					&:after {
 						content: ''; 
-						display: block; height: 3px; width: 0; position: absolute; bottom: 0; 
-						background: #726e64;
+						display: block; height: 3px; width: 0%; position: absolute; left: 50%; bottom: 0; 
+						background: #726e64; transform: translateX(-50%); 
 						transition: width 0.3s ease-in-out;
 					} 
-					&:before {right: 50%;}
-					&:after {left: 50%;}
 
 					&:hover {
-						&:before {width: 50%;}
-						&:after {width: 50%;}
+						&:after {width: 100%;}
 
 					}
 				}
