@@ -27,10 +27,10 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function () {
 	return gulp.src('app/css/*.scss')
 	.pipe(sass().on('error', sass.logError))
-	.pipe(autoprefixer({
-		browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
-		cascade: false
-	}))
+	// .pipe(autoprefixer({
+	// 	browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+	// 	cascade: false
+	// }))
 	.pipe(gulp.dest('dist/web/css'))
 	.pipe(browserSync.reload({stream: true}));
 });

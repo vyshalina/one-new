@@ -18,6 +18,7 @@
 		<!-- CONFIG -->
 		<meta name="format-detection" content="telephone=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		</script>
 	
 		<!-- CSS -->
 		<link rel="stylesheet" href="../../web/css/main.css">
@@ -36,79 +37,50 @@
 		<!-- Application -->
 		<div class="app index children">
 			<header class="header js-header active">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="logo-block">
-								<a href="index.html" class="logo"><img src="../../web/img/logoBlue.svg"></a>
-								<a href="index.html" class="logo white"><img src="../../web/img/logo-white.png"></a> <span class="subtitle"><img src="../../web/img/index/pet.png" alt=""></span>
-							</div>
-							
-							<nav class="menu-top">
-								<a href="#" class="burger js-open_menu-top">
-									<span></span>
-									<span></span>
-									<span></span>
-									<span></span>
-								</a>
-								<ul>
-									<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Найти вещь</a></li>
-									<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Продать</a></li>
-									<li><a href="#" class="js-poPup">Войти</a></li>
-									<li class="drop-down">
-										<a href="#" class="js-dropDown">
-											<span></span>
-											<span></span>
-											<span></span>
-										</a>
-										<ul>
-											<li><a href="#">О проекте</a></li>
-											<li><a href="#">Фонды</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-							
-						</div>
-					</div>
-				</div>
-			</header>
 			
-			<section class="intro" style="background: url('../../web/img/index/intro2.png') no-repeat center; background-size: cover;">
-				<div class="gradient"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<article class="intro-body">
-								<header>
-									<h1>Забота <br>
+				<a href="/" class="logo"><span><img src="../../web/img/index/pet.png" alt=""></span></a> 
+				
+				<nav class="menu">
+					<ul>
+						<li><a href="#"><i class="icon-search"></i><span>Найти вещь</span></a></li>
+						<li><a href="#"><i class="icon-plus"></i><span>Продать</span></a></li>
+						<li><a href="#" class="js-poPup"><span>Войти</span></a></li>
+					</ul>
+					<a href="#" class="burger js-dropDown">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</nav>
+			
+			</header>
+
+			<div class="intro">
+				<section>
+					<article>
+						<div class="container">
+							<header>
+								<h1>Забота <br>
 									о своих детях <br>
 									- помощь всем</h1>
 									<p>Коротенький дискрипшн. Компании жертвуют <br> часть стоимости товаров.</p>
-								</header>
-
-								<section>
-									<p>
-										<span><i class="icon icon-shield"></i>Надежность</span>
-										BLOCKHAIN
-									</p>
-								</section>
-							</article>
-
-							<div class="js-index-menu">
-								<a href="#" class="js-toggle-menu">Участвовать <i class="fa fa-angle-down"></i></a>
-								<ul class="help-menu">
-									<li class="active"><a href="#">Идея <i class="fa fa-angle-right"></i></a></li>
-									<li><a href="#">Продать <i class="fa fa-angle-right"></i></a></li>
-									<li><a href="#">Купить <i class="fa fa-angle-right"></i></a></li>
-									<li><a href="#">Помочь <i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-							
+							</header>
+							<footer>
+								<p><span><i class="icon icon-shield"></i>Надежность</span>BLOCKHAIN</p>
+							</footer>
 						</div>
-					</div>
-				</div>		
-			</section>
+					</article>
+				</section>
+				<nav>
+					<a href="#" class="js-toggle-menu">Участвовать <i class="fa fa-angle-down"></i></a>
+					<ul class="js-lava_menu">
+						<li><a href="#"><span>Идея</span><i class="fa fa-angle-right"></i></a></li>
+						<li><a href="#"><span>Продать</span><i class="fa fa-angle-right"></i></a></li>
+						<li><a href="#"><span>Купить</span><i class="fa fa-angle-right"></i></a></li>
+						<li><a href="#"><span>Помочь</span><i class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</nav>	
+			</div>
 			
 			<div class="wr base">
 				<div class="container">
@@ -624,7 +596,12 @@
 		</div>
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="../../web/js/libs.min.js"></script>
-		<script type="text/javascript" src="../../web/js/main.js"></script>
+		<!-- <script type="text/javascript" src="../../web/js/libs.min.js"></script>
+		<script type="text/javascript" src="../../web/js/main.js"></script> -->
+		
+		<script type="text/javascript" src="../../web/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../web/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../../web/js/jquery.lavalamp-1.4.min.js"></script>
+		<script type="text/javascript" src="../../web/js/main-new.js"></script>
 	</body>
 </html>

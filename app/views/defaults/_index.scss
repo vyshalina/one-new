@@ -139,57 +139,6 @@
 
 .app.index 	{
 	padding-top: 0;
-	.header {
-		//////Временно, чтобы не мешал
-		position: absolute;
-		////////////////////////////////
-
-		background: transparent; box-shadow: none;
-		//Надписи возле лого - http://prntscr.com/h4bzp5
-		.subtitle {
-			position: relative; padding-left: 21px;
-			&:before {
-				content: '';
-				height: 26px; width: 2px; position: absolute; left: 5px; top: -8px;
-				background: #fff;
-			}
-		}
-		/////////////////////
-		.menu-top { 
-			a.burger {
-				&.active {
-					span {
-						@include respond-to(md) {background: $link-color;}
-					}
-				}
-				span {
-					@include respond-to(md) {background: #fff;}
-				}
-				
-			}
-			& > ul { 
-
-				& > li { 
-					a { 
-						color: #fff; i {color: #fff;} 
-						@include respond-to(md) {
-							color: $link-color;
-							i {color: $link-color;}
-						}
-					} 
-					&.drop-down { & > a { span {background: #fff;} } }
-				} 
-			} 
-		}
-
-		a.logo {
-			display: none;
-			&.white {
-				display: inline-block; position: relative; top: -2px; padding-left: 31px;
-				@include respond-to(sm) {padding-left: 15px;}
-			}
-		}
-	}
 
 	//Секция с выпадающими списками на главной - http://prntscr.com/h2ns22
 	.section-group {
@@ -212,63 +161,176 @@
 	}
 }
 
-.gradient-vert {
-	position: absolute; width: 100%; height: 100%;
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 16%,rgba(0,0,0,0.49) 98%,rgba(0,0,0,0.5) 100%);
-}
-
 // INTRO LANDING - http://prntscr.com/h2bdli
 .intro {
-	width: 100%; height: auto; position: relative;
-	background: url(../../web/img/index/intro.png) no-repeat center; background-size: cover;
-	.gradient {
-		position: absolute; width: 100%; height: 100%; 
+	section {
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
-	}
-	&-body {
-		color: #fff;
-		position: relative; padding: 145px 0 64px 100px;
-		@include respond-to(sm) {padding: 145px 0 64px 20px;}
-		@include respond-to(xs) {padding-left: 0;}
-		header {
-			h1 {
-				@include font-type($CormacB, 42px, 56px, 0px); 
-				color: #fff; margin-top: 0; margin-bottom: 23px;
-				@include respond-to(sm) {font-size: 36px; line-height: 48px;}
-			}
-			p {
-				@include font-type($CormacB, 26px, 32px, 0px); 
-				margin-bottom: 87px;
-			}
-			a {
-				@include font-type($CormacB, 16px, 1px, 0px); color: #fff;
-				position: relative;
-				&:after {
-					content: '';
-					position: absolute; top: 100%;
-					border-bottom: 1px solid #fff;
-					transition: all 0.4s;
-				}
-				&:after {right: 100%; left: 0;}
-				&:hover:after {right: 0;}
-				&:hover i {transform: translateX(5px);}
+		
+		article {
+			.container {position: relative;}
+			min-height: 546px; padding: 146px 0 30px 0;
+			color: #fff;
+			position: relative;
+			background: url('../img/index/intro.png') no-repeat center; background-size: cover;
 
-				i {color: #fff; transition: all 0.4s; transform: translateX(0);}	
+			header {
+				padding-left: 102px;
+
+				h1 {
+					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
+					margin-top: 0; margin-bottom: 22px;
+					@include respond-to(sm) {font-size: 36px; line-height: 48px;}
+				}
+				p {
+					@include font-type($CormacB, 26px, 32px, 0px); 
+					margin-bottom: 86px;
+				}
+				a {
+					@include font-type($CormacB, 16px, 16px, 0px); color: #fff;
+					position: relative;
+					i {
+						color: #fff; font-size: 17px; font-weight: bold;
+						margin-left: 4px;
+						position: relative; top: 1px;
+						transition: all 0.4s; transform: translateX(0);
+					}
+
+					&:after {
+						content: '';
+						position: absolute; top: 100%;
+						border-bottom: 1px solid #fff;
+						transition: all 0.4s;
+					}
+					&:after {right: 100%; left: 0;}
+					&:hover:after {right: 0;}
+					&:hover i {transform: translateX(5px);}
+
+						
+				}
+			}
+
+			footer {
+				position: absolute; top: 0; right: 0;
+				p {
+					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
+					position: relative;
+					span {
+						position: absolute; top: -22px; left: -26px; 
+						@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
+						i {margin-right: 11px;}
+					}
+				}
 			}
 		}
+	}
 
-		section {
-			position: absolute; right: 24px; top: 184px;
-			@include respond-to(md) {
-				position: static; margin-top: 50px; padding-left: 26px;
+	nav {
+		margin-top: -36px; background: white;
+
+		& > ul {
+			display: flex; justify-content: space-between; align-items: stretch;
+			width: 984px; height: 64px; margin: 0 auto;
+			position: relative; z-index: 2;
+			background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+			li {
+				height: 100%; width: 26%;
+				position: relative; z-index: 1;
+				
+				a, i {transition: all 1s ease;}
+				a {
+					display: flex; justify-content: center; align-items: center;
+					color: #669CF9; font-family: $CormacB; font-size: 18px; line-height: 18px; text-align: center;
+					width: 100%; height: 100%; padding-right: 100px;
+					position: relative;
+
+					i {
+						color: #669CF9; font-size: 30px;
+						position: absolute; right: 21px; top: 16px;
+					} 
+				}
+				&:last-child {width: 22%; a {padding-right: 0; i {display: none;}}}
+
+				&.backLava {background: #669CF9; border-radius: 100px;}
+				&.selectedLava {a {color: #fff; i {color: #fff;}}}
 			}
-			p {
-				@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
-				position: relative;
-				span {
-					position: absolute; top: -22px; left: -26px; 
-					@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
-					i {margin-right: 11px;}
+
+			&:hover {
+				li {
+					a {color: #669CF9; i {color: #669CF9;}}
+					&:hover {
+						a {color: #fff; i {color: #fff;}}
+						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
+				}
+			}
+
+			@include respond-to(sm) {
+				height: 0; max-height: 0; overflow: hidden;
+				transition: all .5s linear;
+				&.active {height: auto; max-height: 1000px;}
+
+				flex-direction: column;
+				height: auto; width: 100%;
+				border-radius: 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
+
+				& > li {
+					text-align: left;
+					width: 100%;
+					&:hover, &.active {
+						a {text-align: left; border-radius: 0;}
+					}
+					&:first-child {
+						&:hover, &.active {
+							a {text-align: left;}
+						}
+					}
+					a {
+						text-align: left;
+						padding: 20px 0 20px 35px;
+						background: #fff;
+					}
+					
+				}
+			}
+		}
+	}
+
+	.pet & {
+		article {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
+		nav > ul li {
+			a, i {color: #96be46;}
+			&.backLava {background: #96be46;}
+			&.selectedLava {a {color: #fff; i {color: #fff;}}}
+		}
+		nav > ul{
+			&:hover {
+				li {
+					a {color: #96be46; i {color: #96be46;}}
+					&:hover {
+						a {color: #fff; i {color: #fff;}}
+						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
+				}
+			}
+		}
+	}
+
+	.children & {
+		article {background: url('../img/index/intro1.png') no-repeat center; background-size: cover;}
+		nav > ul li {
+			a, i {color: #E8B194;}
+			&.backLava {background: #E8B194;}
+			&.selectedLava {a {color: #fff; i {color: #fff;}}}
+		}
+		nav > ul{
+			&:hover {
+				li {
+					a {color: #E8B194; i {color: #E8B194;}}
+					&:hover {
+						a {color: #fff; i {color: #fff;}}
+						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
 				}
 			}
 		}
@@ -276,126 +338,21 @@
 }
 
 //ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ НА МОБИЛЬНОЙ ВЕРСИИ - http://prntscr.com/h4fsh2
-.js-index-menu {
+.js-toggle-menu {
+	display: none; 
 	@include respond-to(sm) {
-		width: 90%; padding-top: 25px; position: relative; bottom: -30px; z-index: 5; margin: 0 auto;
-		border-radius: 20px; background: #fff; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-	}
+		display: flex; justify-content: space-between;
 
-	.js-toggle-menu {
-		display: none; 
-		@include respond-to(sm) {
-			display: flex; justify-content: space-between;
-
-			@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
-			width: 95%; margin: 0 auto; padding-bottom: 15px;
-			i {
-				font-size: 28px; color: $link-color;
-				transition: all .4s ease;
-				&.active {transform: rotate(180deg);}
-			}
-
+		@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
+		width: 95%; margin: 0 auto; padding-bottom: 15px;
+		i {
+			font-size: 28px; color: $link-color;
+			transition: all .4s ease;
+			&.active {transform: rotate(180deg);}
 		}
-	}
-	.help-menu {
-		@include respond-to(sm) {
-			height: 0; max-height: 0; overflow: hidden;
-			transition: all .5s linear;
-			&.active {height: auto; max-height: 1000px;}
 
-			flex-direction: column;
-			height: auto; width: 100%;
-			border-radius: 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
-
-			& > li {
-				text-align: left;
-				width: 100%;
-				&:hover, &.active {
-					a {text-align: left; border-radius: 0;}
-				}
-				&:first-child {
-					&:hover, &.active {
-						a {text-align: left;}
-					}
-				}
-				a {
-					text-align: left;
-					padding: 20px 0 20px 35px;
-					background: #fff;
-				}
-				
-			}
-		}
 	}
 }
-
-//MENU IN INTRO http://prntscr.com/h2dmhm
-.help-menu {
-	display: flex;
-	position: relative; z-index: 2; bottom: -28px; width: 984px; height: 64px; margin: 0 auto;
-	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-	@include respond-to(lg) {width: 95%;}
-	
-	
-
-	li {
-		height: 100%; margin-right: 11px;
-		transition: all .4s ease;
-		@include respond-to(lg) {width: 25%;}
-	
-		&:hover {
-			a {
-				color: #fff; text-align: center;
-				background: $btn-color; border-radius: 100px; 
-
-				i {
-					color: #fff;
-				}
-			}
-		}
-		&.active {
-			a {
-				text-align: left; color: #fff;
-				padding: 20px 0 20px 35px;
-				background: $btn-color; border-radius: 100px; 
-				&:after {
-					content: '';
-					position: absolute; bottom: 12px;
-					border-bottom: 1px solid $link-color;
-					transition: all 0.4s;
-				}
-				i {
-					color: #fff;
-				}
-			}
-		}
-		&:last-child {
-			margin-right: 0;
-			a {
-				i {
-					display: none;
-					@include respond-to(sm) {display: inline-block;}
-				}
-			}
-		}
-		
-
-		a {
-			color: $link-color; text-align: center; @include font-type($CormacEL, 18px, 1, 0px);
-			display: inline-block; height: inherit; width: 238px; padding-top: 20px; padding-right: 14px;  position: relative;
-			transition: all .5s ease;
-			@include respond-to(lg) {width: 100%;}
-			
-
-			i {
-				color: $link-color; font-size: 30px;
-				position: absolute; right: 21px; top: 16px;
-				transition: all .5s ease;
-			} 
-		}
-	}
-}
-
 
 //PROMOTION LIST - http://prntscr.com/h2dye8
 .list {
