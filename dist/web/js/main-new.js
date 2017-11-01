@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 $(document).ready(function () {
 
@@ -6,6 +6,10 @@ $(document).ready(function () {
     fx: 'easeInOutQuart',
     speed: 600,
     startItem: 0
+  });
+
+  $(".js-lava_menu li a").click(function () {
+    $('.js-slides article').removeClass('active').eq($(this).parent().index() - 1).addClass('active');
   });
 });
 

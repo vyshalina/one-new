@@ -165,16 +165,18 @@
 .intro {
 	section {
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
+		height: 640px; position: relative;
 		
 		article {
-			.container {position: relative;}
-			min-height: 546px; padding: 146px 0 30px 0;
+			.container {position: relative;} transition: height .6s;
+			width: 100%; height: 0; &.active {height: 100%;}
+
 			color: #fff;
-			position: relative;
+			position: absolute; bottom: 0; left: 0;
 			background: url('../img/index/intro.png') no-repeat center; background-size: cover;
 
 			header {
-				padding-left: 102px;
+				padding-left: 102px; margin-top: 146px;
 
 				h1 {
 					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
@@ -210,7 +212,7 @@
 			}
 
 			footer {
-				position: absolute; top: 0; right: 0;
+				position: absolute; top: 146px; right: 0;
 				p {
 					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
 					position: relative;
@@ -237,11 +239,11 @@
 				height: 100%; width: 26%;
 				position: relative; z-index: 1;
 				
-				a, i {transition: all 1s ease;}
+				a, i {transition: color 1s ease, padding .2s linear;}
 				a {
 					display: flex; justify-content: center; align-items: center;
 					color: #669CF9; font-family: $CormacB; font-size: 18px; line-height: 18px; text-align: center;
-					width: 100%; height: 100%; padding-right: 100px;
+					width: 100%; height: 100%; padding-right: 50px;
 					position: relative;
 
 					i {
@@ -249,10 +251,12 @@
 						position: absolute; right: 21px; top: 16px;
 					} 
 				}
-				&:last-child {width: 22%; a {padding-right: 0; i {display: none;}}}
+				&:last-child {width: 22%; a {padding-right: 0 !important; i {display: none;}}}
 
 				&.backLava {background: #669CF9; border-radius: 100px;}
-				&.selectedLava {a {color: #fff; i {color: #fff;}}}
+				&.selectedLava {
+					a {color: #fff; padding-right: 100px; i {color: #fff;}}
+				}
 			}
 
 			&:hover {
@@ -264,35 +268,12 @@
 					}
 				}
 			}
-
-			@include respond-to(sm) {
-				height: 0; max-height: 0; overflow: hidden;
-				transition: all .5s linear;
-				&.active {height: auto; max-height: 1000px;}
-
-				flex-direction: column;
-				height: auto; width: 100%;
-				border-radius: 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
-
-				& > li {
-					text-align: left;
-					width: 100%;
-					&:hover, &.active {
-						a {text-align: left; border-radius: 0;}
-					}
-					&:first-child {
-						&:hover, &.active {
-							a {text-align: left;}
-						}
-					}
-					a {
-						text-align: left;
-						padding: 20px 0 20px 35px;
-						background: #fff;
-					}
-					
-				}
-			}
+		}
+		@include respond-to(lg) {
+			& > ul {width: 100%; li {width: 25%; a {padding-right: 20px;} &.selectedLava {a {padding-right: 20px;}}}}
+		}
+		@include respond-to(sm) {
+			& > ul {width: 400%; li {}}
 		}
 	}
 

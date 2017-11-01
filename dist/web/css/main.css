@@ -12849,18 +12849,26 @@ button.close {
           color: #000; }
 
 .intro section {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(5, 171, 224, 0) 100%); }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(5, 171, 224, 0) 100%);
+  height: 640px;
+  position: relative; }
   .intro section article {
-    min-height: 546px;
-    padding: 146px 0 30px 0;
+    transition: height .6s;
+    width: 100%;
+    height: 0;
     color: #fff;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background: url("../img/index/intro.png") no-repeat center;
     background-size: cover; }
     .intro section article .container {
       position: relative; }
+    .intro section article.active {
+      height: 100%; }
     .intro section article header {
-      padding-left: 102px; }
+      padding-left: 102px;
+      margin-top: 146px; }
       .intro section article header h1 {
         color: #fff;
         font-family: Cormac-Book, sans-serif;
@@ -12910,7 +12918,7 @@ button.close {
           transform: translateX(5px); }
     .intro section article footer {
       position: absolute;
-      top: 0;
+      top: 146px;
       right: 0; }
       .intro section article footer p {
         font-family: "HelveticaMedium", sans-serif;
@@ -12952,7 +12960,7 @@ button.close {
       position: relative;
       z-index: 1; }
       .intro nav > ul li a, .intro nav > ul li i {
-        transition: all 1s ease; }
+        transition: color 1s ease, padding .2s linear; }
       .intro nav > ul li a {
         display: flex;
         justify-content: center;
@@ -12964,7 +12972,7 @@ button.close {
         text-align: center;
         width: 100%;
         height: 100%;
-        padding-right: 100px;
+        padding-right: 50px;
         position: relative; }
         .intro nav > ul li a i {
           color: #669CF9;
@@ -12975,14 +12983,15 @@ button.close {
       .intro nav > ul li:last-child {
         width: 22%; }
         .intro nav > ul li:last-child a {
-          padding-right: 0; }
+          padding-right: 0 !important; }
           .intro nav > ul li:last-child a i {
             display: none; }
       .intro nav > ul li.backLava {
         background: #669CF9;
         border-radius: 100px; }
       .intro nav > ul li.selectedLava a {
-        color: #fff; }
+        color: #fff;
+        padding-right: 100px; }
         .intro nav > ul li.selectedLava a i {
           color: #fff; }
     .intro nav > ul:hover li a {
@@ -12997,33 +13006,18 @@ button.close {
       color: #fff; }
       .intro nav > ul:hover li:hover.selectedLava a i {
         color: #fff; }
-    @media (max-width: 767px) {
-      .intro nav > ul {
-        height: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: all .5s linear;
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-        border-radius: 0;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px; }
-        .intro nav > ul.active {
-          height: auto;
-          max-height: 1000px; }
-        .intro nav > ul > li {
-          text-align: left;
-          width: 100%; }
-          .intro nav > ul > li:hover a, .intro nav > ul > li.active a {
-            text-align: left;
-            border-radius: 0; }
-          .intro nav > ul > li:first-child:hover a, .intro nav > ul > li:first-child.active a {
-            text-align: left; }
-          .intro nav > ul > li a {
-            text-align: left;
-            padding: 20px 0 20px 35px;
-            background: #fff; } }
+  @media (max-width: 1199px) {
+    .intro nav > ul {
+      width: 100%; }
+      .intro nav > ul li {
+        width: 25%; }
+        .intro nav > ul li a {
+          padding-right: 20px; }
+        .intro nav > ul li.selectedLava a {
+          padding-right: 20px; } }
+  @media (max-width: 767px) {
+    .intro nav > ul {
+      width: 400%; } }
 
 .pet .intro article {
   background: url("../img/index/intro2.png") no-repeat center;

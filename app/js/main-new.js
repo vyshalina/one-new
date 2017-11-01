@@ -5,6 +5,10 @@ $(document).ready(function() {
     speed: 600,
     startItem: 0
   });
+
+  $(".js-lava_menu li a").click(function() {
+  	$('.js-slides article').removeClass('active').eq($(this).parent().index() - 1).addClass('active');
+  });
 });
 
 $(window).load(function() {
