@@ -6,11 +6,9 @@ $(document).ready(function() {
     startItem: 0
   });
 
-<<<<<<< HEAD
   $(".js-lava_menu li a").click(function() {
   	$('.js-slides article').removeClass('active').eq($(this).parent().index() - 1).addClass('active');
   });
-=======
 
   $(".js-owl-carousel").owlCarousel({
   	loop:true,
@@ -39,7 +37,6 @@ $(document).ready(function() {
   	dotsClass:'navigation'
   });
 
->>>>>>> a3e29cb35ec1e0c20ab74e811275cd72456af71e
 });
 
 $(window).load(function() {
