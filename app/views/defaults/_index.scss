@@ -66,7 +66,7 @@
 		.js-index-menu .js-toggle-menu i {color: #96be46;}
 
 		//меняем цвет кнопок в карусели - http://prntscr.com/h4d0x7
-		.carousel .navigation li {
+		.carousel .navigation div {
 			&.active, &:hover {
 				background: #96be46;
 			}
@@ -113,7 +113,7 @@
 		.js-index-menu .js-toggle-menu i {color: #e8b194;}
 
 		//меняем цвет кнопок в карусели - http://prntscr.com/h4d2gb
-		.carousel .navigation li {
+		.carousel .navigation div {
 			&.active, &:hover {background: #e8b194;}
 		}
 		
@@ -444,8 +444,9 @@
 	ul {
 		display: flex;
 		li {
-			margin-right: 19px; 
-			&:last-child {margin-right: 0;}
+			padding: 12px 0;
+			// margin-right: 19px; 
+			// &:last-child {margin-right: 0;}
 			a {
 				&:hover {
 					img {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
@@ -674,7 +675,8 @@
 	&-item {
 		display: flex; justify-content: start;
 
-		position: absolute; top: 0; left: 0; width: 100%; padding-left: 102px;
+		// position: absolute; top: 0; left: 0;
+		width: 100%; padding-left: 102px; padding-top: 10px;
 		@include respond-to(lg) {padding-left: 40px;}
 		@include respond-to(sm) {flex-direction: column; padding-left: 0;}
 
@@ -684,7 +686,8 @@
 			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 			@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 			img {
-				width: 80px; height: 80px; margin-right: 20px; margin-top: 5px;
+				width: 80px; height: 80px; margin-right: 20px; margin-top: 5px; max-width: 100%;
+				@include respond-to(md) {width: auto !important;}
 				@include respond-to(sm) {margin: 0 0 15px 0;}
 			}
 			figcaption {
@@ -720,7 +723,7 @@
 			transition: 0.5s ease-out;
 		}
 
-		&.active {
+		.active & {
 			figure {
 				opacity: 1;
 			}
