@@ -60,7 +60,7 @@ gulp.task('js:libs', function () {
 		'node_modules/lity/dist/lity.min.js',
 		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
 		'plugins/bpopup/jquery.bpopup.min.js',
-		'plugins/jquery.lavalamp-1.4.min.js'
+		'plugins/jrange-master/jquery.range-min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

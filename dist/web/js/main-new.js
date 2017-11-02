@@ -16,6 +16,20 @@ $(document).ready(function () {
     return false;
   });
 
+  $('.filter-catalog .reset').click(function () {
+    $('.filter-catalog-category input').attr('checked', false);
+  });
+
+  $('.js-range-slider').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    format: '%s',
+    width: 250,
+    showLabels: true,
+    isRange: true
+  });
+
   $(".js-owl-carousel").owlCarousel({
     loop: true,
     nav: false,
