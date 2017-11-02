@@ -3,6 +3,7 @@
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
 .app.index {
 	h2.header {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
+	.header a.logo {display: block;} // ХАК ЧТОБЫ ПЕРЕБИТЬ main.css
 
 	&.pet, &.children {
 		header.header {
@@ -756,7 +757,7 @@
 			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 			@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 			img {
-				width: 80px; height: 80px; margin-right: 20px; margin-top: 5px; max-width: 100%;
+				width: 80px !important; height: 80px !important; margin-right: 20px; margin-top: 5px; max-width: 100%;
 				@include respond-to(md) {width: auto !important;}
 				@include respond-to(sm) {margin: 0 0 15px 0;}
 			}
