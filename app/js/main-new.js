@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  // $('.js-slides article').removeClass('active').eq($(this).parent().index() - 1).addClass('active');
-
   $('.js-menu-open').click(function() {
     $('.menu-open').addClass('active');
     $('body').addClass('on-load');
@@ -11,6 +9,49 @@ $(document).ready(function() {
   $('.menu-close').click(function() {
     $('.menu-open').removeClass('active');
     $('body').removeClass('on-load');
+    return false;
+  });
+
+  $('.intro nav > ul li a').hover(function() {
+    let decor = $('.intro nav > ul li.decoration');
+    let itemNumber = $(this).parent().index();
+
+    $('.intro nav > ul li').removeClass('hovered');
+    
+    if (itemNumber === 1) {
+     decor.css('width', '26%');
+     $('.intro nav > ul li:nth-child(2)').addClass('hovered');
+    } else if (itemNumber === 2) {
+      decor.css('width', '52%');
+      $('.intro nav > ul li:nth-child(2)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(3)').addClass('hovered');
+    } else if (itemNumber === 3) {
+      decor.css('width', '78%');
+      $('.intro nav > ul li:nth-child(2)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(3)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(4)').addClass('hovered');
+    } else if (itemNumber === 4) {
+      decor.css('width', '100%');
+      $('.intro nav > ul li:nth-child(2)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(3)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(4)').addClass('hovered');
+      $('.intro nav > ul li:nth-child(5)').addClass('hovered');
+    }
+  });
+
+  $('.intro nav > ul li a').click(function() {
+    let itemNumber = $(this).parent().index() - 1;
+    $('.js-slides article').eq(itemNumber).addClass('active');
+
+    if (itemNumber === 0) {
+
+    } else if (itemNumber === 1) {
+
+    } else if (itemNumber === 2) {
+
+    } else if (itemNumber === 3) {
+
+    }
     return false;
   });
 

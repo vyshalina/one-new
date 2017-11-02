@@ -13124,26 +13124,16 @@ button.close {
           padding-right: 0 !important; }
           .intro nav > ul li:last-child a i {
             display: none; }
-      .intro nav > ul li.backLava {
+      .intro nav > ul li.hovered a, .intro nav > ul li.hovered i {
+        color: white; }
+      .intro nav > ul li.decoration {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
         background: #669CF9;
-        border-radius: 100px; }
-      .intro nav > ul li.selectedLava a {
-        color: #fff;
-        padding-right: 100px; }
-        .intro nav > ul li.selectedLava a i {
-          color: #fff; }
-    .intro nav > ul:hover li a {
-      color: #669CF9; }
-      .intro nav > ul:hover li a i {
-        color: #669CF9; }
-    .intro nav > ul:hover li:hover a {
-      color: #fff; }
-      .intro nav > ul:hover li:hover a i {
-        color: #fff; }
-    .intro nav > ul:hover li:hover.selectedLava a {
-      color: #fff; }
-      .intro nav > ul:hover li:hover.selectedLava a i {
-        color: #fff; }
+        border-radius: 100px;
+        transition: width .4s ease; }
   @media (max-width: 1199px) {
     .intro nav > ul {
       width: 100%; }
@@ -14394,7 +14384,7 @@ header.header {
   z-index: 5;
   background: white;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease-out;
+  transition: all 0.3s ease-out;
   transform: translateY(-100%); }
   header.header.active {
     transform: translateY(0); }

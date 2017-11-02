@@ -5,7 +5,7 @@ header.header {
 	position: fixed; top: 0; left: 0; z-index: 5;
 	background: white; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 	
-	transition: transform 0.3s ease-out;
+	transition: all 0.3s ease-out;
 	transform: translateY(-100%); &.active {transform: translateY(0);}
 
 

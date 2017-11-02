@@ -227,19 +227,12 @@
 				}
 				&:last-child {width: 22%; a {padding-right: 0 !important; i {display: none;}}}
 
-				&.backLava {background: #669CF9; border-radius: 100px;}
-				&.selectedLava {
-					a {color: #fff; padding-right: 100px; i {color: #fff;}}
-				}
-			}
-
-			&:hover {
-				li {
-					a {color: #669CF9; i {color: #669CF9;}}
-					&:hover {
-						a {color: #fff; i {color: #fff;}}
-						&.selectedLava {a {color: #fff; i {color: #fff;}}}
-					}
+				&.hovered {a, i {color: white;}}
+				&.decoration {
+					height: 100%;
+					position: absolute; top: 0; bottom: 0;
+					background: #669CF9; border-radius: 100px;
+					transition: width .4s ease;
 				}
 			}
 		}
