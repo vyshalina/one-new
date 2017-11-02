@@ -1,7 +1,18 @@
+//PARTNERS - http://prntscr.com/h2caw6
+.partners {
+	padding: 65px 0 54px 0;
+	border-top: 1px solid #e7edf2; background: white;
+
+	ul {
+		display: flex; align-items: center;  justify-content: space-between; flex-wrap: wrap;
+		li a img {filter: grayscale(100%);}
+	}
+}
+
 .footer {
 
 	padding-top: 20px;
-	background: #fff; border-top: 1px solid #d9e4ea; overflow: hidden;
+	background: #fff; border-top: 1px solid #e7edf2; overflow: hidden;
 	
 	&-info {
 		display: flex; align-items: center;

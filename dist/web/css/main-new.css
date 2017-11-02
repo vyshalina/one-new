@@ -12732,94 +12732,6 @@ button.close {
         .booking-proc section .info .btn-gr a:hover:after {
           width: 50%; }
 
-.app.index h2.header {
-  color: #000000;
-  font-family: Cormac-Book, sans-serif;
-  font-size: 38px;
-  line-height: 39px;
-  text-align: center;
-  margin-bottom: 15px; }
-
-.app.index .header a.logo {
-  display: block; }
-
-.app.index.pet header.header .logo-block .subtitle, .app.index.children header.header .logo-block .subtitle {
-  display: inline-block; }
-
-.app.index.pet .list-promotion, .app.index.children .list-promotion {
-  padding-top: 16px; }
-
-.app.index.pet .footer-contacts > ul .logo, .app.index.children .footer-contacts > ul .logo {
-  display: none; }
-  .app.index.pet .footer-contacts > ul .logo-black, .app.index.children .footer-contacts > ul .logo-black {
-    display: inline-block; }
-
-.app.index.pet .footer-contacts > ul > li ul.soc li a i, .app.index.children .footer-contacts > ul > li ul.soc li a i {
-  color: #000; }
-
-.app.index.pet .promotion section p > i {
-  color: #96be46; }
-
-.app.index.pet .js-index-menu .js-toggle-menu i {
-  color: #96be46; }
-
-.app.index.pet .carousel .navigation div.active, .app.index.pet .carousel .navigation div:hover {
-  background: #96be46; }
-
-.app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button {
-  background: #96be46;
-  border-color: #96be46; }
-  .app.index.pet .subscription .form .btn:hover, .app.index.pet .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.pet .subscription .form button:hover {
-    background: #fff;
-    color: #96be46; }
-
-.app.index.pet .footer-contacts > ul > li ul.soc li a:hover i {
-  color: #96be46; }
-
-.app.index.children .promotion section p > i {
-  color: #e8b194; }
-
-.app.index.children .js-index-menu .js-toggle-menu i {
-  color: #e8b194; }
-
-.app.index.children .carousel .navigation div.active, .app.index.children .carousel .navigation div:hover {
-  background: #e8b194; }
-
-.app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button {
-  background: #e8b194;
-  border-color: #e8b194; }
-  .app.index.children .subscription .form .btn:hover, .app.index.children .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.children .subscription .form button:hover {
-    background: #fff;
-    color: #e8b194; }
-
-.app.index.children .footer-contacts > ul > li ul.soc li a:hover i {
-  color: #e8b194; }
-
-.app.index.dobro h2.header {
-  margin-top: 40px; }
-
-.app.index.dobro .section-group {
-  padding-top: 0; }
-
-.app.index.dobro .promotion section p > i {
-  color: white; }
-
-.app.index.dobro .js-index-menu .js-toggle-menu i {
-  color: #7A3FBF; }
-
-.app.index.dobro .carousel .navigation div.active, .app.index.dobro .carousel .navigation div:hover {
-  background: #7A3FBF; }
-
-.app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button {
-  background: #7A3FBF;
-  border-color: #7A3FBF; }
-  .app.index.dobro .subscription .form .btn:hover, .app.index.dobro .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.dobro .subscription .form button:hover {
-    background: #fff;
-    color: #7A3FBF; }
-
-.app.index.dobro .footer-contacts > ul > li ul.soc li a:hover i {
-  color: #7A3FBF; }
-
 .app.index {
   padding-top: 0; }
   .app.index .section-group {
@@ -12842,11 +12754,68 @@ button.close {
         .app.index .section-group .select > a i {
           font-size: 16px;
           color: #000; }
+  .app.index.pet header.header .logo-block .subtitle, .app.index.children header.header .logo-block .subtitle {
+    display: inline-block; }
+  .app.index.pet .list-promotion, .app.index.children .list-promotion {
+    padding-top: 16px; }
+  .app.index.pet .footer-contacts > ul .logo, .app.index.children .footer-contacts > ul .logo {
+    display: none; }
+    .app.index.pet .footer-contacts > ul .logo-black, .app.index.children .footer-contacts > ul .logo-black {
+      display: inline-block; }
+  .app.index.pet .footer-contacts > ul > li ul.soc li a i, .app.index.children .footer-contacts > ul > li ul.soc li a i {
+    color: #000; }
+  .app.index.pet .promotion section p > i {
+    color: #96be46; }
+  .app.index.pet .js-index-menu .js-toggle-menu i {
+    color: #96be46; }
+  .app.index.pet .carousel .navigation div.active, .app.index.pet .carousel .navigation div:hover {
+    background: #96be46; }
+  .app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button {
+    background: #96be46;
+    border-color: #96be46; }
+    .app.index.pet .subscription .form .btn:hover, .app.index.pet .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.pet .subscription .form button:hover {
+      background: #fff;
+      color: #96be46; }
+  .app.index.pet .footer-contacts > ul > li ul.soc li a:hover i {
+    color: #96be46; }
+  .app.index.children .promotion section p > i {
+    color: #e8b194; }
+  .app.index.children .js-index-menu .js-toggle-menu i {
+    color: #e8b194; }
+  .app.index.children .carousel .navigation div.active, .app.index.children .carousel .navigation div:hover {
+    background: #e8b194; }
+  .app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button {
+    background: #e8b194;
+    border-color: #e8b194; }
+    .app.index.children .subscription .form .btn:hover, .app.index.children .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.children .subscription .form button:hover {
+      background: #fff;
+      color: #e8b194; }
+  .app.index.children .footer-contacts > ul > li ul.soc li a:hover i {
+    color: #e8b194; }
+  .app.index.dobro h2.header {
+    margin-top: 40px; }
+  .app.index.dobro .section-group {
+    padding-top: 0; }
+  .app.index.dobro .promotion section p > i {
+    color: white; }
+  .app.index.dobro .js-index-menu .js-toggle-menu i {
+    color: #7A3FBF; }
+  .app.index.dobro .carousel .navigation div.active, .app.index.dobro .carousel .navigation div:hover {
+    background: #7A3FBF; }
+  .app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button {
+    background: #7A3FBF;
+    border-color: #7A3FBF; }
+    .app.index.dobro .subscription .form .btn:hover, .app.index.dobro .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.dobro .subscription .form button:hover {
+      background: #fff;
+      color: #7A3FBF; }
+  .app.index.dobro .footer-contacts > ul > li ul.soc li a:hover i {
+    color: #7A3FBF; }
 
 .intro section {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(5, 171, 224, 0) 100%);
   height: 640px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .intro section article {
     transition: height .6s;
     width: 100%;
@@ -13118,6 +13087,10 @@ button.close {
         top: auto;
         left: auto; }
 
+.wrapper {
+  padding-bottom: 60px;
+  background: white; }
+
 .counter {
   padding: 35px 0;
   background: #fff; }
@@ -13208,6 +13181,71 @@ button.close {
               line-height: 16px;
               letter-spacing: 0px;
               opacity: 0.7; }
+
+.megasale {
+  padding: 30px 0;
+  background: white; }
+
+.home_filter {
+  padding: 35px 0;
+  background: white; }
+  .home_filter h2.header {
+    color: #000000;
+    font-family: Cormac-Book, sans-serif;
+    font-size: 38px;
+    line-height: 39px;
+    text-align: center;
+    margin-bottom: 15px; }
+
+.home_product {
+  padding: 35px 0 55px 0;
+  background: #F3F6FA; }
+
+.joined_partners {
+  padding: 45px 0;
+  background: white; }
+
+.home_testimonials {
+  padding: 15px 0;
+  background: white; }
+  .children .home_testimonials, .pet .home_testimonials {
+    background: #F3F6FA; }
+
+.home_news {
+  padding: 55px 0 35px 0;
+  background: #F3F6FA; }
+  .children .home_news, .pet .home_news {
+    background: white;
+    border-bottom: 1px solid #d9d9d9; }
+
+.subscription {
+  padding: 80px 0;
+  background: white; }
+  .subscription h2 {
+    font-family: Cormac-Book, sans-serif;
+    font-size: 34px;
+    line-height: 51px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin-bottom: 16px; }
+  .subscription .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .subscription .form > span {
+      margin-bottom: 5px; }
+      @media (max-width: 767px) {
+        .subscription .form > span {
+          width: 100%; } }
+      .subscription .form > span input {
+        letter-spacing: 0.6px;
+        width: 580px; }
+        @media (max-width: 767px) {
+          .subscription .form > span input {
+            width: 100%; } }
+    .subscription .form .btn, .subscription .form .new_post-confirm li button, .new_post-confirm li .subscription .form button {
+      width: 203px;
+      padding: 21px 20px; }
 
 .js-toggle-menu {
   display: none; }
@@ -13868,45 +13906,6 @@ button.close {
         text-transform: uppercase;
         color: #4b5769; }
 
-.wr.base.partners-style2 {
-  padding: 65px 0 54px 0;
-  border-top: 1px solid #e7edf2; }
-  .wr.base.partners-style2 ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-
-.subscription {
-  padding-top: 79px;
-  padding-bottom: 40px;
-  border-top: 1px solid #d9d9d9; }
-  .subscription h2 {
-    font-family: Cormac-Book, sans-serif;
-    font-size: 34px;
-    line-height: 51px;
-    letter-spacing: 0.3px;
-    text-align: center;
-    margin-bottom: 16px; }
-  .subscription .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .subscription .form > span {
-      margin-bottom: 5px; }
-      @media (max-width: 767px) {
-        .subscription .form > span {
-          width: 100%; } }
-      .subscription .form > span input {
-        letter-spacing: 0.6px;
-        width: 580px; }
-        @media (max-width: 767px) {
-          .subscription .form > span input {
-            width: 100%; } }
-    .subscription .form .btn, .subscription .form .new_post-confirm li button, .new_post-confirm li .subscription .form button {
-      width: 203px;
-      padding: 21px 20px; }
-
 .popup {
   width: 80%;
   display: none; }
@@ -14417,101 +14416,21 @@ header.header {
           color: #4489ff; }
 
 .partners {
-  padding-top: 40px;
-  border-top: 1px solid #f3f6f8; }
-  .partners > ul {
-    display: flex; }
-    @media (max-width: 991px) {
-      .partners > ul {
-        flex-direction: column; } }
-    @media (max-width: 991px) {
-      .partners > ul li:first-child {
-        justify-content: space-between; } }
-    .partners > ul li:first-child ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center; }
-    .partners > ul li:last-child ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center; }
-      @media (max-width: 991px) {
-        .partners > ul li:last-child ul {
-          justify-content: space-around; } }
-      @media (max-width: 400px) {
-        .partners > ul li:last-child ul {
-          display: block; } }
-  .partners h4 {
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #4a4a4a;
-    margin-bottom: 40px; }
-  .partners > ul li:first-child {
-    width: 66%; }
-    @media (max-width: 991px) {
-      .partners > ul li:first-child {
-        width: 100%; } }
-    .partners > ul li:first-child ul li {
-      width: 14%;
-      padding: 10px 15px; }
-      @media (max-width: 991px) {
-        .partners > ul li:first-child ul li {
-          text-align: center;
-          width: 25%; } }
-      @media (max-width: 480px) {
-        .partners > ul li:first-child ul li {
-          width: 100%;
-          text-align: center; } }
-      .partners > ul li:first-child ul li img {
-        max-width: 100%; }
-  .partners > ul li:last-child {
-    width: 33%; }
-    @media (max-width: 991px) {
-      .partners > ul li:last-child {
-        width: 100%;
-        margin-top: 40px; } }
-    .partners > ul li:last-child ul {
-      height: calc(100% - 90px); }
-      .partners > ul li:last-child ul li {
-        width: 45%;
-        margin-bottom: 20px; }
-        @media (max-width: 991px) {
-          .partners > ul li:last-child ul li {
-            width: auto; } }
-        @media (max-width: 400px) {
-          .partners > ul li:last-child ul li {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 60px; }
-            .partners > ul li:last-child ul li:last-child {
-              margin-bottom: 0; } }
-        .partners > ul li:last-child ul li img {
-          max-width: 150px; }
-          @media (max-width: 400px) {
-            .partners > ul li:last-child ul li img {
-              max-width: 70%; } }
-  .partners > ul li.sep {
-    width: 1px;
-    margin: 0 30px 0 20px;
-    background: #f3f6f8; }
-    @media (max-width: 991px) {
-      .partners > ul li.sep {
-        display: none; } }
-  .partners > ul li a img {
-    transition: all .4s;
-    filter: grayscale(100);
-    opacity: 0.4; }
-  .partners > ul li a:hover img {
-    filter: grayscale(0%);
-    opacity: 1; }
+  padding: 65px 0 54px 0;
+  border-top: 1px solid #e7edf2;
+  background: white; }
+  .partners ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .partners ul li a img {
+      filter: grayscale(100%); }
 
 .footer {
   padding-top: 20px;
   background: #fff;
-  border-top: 1px solid #d9e4ea;
+  border-top: 1px solid #e7edf2;
   overflow: hidden; }
   .footer-info {
     display: flex;
@@ -17882,132 +17801,6 @@ a {
 		ul li a {transition: all 0.4s ease;}
 	}
 }*/
-/* Parallax base styles
-  --------------------------------------------- */
-.parallax {
-  height: 500px;
-  /* fallback for older browsers */
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-  -webkit-perspective-origin-x: 100%;
-  perspective-origin-x: 100%; }
-
-.parallax__group {
-  position: relative;
-  height: 500px;
-  /* fallback for older browsers */
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transform-origin-x: 100%;
-  transform-origin-x: 100%; }
-
-.parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(0.7);
-  transform: translateZ(90px) scale(0.7);
-  z-index: 1; }
-
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4; }
-
-.parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3; }
-
-.parallax__layer--deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2; }
-
-/* demo styles
-  --------------------------------------------- */
-.parallax {
-  font-size: 200%; }
-
-/* centre the content in the parallax layers */
-.title {
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-/* style the groups
-  --------------------------------------------- */
-#group1 {
-  z-index: 5;
-  /* slide over group 2 */ }
-
-#group1 .parallax__layer--base {
-  background: #66cc66; }
-
-#group2 {
-  z-index: 3;
-  /* slide under groups 1 and 3 */ }
-
-#group2 .parallax__layer--back {
-  background: #7bd266; }
-
-#group3 {
-  z-index: 4;
-  /* slide over group 2 and 4 */ }
-
-#group3 .parallax__layer--base {
-  background: #99d865; }
-
-#group4 {
-  z-index: 2;
-  /* slide under group 3 and 5 */ }
-
-#group4 .parallax__layer--deep {
-  background: #b8df65; }
-
-#group5 {
-  z-index: 3;
-  /* slide over group 4 and 6 */ }
-
-#group5 .parallax__layer--base {
-  background: #d6e564; }
-
-#group6 {
-  z-index: 2;
-  /* slide under group 5 and 7 */ }
-
-#group6 .parallax__layer--back {
-  background: #f5eb64; }
-
-#group7 {
-  z-index: 3;
-  /* slide over group 7 */ }
-
-#group7 .parallax__layer--base {
-  background: #fff164; }
-
-/* misc
-  --------------------------------------------- */
-.demo__info {
-  position: absolute;
-  z-index: 100;
-  bottom: 1vh;
-  top: auto;
-  font-size: 80%;
-  text-align: center;
-  width: 100%; }
-
 .checkboxes {
   padding-top: 7px; }
   .checkboxes section {
