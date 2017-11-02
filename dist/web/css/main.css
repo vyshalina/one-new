@@ -12732,25 +12732,16 @@ button.close {
         .booking-proc section .info .btn-gr a:hover:after {
           width: 50%; }
 
+.app.index h2.header {
+  color: #000000;
+  font-family: Cormac-Book, sans-serif;
+  font-size: 38px;
+  line-height: 39px;
+  text-align: center;
+  margin-bottom: 15px; }
+
 .app.index.pet header.header .logo-block .subtitle, .app.index.children header.header .logo-block .subtitle {
   display: inline-block; }
-
-.app.index.pet .intro-body, .app.index.children .intro-body {
-  padding: 169px 0 45px 9px; }
-  .app.index.pet .intro-body header h1, .app.index.children .intro-body header h1 {
-    font-size: 54px;
-    line-height: 65px;
-    margin-bottom: 41px; }
-    @media (max-width: 480px) {
-      .app.index.pet .intro-body header h1, .app.index.children .intro-body header h1 {
-        font-size: 38px;
-        line-height: 48px; } }
-  .app.index.pet .intro-body header p, .app.index.children .intro-body header p {
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 0; }
-  .app.index.pet .intro-body section, .app.index.children .intro-body section {
-    top: 214px; }
 
 .app.index.pet .list-promotion, .app.index.children .list-promotion {
   padding-top: 16px; }
@@ -12763,25 +12754,13 @@ button.close {
 .app.index.pet .footer-contacts > ul > li ul.soc li a i, .app.index.children .footer-contacts > ul > li ul.soc li a i {
   color: #000; }
 
-.app.index.pet .help-menu {
-  bottom: -35px; }
-  .app.index.pet .help-menu li.active a, .app.index.pet .help-menu li:hover a {
-    background: #96be46;
-    color: #fff; }
-    .app.index.pet .help-menu li.active a i, .app.index.pet .help-menu li:hover a i {
-      color: #fff; }
-  .app.index.pet .help-menu li a {
-    color: #96be46; }
-    .app.index.pet .help-menu li a i {
-      color: #96be46; }
-
 .app.index.pet .promotion section p > i {
   color: #96be46; }
 
 .app.index.pet .js-index-menu .js-toggle-menu i {
   color: #96be46; }
 
-.app.index.pet .carousel .navigation li.active, .app.index.pet .carousel .navigation li:hover {
+.app.index.pet .carousel .navigation div.active, .app.index.pet .carousel .navigation div:hover {
   background: #96be46; }
 
 .app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button {
@@ -12794,25 +12773,13 @@ button.close {
 .app.index.pet .footer-contacts > ul > li ul.soc li a:hover i {
   color: #96be46; }
 
-.app.index.children .help-menu {
-  bottom: -35px; }
-  .app.index.children .help-menu li.active a, .app.index.children .help-menu li:hover a {
-    background: #e8b194;
-    color: #fff; }
-    .app.index.children .help-menu li.active a i, .app.index.children .help-menu li:hover a i {
-      color: #fff; }
-  .app.index.children .help-menu li a {
-    color: #e8b194; }
-    .app.index.children .help-menu li a i {
-      color: #e8b194; }
-
 .app.index.children .promotion section p > i {
   color: #e8b194; }
 
 .app.index.children .js-index-menu .js-toggle-menu i {
   color: #e8b194; }
 
-.app.index.children .carousel .navigation li.active, .app.index.children .carousel .navigation li:hover {
+.app.index.children .carousel .navigation div.active, .app.index.children .carousel .navigation div:hover {
   background: #e8b194; }
 
 .app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button {
@@ -12824,6 +12791,31 @@ button.close {
 
 .app.index.children .footer-contacts > ul > li ul.soc li a:hover i {
   color: #e8b194; }
+
+.app.index.dobro h2.header {
+  margin-top: 40px; }
+
+.app.index.dobro .section-group {
+  padding-top: 0; }
+
+.app.index.dobro .promotion section p > i {
+  color: white; }
+
+.app.index.dobro .js-index-menu .js-toggle-menu i {
+  color: #7A3FBF; }
+
+.app.index.dobro .carousel .navigation div.active, .app.index.dobro .carousel .navigation div:hover {
+  background: #7A3FBF; }
+
+.app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button {
+  background: #7A3FBF;
+  border-color: #7A3FBF; }
+  .app.index.dobro .subscription .form .btn:hover, .app.index.dobro .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.dobro .subscription .form button:hover {
+    background: #fff;
+    color: #7A3FBF; }
+
+.app.index.dobro .footer-contacts > ul > li ul.soc li a:hover i {
+  color: #7A3FBF; }
 
 .app.index {
   padding-top: 0; }
@@ -12885,6 +12877,13 @@ button.close {
         font-family: Cormac-Book, sans-serif;
         font-size: 26px;
         line-height: 32px;
+        letter-spacing: 0px;
+        margin-bottom: 86px; }
+      .intro section article header h2 {
+        color: #fff;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 62px;
+        line-height: 78px;
         letter-spacing: 0px;
         margin-bottom: 86px; }
       .intro section article header a {
@@ -13079,6 +13078,134 @@ button.close {
   .children .intro nav > ul:hover li:hover.selectedLava a i {
     color: #fff; }
 
+.dobro .intro article {
+  background: url("../img/index/intro3.png") no-repeat center;
+  background-size: cover; }
+  .dobro .intro article header {
+    padding-left: 145px;
+    margin-top: 216px;
+    position: relative; }
+    .dobro .intro article header figure {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .dobro .intro article header p {
+      margin-bottom: 10px; }
+    .dobro .intro article header a {
+      padding: 20px 25px;
+      border: 2px solid white;
+      border-radius: 100px; }
+  .dobro .intro article footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    background: url("../images/dobro-duga.svg") no-repeat center; }
+    .dobro .intro article footer p {
+      font-family: Cormac-Book, sans-serif;
+      font-size: 32px;
+      margin-bottom: 0; }
+      .dobro .intro article footer p span {
+        display: block;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 8px;
+        position: relative;
+        top: auto;
+        left: auto; }
+
+.counter {
+  padding: 35px 0;
+  background: #fff; }
+  .dobro .counter {
+    background: #7A3FBF url("../images/bg-plus.svg") 0 center no-repeat; }
+    .dobro .counter article p,
+    .dobro .counter article section p,
+    .dobro .counter article section p > i {
+      color: white; }
+    .dobro .counter article section p {
+      font-size: 84px;
+      line-height: 84px; }
+
+.about {
+  padding: 50px 0 80px 0; }
+  .about article {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .about article section {
+      padding-left: 60px; }
+      .about article section h2 {
+        color: #64359C;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 0px;
+        margin-bottom: 20px; }
+      .about article section p {
+        color: #000000;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.4px;
+        margin-bottom: 30px; }
+      .about article section ul {
+        display: flex;
+        align-items: center; }
+        .about article section ul li {
+          margin-right: 20px; }
+          .about article section ul li a {
+            color: #64359C;
+            font-family: Cormac-Book, sans-serif;
+            font-size: 18px;
+            line-height: 19px;
+            letter-spacing: 0px; }
+
+.people {
+  padding: 80px 0 40px 0; }
+  .people article {
+    display: flex; }
+    .people article section {
+      width: 45%; }
+      .people article section h2 {
+        color: #000000;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 38px;
+        line-height: 39px;
+        letter-spacing: 0px;
+        margin-bottom: 40px; }
+      .people article section p {
+        color: #000000;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.4px; }
+    .people article > ul {
+      display: flex;
+      flex-flow: row wrap; }
+      .people article > ul li {
+        width: 25%;
+        margin-bottom: 20px; }
+        .people article > ul li figure {
+          text-align: center; }
+          .people article > ul li figure figcaption {
+            padding-top: 20px; }
+            .people article > ul li figure figcaption p {
+              color: #000000;
+              font-family: Cormac-Book, sans-serif;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0px;
+              margin-bottom: 0; }
+            .people article > ul li figure figcaption span {
+              color: #000000;
+              font-family: Cormac-Book, sans-serif;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: 0px;
+              opacity: 0.7; }
+
 .js-toggle-menu {
   display: none; }
   @media (max-width: 767px) {
@@ -13231,9 +13358,7 @@ button.close {
   .joined ul {
     display: flex; }
     .joined ul li {
-      margin-right: 19px; }
-      .joined ul li:last-child {
-        margin-right: 0; }
+      padding: 12px 0; }
       .joined ul li a:hover img {
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); }
       .joined ul li a img {
@@ -13439,7 +13564,7 @@ button.close {
       .main-category-block > a section h2 {
         font-family: Cormac-Book, sans-serif;
         font-size: 54px;
-        line-height: 1;
+        line-height: 54px;
         letter-spacing: 0;
         color: #fff;
         margin-bottom: 19px; }
@@ -13453,7 +13578,7 @@ button.close {
       .main-category-block > a section p {
         font-family: Cormac-Book, sans-serif;
         font-size: 22px;
-        line-height: 1;
+        line-height: 22px;
         letter-spacing: 0;
         color: #fff; }
       @media (max-width: 767px) {
@@ -13478,6 +13603,19 @@ button.close {
     @media (max-width: 480px) {
       .main-products .btn-white {
         top: -23px; } }
+  .main-products .btn, .main-products .new_post-confirm li button, .new_post-confirm li .main-products button {
+    font-family: Cormac-Book, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+    .dobro .main-products .btn, .dobro .main-products .new_post-confirm li button, .new_post-confirm li .dobro .main-products button {
+      background: #7A3FBF;
+      border: none; }
 
 .carousel {
   padding: 55px 0 32px 0; }
@@ -13541,11 +13679,9 @@ button.close {
   .carousel-item {
     display: flex;
     justify-content: start;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    padding-left: 102px; }
+    padding-left: 102px;
+    padding-top: 10px; }
     @media (max-width: 1199px) {
       .carousel-item {
         padding-left: 40px; } }
@@ -13570,7 +13706,11 @@ button.close {
         width: 80px;
         height: 80px;
         margin-right: 20px;
-        margin-top: 5px; }
+        margin-top: 5px;
+        max-width: 100%; }
+        @media (max-width: 991px) {
+          .carousel-item figure img {
+            width: auto !important; } }
         @media (max-width: 767px) {
           .carousel-item figure img {
             margin: 0 0 15px 0; } }
@@ -13624,9 +13764,9 @@ button.close {
       transform: translateX(150px);
       opacity: 0;
       transition: 0.5s ease-out; }
-    .carousel-item.active figure {
+    .active .carousel-item figure {
       opacity: 1; }
-    .carousel-item.active section {
+    .active .carousel-item section {
       opacity: 1;
       transform: translateX(0); }
     .carousel-item.left section {

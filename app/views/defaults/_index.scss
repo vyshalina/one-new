@@ -2,26 +2,13 @@
 ////////////////////////////////////////////////////
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
 .app.index {
+	h2.header {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
+
 	&.pet, &.children {
 		header.header {
 			.logo-block {
 				.subtitle {display: inline-block;}
 			}
-		}
-
-		//изменен размер текста и отступы - http://prntscr.com/h4c507
-		.intro-body {
-			padding: 169px 0 45px 9px;
-			header {
-				h1 {
-					font-size: 54px; line-height: 65px; margin-bottom: 41px;
-					@include respond-to(xs) {
-						font-size: 38px; line-height: 48px;
-					}
-				}
-				p {font-size: 18px; line-height: 28px; margin-bottom: 0;}
-			}
-			section {top: 214px;}
 		}
 		
 		//подкорректированы отступы
@@ -42,22 +29,6 @@
 	}
 	
 	&.pet {
-		//меняем цвет меню - http://prntscr.com/h4ba6n
-		.help-menu {
-			bottom: -35px;
-			li {
-				&.active, &:hover {
-					a {
-						background: #96be46; color: #fff;
-						i {color: #fff;}
-					}
-				}
-				a {
-					color: #96be46;
-					i {color: #96be46;}
-				}
-			}
-		}
 
 		//меняем цвет стрелок - http://prntscr.com/h4bgop
 		.promotion section p > i {color: #96be46;}
@@ -89,22 +60,6 @@
 	}
 
 	&.children {
-		//меняем цвет меню - http://prntscr.com/h4bg0s
-		.help-menu {
-			bottom: -35px;
-			li {
-				&.active, &:hover {
-					a {
-						background: #e8b194; color: #fff;
-						i {color: #fff;}
-					}
-				}
-				a {
-					color: #e8b194;
-					i {color: #e8b194;}
-				}
-			}
-		}
 
 		//меняем цвет стрелок - http://prntscr.com/h4bgum
 		.promotion section p > i {color: #e8b194;}
@@ -131,7 +86,38 @@
 				&:hover { i {color: #e8b194;}}
 			}  
 		}
+	}
 
+	&.dobro {
+		h2.header {margin-top: 40px;}
+		.section-group {padding-top: 0;}
+
+
+		//меняем цвет стрелок - http://prntscr.com/h4bgum
+		.promotion section p > i {color: white;}
+		
+		//меняем цвет выпадающего меню - http://prntscr.com/h4fvbw
+		.js-index-menu .js-toggle-menu i {color: #7A3FBF;}
+
+		//меняем цвет кнопок в карусели - http://prntscr.com/h4d2gb
+		.carousel .navigation div {
+			&.active, &:hover {background: #7A3FBF;}
+		}
+		
+		//меняем цвет кнопки в подписке - http://prntscr.com/h4d2pj
+		.subscription .form .btn {
+			background: #7A3FBF; border-color: #7A3FBF;
+			&:hover {
+				background: #fff; color: #7A3FBF;
+			}
+		}
+
+		//меняем цвета в футере - http://prntscr.com/h4dpcf
+		.footer {
+			&-contacts > ul > li ul.soc li a {
+				&:hover { i {color: #7A3FBF;}}
+			}  
+		}
 	}
 }
 ////////////////////////////////////////////////////
@@ -185,6 +171,10 @@
 				}
 				p {
 					@include font-type($CormacB, 26px, 32px, 0px); 
+					margin-bottom: 86px;
+				}
+				h2 {
+					color: #fff; @include font-type($CormacB, 62px, 78px, 0px); 
 					margin-bottom: 86px;
 				}
 				a {
@@ -311,6 +301,99 @@
 					&:hover {
 						a {color: #fff; i {color: #fff;}}
 						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
+				}
+			}
+		}
+	}
+
+	.dobro & {
+		article {
+			background: url('../img/index/intro3.png') no-repeat center; background-size: cover;
+			header {
+				padding-left: 145px; margin-top: 216px;
+				position: relative;
+
+				figure {position: absolute; top: 0; left: 0;}
+				p {margin-bottom: 10px;}
+				a {
+					padding: 20px 25px;
+					border: 2px solid white; border-radius: 100px;
+				}
+			}
+			footer {
+				display: flex; justify-content: center; align-items: center;
+				width: 195px; height: 195px;
+				background: url('../images/dobro-duga.svg') no-repeat center;
+				p {
+					font-family: $CormacB; font-size:32px; margin-bottom: 0;
+					span {
+						display: block;
+						font-size: 16px; line-height: 18px;
+						margin-bottom: 8px;
+						position: relative; top: auto; left: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.counter {
+    padding: 35px 0; background: #fff;
+
+    .dobro & {
+    	background: #7A3FBF url('../images/bg-plus.svg') 0 center no-repeat;
+    	
+		article p,
+    	article section p,
+    	article section p > i {color: white;}
+    	article section p {font-size: 84px; line-height: 84px;}
+    }
+}
+
+.about {
+	padding: 50px 0 80px 0;
+	article {
+		display: flex; justify-content: center; align-items: center;
+
+		section {
+			padding-left: 60px;
+
+			h2 {color: #64359C; @include font-type($CormacB, 28px, 38px, 0px); margin-bottom: 20px;}
+			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px); margin-bottom: 30px;}
+			ul {
+				display: flex; align-items: center;
+				li {
+					margin-right: 20px;
+					a {color: #64359C; @include font-type($CormacB, 18px, 19px, 0px);}
+				}
+			}
+		}
+	}
+}
+
+.people {
+	padding: 80px 0 40px 0;
+	article {
+		display: flex;
+		section {
+			width: 45%;
+
+			h2 {color: #000000; @include font-type($CormacB, 38px, 39px, 0px); margin-bottom: 40px;}
+			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px);}
+		}
+
+		& > ul {
+			display: flex; flex-flow: row wrap;
+			li {
+				width: 25%; margin-bottom: 20px;
+				figure {
+					text-align: center;
+					figcaption {
+						padding-top: 20px;
+						p {color: #000000; @include font-type($CormacB, 16px, 24px, 0px); margin-bottom: 0;}
+						span {color: #000000; @include font-type($CormacB, 12px, 16px, 0px); opacity: 0.7;}
 					}
 				}
 			}
@@ -588,13 +671,13 @@
 				@include respond-to(xs) {left: 25px; bottom: 20px;}
 
 				h2 {
-					@include font-type($CormacB, 54px, 1, 0); color: #fff;
+					@include font-type($CormacB, 54px, 54px, 0); color: #fff;
 					margin-bottom: 19px;
 					@include respond-to(sm) {font-size: 40px}
 					@include respond-to(xs) {font-size: 30px; margin-bottom: 12px;}
 				}
 
-				p {@include font-type($CormacB, 22px, 1, 0); color: #fff;}
+				p {@include font-type($CormacB, 22px, 22px, 0); color: #fff;}
 				@include respond-to(sm) {font-size: 18px;}
 			}
 			figure {
@@ -613,7 +696,13 @@
 		position: absolute; z-index: 5; top: 178px; right: -45px;
 		@include respond-to(lg) {right: -20px;}
 		@include respond-to(xs) {top: -23px;}
+	}
+	.btn {
+		@include font-type($CormacB, 16px, 16px, 0);
+		padding: 20px;
+		position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
 
+		.dobro & {background: #7A3FBF; border: none;}
 	}
 }
 
