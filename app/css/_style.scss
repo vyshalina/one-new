@@ -370,8 +370,7 @@ a {
 /********* Application ***********/
 /*********************************/
 .app {
-	min-width: 320px; overflow-x: hidden; padding-top: 65px;
-	background: #F8FAFD;
+	min-width: 320px; padding-top: 65px; overflow-x: hidden; position: relative;
 
 	//Новые враперы - http://prntscr.com/h1vhsu
 	.wr {
