@@ -41,17 +41,7 @@ $(document).ready(function() {
 
   $('.intro nav > ul li a').click(function() {
     let itemNumber = $(this).parent().index() - 1;
-    $('.js-slides article').eq(itemNumber).addClass('active');
-
-    if (itemNumber === 0) {
-
-    } else if (itemNumber === 1) {
-
-    } else if (itemNumber === 2) {
-
-    } else if (itemNumber === 3) {
-
-    }
+    $('.js-slides article').removeClass('active').eq(itemNumber).addClass('active');
     return false;
   });
 
