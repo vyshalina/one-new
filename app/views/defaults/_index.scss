@@ -11,8 +11,9 @@
 
 		padding-top: 27px;
 		.select {
-			margin: 0 31px;
+			margin: 0 32px;
 			@include respond-to(md) {margin-bottom: 25px;}
+			sup {font-size: 11px; top: -0.6em; left: -5px;}
 
 			&:last-child {margin-bottom: 0}
 			& > a {
@@ -256,26 +257,50 @@
 	}
 
 	.pet & {
+		& > section {
+			height: 576px;
+		}
+		header {
+			margin-top: 168px; padding-left: 9px;
+			h1 {font-size: 54px; line-height: 64px; margin-bottom: 44px;}
+			p {font-size: 18px; line-height: 28px;}
+		}
+		footer {top: 214px;}
 		article {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
 		nav > ul li {
 			a, i {color: #96be46;}
 			&.backLava {background: #96be46;}
 			&.selectedLava {a {color: #fff; i {color: #fff;}}}
 		}
-		nav > ul{
-			&:hover {
-				li {
-					a {color: #96be46; i {color: #96be46;}}
-					&:hover {
-						a {color: #fff; i {color: #fff;}}
-						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+		nav {
+			margin-top: -35px;
+			nav > ul{
+				&:hover {
+					li {
+						a {color: #96be46; i {color: #96be46;}}
+						&:hover {
+							a {color: #fff; i {color: #fff;}}
+							&.selectedLava {a {color: #fff; i {color: #fff;}}}
+						}
 					}
 				}
 			}
 		}
+		
 	}
 
 	.children & {
+
+		& > section {
+			height: 576px;
+		}
+		header {
+			margin-top: 188px; padding-left: 9px;
+			h1 {font-size: 54px; line-height: 64px; margin-bottom: 35px;}
+			p {font-size: 18px; line-height: 28px;}
+		}
+		footer {top: 214px;}
+
 		article {background: url('../img/index/intro1.png') no-repeat center; background-size: cover;}
 		nav > ul li {
 			a, i {color: #E8B194;}
@@ -299,11 +324,12 @@
 		article {
 			background: url('../img/index/intro3.png') no-repeat center; background-size: cover;
 			header {
-				padding-left: 145px; margin-top: 216px;
+				padding-left: 199px; margin-top: 228px;
 				position: relative;
 
-				figure {position: absolute; top: 0; left: 0;}
-				p {margin-bottom: 10px;}
+				figure {position: absolute; top: -17px; left: 60px;}
+				p {margin-bottom: 0; padding-left: 3px; letter-spacing: 1.1px;}
+				h2 {}
 				a {
 					padding: 20px 25px;
 					border: 2px solid white; border-radius: 100px;
@@ -311,7 +337,7 @@
 			}
 			footer {
 				display: flex; justify-content: center; align-items: center;
-				width: 195px; height: 195px;
+				width: 195px; height: 195px; top: 97px; right: 17px; padding-top: 4px; padding-left: 28px;
 				background: url('../images/dobro-duga.svg') no-repeat center;
 				p {
 					font-family: $CormacB; font-size:32px; margin-bottom: 0;
@@ -319,7 +345,7 @@
 						display: block;
 						font-size: 16px; line-height: 18px;
 						margin-bottom: 8px;
-						position: relative; top: auto; left: auto;
+						position: relative; top: auto; left: 1px;
 					}
 				}
 			}
@@ -332,7 +358,7 @@
 }
 
 .counter {
-    padding: 35px 0; background: #fff;
+    padding: 35px 0 42px 0; background: #fff;
 
     .dobro & {
     	background: #7A3FBF url('../images/bg-plus.svg') 0 center no-repeat;
@@ -394,16 +420,23 @@
 }
 
 .megasale {
-	padding: 30px 0; background: white;
+	padding: 23px 0; background: white;
 }
 
 .home_filter {
+	padding: 9px 0 38px 0; background: white;
 	h2 {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
-	padding: 35px 0; background: white;
+
+	.app.index.pet &,  .app.index.children & {
+		padding: 39px 0 38px 0;
+	}
 }
 
 .home_product {
-	padding: 35px 0 55px 0; background: #F3F6FA;
+	padding: 35px 0 33px 0; background: #F3F6FA;
+	.app.index.pet & {
+		padding: 24px 0 43px 0;
+	}
 }
 
 .joined_partners {
@@ -411,7 +444,7 @@
 }
 
 .home_testimonials {
-	padding: 15px 0; background: white;
+	padding: 34px 0; background: white;
 	.children &, .pet & {background: #F3F6FA;}
 }
 
@@ -422,7 +455,7 @@
 
 //http://prntscr.com/h4cg2c
 .subscription {
-	padding: 80px 0; background: white;
+	padding: 77px 0 72px 0; background: white;
 
 	h2 {
 		@include font-type($CormacB, 34px, 51px, 0.3px); text-align: center;
@@ -499,7 +532,7 @@
 			}
 			span {
 				@include font-type($CormacB, 18px, 1, 0px);
-				position: relative; top: 11px; display: inline-block; left: 0;  vertical-align: top;
+				position: relative; top: 11px; display: inline-block; margin-left: -10px;  vertical-align: top;
 				
 				i {color: #000; font-size: 15px; font-weight: 600;}
 			}
@@ -515,7 +548,7 @@
 .action {
 	display: flex; flex-direction: column; justify-content: end;
 
-	width: 100%; min-height: 422px; padding: 0 0 59px 49px;
+	width: 100%; min-height: 422px; padding: 0 0 61px 43px;
 	@include respond-to(xs) {padding: 0 15px 59px 15px;}
 
 	h2 {
@@ -538,21 +571,20 @@
 
 //http://prntscr.com/h4c80l
 .joined {
-	padding-bottom: 51px; position: relative;
+	padding-bottom: 41px; position: relative;
 	a.btn-white {
-		position: absolute; right: -29px; top: 145px; z-index: 2;
+		position: absolute; right: -29px; top: 134px; z-index: 2;
 		@include respond-to(sm) {right: -15px;}
 
 		i {margin-left: 0;}
 	}
 	h2 {
 		@include font-type($CormacB, 16px, 1, 0); color: #7690a4; text-align: center;
-		padding-top: 20px; margin-bottom: 50px;
+		padding-top: 11px; margin-bottom: 50px;
 	}
 	ul {
 		display: flex;
 		li {
-			padding: 12px 0;
 			// margin-right: 19px; 
 			// &:last-child {margin-right: 0;}
 			a {
@@ -582,7 +614,7 @@
 				section {
 					display: flex; flex-direction: column; justify-content: end;
 
-					position: absolute; left: 0; bottom: 0;
+					position: absolute;
 				}
 				figure {
 					img {
@@ -594,19 +626,20 @@
 		}
 
 		&_single {
-			width: 585px;
+			width: 590px;
 			@include respond-to(md) {width: 80%; margin: 0 auto;}
 			@include respond-to(sm) {width: 100%;}
 
 			& > a {width: 100%;}
 			section {
 				width: 100%; height: 229px;
-				padding-left: 47px; padding-bottom: 40px;
+				padding-left: 48px; padding-bottom: 40px; bottom: 0; left: 0;
 				@include respond-to(xs) {padding-left: 10px;}
 
 				h2 {
-					@include font-type($CormacB, 54px, 1, 0); color: #fff;
+					@include font-type($CormacB, 54px, 56px, 0); color: #fff;
 					margin-bottom: 24px;
+					i {font-size: 24px; position: relative; bottom: 5px; right: -2px; }
 					@include respond-to(xs) {
 						font-size: 32px;
 					}
@@ -624,7 +657,6 @@
 			@include respond-to(sm) {width: 100%;}
 
 			section {
-				padding-left: 20px;
 				h2 {
 					@include font-type($CormacB, 38px, 46px, 0px); color: #fff;
 					margin-bottom: 17px;
@@ -641,8 +673,9 @@
 			header {
 				& > a {width: 100%;}
 				section {
-					padding-bottom: 29px;
+					padding-bottom: 29px; left: 39px; bottom: 2px;
 					@include respond-to(xs) {padding-bottom: 0;}
+					h2 {i {font-size: 24px; position: relative; bottom: 5px; right: -3px; }}
 				}
 			}
 			footer {
@@ -657,11 +690,16 @@
 					section {
 						display: flex; flex-direction: column;
 
-						position: absolute; bottom: 11px; left: 0; min-height: 163px;
-						h2 {margin-bottom: 11px;}
+						position: absolute; bottom: 0; left: 36px; min-height: 163px; padding-top: 5px;
+						h2 {
+							margin-bottom: 14px;
+							i {font-size: 24px; position: relative; bottom: 2px; right: -4px; }
+						}
+						p {padding-left: 2px;}
 						
 					}
 					figure {
+						height: 305px;
 						img {
 							max-width: 100%;
 							@include respond-to(sm) {width: 100%;}
@@ -678,16 +716,15 @@
 .main-category {
 	display: flex; justify-content: space-between;
 
-	padding-top: 27px; position: relative;
+	padding-top: 35px; position: relative;
 	@include respond-to(md) {flex-direction: column;}
 
 	& > .btn-white {
-		position: absolute; z-index: 1; right: -28px; top: 204px;
+		position: absolute; z-index: 1; right: -28px; top: 211px;
 		@include respond-to(lg) {top: 70px; right: -20px;}
 		@include respond-to(xs) {top: -27px;}
 	}
 	&-block {
-		
 		&.first {
 			width: 680px;
 			@include respond-to(lg) {width: 57%;}
@@ -715,13 +752,14 @@
 				@include respond-to(xs) {left: 25px; bottom: 20px;}
 
 				h2 {
-					@include font-type($CormacB, 54px, 54px, 0); color: #fff;
+					@include font-type($CormacB, 54px, 58px, 0); color: #fff;
 					margin-bottom: 19px;
 					@include respond-to(sm) {font-size: 40px}
 					@include respond-to(xs) {font-size: 30px; margin-bottom: 12px;}
+					i {font-size: 24px; font-weight: 600; position: relative; bottom: 8px; right: -6px;}
 				}
 
-				p {@include font-type($CormacB, 22px, 22px, 0); color: #fff;}
+				p {@include font-type($CormacB, 22px, 22px, 0); color: #fff; padding-left: 3px;}
 				@include respond-to(sm) {font-size: 18px;}
 			}
 			figure {
@@ -735,9 +773,9 @@
 }
 
 .main-products {
-	position: relative;
+	position: relative; padding-top: 15px;
 	.btn-white {
-		position: absolute; z-index: 1; top: 178px; right: -45px;
+		position: absolute; z-index: 1; top: 190px; right: -45px;
 		@include respond-to(lg) {right: -20px;}
 		@include respond-to(xs) {top: -23px;}
 	}
@@ -753,11 +791,11 @@
 
 //CAROUSEL - http://prntscr.com/h2bo9g
 .carousel {
-	padding: 55px 0 32px 0;
+	padding: 77px 0 53px 0;
 
 	.navigation {display: flex; justify-content: center;}
 	.navigation, .owl-dots {
-		margin-top: 55px;
+		margin-top: 7px; padding-left: 6px	;
 
 		li,  .owl-dot {
 			width: 19px; height: 8px; margin: 0 5px;
@@ -789,8 +827,7 @@
 	&-item {
 		display: flex; justify-content: start;
 
-		// position: absolute; top: 0; left: 0;
-		width: 100%; padding-left: 102px; padding-top: 10px;
+		width: 100%; padding-left: 102px;
 		@include respond-to(lg) {padding-left: 40px;}
 		@include respond-to(sm) {flex-direction: column; padding-left: 0;}
 
@@ -800,30 +837,30 @@
 			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 			@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 			img {
-				width: 80px !important; height: 80px !important; margin-right: 20px; margin-top: 5px; max-width: 100%;
+				width: 80px !important; height: 80px !important; margin-right: 19px; max-width: 100%;
 				@include respond-to(md) {width: auto !important;}
 				@include respond-to(sm) {margin: 0 0 15px 0;}
 			}
 			figcaption {
-				@include font-type($CormacB, 34px, 43px, 0);
-				padding-top: 4px;
+				@include font-type($CormacB, 34px, 42px, 0);
+				
 				@include respond-to(sm) {br {display: none;}}
 
 				span {
-					@include font-type($CormacEL, 16px, 24px, 1px); color: #4b5769 !important;
+					@include font-type($CormacB, 18px, 24px, 0.5px); color: #4b5769 !important;
 					width: 180px; 
-					display: block; padding-top: 7px;
+					display: block; padding-top: 12px;
 					@include respond-to(sm) {width: 100%;}
 				}
 			}
 		}
 
 		section {
-			width: 53%; padding-left: 118px;  position: relative; top: -8px;
+			width: 56%; padding-left: 118px;  position: relative; top: -8px;
 			@include respond-to(lg) {width: 100%;}
 			@include respond-to(sm) {padding-left: 0;}
 			p {
-				@include font-type($HelveticaM, 18px, 28px, 1.5px); color: #4b5769; font-family: $HelveticaL;
+				@include font-type($HelveticaM, 19px, 28px, 1.1px); color: #4b5769; font-family: $HelveticaL;
 				position: relative;
 				@include respond-to(sm) {text-align: center;}
 			}
@@ -877,7 +914,7 @@
 
 //DOINGS - http://prntscr.com/h2caai
 .doings {
-	padding: 30px 0 21px 0; position: relative;
+	padding: 26px 0 21px 0; position: relative;
 	.btn-white {
 		position: absolute; right: -47px; top: 182px;
 		@include respond-to(lg) {right: -20px;}
@@ -916,12 +953,12 @@
 		}
 
 		section {
-			padding: 35px 23px 40px;
+			padding: 40px 27px 40px;
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
 				@include font-type($CormacB, 22px, 32px, 0);  font-size: 22px; line-height: 32px; letter-spacing: 0;
-				margin-bottom: 14px;
+				margin-bottom: 23px;
 			}
 			p {
 				@include font-type($HelveticaL, 16px, 24px, 0.7px); color: #4b5769;

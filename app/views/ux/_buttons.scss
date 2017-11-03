@@ -1,9 +1,9 @@
 .btn-white {
 	@include font-type($CormacB, 16px, 1, 0); color: #000;
-	padding: 20px 23px 21px 27px;
+	padding: 21px 23px 22px 27px;
 	background: #fff;  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 100px;
 
-	i {margin-left: 12px;}
+	i {font-weight: 600; margin-left: 12px;}
 }
 
 // BASE BUTTON – http://prntscr.com/gg2bdo
@@ -14,7 +14,7 @@
 
 .btn {
 	
-	color: #ffffff; @include font-type($CormacEL, 15px, 1, 0.2px);
+	color: #ffffff; @include font-type($CormacB, 16px, 1, 0);
 	padding: 14px 22px; margin: 0; vertical-align: baseline;
 	border: none; background: #4489ff; border: solid 1px #4489ff; border-radius: 100px;
 
