@@ -12,7 +12,7 @@
 		padding-top: 27px;
 		.select {
 			margin: 0 32px;
-			@include respond-to(md) {margin-bottom: 25px;}
+			@include respond-to(md) {margin-bottom: 25px; margin-right: 0;}
 			sup {font-size: 11px; top: -0.6em; left: -5px;}
 
 			&:last-child {margin-bottom: 0}
@@ -138,6 +138,7 @@
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
 		height: 547px; position: relative; overflow: hidden;
 		background: url('../img/index/intro.png') no-repeat center; background-size: cover;
+		@include respond-to(md) {height: 600px;}
 		
 		article {
 			.container {position: relative;} transition: height .6s;
@@ -149,19 +150,26 @@
 
 			header {
 				padding-left: 102px; margin-top: 143px;
+				@include respond-to(md) {padding-left: 20px;}
+				@include respond-to(xs) {margin-top: 110px;}
 
 				h1 {
 					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
 					margin-top: 0; margin-bottom: 22px;
 					@include respond-to(sm) {font-size: 36px; line-height: 48px;}
+					@include respond-to(xs) {font-size: 28px; line-height: 38px;}
 				}
 				p {
 					@include font-type($CormacB, 26px, 32px, 0px); 
 					margin-bottom: 86px;
+					@include respond-to(sm) {font-size: 20px; line-height: 26px;}
 				}
 				h2 {
 					color: #fff; @include font-type($CormacB, 62px, 78px, 0px); 
 					margin-bottom: 86px;
+					@include respond-to(sm) {
+						font-size: 40px; line-height: 50px; margin-bottom: 44px;
+					}
 				}
 				a {
 					@include font-type($CormacB, 16px, 16px, 0px); color: #fff;
@@ -190,6 +198,8 @@
 
 			footer {
 				position: absolute; top: 185px; right: 38px;
+				@include respond-to(md) {position: static; padding-top: 56px; padding-left: 45px;}
+
 				p {
 					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
 					position: relative;
@@ -259,11 +269,19 @@
 	.pet & {
 		& > section {
 			height: 576px;
+			@include respond-to(md) {height: 750px;}
+			@include respond-to(sm) {height: 700px;}
 		}
 		header {
 			margin-top: 168px; padding-left: 9px;
-			h1 {font-size: 54px; line-height: 64px; margin-bottom: 44px;}
-			p {font-size: 18px; line-height: 28px;}
+			h1 {
+				font-size: 54px; line-height: 64px; margin-bottom: 44px;
+				@include respond-to(sm) {font-size: 34px; line-height: 44px;}
+			}
+			p {
+				font-size: 18px; line-height: 28px;
+				@include respond-to(sm) {margin-bottom: 40px;}
+			}
 		}
 		footer {top: 214px;}
 		article {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
@@ -293,11 +311,19 @@
 
 		& > section {
 			height: 576px;
+			@include respond-to(md) {height: 750px;}
+
 		}
 		header {
 			margin-top: 188px; padding-left: 9px;
-			h1 {font-size: 54px; line-height: 64px; margin-bottom: 35px;}
-			p {font-size: 18px; line-height: 28px;}
+			h1 {
+				font-size: 54px; line-height: 64px; margin-bottom: 35px;
+				@include respond-to(sm) {font-size: 34px; line-height: 44px;}
+			}
+			p {
+				font-size: 18px; line-height: 28px;
+				@include respond-to(sm) {margin-bottom: 40px;}
+			}
 		}
 		footer {top: 214px;}
 
@@ -321,15 +347,33 @@
 	}
 
 	.dobro & {
+		section {
+			@include respond-to(sm) {height: 625px;}
+			@include respond-to(sm) {height: 700px;}
+			
+		}
 		article {
 			background: url('../img/index/intro3.png') no-repeat center; background-size: cover;
 			header {
 				padding-left: 199px; margin-top: 228px;
 				position: relative;
+				@include respond-to(lg) {margin-top: 155px;}
+				@include respond-to(md) {padding-left: 100px;}
+				@include respond-to(sm) {margin-top: 100px;}
+				@include respond-to(xs) {padding-left: 0;} 
 
-				figure {position: absolute; top: -17px; left: 60px;}
+				figure {
+					position: absolute; top: -17px; left: 60px;
+					@include respond-to(md) {left: 0;}
+					@include respond-to(xs) {position: static; margin-bottom: 30px;}
+				}
+				
+
 				p {margin-bottom: 0; padding-left: 3px; letter-spacing: 1.1px;}
-				h2 {margin-bottom: 74px;}
+				h2 {
+					margin-bottom: 74px;
+					@include respond-to(xs) {font-size: 34px;}
+				}
 				a {
 					padding: 18px 25px;
 					border: 2px solid white; border-radius: 100px;
@@ -339,6 +383,11 @@
 				display: flex; justify-content: center; align-items: center;
 				width: 195px; height: 195px; top: 97px; right: 17px; padding-top: 4px; padding-left: 28px;
 				background: url('../images/dobro-duga.svg') no-repeat center;
+				@include respond-to(lg) {position: relative; float: right; top: -41px;}
+				@include respond-to(md) {top: -110px;}
+				@include respond-to(sm) {top: 63px;}
+				@include respond-to(xs) {position: absolute; top: 77px;}
+				
 				p {
 					font-family: $CormacB; font-size:32px; margin-bottom: 0;
 					span {
@@ -361,6 +410,7 @@
     padding: 35px 0 42px 0; background: #fff;
 
     .dobro & {
+    	padding: 33px 0 50px 0;
     	background: #7A3FBF url('../images/bg-plus.svg') 0 center no-repeat;
     	
 		article p,
@@ -371,37 +421,67 @@
 }
 
 .about {
-	padding: 65px 0 80px 41px;
+	padding: 65px 0 61px 41px;
+	@include respond-to(sm) {padding-left: 0;}
 	article {
-		display: flex; justify-content: center;
+		display: flex; justify-content: space-between;
+		@include respond-to(md) {
+			flex-direction: column; align-items: center;
+		}
+
 		header {
 			flex-shrink: 0;
 			width: 424px; height: 424px; padding-top: 150px;
 			background: url('../img/index/dobro-duga-big.svg') center no-repeat transparent;
+			@include respond-to(md) {margin-bottom: 20px;}
+			@include respond-to(xs) {
+				width: 300px; height: 300px; padding-top: 25px;
+				background-size: cover;
+			}
 			.logos {
 				display: flex; align-items: center; justify-content: space-between;
 				width: 82%; margin: 0 auto 13px auto;
+				@include respond-to(xs) {flex-direction: column;}
+
 				figure {
-					&:first-child {padding-left: 9px; position: relative; top: -6px;}
-					&:nth-child(2) {position: relative; top: -4px; left: 2px;}
-					&:last-child {padding-top: 13px;}
+					&:first-child {
+						padding-left: 9px; position: relative; top: -6px;
+						@include respond-to(xs) {top: 0; padding-left: 23px;}
+					}
+					&:nth-child(2) {
+						position: relative; top: -4px; left: 2px;
+						@include respond-to(xs) {
+							top: 0; left: 0; margin: 10px 0 13px 0;
+						}
+					}
+					&:last-child {
+						padding-top: 13px;
+						@include respond-to(xs) {padding-top: 0;}
+					}
 				}
 			}
 			p {
 				@include font-type($CormacB, 17px, 26px, 0); color: #515c6e; text-align: center;
 				width: 100%; padding-left: 22px;
+				@include respond-to(xs) {
+					font-size: 15px; line-height: 23px;
+					padding-left: 0;
+				}
 			}
 		}
 
 		section {
-			padding-left: 56px; padding-top: 38px;
+			padding-left: 56px; padding-top: 38px; width: 64%;
+			@include respond-to(lg) {padding-right: 20px;}
+			@include respond-to(md) {width: 100%; padding-left: 0;}
 
 			h2 {color: #64359C; @include font-type($CormacB, 28px, 38px, 0px); margin-bottom: 29px;}
-			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px); margin-bottom: 30px;}
+			p {color: #000000; @include font-type($HelveticaR, 18px, 26px, 0.8px); margin-bottom: 45px;}
 			ul {
 				display: flex; align-items: center;
 				li {
-					margin-right: 20px;
+					margin-right: 43px;
+					&:last-child {margin-right: 0;}
 					a {color: #64359C; @include font-type($CormacB, 18px, 19px, 0px);}
 				}
 			}
@@ -413,21 +493,37 @@
 	padding: 80px 0 40px 0;
 	article {
 		display: flex;
+		@include respond-to(md) {flex-direction: column;}
+
 		section {
 			width: 45%;
+			@include respond-to(md) {width: 100%; margin-bottom: 20px;}
 
-			h2 {color: #000000; @include font-type($CormacB, 38px, 39px, 0px); margin-bottom: 40px;}
-			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px);}
+			h2 {
+				color: #000000; @include font-type($CormacB, 38px, 39px, 0px); margin-bottom: 40px;
+				.dobro & {
+					line-height: 46px; 
+					padding-top: 21px; margin-bottom: 43px;
+				}
+			}
+			p {
+				color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px);
+				.dobro & {@include font-type($HelveticaR, 18px, 26px, 1px);}
+			}
 		}
 
 		& > ul {
 			display: flex; flex-flow: row wrap;
+			padding-top: 4px; padding-left: 14px;
 			li {
 				width: 25%; margin-bottom: 20px;
+				@include respond-to(sm) {width: 50%;}
+				@include respond-to(xs) {width: 100%;}
+
 				figure {
 					text-align: center;
 					figcaption {
-						padding-top: 20px;
+						padding-top: 12px;
 						p {color: #000000; @include font-type($CormacB, 16px, 24px, 0px); margin-bottom: 0;}
 						span {color: #000000; @include font-type($CormacB, 12px, 16px, 0px); opacity: 0.7;}
 					}
@@ -605,6 +701,7 @@
 		li {
 			// margin-right: 19px; 
 			// &:last-child {margin-right: 0;}
+			padding: 10px;
 			a {
 				&:hover {
 					img {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
