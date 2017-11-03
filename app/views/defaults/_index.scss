@@ -135,7 +135,7 @@
 .intro {
 	section {
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
-		height: 640px; position: relative; overflow: hidden;
+		height: 547px; position: relative; overflow: hidden;
 		background: url('../img/index/intro.png') no-repeat center; background-size: cover;
 		
 		article {
@@ -147,7 +147,7 @@
 			
 
 			header {
-				padding-left: 102px; margin-top: 146px;
+				padding-left: 102px; margin-top: 143px;
 
 				h1 {
 					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
@@ -188,7 +188,7 @@
 			}
 
 			footer {
-				position: absolute; top: 146px; right: 0;
+				position: absolute; top: 185px; right: 38px;
 				p {
 					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
 					position: relative;
@@ -212,22 +212,31 @@
 			background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 
 			li {
-				height: 100%; width: 26%;
+				height: 100%; width: 26.3%;
 				position: relative; z-index: 1;
+				&.decoration, &:nth-child(2) {
+					width: 24.6%;
+					a {
+						justify-content: start;
+						padding-left: 35px;
+						i {right: 24px}
+					}
+				}
+
 				
 				a, i {transition: color 1s ease, padding .2s linear;}
 				a {
 					display: flex; justify-content: center; align-items: center;
 					color: #669CF9; font-family: $CormacB; font-size: 18px; line-height: 18px; text-align: center;
-					width: 100%; height: 100%; padding-right: 50px;
+					width: 100%; height: 100%; padding-right: 50px; padding-left: 32px;
 					position: relative;
 
 					i {
 						color: #669CF9; font-size: 30px;
-						position: absolute; right: 21px; top: 16px;
+						position: absolute; right: 0; top: 16px;
 					} 
 				}
-				&:last-child {width: 22%; a {padding-right: 0 !important; i {display: none;}}}
+				&:last-child { width: 22.6%; a {padding-right: 0 !important; i {display: none;}}}
 
 				&.hovered {a, i {color: white;}}
 				&.decoration {
@@ -389,7 +398,7 @@
 }
 
 .home_filter {
-	h2.header {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
+	h2 {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
 	padding: 35px 0; background: white;
 }
 
@@ -476,21 +485,21 @@
 .promotion {
 	section {
 		display: flex; justify-content: center;
-		padding-top: 61px; margin-bottom: 15px;
+		padding-top: 29px; margin-bottom: 15px;
 
 		p {
 			color: #000; text-align: center;
-			position: relative; left: 15px; margin-bottom: 9px;
+			position: relative; left: 14px; margin-bottom: 13px;
 
 			@include font-type($CormacB, 64px, 1, 0px);
 
 			& > i {
 				color: $link-color; font-size: 24px; font-weight: 600;
-				position: absolute; top: 22px; left: -20px;
+				position: absolute; top: 25px; left: -19px;
 			}
 			span {
-				@include font-type($CormacEL, 18px, 1, 0px);
-				position: relative; top: 7px; display: inline-block; margin-left: -10px;  vertical-align: top;
+				@include font-type($CormacB, 18px, 1, 0px);
+				position: relative; top: 11px; display: inline-block; left: 0;  vertical-align: top;
 				
 				i {color: #000; font-size: 15px; font-weight: 600;}
 			}
