@@ -47,8 +47,8 @@ $(document).ready(function () {
     return false;
   });
 
-  $('.filter-catalog .reset').click(function () {
-    $('.filter-catalog-category input').attr('checked', false);
+  $('.reset').click(function () {
+    $('.filters input').attr('checked', false);
   });
 
   $('.js-range-slider').jRange({
