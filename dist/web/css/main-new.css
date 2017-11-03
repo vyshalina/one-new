@@ -13130,13 +13130,24 @@ button.close {
     background: #fff;
     border-radius: 100px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 767px) {
+      .intro nav > ul {
+        width: 100%; } }
     .intro nav > ul li {
       height: 100%;
       width: 26.3%;
       position: relative;
       z-index: 1; }
+      @media (max-width: 767px) {
+        .intro nav > ul li {
+          width: 100%;
+          height: 64px; } }
       .intro nav > ul li.decoration, .intro nav > ul li:nth-child(2) {
         width: 24.6%; }
+        @media (max-width: 767px) {
+          .intro nav > ul li.decoration, .intro nav > ul li:nth-child(2) {
+            width: 100%;
+            height: 64px; } }
         .intro nav > ul li.decoration a, .intro nav > ul li:nth-child(2) a {
           justify-content: start;
           padding-left: 35px; }
@@ -13191,7 +13202,34 @@ button.close {
           padding-right: 20px; } }
   @media (max-width: 767px) {
     .intro nav > ul {
-      width: 400%; } }
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      border-radius: 10px; }
+      .intro nav > ul li {
+        width: 100% !important;
+        height: 64px; }
+        .intro nav > ul li.decoration {
+          display: none; }
+        .intro nav > ul li.hovered {
+          background: #669CF9; }
+        .intro nav > ul li:first-child a {
+          justify-content: center; }
+        .intro nav > ul li:nth-child(2) {
+          padding: 0; }
+          .intro nav > ul li:nth-child(2) a {
+            justify-content: center;
+            padding-left: 0; }
+        .intro nav > ul li:last-child a i {
+          display: block; }
+        .intro nav > ul li a {
+          color: #669CF9;
+          flex-direction: column;
+          align-items: center;
+          padding: 0; }
+          .intro nav > ul li a i {
+            right: 24px;
+            transform: rotate(90deg); } }
 
 .pet .intro > section {
   height: 576px; }
@@ -13205,6 +13243,9 @@ button.close {
 .pet .intro header {
   margin-top: 168px;
   padding-left: 9px; }
+  @media (max-width: 480px) {
+    .pet .intro header {
+      margin-top: 110px; } }
   .pet .intro header h1 {
     font-size: 54px;
     line-height: 64px;
@@ -13227,6 +13268,16 @@ button.close {
   background: url("../img/index/intro2.png") no-repeat center;
   background-size: cover; }
 
+.pet .intro nav > ul li.decoration {
+  background: #96be46;
+  color: #fff; }
+
+.pet .intro nav > ul li.hovered a, .pet .intro nav > ul li.hovered i {
+  color: #fff; }
+
+.pet .intro nav > ul li:first-child a {
+  justify-content: start; }
+
 .pet .intro nav > ul li a, .pet .intro nav > ul li i {
   color: #96be46; }
 
@@ -13245,13 +13296,18 @@ button.close {
     .pet .intro nav nav > ul:hover li a i {
       color: #96be46; }
   .pet .intro nav nav > ul:hover li:hover a {
-    color: #fff; }
+    justify-content: start;
+    color: #fff;
+    background: #96be46; }
     .pet .intro nav nav > ul:hover li:hover a i {
       color: #fff; }
   .pet .intro nav nav > ul:hover li:hover.selectedLava a {
     color: #fff; }
     .pet .intro nav nav > ul:hover li:hover.selectedLava a i {
       color: #fff; }
+  @media (max-width: 767px) {
+    .pet .intro nav li.hovered {
+      background: #96be46; } }
 
 .children .intro > section {
   height: 576px; }
@@ -13262,6 +13318,9 @@ button.close {
 .children .intro header {
   margin-top: 188px;
   padding-left: 9px; }
+  @media (max-width: 480px) {
+    .children .intro header {
+      margin-top: 110px; } }
   .children .intro header h1 {
     font-size: 54px;
     line-height: 64px;
@@ -13283,6 +13342,16 @@ button.close {
 .children .intro article {
   background: url("../img/index/intro1.png") no-repeat center;
   background-size: cover; }
+
+.children .intro nav > ul li.decoration {
+  background: #E8B194;
+  color: #fff; }
+
+.children .intro nav > ul li.hovered a, .children .intro nav > ul li.hovered i {
+  color: #fff; }
+
+.children .intro nav > ul li:first-child a {
+  justify-content: start; }
 
 .children .intro nav > ul li a, .children .intro nav > ul li i {
   color: #E8B194; }
@@ -13309,6 +13378,10 @@ button.close {
   color: #fff; }
   .children .intro nav > ul:hover li:hover.selectedLava a i {
     color: #fff; }
+
+@media (max-width: 767px) {
+  .children .intro nav > ul li.hovered {
+    background: #E8B194; } }
 
 @media (max-width: 767px) {
   .dobro .intro section {
@@ -13666,27 +13739,21 @@ button.close {
       width: 203px;
       padding: 21px 20px; }
 
-.js-toggle-menu {
-  display: none; }
-  @media (max-width: 767px) {
-    .js-toggle-menu {
-      display: flex;
-      justify-content: space-between;
-      font-family: Cormac-Book, sans-serif;
-      font-size: 20px;
-      line-height: 1;
-      letter-spacing: 0.5px;
-      color: #000;
-      width: 95%;
-      margin: 0 auto;
-      padding-bottom: 15px; }
-      .js-toggle-menu i {
-        font-size: 28px;
-        color: #4489ff;
-        transition: all .4s ease; }
-        .js-toggle-menu i.active {
-          transform: rotate(180deg); } }
+/*.js-toggle-menu {
+	display: none; 
+	@include respond-to(sm) {
+		display: flex; justify-content: space-between;
 
+		@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
+		width: 95%; margin: 0 auto; padding-bottom: 15px;
+		i {
+			font-size: 28px; color: $link-color;
+			transition: all .4s ease;
+			&.active {transform: rotate(180deg);}
+		}
+
+	}
+}*/
 .list-promotion {
   display: flex;
   justify-content: space-around;
