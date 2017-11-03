@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
   $('.js-menu-open').click(function() {
     $('.menu-open').addClass('active');
     $('body').addClass('on-load');

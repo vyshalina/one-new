@@ -19,7 +19,7 @@
 	background: #e9edf5; box-shadow: inset 0 0px 11px rgba(0, 0, 0, 0.1);
 
 	ul {li {@extend .checkbox-filter; margin-right: 14px;}}
-	section {display: flex; justify-content: flex-end; align-items: center; width: 640px;}
+	section {display: flex; justify-content: flex-end; align-items: center; width: 550px;}
 
 	button.reset {
 		@include font-type($CormacB, 14px, 1, 0); color: #000;

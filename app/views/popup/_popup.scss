@@ -1,64 +1,29 @@
+// POPUPs
 .popup {
-	width: 80%; display: none;
-	@include respond-to(xs) {width: 70%;}
-}
+	//http://prntscr.com/h0zgpy
+	&-seller_info {
+		display: none;
+		max-width: 480px; padding: 25px;
+		background: rgba(192,209,221,0.9); border-radius: 4px;
 
-//http://prntscr.com/h0zgpy
-.popup {
-	position: fixed; z-index: 10000; width: 100%; height: 100%; padding-top: 10%;
-	background: rgba(192,209,221,0.9);
-	opacity: 0; 
-	transition: .4s all ease;
-	pointer-events: none;
-	&.active {
-		opacity: 1; transform: translate(0); pointer-events: auto;
-		.popup-main_body {
-			opacity: 1; transform: translate(0);
-		}
-	}
-	&_body {
-		transition: .6s all ease;
-		opacity: 0; transform: translate(-150px, -150px);
-		@extend .neo-bg;
-		width: 50%; margin: 0 auto; padding: 50px 30px 30px 30px; position: relative;
-		overflow-y: auto; 
-		@include respond-to(md) {width: 90%;}
-		.close {position: absolute; right: 20px; top: 20px;}
-		p {
-			@include font-type($HelveticaR, 16px, 24px, 0.5px); color: #000;
-		}
-	}
-	&_top {
-		width: 100%; text-align: center;
-	}
-}
+		figure {
+			text-align: center;
+			img {margin-bottom: 25px;}
 
-// POPUP WINDOWS
-.popup {
-	// LOGIN POPUP – http://prntscr.com/gg2gi8
-	// NOTICE POPUP – http://prntscr.com/gg2ew1
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-login {
-		& > ul {
-			display: flex; justify-content: center;
-			@include respond-to(sm) {flex-direction: column;}
-
-			& > li {
-				form {
-					ul {display: flex; justify-content: flex-end;}
-				}
+			figcaption {
+				text-align: left;
+	
+				h3 {color: #000; @include font-type($CormacB, 22px, 32px, 0px);}
+				p {color: #000; @include font-type($HelveticaR, 16px, 24px, 0.5px);}
+				address {margin-bottom: 0;}
 			}
 		}
+
+		a.b-close {position: absolute; right: 15px; top: 15px;}
+
+		@include respond-to(sm) {max-width: 100%;}
 	}
 
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	// LOGIN POPUP – http://prntscr.com/gg2gi8
 	&-login {
 		padding: 70px 0; position: relative;
@@ -66,9 +31,7 @@
 		@include respond-to(sm) {width: 90%; margin: 0 auto; padding: 40px 0;}
 		@include respond-to(xs) {width: 100%; min-width: 300px;}
 
-		&-close {
-			position: absolute; right: 25px; top: 25px;
-		}
+		&-close {position: absolute; right: 25px; top: 25px;}
 
 		h2 {
 			@include font-type($CormacEL, 32px, 36px, -0.5px); color: $main-color-text; text-align: center;
@@ -77,7 +40,9 @@
 		}
 
 		& > ul {
-			
+			display: flex; justify-content: center;
+			@include respond-to(sm) {flex-direction: column;}
+
 			& > li {
 				width: 50%;
 				@include respond-to(sm) {text-align: center; width: 100%;}
@@ -102,6 +67,7 @@
 					}
 
 					ul {
+						display: flex; justify-content: flex-end;
 						margin-top: 20px;
 						li {line-height: 35px;}
 					}

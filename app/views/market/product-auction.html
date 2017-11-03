@@ -4,26 +4,6 @@
 
 	<body class="on-load">
 		//= ./../tpl/counter.html
-		<section class="popup">
-
-			<div class="popup-main_body">
-				<a href="#" class="close js-close_popup">
-					<i class="icon icon-close"></i>
-				</a>
-				<div class="popup-main_top">
-					<img src="../../web/img/product-logo.png" alt="">
-				</div>
-				
-				<h3>Контакты</h3>
-				  <p>Управляющий Сервисный центр<br>
-					г. Москва, ул. Большая Новодмитровская д. 36 стр. 1,<br>
-					1 вход, 4 этаж. "Дизайн завод Flacon"<br>  
-					http://servicenb.ru<br>
-					Тел.: +7 800 775-29-44 (Звонок по России бесплатный)<br>
-					Тел.: +7 495 984-06-02</p>
-			</div>
-
-		</section>
 
 		<!-- Application -->
 		<div class="app product">
@@ -83,9 +63,9 @@
 
 									<section class="auction-rate">
 										<div class="btn-gr">
-											<sup>Ваша ставка (Шаг 60<span class="rub">a</span>)</sup>
+											<sup>Ваша ставка (Шаг 60 ₽)</sup>
 											<div class="btn-grey">
-												<span class="price">6 260<span class="rub">a</span></span>
+												<span class="price"><input type="number" name="amount" placeholder="ставка"> ₽</span>
 												<button class="btn shadow">Сделать ставку</button>
 											</div>
 											
@@ -198,6 +178,24 @@
 			</section>
 			
 		//= ./../tpl/footer.html
+		</div>
+
+		<div class="popup-seller_info">
+			<figure>
+				<img src="../../web/img/product-logo.png" alt="">
+				<figcaption>
+					<h3>Контакты</h3>
+				 	<address>
+				 		Управляющий Сервисный центр<br>
+						г. Москва, ул. Большая Новодмитровская д. 36 стр. 1,<br>
+						1 вход, 4 этаж. "Дизайн завод Flacon"<br>  
+						http://servicenb.ru<br>
+						Тел.: +7 800 775-29-44 (Звонок по России бесплатный)<br>
+						Тел.: +7 495 984-06-02
+					</address>
+				</figcaption>
+			</figure>
+			<a href="#" class="b-close"><i class="icon icon-close"></i></a>
 		</div>
 
 		<!-- Scripts -->

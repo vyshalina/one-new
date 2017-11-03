@@ -129,12 +129,12 @@
 				&-rate {
 					.btn-gr {
 						position: relative; padding-top: 16px; left: -2px;
-						& > sup {
+						sup {
 							@include font-type($HelveticaL, 9px, 1, 1.7px); color: #4b5769; text-transform: uppercase;
 							position: absolute; top: 0;
 							.rub {text-transform: none;}
 						}
-						& > .btn-grey {
+						.btn-grey {
 							display: inline-block; padding: 0 0 0 18px; margin-right: 13px; position: relative; left: -9px;
 							background: #f4f7fb; border-radius: 100px;
 							@include respond-to(xs) {
@@ -143,15 +143,16 @@
 							}
 							.price {
 								@include font-type($CormacB, 22px, 1, 0.5px); color: #000;
-								display: inline-block; padding: 19px 0;	margin-right: 80px;
-								@include respond-to(md) {margin-right: 15px;}
+								display: inline-block; padding: 20px;
+
+								input {border: none; outline: none; background: transparent; width: 120px;}
 							}
 							.btn {
 								margin-right: 0; padding: 23px 36px; letter-spacing: 0.7px;
 								@include respond-to(xs) {width: 100%;}
 							}
 						}
-						& > a {
+						a {
 							@include font-type($CormacB, 16px, 1, 0.5px);
 							@include respond-to(lg) {display: block; margin-top: 30px;}
 							@include respond-to(xs) {text-align: center;}
