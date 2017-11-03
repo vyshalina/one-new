@@ -24,11 +24,11 @@ $(document).ready(function () {
       decor.css('width', '26%');
       $('.intro nav > ul li:nth-child(2)').addClass('hovered');
     } else if (itemNumber === 2) {
-      decor.css('width', '52%');
+      decor.css('width', '54%');
       $('.intro nav > ul li:nth-child(2)').addClass('hovered');
       $('.intro nav > ul li:nth-child(3)').addClass('hovered');
     } else if (itemNumber === 3) {
-      decor.css('width', '78%');
+      decor.css('width', '80%');
       $('.intro nav > ul li:nth-child(2)').addClass('hovered');
       $('.intro nav > ul li:nth-child(3)').addClass('hovered');
       $('.intro nav > ul li:nth-child(4)').addClass('hovered');
@@ -43,12 +43,13 @@ $(document).ready(function () {
 
   $('.intro nav > ul li a').click(function () {
     var itemNumber = $(this).parent().index() - 1;
-    $('.js-slides article').removeClass('active').eq(itemNumber).addClass('active');
+    $('.js-slides article').fadeOut().eq(itemNumber).fadeIn();
     return false;
   });
 
   $('.reset').click(function () {
     $('.filters input').attr('checked', false);
+    return false;
   });
 
   $('.js-range-slider').jRange({
@@ -61,7 +62,8 @@ $(document).ready(function () {
     isRange: true
   });
 
-  $(".js-owl-carousel").owlCarousel({
+  var owl = $('.js-owl-carousel');
+  owl.owlCarousel({
     loop: true,
     nav: false,
     responsiveClass: true,
@@ -83,11 +85,43 @@ $(document).ready(function () {
       }
     }
   });
+  $('.joined a.btn-white').click(function () {
+    owl.trigger('next.owl.carousel');
+    return false;
+  });
 
   $(".js-carousel").owlCarousel({
     items: 1,
     nav: false,
     dotsClass: 'navigation'
+  });
+
+  $('.js-partners-carousel').owlCarousel({
+    loop: true,
+    nav: true,
+    responsiveClass: true,
+    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+    responsive: {
+      0: {
+        items: 1,
+        margin: 0
+      },
+      420: {
+        items: 2,
+        margin: 0
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4,
+        margin: 15
+      },
+      1199: {
+        items: 5,
+        margin: 15
+      }
+    }
   });
 
   // scroll menu
@@ -127,7 +161,15 @@ $(document).ready(function () {
     } else if (scrolled < 50) {
       header.removeClass('filled');
     }
+
+    // parallax();
   });
+
+  // function parallax() {
+  //   var scrolled = $(window).scrollTop();
+  //   var position = -(scrolled*0.1);
+  //   $('.dobro .counter').css('background-position', '-200px '+position+'px');
+  // }
 });
 
 $(window).load(function () {

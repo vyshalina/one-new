@@ -1,16 +1,10 @@
 //превью товара в списке http://prntscr.com/h1uwdh
 .preview{
-	background: #fff;
+	display: flex; flex-flow: column nowrap; justify-content: space-between;
+	min-height: 450px; background: #fff;
 
 	header {
-		margin-bottom: 14px;
-		a{
-			&:hover {
-				figcaption {
-					opacity: 1;
-				}
-			}
-		}
+		a {&:hover {figcaption {opacity: 1;}}}
 		figure {
 			position: relative;
 			img {max-width: 100%;}
@@ -37,8 +31,7 @@
 		padding: 0 17px;
 
 		h2 {
-			line-height: 14px;
-			margin-top: 0; min-height: 52px; margin-bottom: 10px; padding-left: 3px;
+			line-height: 14px; margin-top: 0; margin-bottom: 10px; padding-left: 3px;
 			
 			a {
 				@include font-type($CormacB, 16px, 24px, 0.5px); color: #000;
@@ -65,7 +58,7 @@
 	footer {
 		display: flex; justify-content: space-between; align-items: center;
 
-		padding: 6px 20px 10px 20px;
+		padding: 10px 20px 20px 20px;
 		a {
 			figure {
 				display: flex; align-items: center;
