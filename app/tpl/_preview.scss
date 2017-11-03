@@ -3,7 +3,7 @@
 	background: #fff;
 
 	header {
-		margin-bottom: 5px;
+		margin-bottom: 14px;
 		a{
 			&:hover {
 				figcaption {
@@ -35,21 +35,23 @@
 
 	section {
 		padding: 0 17px;
+
 		h2 {
-			line-height: 14px; min-height: 52px;
-			margin-top: 0; margin-bottom: 8px;
+			line-height: 14px;
+			margin-top: 0; min-height: 52px; margin-bottom: 10px; padding-left: 3px;
+			
 			a {
 				@include font-type($CormacB, 16px, 24px, 0.5px); color: #000;
 			}
 		}
 		p {
 			@include font-type($HelveticaR, 12px, 16px, 0.5px); color: #000;
-			margin-bottom: 5px;
+			margin-bottom: 5px; padding-left: 2px;
 			span {margin-left: 10px;}
 		}
 
 		& > ul {
-			display: flex; flex-wrap: wrap;
+			display: flex; flex-wrap: wrap; margin-bottom: 4px;
 
 			li {
 				display: inline-block; padding: 0 5px; margin-right: 5px;
@@ -63,13 +65,13 @@
 	footer {
 		display: flex; justify-content: space-between; align-items: center;
 
-		padding: 6px 20px 15px 20px;
+		padding: 6px 20px 10px 20px;
 		a {
 			figure {
 				display: flex; align-items: center;
 
 				span {
-					width: 31px; height: 31px; margin-right: 10px;
+					width: 31px; height: 31px; margin-right: 8px;
 					border-radius: 50%; background-position: center; background-repeat: none;
 				}
 				figcaption {
@@ -80,8 +82,8 @@
 			}
 		}
 		p {
-			@include font-type($CormacB, 16px, 1, 0.5px); color: #000;
-			margin-bottom: 0;
+			@include font-type($CormacB, 16px, 1, 0.7px); color: #000;
+			margin-bottom: 5px;
 		}
 	}
 }

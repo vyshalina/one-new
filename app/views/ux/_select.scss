@@ -3,10 +3,10 @@
 	position: relative;
 
 	& > a {
-		@include font-type($CormacB, 16px, 1, 0.5px); color: #000000;
+		@include font-type($CormacB, 16px, 1, 0.5px); color: #000000; font-weight: 600px;
 		position: relative; padding-right: 19px;
 		i {
-			display: inline-block; padding: 3px; margin-left: 15px;  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+			display: inline-block; padding: 3px; margin-left: 15px;  position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
 			transition: .4s all ease;
 		}
 		&.active {
