@@ -2,62 +2,40 @@
 ////////////////////////////////////////////////////
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
 .app.index {
+	padding-top: 0;
+
+	//Секция с выпадающими списками на главной - http://prntscr.com/h2ns22
+	.section-group {
+		display: flex; justify-content: center;
+		@include respond-to(md) {flex-direction: column;}
+
+		padding-top: 27px;
+		.select {
+			margin: 0 31px;
+			@include respond-to(md) {margin-bottom: 25px;}
+
+			&:last-child {margin-bottom: 0}
+			& > a {
+				font-size: 18px; letter-spacing: 0;
+				i {
+					font-size: 16px; color: #000;
+				}
+			}
+		}
+	}
+
 	&.pet, &.children {
 		header.header {
 			.logo-block {
 				.subtitle {display: inline-block;}
 			}
 		}
-
-		//изменен размер текста и отступы - http://prntscr.com/h4c507
-		.intro-body {
-			padding: 169px 0 45px 9px;
-			header {
-				h1 {
-					font-size: 54px; line-height: 65px; margin-bottom: 41px;
-					@include respond-to(xs) {
-						font-size: 38px; line-height: 48px;
-					}
-				}
-				p {font-size: 18px; line-height: 28px; margin-bottom: 0;}
-			}
-			section {top: 214px;}
-		}
 		
 		//подкорректированы отступы
 		.list-promotion {padding-top: 16px;}
-		
-		//меняем цвета в футере - http://prntscr.com/h4dpcf
-		.footer {
-			&-contacts {
-				& > ul {
-					.logo {
-						display: none;
-						&-black {display: inline-block;}
-					}
-					& > li ul.soc li a i {color: #000;}
-				}
-			}
-		}
 	}
 	
 	&.pet {
-		//меняем цвет меню - http://prntscr.com/h4ba6n
-		.help-menu {
-			bottom: -35px;
-			li {
-				&.active, &:hover {
-					a {
-						background: #96be46; color: #fff;
-						i {color: #fff;}
-					}
-				}
-				a {
-					color: #96be46;
-					i {color: #96be46;}
-				}
-			}
-		}
 
 		//меняем цвет стрелок - http://prntscr.com/h4bgop
 		.promotion section p > i {color: #96be46;}
@@ -66,7 +44,7 @@
 		.js-index-menu .js-toggle-menu i {color: #96be46;}
 
 		//меняем цвет кнопок в карусели - http://prntscr.com/h4d0x7
-		.carousel .navigation li {
+		.carousel .navigation div {
 			&.active, &:hover {
 				background: #96be46;
 			}
@@ -89,22 +67,6 @@
 	}
 
 	&.children {
-		//меняем цвет меню - http://prntscr.com/h4bg0s
-		.help-menu {
-			bottom: -35px;
-			li {
-				&.active, &:hover {
-					a {
-						background: #e8b194; color: #fff;
-						i {color: #fff;}
-					}
-				}
-				a {
-					color: #e8b194;
-					i {color: #e8b194;}
-				}
-			}
-		}
 
 		//меняем цвет стрелок - http://prntscr.com/h4bgum
 		.promotion section p > i {color: #e8b194;}
@@ -113,7 +75,7 @@
 		.js-index-menu .js-toggle-menu i {color: #e8b194;}
 
 		//меняем цвет кнопок в карусели - http://prntscr.com/h4d2gb
-		.carousel .navigation li {
+		.carousel .navigation div {
 			&.active, &:hover {background: #e8b194;}
 		}
 		
@@ -131,271 +93,363 @@
 				&:hover { i {color: #e8b194;}}
 			}  
 		}
+	}
 
+	&.dobro {
+		h2.header {margin-top: 40px;}
+		.section-group {padding-top: 0;}
+
+
+		//меняем цвет стрелок - http://prntscr.com/h4bgum
+		.promotion section p > i {color: white;}
+		
+		//меняем цвет выпадающего меню - http://prntscr.com/h4fvbw
+		.js-index-menu .js-toggle-menu i {color: #7A3FBF;}
+
+		//меняем цвет кнопок в карусели - http://prntscr.com/h4d2gb
+		.carousel .navigation div {
+			&.active, &:hover {background: #7A3FBF;}
+		}
+		
+		//меняем цвет кнопки в подписке - http://prntscr.com/h4d2pj
+		.subscription .form .btn {
+			background: #7A3FBF; border-color: #7A3FBF;
+			&:hover {
+				background: #fff; color: #7A3FBF;
+			}
+		}
+
+		//меняем цвета в футере - http://prntscr.com/h4dpcf
+		.footer {
+			&-contacts > ul > li ul.soc li a {
+				&:hover { i {color: #7A3FBF;}}
+			}  
+		}
 	}
 }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 
-.app.index 	{
-	padding-top: 0;
-	.header {
-		//////Временно, чтобы не мешал
-		position: absolute;
-		////////////////////////////////
-
-		background: transparent; box-shadow: none;
-		//Надписи возле лого - http://prntscr.com/h4bzp5
-		.subtitle {
-			position: relative; padding-left: 21px;
-			&:before {
-				content: '';
-				height: 26px; width: 2px; position: absolute; left: 5px; top: -8px;
-				background: #fff;
-			}
-		}
-		/////////////////////
-		.menu-top { 
-			a.burger {
-				&.active {
-					span {
-						@include respond-to(md) {background: $link-color;}
-					}
-				}
-				span {
-					@include respond-to(md) {background: #fff;}
-				}
-				
-			}
-			& > ul { 
-
-				& > li { 
-					a { 
-						color: #fff; i {color: #fff;} 
-						@include respond-to(md) {
-							color: $link-color;
-							i {color: $link-color;}
-						}
-					} 
-					&.drop-down { & > a { span {background: #fff;} } }
-				} 
-			} 
-		}
-
-		a.logo {
-			display: none;
-			&.white {
-				display: inline-block; position: relative; top: -2px; padding-left: 31px;
-				@include respond-to(sm) {padding-left: 15px;}
-			}
-		}
-	}
-
-	//Секция с выпадающими списками на главной - http://prntscr.com/h2ns22
-	.section-group {
-		display: flex; justify-content: center;
-		@include respond-to(md) {flex-direction: column;}
-
-		padding-top: 27px;
-		.select {
-			margin: 0 31px;
-			@include respond-to(md) {margin-bottom: 25px;}
-
-			&:last-child {margin-bottom: 0}
-			& > a {
-				font-size: 18px; letter-spacing: 0;
-				i {
-					font-size: 16px; color: #000;
-				}
-			}
-		}
-	}
-}
-
-.gradient-vert {
-	position: absolute; width: 100%; height: 100%;
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 16%,rgba(0,0,0,0.49) 98%,rgba(0,0,0,0.5) 100%);
-}
 
 // INTRO LANDING - http://prntscr.com/h2bdli
 .intro {
-	width: 100%; height: auto; position: relative;
-	background: url(../../web/img/index/intro.png) no-repeat center; background-size: cover;
-	.gradient {
-		position: absolute; width: 100%; height: 100%; 
+	section {
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
-	}
-	&-body {
-		color: #fff;
-		position: relative; padding: 145px 0 64px 100px;
-		@include respond-to(sm) {padding: 145px 0 64px 20px;}
-		@include respond-to(xs) {padding-left: 0;}
-		header {
-			h1 {
-				@include font-type($CormacB, 42px, 56px, 0px); 
-				color: #fff; margin-top: 0; margin-bottom: 23px;
-				@include respond-to(sm) {font-size: 36px; line-height: 48px;}
-			}
-			p {
-				@include font-type($CormacB, 26px, 32px, 0px); 
-				margin-bottom: 87px;
-			}
-			a {
-				@include font-type($CormacB, 16px, 1px, 0px); color: #fff;
-				position: relative;
-				&:after {
-					content: '';
-					position: absolute; top: 100%;
-					border-bottom: 1px solid #fff;
-					transition: all 0.4s;
-				}
-				&:after {right: 100%; left: 0;}
-				&:hover:after {right: 0;}
-				&:hover i {transform: translateX(5px);}
+		height: 640px; position: relative; overflow: hidden;
+		
+		article {
+			.container {position: relative;} transition: height .6s;
+			width: 100%; height: 0; &.active {height: 100%;}
 
-				i {color: #fff; transition: all 0.4s; transform: translateX(0);}	
+			color: #fff;
+			position: absolute; bottom: 0; left: 0;
+			background: url('../img/index/intro.png') no-repeat center; background-size: cover;
+
+			header {
+				padding-left: 102px; margin-top: 146px;
+
+				h1 {
+					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
+					margin-top: 0; margin-bottom: 22px;
+					@include respond-to(sm) {font-size: 36px; line-height: 48px;}
+				}
+				p {
+					@include font-type($CormacB, 26px, 32px, 0px); 
+					margin-bottom: 86px;
+				}
+				h2 {
+					color: #fff; @include font-type($CormacB, 62px, 78px, 0px); 
+					margin-bottom: 86px;
+				}
+				a {
+					@include font-type($CormacB, 16px, 16px, 0px); color: #fff;
+					position: relative;
+					i {
+						color: #fff; font-size: 17px; font-weight: bold;
+						margin-left: 4px;
+						position: relative; top: 1px;
+						transition: all 0.4s; transform: translateX(0);
+					}
+
+					&:after {
+						content: '';
+						position: absolute; top: 100%;
+						border-bottom: 1px solid #fff;
+						transition: all 0.4s;
+					}
+					&:after {right: 100%; left: 0;}
+					&:hover:after {right: 0;}
+					&:hover i {transform: translateX(5px);}
+
+						
+				}
+			}
+
+			footer {
+				position: absolute; top: 146px; right: 0;
+				p {
+					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
+					position: relative;
+					span {
+						position: absolute; top: -22px; left: -26px; 
+						@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
+						i {margin-right: 11px;}
+					}
+				}
 			}
 		}
+	}
+
+	nav {
+		margin-top: -36px; background: white;
+
+		& > ul {
+			display: flex; justify-content: space-between; align-items: stretch;
+			width: 984px; height: 64px; margin: 0 auto;
+			position: relative; z-index: 2;
+			background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+			li {
+				height: 100%; width: 26%;
+				position: relative; z-index: 1;
+				
+				a, i {transition: color 1s ease, padding .2s linear;}
+				a {
+					display: flex; justify-content: center; align-items: center;
+					color: #669CF9; font-family: $CormacB; font-size: 18px; line-height: 18px; text-align: center;
+					width: 100%; height: 100%; padding-right: 50px;
+					position: relative;
+
+					i {
+						color: #669CF9; font-size: 30px;
+						position: absolute; right: 21px; top: 16px;
+					} 
+				}
+				&:last-child {width: 22%; a {padding-right: 0 !important; i {display: none;}}}
+
+				&.hovered {a, i {color: white;}}
+				&.decoration {
+					height: 100%;
+					position: absolute; top: 0; bottom: 0;
+					background: #669CF9; border-radius: 100px;
+					transition: width .4s ease;
+				}
+			}
+		}
+		@include respond-to(lg) {
+			& > ul {width: 100%; li {width: 25%; a {padding-right: 20px;} &.selectedLava {a {padding-right: 20px;}}}}
+		}
+		@include respond-to(sm) {
+			& > ul {width: 400%; li {}}
+		}
+	}
+
+	.pet & {
+		article {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
+		nav > ul li {
+			a, i {color: #96be46;}
+			&.backLava {background: #96be46;}
+			&.selectedLava {a {color: #fff; i {color: #fff;}}}
+		}
+		nav > ul{
+			&:hover {
+				li {
+					a {color: #96be46; i {color: #96be46;}}
+					&:hover {
+						a {color: #fff; i {color: #fff;}}
+						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
+				}
+			}
+		}
+	}
+
+	.children & {
+		article {background: url('../img/index/intro1.png') no-repeat center; background-size: cover;}
+		nav > ul li {
+			a, i {color: #E8B194;}
+			&.backLava {background: #E8B194;}
+			&.selectedLava {a {color: #fff; i {color: #fff;}}}
+		}
+		nav > ul{
+			&:hover {
+				li {
+					a {color: #E8B194; i {color: #E8B194;}}
+					&:hover {
+						a {color: #fff; i {color: #fff;}}
+						&.selectedLava {a {color: #fff; i {color: #fff;}}}
+					}
+				}
+			}
+		}
+	}
+
+	.dobro & {
+		article {
+			background: url('../img/index/intro3.png') no-repeat center; background-size: cover;
+			header {
+				padding-left: 145px; margin-top: 216px;
+				position: relative;
+
+				figure {position: absolute; top: 0; left: 0;}
+				p {margin-bottom: 10px;}
+				a {
+					padding: 20px 25px;
+					border: 2px solid white; border-radius: 100px;
+				}
+			}
+			footer {
+				display: flex; justify-content: center; align-items: center;
+				width: 195px; height: 195px;
+				background: url('../images/dobro-duga.svg') no-repeat center;
+				p {
+					font-family: $CormacB; font-size:32px; margin-bottom: 0;
+					span {
+						display: block;
+						font-size: 16px; line-height: 18px;
+						margin-bottom: 8px;
+						position: relative; top: auto; left: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrapper {
+	padding-bottom: 60px; background: white;
+}
+
+.counter {
+    padding: 35px 0; background: #fff;
+
+    .dobro & {
+    	background: #7A3FBF url('../images/bg-plus.svg') 0 center no-repeat;
+    	
+		article p,
+    	article section p,
+    	article section p > i {color: white;}
+    	article section p {font-size: 84px; line-height: 84px;}
+    }
+}
+
+.about {
+	padding: 50px 0 80px 0;
+	article {
+		display: flex; justify-content: center; align-items: center;
 
 		section {
-			position: absolute; right: 24px; top: 184px;
-			@include respond-to(md) {
-				position: static; margin-top: 50px; padding-left: 26px;
-			}
-			p {
-				@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
-				position: relative;
-				span {
-					position: absolute; top: -22px; left: -26px; 
-					@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
-					i {margin-right: 11px;}
+			padding-left: 60px;
+
+			h2 {color: #64359C; @include font-type($CormacB, 28px, 38px, 0px); margin-bottom: 20px;}
+			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px); margin-bottom: 30px;}
+			ul {
+				display: flex; align-items: center;
+				li {
+					margin-right: 20px;
+					a {color: #64359C; @include font-type($CormacB, 18px, 19px, 0px);}
 				}
 			}
 		}
+	}
+}
+
+.people {
+	padding: 80px 0 40px 0;
+	article {
+		display: flex;
+		section {
+			width: 45%;
+
+			h2 {color: #000000; @include font-type($CormacB, 38px, 39px, 0px); margin-bottom: 40px;}
+			p {color: #000000; @include font-type($CormacB, 18px, 26px, 0.4px);}
+		}
+
+		& > ul {
+			display: flex; flex-flow: row wrap;
+			li {
+				width: 25%; margin-bottom: 20px;
+				figure {
+					text-align: center;
+					figcaption {
+						padding-top: 20px;
+						p {color: #000000; @include font-type($CormacB, 16px, 24px, 0px); margin-bottom: 0;}
+						span {color: #000000; @include font-type($CormacB, 12px, 16px, 0px); opacity: 0.7;}
+					}
+				}
+			}
+		}
+	}
+}
+
+.megasale {
+	padding: 30px 0; background: white;
+}
+
+.home_filter {
+	h2.header {color: #000000; font-family: $CormacB; font-size: 38px; line-height: 39px; text-align: center; margin-bottom: 15px;}
+	padding: 35px 0; background: white;
+}
+
+.home_product {
+	padding: 35px 0 55px 0; background: #F3F6FA;
+}
+
+.joined_partners {
+	padding: 45px 0; background: white;
+}
+
+.home_testimonials {
+	padding: 15px 0; background: white;
+	.children &, .pet & {background: #F3F6FA;}
+}
+
+.home_news {
+	padding: 55px 0 35px 0; background: #F3F6FA;
+	.children &, .pet & {background: white; border-bottom: 1px solid #d9d9d9;}
+}
+
+//http://prntscr.com/h4cg2c
+.subscription {
+	padding: 80px 0; background: white;
+
+	h2 {
+		@include font-type($CormacB, 34px, 51px, 0.3px); text-align: center;
+		margin-bottom: 16px;
+	}
+
+	.form {
+		display: flex; flex-direction: column; align-items: center;
+		& > span {
+			margin-bottom: 5px;
+			@include respond-to(sm) {width: 100%;}
+
+			input {
+				letter-spacing: 0.6px; width: 580px;
+				@include respond-to(sm) {width: 100%;}
+			}
+		}
+		
+		.btn {width: 203px; padding: 21px 20px;}
 	}
 }
 
 //ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ НА МОБИЛЬНОЙ ВЕРСИИ - http://prntscr.com/h4fsh2
-.js-index-menu {
+.js-toggle-menu {
+	display: none; 
 	@include respond-to(sm) {
-		width: 90%; padding-top: 25px; position: relative; bottom: -30px; z-index: 5; margin: 0 auto;
-		border-radius: 20px; background: #fff; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-	}
+		display: flex; justify-content: space-between;
 
-	.js-toggle-menu {
-		display: none; 
-		@include respond-to(sm) {
-			display: flex; justify-content: space-between;
-
-			@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
-			width: 95%; margin: 0 auto; padding-bottom: 15px;
-			i {
-				font-size: 28px; color: $link-color;
-				transition: all .4s ease;
-				&.active {transform: rotate(180deg);}
-			}
-
+		@include font-type($CormacB, 20px, 1, 0.5px); color: #000;
+		width: 95%; margin: 0 auto; padding-bottom: 15px;
+		i {
+			font-size: 28px; color: $link-color;
+			transition: all .4s ease;
+			&.active {transform: rotate(180deg);}
 		}
-	}
-	.help-menu {
-		@include respond-to(sm) {
-			height: 0; max-height: 0; overflow: hidden;
-			transition: all .5s linear;
-			&.active {height: auto; max-height: 1000px;}
 
-			flex-direction: column;
-			height: auto; width: 100%;
-			border-radius: 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
-
-			& > li {
-				text-align: left;
-				width: 100%;
-				&:hover, &.active {
-					a {text-align: left; border-radius: 0;}
-				}
-				&:first-child {
-					&:hover, &.active {
-						a {text-align: left;}
-					}
-				}
-				a {
-					text-align: left;
-					padding: 20px 0 20px 35px;
-					background: #fff;
-				}
-				
-			}
-		}
 	}
 }
-
-//MENU IN INTRO http://prntscr.com/h2dmhm
-.help-menu {
-	display: flex;
-	position: relative; z-index: 2; bottom: -28px; width: 984px; height: 64px; margin: 0 auto;
-	background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-	@include respond-to(lg) {width: 95%;}
-	
-	
-
-	li {
-		height: 100%; margin-right: 11px;
-		transition: all .4s ease;
-		@include respond-to(lg) {width: 25%;}
-	
-		&:hover {
-			a {
-				color: #fff; text-align: center;
-				background: $btn-color; border-radius: 100px; 
-
-				i {
-					color: #fff;
-				}
-			}
-		}
-		&.active {
-			a {
-				text-align: left; color: #fff;
-				padding: 20px 0 20px 35px;
-				background: $btn-color; border-radius: 100px; 
-				&:after {
-					content: '';
-					position: absolute; bottom: 12px;
-					border-bottom: 1px solid $link-color;
-					transition: all 0.4s;
-				}
-				i {
-					color: #fff;
-				}
-			}
-		}
-		&:last-child {
-			margin-right: 0;
-			a {
-				i {
-					display: none;
-					@include respond-to(sm) {display: inline-block;}
-				}
-			}
-		}
-		
-
-		a {
-			color: $link-color; text-align: center; @include font-type($CormacEL, 18px, 1, 0px);
-			display: inline-block; height: inherit; width: 238px; padding-top: 20px; padding-right: 14px;  position: relative;
-			transition: all .5s ease;
-			@include respond-to(lg) {width: 100%;}
-			
-
-			i {
-				color: $link-color; font-size: 30px;
-				position: absolute; right: 21px; top: 16px;
-				transition: all .5s ease;
-			} 
-		}
-	}
-}
-
 
 //PROMOTION LIST - http://prntscr.com/h2dye8
 .list {
@@ -475,7 +529,7 @@
 .joined {
 	padding-bottom: 51px; position: relative;
 	a.btn-white {
-		position: absolute; right: -29px; top: 145px;
+		position: absolute; right: -29px; top: 145px; z-index: 2;
 		@include respond-to(sm) {right: -15px;}
 
 		i {margin-left: 0;}
@@ -487,8 +541,9 @@
 	ul {
 		display: flex;
 		li {
-			margin-right: 19px; 
-			&:last-child {margin-right: 0;}
+			padding: 12px 0;
+			// margin-right: 19px; 
+			// &:last-child {margin-right: 0;}
 			a {
 				&:hover {
 					img {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
@@ -616,7 +671,7 @@
 	@include respond-to(md) {flex-direction: column;}
 
 	& > .btn-white {
-		position: absolute; z-index: 5; right: -28px; top: 204px;
+		position: absolute; z-index: 1; right: -28px; top: 204px;
 		@include respond-to(lg) {top: 70px; right: -20px;}
 		@include respond-to(xs) {top: -27px;}
 	}
@@ -649,13 +704,13 @@
 				@include respond-to(xs) {left: 25px; bottom: 20px;}
 
 				h2 {
-					@include font-type($CormacB, 54px, 1, 0); color: #fff;
+					@include font-type($CormacB, 54px, 54px, 0); color: #fff;
 					margin-bottom: 19px;
 					@include respond-to(sm) {font-size: 40px}
 					@include respond-to(xs) {font-size: 30px; margin-bottom: 12px;}
 				}
 
-				p {@include font-type($CormacB, 22px, 1, 0); color: #fff;}
+				p {@include font-type($CormacB, 22px, 22px, 0); color: #fff;}
 				@include respond-to(sm) {font-size: 18px;}
 			}
 			figure {
@@ -671,10 +726,16 @@
 .main-products {
 	position: relative;
 	.btn-white {
-		position: absolute; z-index: 5; top: 178px; right: -45px;
+		position: absolute; z-index: 1; top: 178px; right: -45px;
 		@include respond-to(lg) {right: -20px;}
 		@include respond-to(xs) {top: -23px;}
+	}
+	.btn {
+		@include font-type($CormacB, 16px, 16px, 0);
+		padding: 20px;
+		position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
 
+		.dobro & {background: #7A3FBF; border: none;}
 	}
 }
 
@@ -717,7 +778,8 @@
 	&-item {
 		display: flex; justify-content: start;
 
-		position: absolute; top: 0; left: 0; width: 100%; padding-left: 102px;
+		// position: absolute; top: 0; left: 0;
+		width: 100%; padding-left: 102px; padding-top: 10px;
 		@include respond-to(lg) {padding-left: 40px;}
 		@include respond-to(sm) {flex-direction: column; padding-left: 0;}
 
@@ -727,7 +789,8 @@
 			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 			@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 			img {
-				width: 80px; height: 80px; margin-right: 20px; margin-top: 5px;
+				width: 80px !important; height: 80px !important; margin-right: 20px; margin-top: 5px; max-width: 100%;
+				@include respond-to(md) {width: auto !important;}
 				@include respond-to(sm) {margin: 0 0 15px 0;}
 			}
 			figcaption {
@@ -763,7 +826,7 @@
 			transition: 0.5s ease-out;
 		}
 
-		&.active {
+		.active & {
 			figure {
 				opacity: 1;
 			}
@@ -805,7 +868,7 @@
 .doings {
 	padding: 30px 0 21px 0; position: relative;
 	.btn-white {
-		position: absolute; z-index: 5; right: -47px; top: 182px;
+		position: absolute; right: -47px; top: 182px;
 		@include respond-to(lg) {right: -20px;}
 		@include respond-to(md) {top: 9px;}
 	}
@@ -855,42 +918,5 @@
 			}
 			span {@include font-type($HelveticaL, 10px, 18px, 1.1px); text-transform: uppercase; color: #4b5769;}
 		}
-	}
-}
-
-
-//PARTNERS - http://prntscr.com/h2caw6
-.wr.base.partners-style2 {
-	padding: 65px 0 54px 0;
-	border-top: 1px solid #e7edf2;
-
-	ul {
-		display: flex; align-items: center;  justify-content: space-between; flex-wrap: wrap;
-	}
-}
-
-
-//http://prntscr.com/h4cg2c
-.subscription {
-	padding-top: 79px; padding-bottom: 40px;
-	border-top: 1px solid #d9d9d9;
-	h2 {
-		@include font-type($CormacB, 34px, 51px, 0.3px); text-align: center;
-		margin-bottom: 16px;
-	}
-
-	.form {
-		display: flex; flex-direction: column; align-items: center;
-		& > span {
-			margin-bottom: 5px;
-			@include respond-to(sm) {width: 100%;}
-
-			input {
-				letter-spacing: 0.6px; width: 580px;
-				@include respond-to(sm) {width: 100%;}
-			}
-		}
-		
-		.btn {width: 203px; padding: 21px 20px;}
 	}
 }

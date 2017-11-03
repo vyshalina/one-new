@@ -1,7 +1,18 @@
+//PARTNERS - http://prntscr.com/h2caw6
+.partners {
+	padding: 65px 0 54px 0;
+	border-top: 1px solid #e7edf2; background: white;
+
+	ul {
+		display: flex; align-items: center;  justify-content: space-between; flex-wrap: wrap;
+		li a img {filter: grayscale(100%);}
+	}
+}
+
 .footer {
 
 	padding-top: 20px;
-	background: #fff; border-top: 1px solid #d9e4ea; overflow: hidden;
+	background: #fff; border-top: 1px solid #e7edf2; overflow: hidden;
 	
 	&-info {
 		display: flex; align-items: center;
@@ -19,7 +30,7 @@
 
 				p {@include font-type($CormacB, 23px, 29px, -0.5px); color: #000; margin-bottom: 7px;}
 				a {
-					@include font-type($CormacEL, 16px, 22px, 0); color: #4b5769; letter-spacing: 0px;
+					@include font-type($CormacEL, 16px, 22px, 0); color: #4B5769; letter-spacing: 0px;
 					display: inline-block; position: relative;
 					&:after {
 						content: '';
@@ -29,7 +40,7 @@
 					}
 					&:hover:after {right: 0;}
 
-					i {color: $link-color; font-weight: 600; margin-left: 11px; transition: all 0.4s; transform: translateX(0);}
+					i {color: #8F8670; font-weight: 600; margin-left: 11px; transition: all 0.4s; transform: translateX(0);}
 					&:hover i {transform: translateX(5px);}
 					
 				}

@@ -27,10 +27,10 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function () {
 	return gulp.src('app/css/*.scss')
 	.pipe(sass().on('error', sass.logError))
-	.pipe(autoprefixer({
-		browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
-		cascade: false
-	}))
+	// .pipe(autoprefixer({
+	// 	browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+	// 	cascade: false
+	// }))
 	.pipe(gulp.dest('dist/web/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -51,6 +51,7 @@ gulp.task('sass', function () {
 gulp.task('js:libs', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
+		'plugins/jquery.easing.1.3.js',
 		'node_modules/jquery-mousewheel/jquery.mousewheel.js',
 		'node_modules/owl.carousel/dist/owl.carousel.min.js',
 		'node_modules/select2/dist/js/select2.min.js',
@@ -58,7 +59,8 @@ gulp.task('js:libs', function () {
 		'bower_components/smooth-scrollbar/dist/smooth-scrollbar.js',
 		'node_modules/lity/dist/lity.min.js',
 		'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
-		'plugins/bpopup/jquery.bpopup.min.js'
+		'plugins/bpopup/jquery.bpopup.min.js',
+		'plugins/jrange-master/jquery.range-min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

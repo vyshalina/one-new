@@ -23,12 +23,10 @@
 			position: relative; padding: 15px 25px 15px 46px; 
 			background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 25px;
 			opacity: 0.5; cursor: pointer;
-			transition: .4s all ease;
 			&:before {
 				content: '';
 				position: absolute; width: 12px; height: 12px; left: 20px; top: 19px;
 				background: url(../img/plus.png) center no-repeat;
-				transition: .7s all ease;
 			}
 		}
 		input:checked + label {
@@ -78,6 +76,8 @@
 
 			.select {margin-right: 22px; &:last-child{margin-right: 0;}}
 		}
+
+		div.checkboxes {padding: 0; section input {display: none;}}
 	}
 
 }

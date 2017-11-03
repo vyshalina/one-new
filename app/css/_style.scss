@@ -370,8 +370,7 @@ a {
 /********* Application ***********/
 /*********************************/
 .app {
-	min-width: 320px; overflow-x: hidden; padding-top: 65px;
-	background: #F8FAFD;
+	min-width: 320px; padding-top: 65px; overflow-x: hidden; position: relative;
 
 	//Новые враперы - http://prntscr.com/h1vhsu
 	.wr {
@@ -392,19 +391,19 @@ a {
 		.selects.filter {padding: 20px 0;}
 		.main_menu_wrapp {box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.05); position: relative; z-index: 2; @include respond-to(sm) {box-shadow: none;}}
 		.filter .select > div.active {width: 240px;}
-		@media (min-width: 992px) {
-			.main_menu.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
-			    display: block !important;
-			    .owl-prev {left: -20px;}
-			    .owl-next {right: -20px;}
-			}
-		}
-		@media (max-width: 991px) {
-			.main_menu.owl-carousel {
-				.owl-prev {left: -10px;}
-				.owl-next {right: -10px;}
-			}
-		}
+		// @media (min-width: 992px) {
+		// 	.main_menu.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+		// 	    display: block !important;
+		// 	    .owl-prev {left: -20px;}
+		// 	    .owl-next {right: -20px;}
+		// 	}
+		// }
+		// @media (max-width: 991px) {
+		// 	.main_menu.owl-carousel {
+		// 		.owl-prev {left: -10px;}
+		// 		.owl-next {right: -10px;}
+		// 	}
+		// }
 		.logo {margin-top: 0;}
 		.galery_wrapp img:hover {cursor: pointer;}
 
@@ -460,9 +459,6 @@ a {
 		&.bg-right {background: url(../img/right-bg.png) no-repeat right bottom #edf2f8;}
 	}
 }
-
-
-
 
 
 
