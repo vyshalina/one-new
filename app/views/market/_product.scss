@@ -13,6 +13,7 @@
 		}
 		.images {
 			@include respond-to(lg) {width: 47%;}
+			@include respond-to(md) {width: 35%;}
 			@include respond-to(sm) {width: 100%; margin-bottom: 50px;}
 			figure {
 				text-align: left;
@@ -42,7 +43,7 @@
 		& > section {
 			padding-left: 10px; padding-top: 6px; position: relative;
 			@include respond-to(lg) {width: 49%;}
-			@include respond-to(md){padding-left: 15px;}
+			@include respond-to(md){padding-left: 15px; width: 60%;}
 			@include respond-to(sm){padding: 0; width: 100%;}
 			.auction-logo {
 				position: absolute; right: -49px; top: 12px; padding: 9px 0;
@@ -107,6 +108,7 @@
 					li {
 						@include font-type($CormacB, 16px, 1, 0); color: #4b5769; text-align: center;
 						position: relative; min-width: 100px; padding-top: 17px; margin-right: 29px;
+						@include respond-to(lg) {margin-right: 20px;}
 						@include respond-to(md) {
 							text-align: left;
 							margin-bottom: 25px; margin-right: 0;
@@ -249,6 +251,8 @@
 						margin-right: 20px;
 						border-radius: 50%; background-size: cover; width: 60px; height: 60px;
 						@include respond-to(md){margin-right: 10px;}
+
+						&.seller-logo {img {max-height: 60px;}}
 					}
 					section {
 						padding: 20px 0;
