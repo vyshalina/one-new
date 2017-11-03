@@ -221,12 +221,17 @@
 			width: 984px; height: 64px; margin: 0 auto;
 			position: relative; z-index: 2;
 			background: #fff; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+			@include respond-to(sm) {
+				width: 100%;
+			}
 
 			li {
 				height: 100%; width: 26.3%;
 				position: relative; z-index: 1;
+				@include respond-to(sm) {width: 100%; height: 64px;}
 				&.decoration, &:nth-child(2) {
 					width: 24.6%;
+					@include respond-to(sm) {width: 100%; height: 64px;}
 					a {
 						justify-content: start;
 						padding-left: 35px;
@@ -262,7 +267,36 @@
 			& > ul {width: 100%; li {width: 25%; a {padding-right: 20px;} &.selectedLava {a {padding-right: 20px;}}}}
 		}
 		@include respond-to(sm) {
-			& > ul {width: 400%; li {}}
+			& > ul {
+				flex-direction: column;
+				width: 100%; height: auto; border-radius: 10px;
+				li {
+					width: 100% !important; height: 64px;
+					&.decoration {display: none;}
+					&.hovered {background: #669CF9;}
+					&:first-child {
+						a {justify-content: center;}
+					}
+					&:nth-child(2)  {
+						padding: 0;
+						a {justify-content: center; padding-left: 0;}
+					}
+					&:last-child {
+						a {
+							i {display: block;}
+						}
+					}
+					a {
+						color: #669CF9; flex-direction: column; align-items: center;
+						padding: 0;
+						i {
+							right: 24px;
+							transform: rotate(90deg);
+						}
+					}
+					
+				}
+			}
 		}
 	}
 
@@ -274,6 +308,7 @@
 		}
 		header {
 			margin-top: 168px; padding-left: 9px;
+			@include respond-to(xs) {margin-top: 110px;}
 			h1 {
 				font-size: 54px; line-height: 64px; margin-bottom: 44px;
 				@include respond-to(sm) {font-size: 34px; line-height: 44px;}
@@ -286,6 +321,9 @@
 		footer {top: 214px;}
 		article {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
 		nav > ul li {
+			&.decoration {background: #96be46; color: #fff;}
+			&.hovered { a, i {color: #fff;}}
+			&:first-child {a {justify-content: start;}}
 			a, i {color: #96be46;}
 			&.backLava {background: #96be46;}
 			&.selectedLava {a {color: #fff; i {color: #fff;}}}
@@ -295,13 +333,27 @@
 			nav > ul{
 				&:hover {
 					li {
-						a {color: #96be46; i {color: #96be46;}}
+						a {
+							color: #96be46; 
+							i {color: #96be46;}
+						}
 						&:hover {
-							a {color: #fff; i {color: #fff;}}
+							a {
+								justify-content: start;
+								color: #fff; background: #96be46; 
+								i {color: #fff;}
+							}
 							&.selectedLava {a {color: #fff; i {color: #fff;}}}
 						}
 					}
 				}
+			}
+			@include respond-to(sm) {
+				
+				li {
+					&.hovered {background: #96be46;}
+				}
+				
 			}
 		}
 		
@@ -316,6 +368,7 @@
 		}
 		header {
 			margin-top: 188px; padding-left: 9px;
+			@include respond-to(xs) {margin-top: 110px;}
 			h1 {
 				font-size: 54px; line-height: 64px; margin-bottom: 35px;
 				@include respond-to(sm) {font-size: 34px; line-height: 44px;}
@@ -329,6 +382,9 @@
 
 		article {background: url('../img/index/intro1.png') no-repeat center; background-size: cover;}
 		nav > ul li {
+			&.decoration {background: #E8B194; color: #fff;}
+			&.hovered { a, i {color: #fff;}}
+			&:first-child {a {justify-content: start;}}
 			a, i {color: #E8B194;}
 			&.backLava {background: #E8B194;}
 			&.selectedLava {a {color: #fff; i {color: #fff;}}}
@@ -336,12 +392,20 @@
 		nav > ul{
 			&:hover {
 				li {
-					a {color: #E8B194; i {color: #E8B194;}}
+
+					a {
+						color: #E8B194; i {color: #E8B194;}}
 					&:hover {
 						a {color: #fff; i {color: #fff;}}
 						&.selectedLava {a {color: #fff; i {color: #fff;}}}
 					}
 				}
+			}
+			@include respond-to(sm) {
+				li {
+					&.hovered {background: #E8B194;}
+				}
+
 			}
 		}
 	}
@@ -593,7 +657,7 @@
 }
 
 //ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ НА МОБИЛЬНОЙ ВЕРСИИ - http://prntscr.com/h4fsh2
-.js-toggle-menu {
+/*.js-toggle-menu {
 	display: none; 
 	@include respond-to(sm) {
 		display: flex; justify-content: space-between;
@@ -607,7 +671,7 @@
 		}
 
 	}
-}
+}*/
 
 //PROMOTION LIST - http://prntscr.com/h2dye8
 .list {
