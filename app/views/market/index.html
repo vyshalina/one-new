@@ -1,6 +1,6 @@
 <!-- !!!СТИЛИ К ЭЛЕМЕНТАМ ЭТОЙ СТРАНИЦИ ЛЕЖАТ в файле _market-new.scss !!! -->
 <!DOCTYPE html>
-<html>
+<html> 
 	//= ./../tpl/head.html
 	<body class="on-load">
 		//= ./../tpl/counter.html
@@ -8,215 +8,118 @@
 		<!-- Application -->
 		<div class="app market">
 			//= ./../tpl/header.html
-
-			<!-- Filter -->
-			<section class="wr bg-dark">
+			
+			<div class="filters">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="filter-catalog">
-								<ul class="filter-catalog-category">
-									<li>
-										<input type="checkbox" id="private-ads" checked>
-										<label for="private-ads">Частные объявления</label>
-									</li>
+					<ul>
+						<li>
+							<input type="checkbox" id="private-ads" checked>
+							<label for="private-ads">Частные объявления</label>
+						</li>
 
-									<li>
-										<input type="checkbox" id="from-shop" checked>
-										<label for="from-shop">От магазинов</label>
-									</li>
-									<li>
-										<input type="checkbox" id="auction" checked>
-										<label for="auction">Аукционы</label>
-									</li>
-									<li>
-										<input type="checkbox" id="stars" checked>
-										<label for="stars">От звезд</label>
-									</li>
-								</ul>
-
-								<div class="select">
-									<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-									<div class="js-selectLists">
-										<ul>
-											<li><a href="#">Личные вещи</a></li>
-											<li><a href="#">Электроника</a></li>
-											<li><a href="#">Спорт</a></li>
-											<li><a href="#">Дом и дача</a></li>
-											<li><a href="#">Детям</a></li>
-											<li><a href="#">Бизнесу</a></li>
-										</ul>
-									</div>
-								</div>
-
-								 <button class="reset">Сбросить все параметры</button>
-
-							</div>
-						</div>
+						<li>
+							<input type="checkbox" id="from-shop" checked>
+							<label for="from-shop">От магазинов</label>
+						</li>
+						<li>
+							<input type="checkbox" id="auction" checked>
+							<label for="auction">Аукционы</label>
+						</li>
+						<li>
+							<input type="checkbox" id="stars" checked>
+							<label for="stars">От звезд</label>
+						</li>
+					</ul>
+					<section>
+						//= ./ux/select.html
+						<button class="reset">Сбросить все параметры</button>
+					</section>
+				</div>
+			</div>
+			<div class="search">
+				<div class="container">
+					<form>
+						<input type="search" placeholder="Найти вещь">
+						<button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> Искать</button>
+					</form>
+				</div>
+			</div>	
+			<div class="categories">
+				<div class="container">
+					<ul>
+						<li>
+							//= ./ux/select.html
+						</li>
+						<li>
+							//= ./ux/select.html
+						</li>
+						<li>
+							//= ./ux/select.html
+						</li>
+						<li>
+							//= ./ux/select.html
+						</li>
+					</ul>
+					<div class="range">
+						<input type="hidden" value="100" class="js-range-slider">
 					</div>
 				</div>
-			</section>
-
-			<section class="wr base border-b">
+			</div>	
+			<div class="categories">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="filter-catalog">
-								<form class="filter-catalog-search">
-									<input type="search" placeholder="Найти вещь">
-									<button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> Искать</button>
-								</form>
-							</div>
-						</div>
-					</div>
+					<ul>
+						<li>
+							//= ./ux/select.html
+						</li>
+						<li>
+							//= ./ux/select.html
+						</li>
+						<li>
+							//= ./ux/select.html
+						</li>
+					</ul>
 				</div>
-			</section>
-
-			<section class="wr base border-b">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="filter-catalog">
-								<div class="filter-catalog-range">
-									<div>
-										<div class="select">
-											<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-											<div class="js-selectLists">
-												<ul>
-													<li><a href="#">Личные вещи</a></li>
-													<li><a href="#">Электроника</a></li>
-													<li><a href="#">Спорт</a></li>
-													<li><a href="#">Дом и дача</a></li>
-													<li><a href="#">Детям</a></li>
-													<li><a href="#">Бизнесу</a></li>
-												</ul>
-											</div>
-										</div>
-
-										<div class="select">
-											<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-											<div class="js-selectLists">
-												<ul>
-													<li><a href="#">Личные вещи</a></li>
-													<li><a href="#">Электроника</a></li>
-													<li><a href="#">Спорт</a></li>
-													<li><a href="#">Дом и дача</a></li>
-													<li><a href="#">Детям</a></li>
-													<li><a href="#">Бизнесу</a></li>
-												</ul>
-											</div>
-										</div>
-
-										<div class="select">
-											<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-											<div class="js-selectLists">
-												<ul>
-													<li><a href="#">Личные вещи</a></li>
-													<li><a href="#">Электроника</a></li>
-													<li><a href="#">Спорт</a></li>
-													<li><a href="#">Дом и дача</a></li>
-													<li><a href="#">Детям</a></li>
-													<li><a href="#">Бизнесу</a></li>
-												</ul>
-											</div>
-										</div>
-
-										<div class="select">
-											<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-											<div class="js-selectLists">
-												<ul>
-													<li><a href="#">Личные вещи</a></li>
-													<li><a href="#">Электроника</a></li>
-													<li><a href="#">Спорт</a></li>
-													<li><a href="#">Дом и дача</a></li>
-													<li><a href="#">Детям</a></li>
-													<li><a href="#">Бизнесу</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-
-									<div class="range">
-										<input type="hidden" value="100" class="js-range-slider">
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="wr base">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="filter-catalog">
-								<div class="select">
-									<a href="#" class="js-selectToogle">В москве<i class="fa fa-angle-down"></i></a>
-									<div class="js-selectLists">
-										<ul>
-											<li><a href="#">Личные вещи</a></li>
-											<li><a href="#">Электроника</a></li>
-											<li><a href="#">Спорт</a></li>
-											<li><a href="#">Дом и дача</a></li>
-											<li><a href="#">Детям</a></li>
-											<li><a href="#">Бизнесу</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
+			</div>	
 
 			<!-- Catalog -->
-			<section class="wr bg-grey">
+			<div class="products">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
+					<ul class="list-preview">
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+						<li>
+							//= ./../tpl/product-preview.html
+						</li>
+					</ul>
 
-							<ul class="list-preview">
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-								<li>
-									//= ./../tpl/product-preview.html
-								</li>
-							</ul>
-
-							<a href="#" class="show_more">
-								<span>Показать еще</span>
-								<em><i class="icon icon-view-more"></i></em>
-							</a>
-
-						</div>
-					</div>
+					<a href="#" class="show_more">
+						<span>Показать еще</span>
+						<em><i class="icon icon-view-more"></i></em>
+					</a>
 				</div>
-			</section>
+			</div>
 			
 			//= ./../tpl/footer.html
 		</div>

@@ -17733,106 +17733,82 @@ a {
 
 /*ДЛЯ ВСЕХ НОВЫХ ЭЛЕМЕНТОВ ДОБАВЛЕНО В КЛАСС */
 /*-catalog*/
-.filter-catalog {
+.filters > .container, .search > .container, .categories > .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-left: -15px;
-  margin-right: -15px; }
-  .filter-catalog-category {
+  align-items: center; }
+  .filters > .container > ul, .search > .container > ul, .categories > .container > ul {
     display: flex;
-    padding-left: 5px; }
-    .filter-catalog-category > li {
-      margin-right: 14px; }
-      .filter-catalog-category > li:last-child {
-        margin-right: 0; }
-    .filter-catalog-category input {
-      position: absolute;
-      opacity: 0; }
-    .filter-catalog-category input + label {
-      color: #283651;
-      font-family: "Cormac Extra Light", sans-serif;
-      font-size: 16px;
-      line-height: 1;
-      letter-spacing: -0.2px;
-      position: relative;
-      padding: 15px 25px 15px 46px;
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 25px;
-      opacity: 0.5;
-      cursor: pointer; }
-      .filter-catalog-category input + label:before {
-        content: '';
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        left: 20px;
-        top: 19px;
-        background: url(../img/plus.png) center no-repeat; }
-    .filter-catalog-category input:checked + label {
-      opacity: 1; }
-      .filter-catalog-category input:checked + label:before {
-        width: 12px;
-        height: 12px;
-        background: url(../img/checked.png) center no-repeat; }
-  .filter-catalog .reset {
+    width: 100%; }
+    .filters > .container > ul > li:last-child, .search > .container > ul > li:last-child, .categories > .container > ul > li:last-child {
+      margin-right: 0; }
+
+.search, .categories {
+  padding: 35px 0;
+  background: white;
+  border-bottom: 1px solid #ebebeb; }
+
+.filters {
+  padding: 15px 0;
+  background: #e9edf5;
+  box-shadow: inset 0 0px 11px rgba(0, 0, 0, 0.1); }
+  .filters ul li {
+    margin-right: 14px; }
+  .filters section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 640px; }
+  .filters button.reset {
     font-family: Cormac-Book, sans-serif;
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0;
     color: #000;
-    padding-right: 20px;
+    padding: 0 20px;
     position: relative;
     background: none;
     border: none; }
-    .filter-catalog .reset:after {
+    .filters button.reset:after {
       content: '\2716';
       color: #79879e;
       font-size: 12px;
       position: absolute;
       right: 0;
-      top: 2px; }
-  .filter-catalog-search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; }
-    .filter-catalog-search input {
-      padding: 22px 0 7px 7px;
-      font-family: Cormac-Book, sans-serif;
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: 0;
-      color: #000;
-      width: calc(100% - 150px);
-      border: none;
-      background: #fff; }
-      .filter-catalog-search input input[placeholder] {
-        color: #abb7cc; }
-    .filter-catalog-search button {
-      position: relative;
-      padding-left: 40px;
-      top: 3px; }
-      .filter-catalog-search button i {
-        position: absolute;
-        left: 16px;
-        top: 15px; }
-  .filter-catalog-range {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; }
-    .filter-catalog-range > div {
-      display: flex; }
-      .filter-catalog-range > div .select {
-        margin-right: 22px; }
-        .filter-catalog-range > div .select:last-child {
-          margin-right: 0; }
-    .filter-catalog-range div.checkboxes {
-      padding: 0; }
-      .filter-catalog-range div.checkboxes section input {
-        display: none; }
+      top: 50%;
+      transform: translateY(-50%); }
+
+.search form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; }
+  .search form input {
+    padding-top: 30px;
+    font-family: Cormac-Book, sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000;
+    border: none;
+    background: #fff; }
+    .search form input::placeholder {
+      color: #B9C4D6; }
+  .search form button {
+    position: relative;
+    padding-left: 40px;
+    top: 3px; }
+    .search form button i {
+      position: absolute;
+      left: 16px;
+      top: 15px; }
+
+.categories ul li {
+  margin-right: 30px; }
+
+.products {
+  padding: 35px 0;
+  background: #F3F6FA; }
 
 .list-preview {
   display: flex;
@@ -17981,8 +17957,9 @@ a {
       padding: 3px;
       margin-left: 15px;
       position: absolute;
-      top: 0px;
       right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       transition: .4s all ease; }
     .select > a.active {
       z-index: 101; }
@@ -18075,6 +18052,43 @@ a {
     margin-right: 20px; }
     .checkboxes section:last-child {
       margin-right: 0; }
+
+.checkbox-filter input, .filters ul li input {
+  position: absolute;
+  opacity: 0; }
+
+.checkbox-filter label, .filters ul li label {
+  margin-bottom: 0; }
+
+.checkbox-filter input + label, .filters ul li input + label {
+  color: #283651;
+  font-family: "Cormac Extra Light", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  position: relative;
+  padding: 15px 25px 15px 46px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  opacity: 0.5;
+  cursor: pointer; }
+  .checkbox-filter input + label:before, .filters ul li input + label:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../img/plus.png) center no-repeat; }
+
+.checkbox-filter input:checked + label, .filters ul li input:checked + label {
+  opacity: 1; }
+  .checkbox-filter input:checked + label:before, .filters ul li input:checked + label:before {
+    width: 12px;
+    height: 12px;
+    background: url(../img/checked.png) center no-repeat; }
 
 .check {
   opacity: 0;
