@@ -9888,7 +9888,7 @@ button.close {
 .theme-blue .scale ins {
   color: #999; }
 
-.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .list-bookmarks > li, .found-about, .booking-proc, .popup_body {
+.neo-bg, .company-deeds li article, .filter-result .filter-add, .filter-result_goods > li, .user-founds li article, .user-ads tr.goods-header, .user-ads tr.goods-content, .user-ads tr.goods-single, .user-goods tr.goods-header, .user-goods tr.goods-content, .user-goods tr.goods-single, .user-bookmarks > li, .list-bookmarks > li, .found-about, .booking-proc {
   margin: 10px;
   padding: 20px;
   background: #fff;
@@ -14077,65 +14077,39 @@ button.close {
         text-transform: uppercase;
         color: #4b5769; }
 
-.popup {
-  width: 80%;
-  display: none; }
-  @media (max-width: 480px) {
-    .popup {
-      width: 70%; } }
-
-.popup {
-  position: fixed;
-  z-index: 10000;
-  width: 100%;
-  height: 100%;
-  padding-top: 10%;
+.popup-seller_info {
+  display: none;
+  max-width: 480px;
+  padding: 25px;
   background: rgba(192, 209, 221, 0.9);
-  opacity: 0;
-  transition: .4s all ease;
-  pointer-events: none; }
-  .popup.active {
-    opacity: 1;
-    transform: translate(0);
-    pointer-events: auto; }
-    .popup.active .popup-main_body {
-      opacity: 1;
-      transform: translate(0); }
-  .popup_body {
-    transition: .6s all ease;
-    opacity: 0;
-    transform: translate(-150px, -150px);
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px 30px 30px 30px;
-    position: relative;
-    overflow-y: auto; }
-    @media (max-width: 991px) {
-      .popup_body {
-        width: 90%; } }
-    .popup_body .close {
-      position: absolute;
-      right: 20px;
-      top: 20px; }
-    .popup_body p {
-      font-family: "HelveticaRegular", sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.5px;
-      color: #000; }
-  .popup_top {
-    width: 100%;
+  border-radius: 4px; }
+  .popup-seller_info figure {
     text-align: center; }
-
-.popup-login > ul {
-  display: flex;
-  justify-content: center; }
+    .popup-seller_info figure img {
+      margin-bottom: 25px; }
+    .popup-seller_info figure figcaption {
+      text-align: left; }
+      .popup-seller_info figure figcaption h3 {
+        color: #000;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px; }
+      .popup-seller_info figure figcaption p {
+        color: #000;
+        font-family: "HelveticaRegular", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px; }
+      .popup-seller_info figure figcaption address {
+        margin-bottom: 0; }
+  .popup-seller_info a.b-close {
+    position: absolute;
+    right: 15px;
+    top: 15px; }
   @media (max-width: 767px) {
-    .popup-login > ul {
-      flex-direction: column; } }
-  .popup-login > ul > li form ul {
-    display: flex;
-    justify-content: flex-end; }
+    .popup-seller_info {
+      max-width: 100%; } }
 
 .popup-login {
   padding: 70px 0;
@@ -14166,77 +14140,85 @@ button.close {
     @media (max-width: 767px) {
       .popup-login h2 {
         margin-bottom: 15px; } }
-  .popup-login > ul > li {
-    width: 50%; }
+  .popup-login > ul {
+    display: flex;
+    justify-content: center; }
     @media (max-width: 767px) {
-      .popup-login > ul > li {
-        text-align: center;
-        width: 100%; } }
-    @media (max-width: 767px) {
-      .popup-login > ul > li:last-child {
-        margin-top: 20px; } }
-    .popup-login > ul > li.sep {
-      width: 2px;
-      margin: 0 50px;
-      background: #eff1f2; }
-    .popup-login > ul > li form {
-      width: 60%;
-      float: right; }
-      @media (max-width: 1199px) {
-        .popup-login > ul > li form {
-          width: 80%; } }
+      .popup-login > ul {
+        flex-direction: column; } }
+    .popup-login > ul > li {
+      width: 50%; }
       @media (max-width: 767px) {
-        .popup-login > ul > li form {
-          display: inline-block;
-          float: none; } }
-      .popup-login > ul > li form > a {
+        .popup-login > ul > li {
+          text-align: center;
+          width: 100%; } }
+      @media (max-width: 767px) {
+        .popup-login > ul > li:last-child {
+          margin-top: 20px; } }
+      .popup-login > ul > li.sep {
+        width: 2px;
+        margin: 0 50px;
+        background: #eff1f2; }
+      .popup-login > ul > li form {
+        width: 60%;
+        float: right; }
+        @media (max-width: 1199px) {
+          .popup-login > ul > li form {
+            width: 80%; } }
+        @media (max-width: 767px) {
+          .popup-login > ul > li form {
+            display: inline-block;
+            float: none; } }
+        .popup-login > ul > li form > a {
+          font-family: "HelveticaLight", sans-serif;
+          font-size: 12px;
+          line-height: 1;
+          letter-spacing: 0;
+          color: #9da8af;
+          display: block;
+          margin: -11px 0 0 20px; }
+        .popup-login > ul > li form ul {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 20px; }
+          .popup-login > ul > li form ul li {
+            line-height: 35px; }
+      .popup-login > ul > li a.link {
         font-family: "HelveticaLight", sans-serif;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1;
-        letter-spacing: 0;
-        color: #9da8af;
-        display: block;
-        margin: -11px 0 0 20px; }
-      .popup-login > ul > li form ul {
-        margin-top: 20px; }
-        .popup-login > ul > li form ul li {
-          line-height: 35px; }
-    .popup-login > ul > li a.link {
-      font-family: "HelveticaLight", sans-serif;
-      font-size: 16px;
-      line-height: 1;
-      letter-spacing: -0.5px;
-      color: #4489ff;
-      margin-right: 25px; }
-      @media (max-width: 480px) {
-        .popup-login > ul > li a.link {
-          font-size: 14px;
-          margin-right: 20px; } }
-    .popup-login > ul > li a.social {
-      font-family: "HelveticaLight", sans-serif;
-      font-size: 16px;
-      line-height: 1;
-      letter-spacing: -0.5px;
-      color: #000;
-      display: flex;
-      align-items: center;
-      width: 67%;
-      padding: 10px 20px;
-      margin: 15px 0;
-      border: 1px solid #d7deea;
-      border-radius: 4px; }
-      @media (max-width: 1199px) {
-        .popup-login > ul > li a.social {
-          width: 80%; } }
-      @media (max-width: 767px) {
-        .popup-login > ul > li a.social {
-          display: inline-block;
-          margin: 5px 0; } }
-      .popup-login > ul > li a.social i {
-        color: #507db1;
-        font-size: 25px;
-        width: 25px;
-        margin-right: 20px; }
+        letter-spacing: -0.5px;
+        color: #4489ff;
+        margin-right: 25px; }
+        @media (max-width: 480px) {
+          .popup-login > ul > li a.link {
+            font-size: 14px;
+            margin-right: 20px; } }
+      .popup-login > ul > li a.social {
+        font-family: "HelveticaLight", sans-serif;
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: -0.5px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        width: 67%;
+        padding: 10px 20px;
+        margin: 15px 0;
+        border: 1px solid #d7deea;
+        border-radius: 4px; }
+        @media (max-width: 1199px) {
+          .popup-login > ul > li a.social {
+            width: 80%; } }
+        @media (max-width: 767px) {
+          .popup-login > ul > li a.social {
+            display: inline-block;
+            margin: 5px 0; } }
+        .popup-login > ul > li a.social i {
+          color: #507db1;
+          font-size: 25px;
+          width: 25px;
+          margin-right: 20px; }
 
 .popup-notice {
   text-align: center;
@@ -15920,7 +15902,7 @@ a {
         position: relative;
         padding-top: 16px;
         left: -2px; }
-        .product-body > section .auction-rate .btn-gr > sup {
+        .product-body > section .auction-rate .btn-gr sup {
           font-family: "HelveticaLight", sans-serif;
           font-size: 9px;
           line-height: 1;
@@ -15929,9 +15911,9 @@ a {
           text-transform: uppercase;
           position: absolute;
           top: 0; }
-          .product-body > section .auction-rate .btn-gr > sup .rub {
+          .product-body > section .auction-rate .btn-gr sup .rub {
             text-transform: none; }
-        .product-body > section .auction-rate .btn-gr > .btn-grey {
+        .product-body > section .auction-rate .btn-gr .btn-grey {
           display: inline-block;
           padding: 0 0 0 18px;
           margin-right: 13px;
@@ -15940,42 +15922,43 @@ a {
           background: #f4f7fb;
           border-radius: 100px; }
           @media (max-width: 480px) {
-            .product-body > section .auction-rate .btn-gr > .btn-grey {
+            .product-body > section .auction-rate .btn-gr .btn-grey {
               padding-left: 11px;
               margin-right: 0;
               background: none; } }
-          .product-body > section .auction-rate .btn-gr > .btn-grey .price {
+          .product-body > section .auction-rate .btn-gr .btn-grey .price {
             font-family: Cormac-Book, sans-serif;
             font-size: 22px;
             line-height: 1;
             letter-spacing: 0.5px;
             color: #000;
             display: inline-block;
-            padding: 19px 0;
-            margin-right: 80px; }
-            @media (max-width: 991px) {
-              .product-body > section .auction-rate .btn-gr > .btn-grey .price {
-                margin-right: 15px; } }
-          .product-body > section .auction-rate .btn-gr > .btn-grey .btn, .product-body > section .auction-rate .btn-gr > .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr > .btn-grey button {
+            padding: 20px; }
+            .product-body > section .auction-rate .btn-gr .btn-grey .price input {
+              border: none;
+              outline: none;
+              background: transparent;
+              width: 120px; }
+          .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button {
             margin-right: 0;
             padding: 23px 36px;
             letter-spacing: 0.7px; }
             @media (max-width: 480px) {
-              .product-body > section .auction-rate .btn-gr > .btn-grey .btn, .product-body > section .auction-rate .btn-gr > .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr > .btn-grey button {
+              .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button {
                 width: 100%; } }
-        .product-body > section .auction-rate .btn-gr > a {
+        .product-body > section .auction-rate .btn-gr a {
           font-family: Cormac-Book, sans-serif;
           font-size: 16px;
           line-height: 1;
           letter-spacing: 0.5px; }
           @media (max-width: 1199px) {
-            .product-body > section .auction-rate .btn-gr > a {
+            .product-body > section .auction-rate .btn-gr a {
               display: block;
               margin-top: 30px; } }
           @media (max-width: 480px) {
-            .product-body > section .auction-rate .btn-gr > a {
+            .product-body > section .auction-rate .btn-gr a {
               text-align: center; } }
-          .product-body > section .auction-rate .btn-gr > a i {
+          .product-body > section .auction-rate .btn-gr a i {
             font-size: 21px;
             margin-right: 5px; }
       .product-body > section .auction-info {
