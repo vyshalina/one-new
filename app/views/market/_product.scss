@@ -2,7 +2,7 @@
 	&-body {
 
 		display: flex; justify-content: space-between;
-		padding-top: 3px; margin-bottom: 64px;
+		padding-top: 50px; margin-bottom: 64px;
 		@include respond-to(sm) {
 			flex-direction: column;
 		}
@@ -25,7 +25,7 @@
 				&:first-child {display: block;}
 				&:last-child {margin-bottom: 0;}
 
-				img {max-width: 100%;}
+				img {max-width: 100%; margin: 0;}
 			}
 
 			&-preview {
@@ -45,6 +45,20 @@
 			@include respond-to(lg) {width: 49%;}
 			@include respond-to(md){padding-left: 15px; width: 60%;}
 			@include respond-to(sm){padding: 0; width: 100%;}
+
+			.edit-block {
+				display: flex; align-items: center;
+				margin-bottom: 20px;
+				& > a {
+					display: flex; justify-content: center; align-items: center;
+					width: 30px; height: 30px; margin-right: 15px;
+					background: #fff; border-radius: 50%; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+					transition: all .4s ease;
+					&:last-child {margin-right: 0;}
+					&:hover {box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); i {color: #4489ff;}}
+					i {color: #999;} 
+				}
+			}
 			.auction-logo {
 				position: absolute; right: -49px; top: 12px; padding: 9px 0;
 				background: #7937bf;
@@ -78,11 +92,15 @@
 			ul.price {
 				display: flex; align-items: center;
 				margin-bottom: 36px;
+				@include respond-to(xs) {flex-wrap: wrap;}
+
 				li {
 					@include font-type($CormacB, 34px, 1, 0.5px); color: #000;
 					margin-right: 28px; position: relative; padding-top: 12px;
-					@include respond-to(sm) {
-						color: #000; font-family: $CormacEL;
+					@include respond-to(sm) {color: #000;}
+					@include respond-to(xs) {
+						width: 100%; margin-right: 0; margin-bottom: 15px;
+						&:last-child {margin-bottom: 0;}
 					}
 					sup {
 						@include font-type($HelveticaL, 9px, 1, 1.8px); color: #4b5769; text-transform: uppercase;
@@ -202,18 +220,18 @@
 			}
 
 			.company {
-				margin-bottom: 35px; position: relative; left: -11px; padding-right: 120px;
-				@include respond-to(md) {padding-right: 0;}
+				margin-bottom: 35px; position: relative; left: -11px; padding: 15px 120px 20px 0;
 				@include respond-to(sm) {
 					display: inline-block; width: 100%; padding: 0 15px;
 					border: 1px solid #edf3f6; border-radius: 5px;
 				}
 				& > div {
 					display: flex; align-items: center;
-					padding: 0 34px 0 11px; margin-bottom: 10px;
+					padding: 0 34px 0 15px; margin-bottom: 25px;
 					background: white; border-radius: 40px;
 					position: relative;
 					background: white; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+					&:last-child {margin-bottom: 0;}
 
 					@include respond-to(sm){
 						background: transparent; box-shadow: none; width: 100%;
@@ -264,13 +282,18 @@
 					}
 					section {
 						padding: 20px 0;
-						a {margin-bottom: 10px; display: block;}
+						a {
+							@include font-type($CormacB, 16px, 26pxs, 0);
+							margin-bottom: 10px; display: block;
+
+						}
 						small {
 							@include font-type($HelveticaL, 10px, 1, 1.3px); color: #79879e; text-transform: uppercase;
 							display: block; margin-bottom: 8px;
 						}
 
-						div {a {font-size: 12px; color: #000; text-decoration: underline; &:hover {text-decoration: none;}}}
+						div {
+							a {font-size: 12px; color: #000; text-decoration: underline; &:hover {text-decoration: none;}}}
 						
 					}
 					
@@ -295,10 +318,20 @@
 			}
 
 			p {
-				@include font-type($HelveticaR, 16px, 24px, 0.3px);
+				@include font-type($HelveticaL, 16px, 24px, 0.3px);
 				width: 90%;
 				@include respond-to(xs) {width: 100%;}
-				.thin {font-family: $HelveticaL;}
+				strong {font-family: $HelveticaR;}
+			}
+
+			.myinfobox {
+				margin-bottom: 25px; padding-bottom: 15px;
+				border-bottom: 1px solid #f2f2f2;
+				&:last-child {border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+				h4 {
+					@include font-type($HelveticaR, 28px, 32px, 2px); text-transform: uppercase; color: #79879e;
+					margin-bottom: 25px;
+				}
 			}
 		}
 

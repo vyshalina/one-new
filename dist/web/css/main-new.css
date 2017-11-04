@@ -17350,7 +17350,7 @@ a {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 3px;
+  padding-top: 50px;
   margin-bottom: 64px; }
   @media (max-width: 767px) {
     .product-body {
@@ -17388,7 +17388,8 @@ a {
     .product-body .images figure:last-child {
       margin-bottom: 0; }
     .product-body .images figure img {
-      max-width: 100%; }
+      max-width: 100%;
+      margin: 0; }
   .product-body .images-preview {
     display: -webkit-box;
     display: -webkit-flex;
@@ -17422,6 +17423,48 @@ a {
       .product-body > section {
         padding: 0;
         width: 100%; } }
+    .product-body > section .edit-block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 20px; }
+      .product-body > section .edit-block > a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        background: #fff;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease; }
+        .product-body > section .edit-block > a:last-child {
+          margin-right: 0; }
+        .product-body > section .edit-block > a:hover {
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+          .product-body > section .edit-block > a:hover i {
+            color: #4489ff; }
+        .product-body > section .edit-block > a i {
+          color: #999; }
     .product-body > section .auction-logo {
       position: absolute;
       right: -49px;
@@ -17492,6 +17535,11 @@ a {
       -ms-flex-align: center;
       align-items: center;
       margin-bottom: 36px; }
+      @media (max-width: 480px) {
+        .product-body > section ul.price {
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
       .product-body > section ul.price li {
         font-family: Cormac-Book, sans-serif;
         font-size: 34px;
@@ -17503,8 +17551,14 @@ a {
         padding-top: 12px; }
         @media (max-width: 767px) {
           .product-body > section ul.price li {
-            color: #000;
-            font-family: "Cormac Extra Light", sans-serif; } }
+            color: #000; } }
+        @media (max-width: 480px) {
+          .product-body > section ul.price li {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px; }
+            .product-body > section ul.price li:last-child {
+              margin-bottom: 0; } }
         .product-body > section ul.price li sup {
           font-family: "HelveticaLight", sans-serif;
           font-size: 9px;
@@ -17711,10 +17765,7 @@ a {
       margin-bottom: 35px;
       position: relative;
       left: -11px;
-      padding-right: 120px; }
-      @media (max-width: 991px) {
-        .product-body > section .company {
-          padding-right: 0; } }
+      padding: 15px 120px 20px 0; }
       @media (max-width: 767px) {
         .product-body > section .company {
           display: inline-block;
@@ -17732,8 +17783,8 @@ a {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 0 34px 0 11px;
-        margin-bottom: 10px;
+        padding: 0 34px 0 15px;
+        margin-bottom: 25px;
         background: white;
         -webkit-border-radius: 40px;
         border-radius: 40px;
@@ -17743,6 +17794,8 @@ a {
         border-radius: 100px;
         -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+        .product-body > section .company > div:last-child {
+          margin-bottom: 0; }
         @media (max-width: 767px) {
           .product-body > section .company > div {
             background: transparent;
@@ -17829,6 +17882,10 @@ a {
         .product-body > section .company > div section {
           padding: 20px 0; }
           .product-body > section .company > div section a {
+            font-family: Cormac-Book, sans-serif;
+            font-size: 16px;
+            line-height: 26pxs;
+            letter-spacing: 0;
             margin-bottom: 10px;
             display: block; }
           .product-body > section .company > div section small {
@@ -17880,7 +17937,7 @@ a {
           font-size: 22px;
           margin-right: 5px; }
     .product-body > section p {
-      font-family: "HelveticaRegular", sans-serif;
+      font-family: "HelveticaLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.3px;
@@ -17888,8 +17945,24 @@ a {
       @media (max-width: 480px) {
         .product-body > section p {
           width: 100%; } }
-      .product-body > section p .thin {
-        font-family: "HelveticaLight", sans-serif; }
+      .product-body > section p strong {
+        font-family: "HelveticaRegular", sans-serif; }
+    .product-body > section .myinfobox {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f2f2f2; }
+      .product-body > section .myinfobox:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0; }
+      .product-body > section .myinfobox h4 {
+        font-family: "HelveticaRegular", sans-serif;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #79879e;
+        margin-bottom: 25px; }
 
 .new_post {
   overflow: hidden;
