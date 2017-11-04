@@ -57,7 +57,7 @@ $(document).ready(function () {
     to: 100,
     step: 1,
     format: '%s',
-    width: 250,
+    width: 155,
     showLabels: true,
     isRange: true
   });

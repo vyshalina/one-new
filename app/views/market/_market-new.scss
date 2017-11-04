@@ -12,23 +12,51 @@
 	}
 }
 
-.search, .categories {padding: 35px 0; background: white; border-bottom: 1px solid #ebebeb;}
+.search, .categories {background: white; border-bottom: 1px solid #ebebeb;}
 
 .filters {
 	padding: 12px 0;
 	background: #e9edf5; box-shadow: inset 0 0px 11px rgba(0, 0, 0, 0.1);
 
-	ul {li {@extend .checkbox-filter; margin-right: 14px;}}
+	.container {
+		@include respond-to(lg) {align-items: start;}
+		@include respond-to(sm) {flex-direction: column-reverse;}
+	}
+
+	ul {
+		@include respond-to(lg) {flex-wrap: wrap; align-items: start;}
+		li {
+			@extend .checkbox-filter; margin-right: 14px;
+			@include respond-to(lg) {
+				width: 50%; margin-right: 0; margin-bottom: 15px;
+				&:last-child {margin-bottom: 0;}
+			}
+			@include respond-to(md) {width: 100%;}
+		}
+		
+	}
 	section {
 		display: flex; justify-content: flex-end; align-items: center; width: 550px;
+		@include respond-to(lg) {flex-wrap: wrap; justify-content: flex-end; width: 680px; padding-top: 15px;}
+		@include respond-to(md) {width: 850px;} 
+		@include respond-to(sm) {width: 100%; justify-content: flex-start; margin-bottom: 25px;}
+
+
 		.select > a, .reset {
 			@include font-type($CormacB, 14px, 1, 0); color: #66748c;
+		}
+
+		.select {
+			@include respond-to(lg) {margin-right: 20px;}
+			@include respond-to(xs) {margin-right: 0; margin-bottom: 25px;}
 		}
 	}
 
 	button.reset {
 		padding: 0 20px; position: relative;
 		background: none; border: none;
+		@include respond-to(lg) {padding-left: 0; width: 210px;}
+		@include respond-to(xs) {left: -6px;}
 		
 		&:after {
 			content: '\2716';
@@ -39,33 +67,105 @@
 }
 
 .search {
-	
+	padding: 14px 0 31px 0;
 	form {
 		display: flex; align-items: center; justify-content: space-between;
 		width: 100%;
+		@include respond-to(sm) {flex-direction: column; align-items: start;}
 
 		input {
 			padding-top: 30px;
 			@include font-type($CormacB, 28px, 1, 0); color: #000;
 			border: none; background: #fff;
+			@include respond-to(sm) {margin-bottom: 25px;}
 
 			&::placeholder {color: #B9C4D6;}
 		}
 
 		button {
-			position: relative; padding-left: 40px; top: 3px;
+			position: relative; padding-left: 38px; padding-right: 22px; top: 12px;
 			i {position: absolute; left: 16px; top: 15px;}
 		}
 	}
 }
 
 .categories {
-	ul li {margin-right: 30px;}
+	padding: 25px 0 24px 0;
+	& > .container {@include respond-to(sm) {flex-direction: column-reverse; align-items: start;}}
+	
+	ul {
+		@include respond-to(lg) {
+			flex-direction: column;
+		}
+		li {
+			margin-right: 30px;
+			@include respond-to(lg) {
+				margin-bottom: 25px;
+				&:last-child {margin-bottom: 0;}
+			}
+		}
+	} 
 }
 
+// РЕНДЖ http://prntscr.com/h62ft7
 .range {
-	// ТУТ СТИЛИ ДЛЯ РЭНДЖА
+	width: 400px; padding-left: 57px; padding-top: 2px;
+	@include respond-to(lg) {width: 350px;}
+	@include respond-to(sm) {width: 305px; margin-bottom: 25px;}
+
 }
+
+//////////--перебиваем js--//////////
+
+.theme-green .back-bar .selected-bar {background: #aac3ff;}
+
+.slider-container {
+	width: 156px;
+	.clickable-dummy {
+		border-radius: 5px;
+	}
+
+	.back-bar {
+		background: #e6ebf6;
+		.pointer-label {
+			@include font-type($CormacB, 10px, 1, 0); color: #66738c;
+		}
+	}
+	.scale {
+		span {
+			&:first-child {
+				left: -22px !important; top: -18px;
+				&:before {
+					content: 'от';
+					@include font-type($CormacB, 10px, 1, 0); color: #66738c;
+					position: absolute; top: 9px; left: -27px;
+				}
+			}
+			&:last-child {
+				right: -38px !important; top: -19px; left: auto !important;
+				&:before {
+					content: 'до';
+					@include font-type($CormacB, 10px, 1, 0); color: #66738c;
+					position: absolute; top: 9px; left: -27px;
+				}
+			}
+			ins {
+				@include font-type($CormacB, 16px, 1, 0); color: #66738c;
+				
+			}
+		}
+
+	}
+	
+	 
+}
+.theme-green  {
+	.back-bar  {
+		.pointer {background: #3570ff; border: none; cursor: pointer;}
+	}
+}
+//////////-----///-----//////////
+
 
 //список превьюшек продуктов - http://prntscr.com/h1v27e
 .products {padding: 35px 0; background: #F3F6FA;}
