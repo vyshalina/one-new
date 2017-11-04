@@ -471,8 +471,8 @@
 							@include respond-to(md) {margin-bottom: 20px;}
 						}
 						&.name {
-							justify-content: start;
-							@include font-type ($CormacEL, 22px, 32px, 0); color: #000;
+							justify-content: start; 
+							@include font-type ($CormacB, 18px, 22px, 0); color: #000;
 							width: 420px;
 							@include respond-to(lg) {width: 320px;}
 							@include respond-to(md) {width: calc(100% - 180px);}
