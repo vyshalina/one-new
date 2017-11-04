@@ -12,7 +12,7 @@
 	input {position: absolute; opacity: 0;}
 	label {margin-bottom: 0;}
 	input + label {
-		color: #283651; @include font-type($CormacEL, 16px, 1, -0.2px);
+		color: #283651; @include font-type($CormacB, 16px, 1, -0.2px);
 		position: relative; padding: 15px 25px 15px 46px; 
 		background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 25px;
 		opacity: 0.5; cursor: pointer;
