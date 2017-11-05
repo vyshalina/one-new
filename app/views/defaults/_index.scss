@@ -174,7 +174,7 @@
 				@include respond-to(xs) {margin-top: 110px;}
 
 				h1 {
-					color: #fff; @include font-type($CormacB, 42px, 56px, 0px); 
+					color: #fff; @include font-type($CormacB, 42px, 56px, -1px); 
 					margin-top: 0; margin-bottom: 22px;
 					@include respond-to(sm) {font-size: 36px; line-height: 48px;}
 					@include respond-to(xs) {font-size: 28px; line-height: 38px; margin-left: -10px;}
@@ -187,7 +187,7 @@
 					@include respond-to(xs) {margin-left: -10px;}
 				}
 				h2 {
-					color: #fff; @include font-type($CormacB, 62px, 78px, 0px); 
+					color: #fff; @include font-type($CormacB, 62px, 78px, -1px); 
 					margin-bottom: 86px;
 					@include respond-to(sm) {
 						font-size: 40px; line-height: 50px; margin-bottom: 44px;
@@ -205,17 +205,6 @@
 						position: relative; top: 1px;
 						transition: all 0.4s; transform: translateX(0);
 					}
-
-					&:after {
-						content: '';
-						position: absolute; top: 100%;
-						border-bottom: 1px solid #fff;
-						transition: all 0.4s;
-					}
-					&:after {right: 100%; left: 0;}
-					&:hover:after {right: 0;}
-					&:hover i {transform: translateX(5px);}
-
 						
 				}
 				& > ul {
@@ -234,7 +223,7 @@
 				@include respond-to(md) {position: static; padding-top: 56px; padding-left: 45px;}
 
 				p {
-					@include font-type($HelveticaM, 26px, 1, 0px); text-transform: uppercase;
+					@include font-type($HelveticaL, 26px, 26px, 0px); text-transform: uppercase; font-weight: bold;
 					position: relative;
 					span {
 						position: absolute; top: -22px; left: -26px; 
@@ -389,9 +378,9 @@
 					}
 					
 
-					p {margin-bottom: 0; padding-left: 3px; letter-spacing: 1.1px;}
+					p {margin-bottom: 0; padding-left: 3px; letter-spacing: 0.1px;}
 					h2 {
-						margin-bottom: 74px;
+						margin-bottom: 74px; letter-spacing: -1px;
 						@include respond-to(xs) {font-size: 34px;}
 					}
 					a {

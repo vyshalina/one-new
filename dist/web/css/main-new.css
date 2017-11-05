@@ -13723,7 +13723,7 @@ button.close {
         font-family: Cormac-Book, sans-serif;
         font-size: 42px;
         line-height: 56px;
-        letter-spacing: 0px;
+        letter-spacing: -1px;
         margin-top: 0;
         margin-bottom: 22px; }
         @media (max-width: 767px) {
@@ -13755,7 +13755,7 @@ button.close {
         font-family: Cormac-Book, sans-serif;
         font-size: 62px;
         line-height: 78px;
-        letter-spacing: 0px;
+        letter-spacing: -1px;
         margin-bottom: 86px; }
         @media (max-width: 767px) {
           .intro section article header h2 {
@@ -13787,22 +13787,6 @@ button.close {
           -webkit-transform: translateX(0);
           -ms-transform: translateX(0);
           transform: translateX(0); }
-        .intro section article header a:after {
-          content: '';
-          position: absolute;
-          top: 100%;
-          border-bottom: 1px solid #fff;
-          -webkit-transition: all 0.4s;
-          transition: all 0.4s; }
-        .intro section article header a:after {
-          right: 100%;
-          left: 0; }
-        .intro section article header a:hover:after {
-          right: 0; }
-        .intro section article header a:hover i {
-          -webkit-transform: translateX(5px);
-          -ms-transform: translateX(5px);
-          transform: translateX(5px); }
       .intro section article header > ul {
         display: -webkit-box;
         display: -webkit-flex;
@@ -13834,11 +13818,12 @@ button.close {
           padding-top: 56px;
           padding-left: 45px; } }
       .intro section article footer p {
-        font-family: "HelveticaMedium", sans-serif;
+        font-family: "HelveticaLight", sans-serif;
         font-size: 26px;
-        line-height: 1;
+        line-height: 26px;
         letter-spacing: 0px;
         text-transform: uppercase;
+        font-weight: bold;
         position: relative; }
         .intro section article footer p span {
           position: absolute;
@@ -14067,9 +14052,10 @@ button.close {
     .dobro .intro section article header p {
       margin-bottom: 0;
       padding-left: 3px;
-      letter-spacing: 1.1px; }
+      letter-spacing: 0.1px; }
     .dobro .intro section article header h2 {
-      margin-bottom: 74px; }
+      margin-bottom: 74px;
+      letter-spacing: -1px; }
       @media (max-width: 480px) {
         .dobro .intro section article header h2 {
           font-size: 34px; } }
@@ -16184,7 +16170,7 @@ nav.menu-open {
           color: #000;
           margin-bottom: 7px; }
         .footer-info li:first-child a {
-          font-family: "Cormac Extra Light", sans-serif;
+          font-family: "HelveticaLight", sans-serif;
           font-size: 16px;
           line-height: 22px;
           letter-spacing: 0;
@@ -16240,7 +16226,7 @@ nav.menu-open {
     font-family: "HelveticaLight", sans-serif;
     font-size: 12px;
     line-height: 22px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0;
     position: relative;
     padding-top: 29px;
     padding-bottom: 28px; }
@@ -16268,7 +16254,7 @@ nav.menu-open {
       height: 1px;
       background: #e7edf2; }
     .footer-contacts a {
-      font-family: "Cormac Extra Light", sans-serif; }
+      font-family: "HelveticaLight", sans-serif; }
     .footer-contacts > ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -16344,20 +16330,11 @@ nav.menu-open {
         .footer-contacts > ul > li ul li a {
           color: #4b5769;
           font-size: 14px;
-          letter-spacing: 0.1px;
+          letter-spacing: 0.6px;
           position: relative;
           padding-bottom: 5px; }
-          .footer-contacts > ul > li ul li a:after {
-            content: '';
-            position: absolute;
-            border-bottom: 1px solid #4489ff;
-            top: 100%;
-            right: 100%;
-            left: 0;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s; }
-          .footer-contacts > ul > li ul li a:hover:after {
-            right: 0; }
+          .footer-contacts > ul > li ul li a:hover {
+            text-decoration: underline !important; }
 
 .user-info {
   display: -webkit-box;
