@@ -119,22 +119,21 @@
 				& > ul {
 					display: flex; flex-wrap: wrap;
 					margin-bottom: 31px;
-					@include respond-to(md) {
+					@include respond-to(lg) {
 						flex-direction: column; align-items: start;
 					}
 					
 					li {
 						@include font-type($CormacB, 16px, 1, 0); color: #4b5769; text-align: center;
-						position: relative; min-width: 100px; padding-top: 17px; margin-right: 29px;
-						@include respond-to(lg) {margin-right: 20px;}
-						@include respond-to(md) {
+						position: relative; min-width: 100px; padding-top: 15px; margin-right: 30px;
+						@include respond-to(lg) {
 							text-align: left;
 							margin-bottom: 25px; margin-right: 0;
 						}
 						&:first-child {text-align: left;}
 						&:last-child {
 							margin-right: 0;
-							@include respond-to(md) {margin-bottom: 0;}
+							@include respond-to(lg) {margin-bottom: 0;}
 						}
 						& > a {
 							color: $link-color;
