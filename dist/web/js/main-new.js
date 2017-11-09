@@ -1,6 +1,9 @@
 'use strict';
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(document).ready(function () {
+  var _$$jRange;
 
   $('.js-menu-open').click(function () {
     $('.menu-open').addClass('active');
@@ -52,15 +55,20 @@ $(document).ready(function () {
     return false;
   });
 
-  $('.js-range-slider').jRange({
-    from: 0,
-    to: 100,
-    step: 1,
+  $('.js-range-slider').jRange((_$$jRange = {
+    from: 100,
+    to: 100000,
+    step: 50,
+    isRange: false,
     format: '%s',
     width: 155,
-    showLabels: true,
-    isRange: true
-  });
+    showLabels: true
+  }, _defineProperty(_$$jRange, 'isRange', true), _defineProperty(_$$jRange, 'onstatechange', function onstatechange() {
+    var textHig = $('.pointer-label.high').html(),
+        textLow = $('.pointer-label.low').html();
+    $('.range .scale span:last-child ins').html(textHig);
+    $('.range .scale span:first-child ins').html(textLow);
+  }), _$$jRange));
 
   var owl = $('.js-owl-carousel');
   owl.owlCarousel({

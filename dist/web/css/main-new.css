@@ -19559,8 +19559,6 @@ a {
         background: #4489ff;
         color: #ffffff; }
 
-/*ДЛЯ ВСЕХ НОВЫХ ЭЛЕМЕНТОВ ДОБАВЛЕНО В КЛАСС */
-/*-catalog*/
 .filter-loading {
   background: #fff url("../images/filter_load.gif") center 240px no-repeat; }
 
@@ -19824,7 +19822,7 @@ a {
       letter-spacing: 0;
       color: #66738c; }
   .slider-container .scale span:first-child {
-    left: -22px !important;
+    left: -66px !important;
     top: -18px; }
     .slider-container .scale span:first-child:before {
       content: 'от';
@@ -19835,9 +19833,9 @@ a {
       color: #66738c;
       position: absolute;
       top: 9px;
-      left: -27px; }
+      left: -33px; }
   .slider-container .scale span:last-child {
-    right: -38px !important;
+    right: -58px !important;
     top: -19px;
     left: auto !important; }
     .slider-container .scale span:last-child:before {
@@ -19849,7 +19847,7 @@ a {
       color: #66738c;
       position: absolute;
       top: 9px;
-      left: -27px; }
+      left: -44px; }
   .slider-container .scale span ins {
     font-family: Cormac-Book, sans-serif;
     font-size: 16px;
@@ -19861,6 +19859,11 @@ a {
   background: #3570ff;
   border: none;
   cursor: pointer; }
+  .theme-green .back-bar .pointer-label {
+    display: none; }
+
+.theme-green .scale span {
+  border: none; }
 
 .products {
   padding: 35px 0;
