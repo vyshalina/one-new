@@ -19583,8 +19583,6 @@ a {
         background: #4489ff;
         color: #ffffff; }
 
-/*ДЛЯ ВСЕХ НОВЫХ ЭЛЕМЕНТОВ ДОБАВЛЕНО В КЛАСС */
-/*-catalog*/
 .filter-loading {
   background: #fff url("../images/filter_load.gif") center 240px no-repeat; }
 
@@ -19829,14 +19827,41 @@ a {
 .range {
   width: 400px;
   padding-left: 57px;
-  padding-top: 2px; }
+  padding-top: 2px;
+  position: relative; }
   @media (max-width: 1199px) {
     .range {
-      width: 350px; } }
+      width: 435px; } }
+  @media (max-width: 991px) {
+    .range {
+      width: 495px;
+      margin-bottom: 25px; } }
   @media (max-width: 767px) {
     .range {
-      width: 305px;
+      width: 310px;
+      left: 45px;
       margin-bottom: 25px; } }
+  @media (max-width: 480px) {
+    .range {
+      padding-left: 0;
+      left: 0;
+      width: 258px;
+      margin-top: 12px; } }
+  .range .rub {
+    color: #66738c;
+    position: absolute;
+    top: -6px; }
+    .range .rub.left-rub {
+      left: 38px; }
+      @media (max-width: 480px) {
+        .range .rub.left-rub {
+          left: 80px;
+          top: -30px; } }
+    .range .rub.right-rub {
+      right: -5px; }
+      @media (max-width: 480px) {
+        .range .rub.right-rub {
+          right: 0; } }
 
 .theme-green .back-bar .selected-bar {
   background: #aac3ff; }
@@ -19855,8 +19880,12 @@ a {
       letter-spacing: 0;
       color: #66738c; }
   .slider-container .scale span:first-child {
-    left: -22px !important;
+    left: -66px !important;
     top: -18px; }
+    @media (max-width: 480px) {
+      .slider-container .scale span:first-child {
+        left: 34px !important;
+        top: -40px; } }
     .slider-container .scale span:first-child:before {
       content: 'от';
       font-family: Cormac-Book, sans-serif;
@@ -19866,9 +19895,9 @@ a {
       color: #66738c;
       position: absolute;
       top: 9px;
-      left: -27px; }
+      left: -33px; }
   .slider-container .scale span:last-child {
-    right: -38px !important;
+    right: -58px !important;
     top: -19px;
     left: auto !important; }
     .slider-container .scale span:last-child:before {
@@ -19880,7 +19909,7 @@ a {
       color: #66738c;
       position: absolute;
       top: 9px;
-      left: -27px; }
+      left: -44px; }
   .slider-container .scale span ins {
     font-family: Cormac-Book, sans-serif;
     font-size: 16px;
@@ -19892,6 +19921,11 @@ a {
   background: #3570ff;
   border: none;
   cursor: pointer; }
+  .theme-green .back-bar .pointer-label {
+    display: none; }
+
+.theme-green .scale span {
+  border: none; }
 
 .products {
   padding: 35px 0;
