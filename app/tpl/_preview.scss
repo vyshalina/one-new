@@ -1,5 +1,18 @@
+.list
+   &-products
+
+   preview
+      -product
+
+    li
+      article @extend .product;
+
+
 //превью товара в списке http://prntscr.com/h1uwdh
-.preview{
+article { 
+    &.product {...
+
+
 	display: flex; flex-flow: column nowrap;
 	background: #fff; transition: all .3s ease;
 
