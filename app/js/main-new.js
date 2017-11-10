@@ -122,6 +122,28 @@ $(document).ready(function() {
     }
   });
 
+  $('.js-carousel_celebrity').owlCarousel({
+    loop: true,
+    responsiveClass:true,
+    responsive:{
+      0:{
+          items:1,
+          margin:0
+      },
+      480:{
+          items:2,
+          margin:0
+      },
+      768:{
+          items:3
+      },
+      1200:{
+          items:4,
+          margin:15
+      }
+    }
+  });
+
   // scroll menu
   var header = $(".js-header"),
       scrollPrev = 0

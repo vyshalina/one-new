@@ -1,3 +1,5 @@
+input, textarea, button {outline: none !important;}
+
 // чекбоксы (временный блок)
 .checkboxes {
 	padding-top: 7px;
@@ -12,21 +14,23 @@
 	input {position: absolute; opacity: 0;}
 	label {margin-bottom: 0;}
 	input + label {
-		color: #283651; @include font-type($CormacB, 16px, 1, -0.2px);
+		color: #283651; @include font-type($CormacB, 16px, 16px, -0.2px); font-weight: 100;
+		@media (max-width: 1249px) {@include font-type($CormacB, 15px, 15px, 0);}
+
 		position: relative; padding: 15px 25px 15px 46px; 
 		background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 25px;
 		opacity: 0.5; cursor: pointer;
 		&:before {
 			content: '';
 			position: absolute; width: 12px; height: 12px; left: 20px; top: 50%; transform: translateY(-50%);
-			background: url(../img/plus.png) center no-repeat;
+			background: url(../images/plus.svg) center no-repeat;
 		}
 	}
 	input:checked + label {
 		opacity: 1;
 		&:before {
 			width: 12px; height: 12px;
-			background: url(../img/checked.png) center no-repeat;
+			background: url(../images/checked.svg) center no-repeat;
 		}	
 	}
 }

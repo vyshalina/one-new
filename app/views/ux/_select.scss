@@ -3,15 +3,25 @@
 	position: relative;
 
 	& > a {
-		@include font-type($CormacB, 16px, 1, 0.5px); color: #000000; font-weight: 600px;
-		position: relative; padding-right: 19px;
+		display: block;
+		@include font-type($CormacB, 16px, 16px, 0); color: #000000; font-weight: 600px;
+		position: relative; padding-right: 20px;
 		i {
-			display: inline-block; padding: 3px; margin-left: 15px;  position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
+			display: block;
+			width: 20px; height: 10px;
+			position: absolute; right: 0; top: 50%; transform: translateY(-50%);
 			transition: .4s all ease;
+			
+			&:before {display: none;}
+			&:after {
+				content: '';
+				display: block; width: 20px; height: 10px;
+				background: url('../images/angle_down.svg') center center no-repeat;
+			}			
 		}
 		&.active {
 			z-index: 101;
-			i {transform: rotate(180deg);}
+			i {transform: rotate(180deg) translateY(50%);}
 		}
 	}
 
