@@ -237,7 +237,7 @@
 					position: relative;
 					span {
 						position: absolute; top: -22px; left: -26px; 
-						@include font-type($CormacB, 18px, 1px, 0px); text-transform: none;
+						@include font-type($CormacB, 18px, 18px, 0); text-transform: none;
 						i {margin-right: 11px;}
 					}
 				}

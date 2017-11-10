@@ -1,4 +1,33 @@
+// outline: NONE
 input, textarea, button {outline: none !important;}
+
+// errors
+input, textarea {
+	&.form {
+		&-error {border: none !important; background: #FF735D !important; box-shadow: 0px 0px 0px 2px #FF735D; color: white !important;}
+		&-success {border: none !important; background: #9DCC22 !important; box-shadow: 0px 0px 0px 2px #9DCC22; color: white !important;}
+		&-warning {border: none !important; background: #FFC344 !important; box-shadow: 0px 0px 0px 2px #FFC344; color: white !important; }
+	}
+}
+
+label, span {
+	&.form {
+		&-error {color: #FF735D !important;}
+		&-success {color: #9DCC22 !important;}
+		&-warning {color: #FFC344 !important;}
+	}
+}
+
+span {
+	&.form {
+		&-error, &-success, &-warning {display: block; padding: 15px 20px; margin-top: 15px; border-radius: 4px;}
+		&-error {border: 1px solid #FF735D;}
+		&-success {border: 1px solid #9DCC22;}
+		&-warning {border: 1px solid #FFC344;}
+	}
+}
+
+
 
 // чекбоксы (временный блок)
 .checkboxes {

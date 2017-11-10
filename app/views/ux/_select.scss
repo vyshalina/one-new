@@ -1,6 +1,6 @@
 //Новые селекты - http://prntscr.com/h1v8wr
 .select {
-	position: relative;
+	position: relative; display: inline-block;
 
 	& > a {
 		display: block;

@@ -6,7 +6,7 @@ header.header {
 	background: white; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 	
 	transition: all 0.3s ease-out;
-	transform: translateY(-100%); &.active {transform: translateY(0);}
+	// transform: translateY(-100%); &.active {transform: translateY(0);}
 
 
 	a.logo {

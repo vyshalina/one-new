@@ -66,8 +66,8 @@ $(document).ready(function () {
   }, _defineProperty(_$$jRange, 'isRange', true), _defineProperty(_$$jRange, 'onstatechange', function onstatechange() {
     var textHig = $('.pointer-label.high').html(),
         textLow = $('.pointer-label.low').html();
-    $('.range .scale span:last-child ins').html(textHig);
-    $('.range .scale span:first-child ins').html(textLow);
+    $('.range .scale span:last-child ins').html(textHig + '₽');
+    $('.range .scale span:first-child ins').html('<em>от</em>' + textLow + '₽');
   }), _$$jRange));
 
   var owl = $('.js-owl-carousel');
@@ -163,28 +163,28 @@ $(document).ready(function () {
         firstScrollUp = false,
         firstScrollDown = false;
 
-    if (scrolled > 0) {
-      if (scrolled > scrollPrev) {
-        firstScrollUp = false;
-        if (scrolled < header.height() + header.offset().top) {
-          if (firstScrollDown === false) {
-            header.removeClass('active');
-            firstScrollDown = true;
-          }
-        } else {
-          header.removeClass('active');
-        }
-      } else {
-        firstScrollDown = false;
-        if (scrolled > header.offset().top) {
-          if (firstScrollUp === false) {
-            header.addClass('active');
-            firstScrollUp = true;
-          };
-        }
-      }
-      scrollPrev = scrolled;
-    }
+    // if ( scrolled > 0 ) {
+    //   if ( scrolled > scrollPrev ) {
+    //     firstScrollUp = false;
+    //     if ( scrolled < header.height() + header.offset().top ) {
+    //       if ( firstScrollDown === false ) {
+    //         header.removeClass('active');
+    //         firstScrollDown = true;
+    //       }
+    //     } else {
+    //       header.removeClass('active');
+    //     }
+    //   } else {
+    //     firstScrollDown = false;
+    //     if ( scrolled > header.offset().top ) {
+    //       if ( firstScrollUp === false ) {
+    //         header.addClass('active');
+    //         firstScrollUp = true;
+    //       };
+    //     }
+    //   }
+    //   scrollPrev = scrolled;
+    // }
 
     if (scrolled > 50) {
       header.addClass('filled');

@@ -1,0 +1,75 @@
+.page {}
+.content {
+	padding: 40px 0 60px 0;
+	h1 {
+		@include font-type($CormacB, 42px, 56px, -1px); margin: 0 0 20px 0;
+		@include respond-to(sm) {font-size: 36px; line-height: 48px;}
+		@include respond-to(xs) {font-size: 28px; line-height: 38px; margin-left: -10px;}
+	}
+
+	h2 {
+		@include font-type($CormacB, 26px, 32px, 0px); 
+		@include respond-to(sm) {font-size: 20px; line-height: 26px;}
+	}
+
+	h3, h4, h5, h6, .title {
+		@include font-type($CormacB, 18px, 20px, 0); margin-bottom: 10px;
+	}
+
+	p {
+		@include font-type($HelveticaL, 16px, 24px, 0.7px); color: #4b5769;
+		margin-bottom: 15px;
+	}
+
+	ul {
+		margin-bottom: 30px;
+
+		li {margin-bottom: 5px; position: relative; @include font-type($HelveticaL, 16px, 24px, 0.7px);}
+		
+		&.typo-list_1 {
+			li {
+				padding-left: 40px;
+
+				&:before {
+					content: '';
+					width: 12px; height: 12px;
+					position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+					background: url(../images/checked.svg) center no-repeat;
+				}
+			}
+		}
+		&.typo-links {display: flex; margin-bottom: 42px; li {margin-right: 10px;}}
+		&.typo-list_2 {
+			li {
+				padding-left: 40px;
+
+				&:before {
+					content: '';
+					width: 12px; height: 12px;
+					position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+					background: url(../images/plus.svg) center no-repeat;
+				}
+			}
+		}
+		
+	}
+
+	a {margin-bottom: 20px;}
+
+	figure {
+		margin-bottom: 30px; 
+		width: 600px; img {max-width: 100%; margin-bottom: 15px;}
+		@include respond-to(sm) {width: 300px;}
+		figcaption {@include font-type($HelveticaL, 10px, 18px, 1.1px); text-transform: uppercase; color: #4b5769;}
+	}
+
+	address {
+		display: inline-block;
+		@include font-type($CormacB, 14px, 22px, 0.4px);
+		margin-bottom: 50px; padding: 20px 30px;
+		background: rgba(0, 0, 0, 0.08);
+	}
+}
+
+
+
