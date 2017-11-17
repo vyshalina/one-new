@@ -525,3 +525,16 @@ $(window).load(function () {
   $('.preloader').fadeOut();
   $('body').removeClass('on-load');
 });
+
+$(document).mouseup(function (e) {
+  var menuBlock = $(".menu-open"),
+      selectBlock = $(".js-selectLists"),
+      selectButton = $('.js-selectToogle');
+  if (menuBlock.has(e.target).length === 0) {
+    $(menuBlock).removeClass('active');
+  }
+  if (selectBlock.has(e.target).length === 0 && !selectBlock.siblings('.js-selectToogle').is(e.target)) {
+    $(selectBlock).removeClass('active');
+    $(selectButton).removeClass('active');
+  }
+});
