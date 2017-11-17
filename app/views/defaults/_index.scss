@@ -1,13 +1,23 @@
 ////////////////////////////////////////////////////}
 ////////////////////////////////////////////////////
+.btn {
+	&.white {
+		color: #000;
+		background: #fff; border-color: #fff;
+	}
+}
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
 .app.index {
 	padding-top: 0;
 
+	.separator {
+		
+		clear: both; display: block; width: 100%; height: 1px; margin: 20px 0 40px 0;
+		background: #e5e5e5;
+	}
 	// кнопочки справа лендинга
 	.container {
 		position: relative;
-
 		.btn-white {
 			position: absolute; z-index: 1; right: -45px; top: 50%; transform: translateY(-50%);
 			@include respond-to(lg) {right: -25px;}
@@ -154,6 +164,66 @@
 			}  
 		}
 	}
+
+	&.fashion, &.art {
+		//меняем цвет стрелочек сверху - http://prntscr.com/hbsz10
+		.promotion {
+			section p > i {color: #89a1b3}
+		}
+
+		//меняем цвет кнопок в контенте - http://prntscr.com/hbrtu8
+		.container .btn-white {background: #000;}
+
+		//меняем цвет кнопок в карусели - http://prntscr.com/hbp9r5
+		.carousel .navigation li, .carousel .owl-dots .owl-dot {
+			&.active, &:hover {
+				background: #414141;
+			}
+		}
+
+		//меняем цвет кнопки в подписке - http://prntscr.com/hbp1il
+		.subscription .form .btn {
+			justify-content: center;
+			background: #000; border-color: #000;
+			&:hover {
+				background: #fff; color: #000;
+			}
+		}
+	}
+
+		//Секция со списком людей - http://prntscr.com/hbm7rz
+	.list-people {
+		display: flex; flex-flow: column wrap; align-content: space-around;
+		max-height: 830px;
+		li {
+			width: 20%; margin-bottom: 33px;
+			&:last-child {margin-bottom: 0;}
+			figure {
+				display: flex; align-items: center;
+				margin-bottom: 0;
+				img {
+					flex-shrink: 0; 
+					width: 59px; height: 59px; margin-bottom: 0;
+					border-radius: 50%; 
+					overflow: hidden; 
+				}
+				figcaption { 
+					color: #000; text-transform: none; font-size: 18px; letter-spacing: 0.4px;
+					margin-left: 20px;
+				}
+			}
+		}
+		@include respond-to(sm) {
+			max-height: 1300px;
+			li {width: 40%;}
+		}
+		@include respond-to(xs) {
+			display: block;
+			max-height: 3000px;
+			li {display: block; width: 100%; }
+		}
+	}
+
 }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
@@ -433,6 +503,46 @@
 			}
 		}
 	}
+
+	.fashion &, .art & {
+		section {
+			height: 705px;
+			article {
+				header {
+					h1 {font-size: 84px; line-height: 79px; letter-spacing: -0.2px; margin-bottom: 31px;}
+					p {font-size: 44px; line-height: 1;}
+				}
+			}
+			@include respond-to(sm) {
+				article {
+					header {
+						h1 {font-size: 50px; line-height: 64px;}
+						p {font-size: 30px; line-height: 42px;}
+					}
+				}
+			}
+		}
+		nav > ul li {
+			&.decoration {background: #000; color: #fff;}
+			&.hovered {a, i {color: white;}}
+			a, i {color: #000;}
+			@include respond-to(sm) {&.hovered {a {background: #000;}}}
+		}
+		//@include respond-to(sm) {nav > ul {li {a {background: #E8B194;}}}}
+	}
+
+	.fashion & {
+		section {
+			background: url('../img/index/fashion-header.png') no-repeat right center; background-size: cover;
+			@media (max-width: 360px) {background: url('../img/index/fashion-header.png') no-repeat -890px center;}
+		}
+	}
+	.art & {
+		section {
+			background: url('../img/index/art-header.png') no-repeat right center; background-size: cover;
+			@media (max-width: 360px) {background: url('../img/index/art-header.png') no-repeat -890px center;}
+		}
+	}
 }
 
 .wrapper {
@@ -590,7 +700,15 @@
 			}
 		}
 	}
+	&-block .content  {
+		h2 {
+			font-size: 44px; line-height: 65px; text-align: center;
+			margin-bottom: 50px;
+		}
+	}
 }
+
+ 
 
 .megasale {
 	padding: 25px 0 0 0; background: white;
@@ -619,10 +737,29 @@
 	.app.index.pet & {
 		padding: 25px 0 45px 0;
 	}
+
+	.fashion &, .art & {background: #fff; padding: 0;}
+
 }
 
 .joined_partners {
 	padding: 45px 0; background: white;
+	.fashion &, .art & {
+		background: #F3F6FA;
+		h2 {
+			@include font-type($CormacB, 16px, 20px, 0px); text-align: center; color: #000;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.events {
+	padding: 50px 0;
+	background: #F3F6FA;
+	h2 {
+		@include font-type($CormacB, 16px, 20px, 0px); text-align: center; color: #000;
+		margin-bottom: 30px;
+	}
 }
 
 .home_testimonials {
@@ -633,7 +770,15 @@
 .home_news {
 	padding: 55px 0 35px 0; background: #F3F6FA;
 	.children &, .pet & {background: white;}
+	.fashion &, .art & {
+		background: #fff;
+		h2 {
+			@include font-type($CormacB, 16px, 20px, 0px); text-align: center;
+			margin-bottom: 30px;
+		}
+	}
 }
+
 
 //http://prntscr.com/h4cg2c
 .subscription {
@@ -700,7 +845,54 @@
 			@include respond-to(sm) {width: 100%;}
 		}
 	}
+
+	//SHOWROOM - http://prntscr.com/hbqxw2
+	&-showroom  {
+		display: flex;
+		margin: 0 -10px;
+		li {
+			width: calc(33.33333% - 20px); margin: 0 10px;
+			background: #fff;
+			a:hover {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
+			figure {img {max-width: 100%;} }
+		}
+		@include respond-to(sm) {
+			width: 100%; 
+			overflow: hidden;
+			li {width: calc(50% - 10px); flex-shrink: 0;}
+		}
+		@include respond-to(xs) {li {width: 100%;} }
+	}
+
+	//EVENTS - http://prntscr.com/hbt0f3
+	&-events {
+		display: flex;
+		margin: 0 -10px;
+		li {
+			width: calc(25% - 20px); margin: 0 10px;
+			background: #fff;
+			a:hover {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
+			article {padding: 20px;}
+			hgroup {
+				margin-bottom: 30px;
+				h4 {@include font-type($CormacB, 54px, 1, 0.3px); color: #323232;}
+				h5 {@include font-type($CormacB, 16px, 1, 0.3px); color: #323232;}
+			}
+			section {
+				h4 {@include font-type($CormacB, 22px, 32px, 0.3px); color: #000;}
+				p {@include font-type($HelveticaL, 16px, 24px, 0.7px); color: #000;}
+			}
+
+		}
+		@include respond-to(md) {
+			width: 100%; 
+			overflow: hidden;
+			li {width: calc(50% - 10px); flex-shrink: 0;}
+		}
+		@include respond-to(xs) {li {width: 100%;} }
+	}
 }
+
 
 //PROMOTION - http://prntscr.com/h4biip
 .promotion {
@@ -772,16 +964,53 @@
 			// &:last-child {margin-right: 0;}
 			padding: 10px;
 			a {
+				display: inline-block;
+				background: #fff;
+				transition: all .4s ease;
 				&:hover {
-					img {box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);}
-				}
-				img {
-					transition: all .4s ease;
+					box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 				}
 			}
 		}
 	}
 	a.btn-white {z-index: 2 !important; i {margin-left: 0;}}
+}
+
+//Блок "Присоединиться" - http://prntscr.com/hbojdz 
+.join {
+	height: 600px; width: 100%; padding-top: 94px;
+	header {
+		text-align: center;
+		margin-bottom: 30px; padding-left: 22px;
+		h4, p {color: #fff;}
+		h4 {
+			font-size: 44px; letter-spacing: 1.1px; line-height: 52px;
+			margin-bottom: 50px;
+		}
+		p {font-size: 28px; line-height: 40px; letter-spacing: 1.1px;}
+	}
+	.form {
+		display: flex; flex-direction: column; align-items: center;
+		width: 560px;
+		.wr-input, input {width: 100%;}
+		input {color: #000; background: #fff;}
+		label {color: #000;}
+		.btn {
+			color: #000; @include font-type($CormacB, 16px, 1, 0);
+			&:hover {background: #000; color: #fff;}
+		}
+	}
+
+	@include respond-to(sm) {
+		height: auto; padding-top: 50px;
+		header {
+			padding-left: 0;
+			h4 {font-size: 32px; line-height: 38px; margin-bottom: 30px;}
+			p {font-size: 16px; line-height: 22px;}
+		}
+		
+		.form {width: 100%;}
+	}
 }
 
 // NEWS in Index - http://prntscr.com/h2fk7d
@@ -924,7 +1153,7 @@
 					figure {
 						height: 299px; overflow: hidden;
 						img {
-							max-width: 100%;
+							max-width: 100%; height: 100%;
 							@include respond-to(sm) {width: 100%;}
 						}
 					}
@@ -992,7 +1221,11 @@
 
 .main-products {
 	position: relative; padding-top: 15px;
-	
+	.fashion &, .art & {
+		h2 {
+			@include font-type($CormacB, 34px, 42px, 0);
+		}
+	}
 	.btn {
 		@include font-type($CormacB, 16px, 16px, 0);
 		padding: 20px;
@@ -1003,16 +1236,40 @@
 }
 
 
+//Блоки для лендингов мода и арт
+.showroom {
+	padding: 55px 0 35px 0; background: #F3F6FA;
+	li {
+		article {
+			figcaption {
+				padding: 20px 30px;
+				h4 {font-family: $CormacB; font-size: 16px; text-transform: none;}
+				p {text-transform: none; font-family: $HelveticaR; font-size: 12px; color: #000;}
+			}
+		}
+	}
+	
+}
+
+.showroom, .joined, .events {
+	.carousel {
+		padding: 0;
+		.navigation, .owl-dots {padding-top: 30px;}
+	}
+}
+
+
 //CAROUSEL - http://prntscr.com/h2bo9g
 .carousel {
 	padding: 77px 0 53px 0;
 
-	.navigation {display: flex; justify-content: center;}
+	.navigation, .owl-dots {display: flex; justify-content: center;}
 	.navigation, .owl-dots {
 		margin-top: 7px; padding-left: 6px	;
 
 		li,  .owl-dot {
-			width: 19px; height: 8px; margin: 0 5px;
+			flex-shrink: 0;
+			width: 19px; height: 8px; margin: 0 5px; padding: 0;
 			background: #d9deea; border-radius: 10px; cursor: pointer;
 
 			&.active {background: #4489ff; &:hover {cursor: default;}}
@@ -1174,4 +1431,9 @@
 			span {@include font-type($HelveticaL, 10px, 18px, 1.1px); text-transform: uppercase; color: #4b5769;}
 		}
 	}
+}
+
+//Временно исправлены партнеры в подвале
+.partners {
+	ul {display: flex;}
 }
