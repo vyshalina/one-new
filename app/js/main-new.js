@@ -203,3 +203,11 @@ $(window).load(function() {
   $('.preloader').fadeOut();
   $('body').removeClass('on-load');
 });
+
+$(document).mouseup(function (e) {
+  var selectBlock = $(".js-selectLists").parent();
+  if (selectBlock.has(e.target).length === 0){
+    $(selectBlock).find('.js-selectLists').removeClass('active');
+    $(selectBlock).find('.js-selectToogle').removeClass('active');
+  }
+});

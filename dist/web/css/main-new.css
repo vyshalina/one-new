@@ -15760,7 +15760,7 @@ button.close {
   .popup-notice ul li a:hover {
     border: solid 1px #4489ff; }
 
-.preview {
+article.preview, .list li article {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15773,17 +15773,17 @@ button.close {
   background: #fff;
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
-  .preview:hover {
+  article.preview:hover, .list li article:hover {
     -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
     z-index: 2; }
-  .preview header a:hover figcaption {
+  article.preview header a:hover figcaption, .list li article header a:hover figcaption {
     opacity: 1; }
-  .preview header figure {
+  article.preview header figure, .list li article header figure {
     position: relative; }
-    .preview header figure img {
+    article.preview header figure img, .list li article header figure img {
       max-width: 100%; }
-    .preview header figure figcaption {
+    article.preview header figure figcaption, .list li article header figure figcaption {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -15793,9 +15793,9 @@ button.close {
       opacity: 0;
       -webkit-transition: .4s all ease;
       transition: .4s all ease; }
-      .preview header figure figcaption span {
+      article.preview header figure figcaption span, .list li article header figure figcaption span {
         position: absolute; }
-        .preview header figure figcaption span.favorites {
+        article.preview header figure figcaption span.favorites, .list li article header figure figcaption span.favorites {
           text-align: center;
           font-family: Cormac-Book, sans-serif;
           font-size: 16px;
@@ -15811,27 +15811,27 @@ button.close {
           left: 50%;
           margin-left: -39px;
           background: url(../images/heart.svg); }
-  .preview section {
+  article.preview section, .list li article section {
     padding: 0 15px; }
-    .preview section h2 {
+    article.preview section h2, .list li article section h2 {
       line-height: 14px;
       margin: 15px 0; }
-      .preview section h2 a {
+      article.preview section h2 a, .list li article section h2 a {
         font-family: Cormac-Book, sans-serif;
         font-size: 16px;
         line-height: 18px;
         letter-spacing: 0;
         color: #000; }
-    .preview section p {
+    article.preview section p, .list li article section p {
       font-family: "HelveticaRegular", sans-serif;
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 0.3px;
       color: #000;
       margin-bottom: 5px; }
-      .preview section p span {
+      article.preview section p span, .list li article section p span {
         margin-left: 10px; }
-    .preview section > ul {
+    article.preview section > ul, .list li article section > ul {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -15840,19 +15840,19 @@ button.close {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-left: -5px; }
-      .preview section > ul li {
+      article.preview section > ul li, .list li article section > ul li {
         display: inline-block;
         padding: 0 5px;
         margin-right: 5px;
         background: #F1F3F7;
         -webkit-border-radius: 9px;
         border-radius: 9px; }
-        .preview section > ul li:last-child {
+        article.preview section > ul li:last-child, .list li article section > ul li:last-child {
           margin-right: 0; }
-        .preview section > ul li a {
+        article.preview section > ul li a, .list li article section > ul li a {
           color: #000;
           font-size: 12px; }
-  .preview footer {
+  article.preview footer, .list li article footer {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15866,7 +15866,7 @@ button.close {
     -ms-flex-align: center;
     align-items: center;
     padding: 15px; }
-    .preview footer a figure {
+    article.preview footer a figure, .list li article footer a figure {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -15875,7 +15875,7 @@ button.close {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      .preview footer a figure span {
+      article.preview footer a figure span, .list li article footer a figure span {
         width: 31px;
         height: 31px;
         margin-right: 8px;
@@ -15883,7 +15883,7 @@ button.close {
         border-radius: 50%;
         background-position: center;
         background-repeat: none; }
-      .preview footer a figure figcaption {
+      article.preview footer a figure figcaption, .list li article footer a figure figcaption {
         font-family: Cormac-Book, sans-serif;
         font-size: 12px;
         line-height: 12px;
@@ -15894,7 +15894,7 @@ button.close {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
-    .preview footer p {
+    article.preview footer p, .list li article footer p {
       font-family: Cormac-Book, sans-serif;
       font-size: 16px;
       line-height: 1;
@@ -16813,7 +16813,7 @@ a {
   border: 1px solid #649dff;
   -webkit-border-radius: 4px;
   border-radius: 4px; }
-  .photos .preview .images {
+  .photos .preview .images, .photos .list li article .images, .list li .photos article .images {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -16836,18 +16836,18 @@ a {
       text-decoration: underline; }
       .photos p a:hover {
         text-decoration: none; }
-  .photos .preview {
+  .photos .preview, .photos .list li article, .list li .photos article {
     padding: 0 20px; }
-    .photos .preview > span {
+    .photos .preview > span, .photos .list li article > span, .list li .photos article > span {
       text-align: left;
       color: #a8b2b8;
       margin-bottom: 25px;
       display: none; }
-    .photos .preview.active > span {
+    .photos .preview.active > span, .photos .list li article.active > span, .list li .photos article.active > span {
       display: block; }
-    .photos .preview .images {
+    .photos .preview .images, .photos .list li article .images, .list li .photos article .images {
       margin-bottom: 40px; }
-      .photos .preview .images .image {
+      .photos .preview .images .image, .photos .list li article .images .image, .list li .photos article .images .image {
         display: block;
         width: 130px;
         margin: 5px;
@@ -16855,9 +16855,9 @@ a {
         -webkit-border-radius: 5px;
         border-radius: 5px;
         overflow: hidden; }
-        .photos .preview .images .image img {
+        .photos .preview .images .image img, .photos .list li article .images .image img, .list li .photos article .images .image img {
           width: 100%; }
-        .photos .preview .images .image a.close-img {
+        .photos .preview .images .image a.close-img, .photos .list li article .images .image a.close-img, .list li .photos article .images .image a.close-img {
           display: block;
           position: absolute;
           right: 5px;
@@ -16867,7 +16867,7 @@ a {
           height: 21px;
           -webkit-border-radius: 50%;
           border-radius: 50%; }
-          .photos .preview .images .image a.close-img i {
+          .photos .preview .images .image a.close-img i, .photos .list li article .images .image a.close-img i, .list li .photos article .images .image a.close-img i {
             display: inline-block; }
   .photos .previews .images .image a.close-img {
     opacity: 0;
@@ -17946,7 +17946,7 @@ a {
           display: inline-block;
           width: 28px;
           height: 28px;
-          padding-top: 6px;
+          padding-top: 3px;
           background: #669CF9;
           -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -17954,7 +17954,13 @@ a {
           right: -1px; }
           @media (max-width: 767px) {
             .product-body > section .company > div .icon-wr {
-              display: none; } }
+              left: 180px;
+              right: auto;
+              top: 8px; } }
+          @media (max-width: 480px) {
+            .product-body > section .company > div .icon-wr {
+              left: 95px;
+              top: 82px; } }
           .product-body > section .company > div .icon-wr i {
             color: #000; }
         .product-body > section .company > div figure, .product-body > section .company > div section {
@@ -19872,11 +19878,11 @@ a {
         -ms-flex-align: start;
         align-items: start; } }
     .search form input {
-      padding-top: 30px;
+      padding-top: 24px;
       width: 85%;
       font-family: Cormac-Book, sans-serif;
       font-size: 28px;
-      line-height: 28px;
+      line-height: 40px;
       letter-spacing: 0;
       color: #000;
       border: none;
@@ -20280,6 +20286,7 @@ a {
     overflow: hidden;
     width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px);
+    min-width: 170px;
     position: absolute;
     z-index: 100;
     -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
