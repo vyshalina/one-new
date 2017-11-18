@@ -10043,7 +10043,7 @@ button.close {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background: #669CF9;
+      background: #4489ff;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
     .tabs-main ul li a:hover:after {
@@ -10526,7 +10526,7 @@ button.close {
           -webkit-transition: background 0.4s ease;
           transition: background 0.4s ease; }
           .company-about address ul li a:hover {
-            background: #669CF9; }
+            background: #4489ff; }
     .company-about address p {
       color: #000;
       font-size: 16px;
@@ -10685,7 +10685,7 @@ button.close {
         font-size: 14px;
         line-height: 1;
         letter-spacing: 0.4px;
-        color: #669CF9; }
+        color: #4489ff; }
         .company-deeds li article ul li dl a:hover {
           text-decoration: underline; }
     .company-deeds li article footer {
@@ -10792,7 +10792,7 @@ button.close {
       -webkit-transition: .4s all ease;
       transition: .4s all ease; }
       .filter-result .filter-add > a:hover {
-        color: #669CF9; }
+        color: #4489ff; }
       .filter-result .filter-add > a i {
         font-size: 9px;
         font-weight: 200; }
@@ -11155,7 +11155,7 @@ button.close {
       padding: 0 10px; }
       .filter-result_pagination li a {
         font-size: 16px;
-        color: #669CF9;
+        color: #4489ff;
         -webkit-transition: .4s all ease;
         transition: .4s all ease; }
         .filter-result_pagination li a:hover {
@@ -11408,7 +11408,7 @@ button.close {
           font-size: 14px;
           line-height: 1;
           letter-spacing: 0.4px;
-          color: #669CF9; }
+          color: #4489ff; }
           .user-founds li article ul li dl a:hover {
             text-decoration: underline; }
       .user-founds li article footer {
@@ -12131,7 +12131,7 @@ button.close {
     -webkit-transition: .4s all ease;
     transition: .4s all ease; }
     .donation-wr .donation:hover {
-      color: #669CF9; }
+      color: #4489ff; }
 
 .founds-list {
   display: -webkit-box;
@@ -13176,7 +13176,7 @@ button.close {
         .booking-proc header .wr-soc ul.soc li:last-child {
           margin-right: 0; }
         .booking-proc header .wr-soc ul.soc li a:hover i {
-          color: #669CF9; }
+          color: #4489ff; }
         .booking-proc header .wr-soc ul.soc li a i {
           font-size: 36px;
           color: #c0d1dd;
@@ -13274,7 +13274,7 @@ button.close {
           font-size: 16px;
           line-height: 1;
           letter-spacing: 0;
-          color: #669CF9;
+          color: #4489ff;
           position: relative;
           padding-top: 3px; }
           @media (max-width: 767px) {
@@ -13291,7 +13291,7 @@ button.close {
             -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-            background: #669CF9;
+            background: #4489ff;
             -webkit-transition: width 0.3s ease-in-out;
             transition: width 0.3s ease-in-out; }
           .booking-proc section .form-btn-group a:hover:after {
@@ -13561,7 +13561,7 @@ button.close {
           width: 0;
           position: absolute;
           bottom: -10px;
-          background: #669CF9;
+          background: #4489ff;
           -webkit-transition: width 0.3s ease-in-out;
           transition: width 0.3s ease-in-out; }
         .booking-proc section .info .btn-gr a:before {
@@ -13586,8 +13586,6 @@ button.close {
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       color: white;
-      -webkit-box-shadow: none;
-      box-shadow: none;
       background: #4489FF; }
       @media (max-width: 1199px) {
         .app.index .container .btn-white {
@@ -14593,7 +14591,7 @@ button.close {
     line-height: 1;
     letter-spacing: 0px; }
     .promotion section p > i {
-      color: #669CF9;
+      color: #4489ff;
       font-size: 24px;
       font-weight: 600;
       position: absolute;
@@ -15661,7 +15659,7 @@ button.close {
         font-size: 16px;
         line-height: 1;
         letter-spacing: -0.5px;
-        color: #669CF9;
+        color: #4489ff;
         margin-right: 25px; }
         @media (max-width: 480px) {
           .popup-login > ul > li a.link {
@@ -15890,7 +15888,10 @@ button.close {
         letter-spacing: 0;
         color: #000;
         width: 100px;
-        height: 12px;
+        height: 14px;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
@@ -16247,7 +16248,7 @@ nav.menu-open {
       .breadcrumbs ul.navigation li a:after {
         content: '';
         position: absolute;
-        border-bottom: 1px solid #669CF9;
+        border-bottom: 1px solid #4489ff;
         top: 100%;
         right: 100%;
         left: 0;
@@ -16276,7 +16277,7 @@ nav.menu-open {
         position: relative;
         top: 2px; }
         .breadcrumbs ul.share li a i:hover {
-          color: #669CF9; }
+          color: #4489ff; }
 
 .partners {
   padding: 65px 0 54px 0;
@@ -16491,7 +16492,7 @@ nav.menu-open {
             -webkit-transition: all 0.4s;
             transition: all 0.4s; }
           .footer-contacts > ul > li ul.soc li a:hover i {
-            color: #669CF9; }
+            color: #4489ff; }
       .footer-contacts > ul > li ul li {
         margin-bottom: 3px; }
         .footer-contacts > ul > li ul li:last-child {
@@ -16533,7 +16534,7 @@ p {
   font-family: "HelveticaLight", sans-serif; }
 
 a {
-  color: #669CF9;
+  color: #4489ff;
   outline: none; }
 
 span.rub {
@@ -16582,7 +16583,7 @@ a {
       margin-right: 0; }
     #shareButton .selectstyle:after {
       content: '\203A';
-      color: #669CF9;
+      color: #4489ff;
       font-size: 24px;
       text-align: center;
       width: 23px;
@@ -17124,7 +17125,7 @@ a {
     .app .wr.bg_white {
       background: #ffffff; }
     .app .wr.bg_blue {
-      background: #669CF9; }
+      background: #4489ff; }
     .app .wr.border {
       border-bottom: 1px solid #d9e4ea; }
     .app .wr.border_grey {
@@ -17277,7 +17278,7 @@ a {
     display: block;
     width: 50px;
     height: 30px;
-    background: #669CF9;
+    background: #4489ff;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -17421,7 +17422,6 @@ a {
   font-family: Cormac-Book, sans-serif;
   width: 100%;
   padding: 15px 30px;
-  margin-bottom: 0;
   -webkit-border-radius: 10px;
   border-radius: 10px; }
   .alert a {
@@ -17488,7 +17488,9 @@ a {
       margin-bottom: 0; }
     .product-body .images figure img {
       max-width: 100%;
-      margin: 0; }
+      margin: 0;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
   .product-body .images-preview {
     display: -webkit-box;
     display: -webkit-flex;
@@ -17623,7 +17625,8 @@ a {
               margin-bottom: 0; } }
         .product-body > section ul.info li i {
           font-size: 16px;
-          margin-right: 6px; }
+          margin-right: 6px;
+          margin-top: -2px; }
     .product-body > section ul.price {
       display: -webkit-box;
       display: -webkit-flex;
@@ -17723,7 +17726,7 @@ a {
               .product-body > section .auction > ul li:last-child {
                 margin-bottom: 0; } }
           .product-body > section .auction > ul li > a {
-            color: #669CF9; }
+            color: #4489ff; }
           .product-body > section .auction > ul li sup {
             font-family: "HelveticaLight", sans-serif;
             font-size: 9px;
@@ -17890,8 +17893,8 @@ a {
         border-radius: 40px;
         position: relative;
         background: white;
-        -webkit-border-radius: 100px;
-        border-radius: 100px;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
         -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
         .product-body > section .company > div:last-child {
@@ -17946,8 +17949,8 @@ a {
           display: inline-block;
           width: 28px;
           height: 28px;
-          padding-top: 6px;
-          background: #669CF9;
+          padding-top: 3px;
+          background: #4489ff;
           -webkit-border-radius: 50%;
           border-radius: 50%;
           top: -5px;
@@ -18039,14 +18042,18 @@ a {
     .product-body > section p {
       font-family: "HelveticaLight", sans-serif;
       font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.3px;
-      width: 90%; }
+      line-height: 22px;
+      letter-spacing: 0.2px;
+      width: 90%;
+      margin-bottom: 30px; }
       @media (max-width: 480px) {
         .product-body > section p {
           width: 100%; } }
       .product-body > section p strong {
-        font-family: "HelveticaRegular", sans-serif; }
+        font-family: Cormac-Book, sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 0; }
     .product-body > section .myinfobox {
       margin-bottom: 25px;
       padding-bottom: 15px;
@@ -19797,8 +19804,7 @@ a {
         -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
-        justify-content: flex-start;
-        margin-bottom: 25px; } }
+        justify-content: flex-start; } }
     .filters section .select > a, .filters section .reset {
       font-family: Cormac-Book, sans-serif;
       font-size: 14px;
@@ -19813,10 +19819,9 @@ a {
           letter-spacing: 0; } }
     @media (max-width: 1199px) {
       .filters section .select {
-        margin-right: 20px; } }
-    @media (max-width: 480px) {
+        margin-right: 25px; } }
+    @media (max-width: 767px) {
       .filters section .select {
-        margin-right: 0;
         margin-bottom: 25px; } }
     .filters section .select .js-selectLists {
       width: 160px; }
@@ -19829,9 +19834,12 @@ a {
       .filters button.reset {
         padding-left: 0;
         width: 210px; } }
+    @media (max-width: 767px) {
+      .filters button.reset {
+        margin-bottom: 25px; } }
     @media (max-width: 480px) {
       .filters button.reset {
-        left: -6px; } }
+        left: -10px; } }
     .filters button.reset:after {
       content: '';
       width: 10px;
@@ -20144,11 +20152,11 @@ a {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.5px;
-    color: #669CF9;
+    color: #4489ff;
     background: #fff; }
     .btn.white:hover, .new_post-confirm li button.white:hover {
       color: #fff;
-      background: #669CF9; }
+      background: #4489ff; }
   .btn-reserve {
     display: -webkit-box;
     display: -webkit-flex;
@@ -20666,7 +20674,7 @@ span.form-warning {
       position: relative;
       right: -2px; }
       .form .form-btn-group .btn.white, .form .form-btn-group .new_post-confirm li button.white, .new_post-confirm li .form .form-btn-group button.white {
-        color: #669CF9;
+        color: #4489ff;
         width: 294px;
         left: -4px;
         border: 2px solid #4489ff;

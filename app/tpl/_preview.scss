@@ -71,7 +71,7 @@
 				}
 				figcaption {
 					@include font-type($CormacB, 12px, 12px, 0); color: #000;
-					width: 100px; height: 12px;
+					width: 100px; height: 14px; position: relative !important; top: auto !important; right: auto !important;
 					overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
 				}
 			}

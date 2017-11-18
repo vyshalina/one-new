@@ -38,7 +38,7 @@
 		display: flex; justify-content: flex-end; align-items: center; width: 550px;
 		@include respond-to(lg) {flex-wrap: wrap; justify-content: flex-end; width: 680px; padding-top: 15px;}
 		@include respond-to(md) {width: 850px;} 
-		@include respond-to(sm) {width: 100%; justify-content: flex-start; margin-bottom: 25px;}
+		@include respond-to(sm) {width: 100%; justify-content: flex-start;}
 
 
 		.select > a, .reset {
@@ -47,8 +47,8 @@
 		}
 
 		.select {
-			@include respond-to(lg) {margin-right: 20px;}
-			@include respond-to(xs) {margin-right: 0; margin-bottom: 25px;}
+			@include respond-to(lg) {margin-right: 25px;}
+			@include respond-to(sm) {margin-bottom: 25px;}
 
 			.js-selectLists {width: 160px;}
 		}
@@ -58,7 +58,8 @@
 		padding: 0 20px; position: relative;
 		background: none; border: none;
 		@include respond-to(lg) {padding-left: 0; width: 210px;}
-		@include respond-to(xs) {left: -6px;}
+		@include respond-to(sm) {margin-bottom: 25px;}
+		@include respond-to(xs) {left: -10px;}
 		
 		&:after {
 			content: '';

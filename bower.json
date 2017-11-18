@@ -15,11 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "^6.0.0",
-    "font-awesome": "^4.7.0",
-    "animate.css": "^3.5.2",
-    "bootstrap": "^3.3.7",
     "jquery": "2.2.4",
-    "smooth-scrollbar": "^7.4.1"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2"
   }
 }
