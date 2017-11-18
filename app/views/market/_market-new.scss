@@ -78,8 +78,8 @@
 		@include respond-to(sm) {flex-direction: column; align-items: start;}
 
 		input {
-			padding-top: 30px; width: 85%;
-			@include font-type($CormacB, 28px, 28px, 0); color: #000;
+			padding-top: 24px; width: 85%;
+			@include font-type($CormacB, 28px, 40px, 0); color: #000;
 			border: none; background: #fff;
 			@include respond-to(sm) {margin-bottom: 25px;}
 
