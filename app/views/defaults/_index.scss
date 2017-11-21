@@ -506,23 +506,6 @@
 	}
 
 	.fashion &, .art & {
-		section {
-			height: 705px;
-			article {
-				header {
-					h1 {font-size: 84px; line-height: 79px; letter-spacing: -0.2px; margin-bottom: 31px;}
-					p {font-size: 44px; line-height: 1;}
-				}
-			}
-			@include respond-to(sm) {
-				article {
-					header {
-						h1 {font-size: 50px; line-height: 64px;}
-						p {font-size: 30px; line-height: 42px;}
-					}
-				}
-			}
-		}
 		nav > ul li {
 			&.decoration {background: #000; color: #fff;}
 			&.hovered {a, i {color: white;}}

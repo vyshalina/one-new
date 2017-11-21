@@ -14226,24 +14226,6 @@ button.close {
         top: auto;
         left: 1px; }
 
-.fashion .intro section, .art .intro section {
-  height: 705px; }
-  .fashion .intro section article header h1, .art .intro section article header h1 {
-    font-size: 84px;
-    line-height: 79px;
-    letter-spacing: -0.2px;
-    margin-bottom: 31px; }
-  .fashion .intro section article header p, .art .intro section article header p {
-    font-size: 44px;
-    line-height: 1; }
-  @media (max-width: 767px) {
-    .fashion .intro section article header h1, .art .intro section article header h1 {
-      font-size: 50px;
-      line-height: 64px; }
-    .fashion .intro section article header p, .art .intro section article header p {
-      font-size: 30px;
-      line-height: 42px; } }
-
 .fashion .intro nav > ul li.decoration, .art .intro nav > ul li.decoration {
   background: #000;
   color: #fff; }
