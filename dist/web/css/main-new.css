@@ -6125,8 +6125,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -16255,6 +16255,14 @@ article.preview, .list li article {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
+        article.preview footer a figure figcaption span, .list li article footer a figure figcaption span {
+          width: 31px;
+          height: 31px;
+          margin-right: 8px;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          background-position: center;
+          background-repeat: none; }
     article.preview footer p, .list li article footer p {
       font-family: Cormac-Book, sans-serif;
       font-size: 16px;
@@ -18310,11 +18318,7 @@ a {
           width: 28px;
           height: 28px;
           padding-top: 3px;
-<<<<<<< HEAD
           background: #4489ff;
-=======
-          background: #669CF9;
->>>>>>> 5a0e2a1690653c99f6621a0d778f5ff5eb39663e
           -webkit-border-radius: 50%;
           border-radius: 50%;
           top: -5px;
