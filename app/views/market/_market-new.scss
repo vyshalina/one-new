@@ -224,3 +224,45 @@
 		}	
 	}
 }
+
+//Пагинация - https://prnt.sc/hd7xp8
+.pagination-block {
+	padding: 30px 0;
+	background: #F3F6FA;
+}
+.main-pagination {
+	display: flex; justify-content: center; align-items: center;
+	li {
+		flex-shrink: 0;
+		text-align: center;
+		width: 50px; height: 50px; margin: 0 10px;
+		border-radius: 50px; 
+		transition: .4s ease;
+		@include respond-to(xs) {margin: 0 7px; width: 35px; height: 35px;}
+		&.active, &:hover {
+			background: #fff;
+			a {color: #000;}
+		}
+		&.next {
+			width: auto; padding: 0 20px;
+			background: #fff; 
+			@include respond-to(sm) {padding: 0; width: 50px;}
+			@include respond-to(xs) {width: 35px;}
+			span {
+				@include respond-to(sm) {display: none;}
+			}
+			i {
+				font-weight: 600;
+				margin-left: 10px; margin-top: 4px;
+				@include respond-to(sm) {margin: 0;}
+			}
+		}
+		a {
+			display: flex; align-items: center; justify-content: center;
+			@include font-type($CormacB, 16px, 16px, 0.5px); color: #7d8894;
+			width: 100%; height: 100%;
+			transition: .4s ease;
+			@include respond-to(xs) {font-size: 14px;}
+		}
+	}
+}
