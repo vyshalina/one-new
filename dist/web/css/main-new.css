@@ -13737,7 +13737,7 @@ button.close {
     -webkit-align-content: space-around;
     -ms-flex-line-pack: distribute;
     align-content: space-around;
-    max-height: 830px; }
+    max-height: 280px; }
     .app.index .list-people li {
       width: 20%;
       margin-bottom: 33px; }
@@ -14225,24 +14225,6 @@ button.close {
         position: relative;
         top: auto;
         left: 1px; }
-
-.fashion .intro section, .art .intro section {
-  height: 705px; }
-  .fashion .intro section article header h1, .art .intro section article header h1 {
-    font-size: 84px;
-    line-height: 79px;
-    letter-spacing: -0.2px;
-    margin-bottom: 31px; }
-  .fashion .intro section article header p, .art .intro section article header p {
-    font-size: 44px;
-    line-height: 1; }
-  @media (max-width: 767px) {
-    .fashion .intro section article header h1, .art .intro section article header h1 {
-      font-size: 50px;
-      line-height: 64px; }
-    .fashion .intro section article header p, .art .intro section article header p {
-      font-size: 30px;
-      line-height: 42px; } }
 
 .fashion .intro nav > ul li.decoration, .art .intro nav > ul li.decoration {
   background: #000;
@@ -14962,6 +14944,9 @@ button.close {
         .joined ul li a:hover {
           -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); }
+      @media (max-width: 480px) {
+        .joined ul li {
+          text-align: center; } }
   .joined a.btn-white {
     z-index: 2 !important; }
     .joined a.btn-white i {
@@ -20480,6 +20465,91 @@ a {
     @media (max-width: 480px) {
       .list-preview > li {
         width: 100%; } }
+
+.pagination-block {
+  padding: 30px 0;
+  background: #F3F6FA; }
+
+.main-pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .main-pagination li {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: .4s ease;
+    transition: .4s ease; }
+    @media (max-width: 480px) {
+      .main-pagination li {
+        margin: 0 7px;
+        width: 35px;
+        height: 35px; } }
+    .main-pagination li.active, .main-pagination li:hover {
+      background: #fff; }
+      .main-pagination li.active a, .main-pagination li:hover a {
+        color: #000; }
+    .main-pagination li.next {
+      width: auto;
+      padding: 0 20px;
+      background: #fff; }
+      @media (max-width: 767px) {
+        .main-pagination li.next {
+          padding: 0;
+          width: 50px; } }
+      @media (max-width: 480px) {
+        .main-pagination li.next {
+          width: 35px; } }
+      @media (max-width: 767px) {
+        .main-pagination li.next span {
+          display: none; } }
+      .main-pagination li.next i {
+        font-weight: 600;
+        margin-left: 10px;
+        margin-top: 4px; }
+        @media (max-width: 767px) {
+          .main-pagination li.next i {
+            margin: 0; } }
+    .main-pagination li a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-family: Cormac-Book, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      color: #7d8894;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: .4s ease;
+      transition: .4s ease; }
+      @media (max-width: 480px) {
+        .main-pagination li a {
+          font-size: 14px; } }
 
 .btn-white {
   font-family: Cormac-Book, sans-serif;

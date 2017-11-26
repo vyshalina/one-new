@@ -166,6 +166,7 @@
 	}
 
 	&.fashion, &.art {
+
 		//меняем цвет стрелочек сверху - http://prntscr.com/hbsz10
 		.promotion {
 			section p > i {color: #89a1b3}
@@ -194,7 +195,7 @@
 		//Секция со списком людей - http://prntscr.com/hbm7rz
 	.list-people {
 		display: flex; flex-flow: column wrap; align-content: space-around;
-		max-height: 830px;
+		max-height: 280px;
 		li {
 			width: 20%; margin-bottom: 33px;
 			&:last-child {margin-bottom: 0;}
@@ -505,23 +506,6 @@
 	}
 
 	.fashion &, .art & {
-		section {
-			height: 705px;
-			article {
-				header {
-					h1 {font-size: 84px; line-height: 79px; letter-spacing: -0.2px; margin-bottom: 31px;}
-					p {font-size: 44px; line-height: 1;}
-				}
-			}
-			@include respond-to(sm) {
-				article {
-					header {
-						h1 {font-size: 50px; line-height: 64px;}
-						p {font-size: 30px; line-height: 42px;}
-					}
-				}
-			}
-		}
 		nav > ul li {
 			&.decoration {background: #000; color: #fff;}
 			&.hovered {a, i {color: white;}}
@@ -971,6 +955,7 @@
 					box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 				}
 			}
+			@include respond-to(xs){text-align: center;}
 		}
 	}
 	a.btn-white {z-index: 2 !important; i {margin-left: 0;}}
