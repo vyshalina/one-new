@@ -13629,10 +13629,6 @@ button.close {
         color: white; }
       .app.index .container .btn-white:hover {
         background: #629CFF; }
-      .children .app.index .container .btn-white {
-        background: #E8B194; }
-        .children .app.index .container .btn-white:hover {
-          background: #efc3ac; }
   .app.index .section-group {
     display: -webkit-box;
     display: -webkit-flex;
@@ -13678,6 +13674,10 @@ button.close {
     color: #96be46; }
   .app.index.pet .carousel .navigation div.active, .app.index.pet .carousel .navigation div:hover {
     background: #96be46; }
+  .app.index.pet .container .btn-white {
+    background: #96be46; }
+    .app.index.pet .container .btn-white:hover {
+      background: #abca6d; }
   .app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button {
     background: #96be46;
     border-color: #96be46; }
@@ -13692,6 +13692,10 @@ button.close {
     color: #e8b194; }
   .app.index.children .carousel .navigation div.active, .app.index.children .carousel .navigation div:hover {
     background: #e8b194; }
+  .app.index.children .container .btn-white {
+    background: #E8B194; }
+    .app.index.children .container .btn-white:hover {
+      background: #efc3ac; }
   .app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button {
     background: #e8b194;
     border-color: #e8b194; }
@@ -16369,11 +16373,28 @@ header.header {
           -ms-flex-align: center;
           align-items: center;
           height: 100%; }
+          header.header nav.menu > ul li a:hover span:after {
+            width: 100%; }
           header.header nav.menu > ul li a span {
             color: #000000;
             font-family: Cormac-Book, sans-serif;
             font-size: 15px;
-            opacity: 0.7; }
+            opacity: 0.7;
+            display: inline-block;
+            position: relative; }
+            header.header nav.menu > ul li a span:after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: -1px;
+              height: 2px;
+              width: 0%;
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              background: #000000;
+              -webkit-transition: 0.4s ease-out;
+              transition: 0.4s ease-out; }
           header.header nav.menu > ul li a i {
             margin: 0 10px;
             position: relative;
@@ -16427,6 +16448,8 @@ header.header {
     .index header.header nav.menu > ul li a span {
       color: white;
       opacity: 1; }
+      .index header.header nav.menu > ul li a span:after {
+        background: #ffffff; }
     .index header.header nav.menu > ul li a i.icon-search {
       background: url("../images/icons/search-white.svg") center center no-repeat; }
     .index header.header nav.menu > ul li a i.icon-plus {
@@ -16443,6 +16466,8 @@ header.header {
       .index header.header.filled nav.menu > ul li a span {
         color: #000000;
         opacity: 0.7; }
+        .index header.header.filled nav.menu > ul li a span:after {
+          background: #000000; }
       .index header.header.filled nav.menu > ul li a i.icon-search {
         background: url("../images/icons/search-black.svg") center center no-repeat; }
       .index header.header.filled nav.menu > ul li a i.icon-plus {

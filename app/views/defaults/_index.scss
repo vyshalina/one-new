@@ -31,13 +31,6 @@
 
 			color: white; background: #4489FF; i {color: white;}
 			&:hover {background: #629CFF;}
-
-			.children & {
-				background: #E8B194;
-				&:hover {
-					background: #efc3ac;
-				}
-			}
 		}
 	}
 
@@ -88,6 +81,13 @@
 			}
 		}
 
+		.container .btn-white {
+			background: #96be46;
+			&:hover {
+				background: #abca6d;
+			}
+		}
+
 		//меняем цвет кнопки в подписке - http://prntscr.com/h4d0n6
 		.subscription .form .btn {
 			background: #96be46; border-color: #96be46;
@@ -117,6 +117,13 @@
 			&.active, &:hover {background: #e8b194;}
 		}
 		
+		.container .btn-white {
+			background: #E8B194;
+			&:hover {
+				background: #efc3ac;
+			}
+		}
+
 		//меняем цвет кнопки в подписке - http://prntscr.com/h4d2pj
 		.subscription .form .btn {
 			background: #e8b194; border-color: #e8b194;

@@ -41,8 +41,24 @@ header.header {
 				a {
 					display: flex; justify-content: center; align-items: center;
 					height: 100%;
+					&:hover {
+						span {
+							&:after {
+								width: 100%;
+							}
+						}
+					}
 
-					span {color: #000000; font-family: $CormacB; font-size: 15px; opacity: 0.7;}
+					span {
+						color: #000000; font-family: $CormacB; font-size: 15px; opacity: 0.7;
+						display: inline-block; position: relative;
+						&:after {
+							content: '';
+							position: absolute; left: 50%; bottom: -1px; height: 2px; width: 0%; transform: translateX(-50%);
+							background: #000000;
+							transition: 0.4s ease-out;
+						}
+					}
 					i {
 						margin: 0 10px; position: relative; top: 1px;
 						&.icon-search {width: 15px; height: 15px; background: url('../images/icons/search-black.svg') center center no-repeat;}
@@ -71,7 +87,12 @@ header.header {
 		}
 		nav.menu { 
 			& > ul li a {
-				span {color: white; opacity: 1;}
+				span {
+					color: white; opacity: 1;
+					&:after {
+						background: #ffffff;
+					}
+				}
 				i {
 					&.icon-search {background: url('../images/icons/search-white.svg') center center no-repeat;}
 					&.icon-plus {background: url('../images/icons/plus-white.svg') center center no-repeat;}
@@ -86,7 +107,12 @@ header.header {
 			a.logo {background: url('../images/logo-blue.svg') center center no-repeat;}
 			nav.menu {
 				& > ul li a {
-					span {color: #000000; opacity: 0.7;}
+					span {
+						color: #000000; opacity: 0.7;
+						&:after {
+							background: #000000;
+						}
+					}
 					i {
 						&.icon-search {background: url('../images/icons/search-black.svg') center center no-repeat;}
 						&.icon-plus {background: url('../images/icons/plus-black.svg') center center no-repeat;}
