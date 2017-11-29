@@ -31,6 +31,13 @@
 
 			color: white; background: #4489FF; i {color: white;}
 			&:hover {background: #629CFF;}
+
+			.children & {
+				background: #E8B194;
+				&:hover {
+					background: #efc3ac;
+				}
+			}
 		}
 	}
 
@@ -438,7 +445,7 @@
 	.children & {
 		section {
 			background: url('../img/index/intro1.png') no-repeat right center; background-size: cover;
-			@media (max-width: 360px) {background: url('../img/index/intro1.png') no-repeat -890px center;}
+			@media (max-width: 360px) {background: url('../img/index/intro1.png') no-repeat -890px center; background-size: cover;}
 		}
 		nav > ul li {
 			&.decoration {background: #E8B194; color: #fff;}
@@ -517,13 +524,13 @@
 	.fashion & {
 		section {
 			background: url('../img/index/fashion-header.png') no-repeat right center; background-size: cover;
-			@media (max-width: 360px) {background: url('../img/index/fashion-header.png') no-repeat -890px center;}
+			@media (max-width: 360px) {background: url('../img/index/fashion-header.png') no-repeat -890px center; background-size: cover;}
 		}
 	}
 	.art & {
 		section {
 			background: url('../img/index/art-header.png') no-repeat right center; background-size: cover;
-			@media (max-width: 360px) {background: url('../img/index/art-header.png') no-repeat -890px center;}
+			@media (max-width: 360px) {background: url('../img/index/art-header.png') no-repeat -890px center; background-size: cover;}
 		}
 	}
 }

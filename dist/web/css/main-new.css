@@ -13617,6 +13617,10 @@ button.close {
         color: white; }
       .app.index .container .btn-white:hover {
         background: #629CFF; }
+      .children .app.index .container .btn-white {
+        background: #E8B194; }
+        .children .app.index .container .btn-white:hover {
+          background: #efc3ac; }
   .app.index .section-group {
     display: -webkit-box;
     display: -webkit-flex;
@@ -14103,7 +14107,8 @@ button.close {
   background-size: cover; }
   @media (max-width: 360px) {
     .children .intro section {
-      background: url("../img/index/intro1.png") no-repeat -890px center; } }
+      background: url("../img/index/intro1.png") no-repeat -890px center;
+      background-size: cover; } }
 
 .children .intro nav > ul li.decoration {
   background: #E8B194;
@@ -14239,14 +14244,16 @@ button.close {
   background-size: cover; }
   @media (max-width: 360px) {
     .fashion .intro section {
-      background: url("../img/index/fashion-header.png") no-repeat -890px center; } }
+      background: url("../img/index/fashion-header.png") no-repeat -890px center;
+      background-size: cover; } }
 
 .art .intro section {
   background: url("../img/index/art-header.png") no-repeat right center;
   background-size: cover; }
   @media (max-width: 360px) {
     .art .intro section {
-      background: url("../img/index/art-header.png") no-repeat -890px center; } }
+      background: url("../img/index/art-header.png") no-repeat -890px center;
+      background-size: cover; } }
 
 .wrapper {
   padding-bottom: 60px;
