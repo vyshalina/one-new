@@ -10346,12 +10346,24 @@ button.close {
     cursor: pointer; }
 
 .company_logo {
-  text-align: center;
   display: block;
-  width: 100%;
-  margin: 45px 0 41px; }
-  .company_logo.edit {
-    margin: 0 0 41px; }
+  margin: 42px auto;
+  min-width: 199px;
+  min-height: 199px;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative; }
+  .company_logo img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   .company_logo figure figcaption {
     font-family: "Cormac Extra Light", sans-serif;
     font-size: 16px;
@@ -13703,6 +13715,8 @@ button.close {
   .app.index.dobro .js-index-menu .js-toggle-menu i {
     color: #7A3FBF; }
   .app.index.dobro .carousel .navigation div.active, .app.index.dobro .carousel .navigation div:hover {
+    background: #7A3FBF; }
+  .app.index.dobro .container .btn-white {
     background: #7A3FBF; }
   .app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button {
     background: #7A3FBF;
@@ -17251,6 +17265,8 @@ a {
       background: #E8B194 url("../images/kids.gif") center center no-repeat; }
     .preloader.index.dobro {
       background: #7A3FBF url("../images/dobro.gif") center center no-repeat; }
+    .preloader.index.art, .preloader.index.fashion {
+      background: #000000 url("../images/dark.gif") center center no-repeat; }
 
 .lity-close {
   top: 25px;
@@ -17844,7 +17860,8 @@ a {
       max-width: 100%;
       margin: 0;
       -webkit-border-radius: 4px;
-      border-radius: 4px; }
+      border-radius: 4px;
+      float: left; }
   .product-body .images-preview {
     display: -webkit-box;
     display: -webkit-flex;
