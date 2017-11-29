@@ -13743,17 +13743,11 @@ button.close {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column wrap;
-    -ms-flex-flow: column wrap;
-    flex-flow: column wrap;
-    -webkit-align-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    max-height: 280px; }
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap; }
     .app.index .list-people li {
-      width: 20%;
+      width: 25%;
       margin-bottom: 33px; }
       .app.index .list-people li:last-child {
         margin-bottom: 0; }
