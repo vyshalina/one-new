@@ -61,12 +61,15 @@ article {
 			}
 
 			& > ul {
-				display: flex; flex-wrap: wrap; margin-left: -5px;
+				display: flex; flex-wrap: wrap; margin-left: -5px; margin-bottom: -5px; justify-content: flex-start;
 
 				li {
-					display: inline-block; padding: 0 5px; margin-right: 5px;
+					display: inline-block; padding: 0 5px; margin-right: 5px; margin-bottom: 5px; width: auto;
 					background: #F1F3F7; border-radius: 9px;
 					&:last-child {margin-right: 0;}
+					&:after {
+						content: none;
+					}
 					a {color: #000; font-size: 12px;}
 				}
 			}

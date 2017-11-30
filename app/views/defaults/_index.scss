@@ -210,12 +210,14 @@
 
 		//Секция со списком людей - http://prntscr.com/hbm7rz
 	.list-people {
-		display: flex; flex-flow: wrap;
+		display: flex; flex-flow: wrap; padding-top: 34px;
 		li {
-			width: 25%; margin-bottom: 33px;
+			width: 33.33333%; margin-bottom: 33px; padding-left: 97px; padding-right: 15px;
 			&:last-child {margin-bottom: 0;}
+			@include respond-to(md) {width: 50%; padding-left: 15px}
+			@include respond-to(xs) {width: 100%;}
 			figure {
-				display: flex; align-items: center;
+				display: flex; align-items: center; width: auto;
 				margin-bottom: 0;
 				img {
 					flex-shrink: 0; 
@@ -226,17 +228,16 @@
 				figcaption { 
 					color: #000; text-transform: none; font-size: 18px; letter-spacing: 0.4px;
 					margin-left: 20px;
+					@include respond-to(sm) {
+						font-size: 16px;
+					}
 				}
 			}
-		}
-		@include respond-to(sm) {
-			max-height: 1300px;
-			li {width: 40%;}
-		}
-		@include respond-to(xs) {
-			display: block;
-			max-height: 3000px;
-			li {display: block; width: 100%; }
+			a {
+				&:hover {
+					cursor: default;
+				}
+			}
 		}
 	}
 

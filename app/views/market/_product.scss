@@ -1,5 +1,12 @@
 .alert {
-	    font-family: Cormac-Book, sans-serif; width: 100%; padding: 15px 30px; border-radius: 10px;
+	font-family: Cormac-Book, sans-serif; width: 100%; padding: 15px 30px; border-radius: 10px;
+	margin-bottom: 20px; margin-top: 20px;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	a {
 		color: #000; font-size: 13px !important; text-decoration: underline !important; 
@@ -270,7 +277,7 @@
 						}
 					}
 					a {
-						@include respond-to(sm) {color: #000; font-family:$HelveticaL; letter-spacing: 0.5px;}
+						@include respond-to(sm) {font-family:$HelveticaL; letter-spacing: 0.5px;}
 					}
 					.icon-wr {
 						text-align: center;

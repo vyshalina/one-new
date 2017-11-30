@@ -98,7 +98,7 @@
 	& > .container {@include respond-to(sm) {flex-direction: column-reverse; align-items: start;}}
 	
 	ul {
-		@include respond-to(lg) {
+		@include respond-to(sm) {
 			flex-direction: column;
 		}
 		li {

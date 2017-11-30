@@ -97,8 +97,8 @@
 	}
 
 	&_logo {
-		display: block; margin: 42px auto; min-width: 199px; min-height: 199px; max-width: 200px; max-height: 200px; overflow: hidden;
-		border-radius: 50%; position: relative;
+		display: block; margin: 42px auto; min-width: 199px; min-height: 199px; max-width: 200px; max-height: 200px;
+		position: relative;
 
 		img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 

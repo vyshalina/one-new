@@ -126,10 +126,12 @@
 
 		ul {
 			display: flex; justify-content: center;
-			transition: max-height 0.7s linear;
+			@media (min-width: 992px) {
+				display: flex !important;
+			}
 			@include respond-to(md) {
-				flex-direction: column;
-				border-bottom: none; @include slide_me();
+				flex-direction: column; display: none;
+				border-bottom: none;
 			}
 
 			li {
