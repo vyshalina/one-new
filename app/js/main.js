@@ -400,6 +400,9 @@ let app = (function ($) {
           let selectList = selectToggle.next();
 
           selectToggle.click(function toggleSelect(event) {
+            if(!selectToggle.hasClass('active')) {
+              $('.js-selectToogle, .js-selectLists').removeClass('active');
+            }
             event.preventDefault();
             selectToggle.toggleClass('active');
             selectList.toggleClass('active');
@@ -465,7 +468,7 @@ let app = (function ($) {
 
       showProfileMenu(event) {
         event.preventDefault();
-        $('.tabs-main ul, .tabs-shop ul').toggleClass('active');
+        $('.tabs-main ul, .tabs-shop ul, .tabs-company ul').toggleClass('active');
         $('.js-toggle-menu i').toggleClass('active');
       },
 
@@ -518,11 +521,12 @@ $(document).mouseup(function (e) {
   var menuBlock = $(".menu-open"),
       selectBlock = $(".js-selectLists"),
       selectButton = $('.js-selectToogle');
-  if (menuBlock.has(e.target).length === 0){
+  if (menuBlock.has(e.target).length === 0 && !menuBlock.is(e.target)) {
     $(menuBlock).removeClass('active');
+    $('body').removeClass('on-load');
   }
   if (selectBlock.has(e.target).length === 0 && !selectBlock.siblings('.js-selectToogle').is(e.target)){
     $(selectBlock).removeClass('active');
     $(selectButton).removeClass('active');
-  }
+  } 
 });
