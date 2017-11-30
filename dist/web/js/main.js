@@ -484,7 +484,8 @@ var app = function ($) {
       },
       showProfileMenu: function showProfileMenu(event) {
         event.preventDefault();
-        $('.tabs-main ul, .tabs-shop ul, .tabs-company ul').toggleClass('active');
+        $('.tabs-main ul, .tabs-shop ul').toggleClass('active');
+        $('.tabs-company ul').slideToggle();
         $('.js-toggle-menu i').toggleClass('active');
       },
       showThingsMenu: function showThingsMenu(event) {
