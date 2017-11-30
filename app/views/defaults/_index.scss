@@ -1,9 +1,22 @@
-////////////////////////////////////////////////////}
+////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 .btn {
 	&.white {
 		color: #000;
 		background: #fff; border-color: #fff;
+	}
+}
+.play-video {
+	display: flex; align-items: center;
+	color: #fff; @include font-type($CormacB, 18px, 18px, 0);
+	&:hover {color: #fff;}
+	& > span {
+		display: inline-block; width: 37px; height: 37px; margin-left: 15px; position: relative; top: 3px;
+		background: $btn-color; border-radius: 50%;
+		i {
+			color: #fff; font-size: 14px;
+			position: absolute !important; top: 12px; left: 14px;
+		}
 	}
 }
 //СТИЛИ ДЛЯ ЛЕГДИНГОВ "ПИТОМЦЫ" и "ДЕТИ"
@@ -12,8 +25,9 @@
 	
 	//разделитель - http://prntscr.com/hdonwo
 	.separator {
-		clear: both; display: block; width: 100%; height: 1px; margin: 20px 0 40px 0;
-		background: #e5e5e5;
+		clear: both; display: block; width: 100%; height: 1px; padding: 0 0 7px 0;
+		background: #F3F6FA; border-bottom: 1px solid #d9deea;
+
 	}
 	// кнопочки справа лендинга
 	.container {
@@ -247,7 +261,7 @@
 
 // INTRO LANDING - http://prntscr.com/h2bdli
 .intro {
-	section {
+	& > section {
 		background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 40%,rgba(5,171,224,0) 100%);
 		height: 547px; position: relative; overflow: hidden;
 		background: url('../img/index/bg.jpg') no-repeat center; background-size: cover;
@@ -267,12 +281,29 @@
 				padding-left: 102px; margin-top: 143px;
 				@include respond-to(md) {padding-left: 20px;}
 				@include respond-to(xs) {margin-top: 110px;}
+				.main-landing & {
+					padding-left: 0; margin-top: 176px;
+				}
+				.auction &, .stars & {
+					text-align: center;	
+					padding-left: 0; margin-top: 134px;
+				}
 
 				h1 {
 					color: #fff; @include font-type($CormacB, 42px, 56px, -1px); 
 					margin-top: 0; margin-bottom: 22px;
 					@include respond-to(sm) {font-size: 36px; line-height: 48px;}
 					@include respond-to(xs) {font-size: 28px; line-height: 38px; margin-left: -10px;}
+					.main-landing & {
+						text-align: center; font-size: 50px; line-height: 57px; letter-spacing: -1.1px;
+						@include respond-to(sm) {font-size: 38px; line-height: 46px;}
+
+					}
+					.auction &, .stars & {
+						font-size: 46px; letter-spacing: 0;
+						@include respond-to(sm)  {font-size: 36px;}
+						@include respond-to(xs) {font-size: 26px; line-height: 32px;}
+					}
 				}
 				h1 + ul {margin-top: 86px; @include respond-to(sm) {margin-bottom: 42px;}}
 				p {
@@ -280,6 +311,11 @@
 					margin-bottom: 86px;
 					@include respond-to(sm) {font-size: 20px; line-height: 26px; margin-bottom: 42px;}
 					@include respond-to(xs) {margin-left: -10px;}
+
+					.auction &, .stars & {
+						margin-bottom: 26px;
+						@include respond-to(xs) {font-size: 16px;}
+					}
 				}
 				h2 {
 					color: #fff; @include font-type($CormacB, 62px, 78px, -1px); 
@@ -293,6 +329,7 @@
 					@include font-type($CormacB, 16px, 16px, 0px); color: #fff;
 					position: relative;
 					@include respond-to(xs) {margin-left: -10px;}
+					.auction & {padding: 18px 22px 16px 24px;}
 
 					i {
 						color: #fff; font-size: 17px; font-weight: bold;
@@ -313,10 +350,54 @@
 				}
 			}
 
+			section {
+				&.search-landing {
+					display: flex; flex-direction: column; align-items: center;
+					padding-top: 6px;
+					.form {
+						display: flex; justify-content: space-between;
+						width: 778px; padding-top: 60px;
+						@include respond-to(md) {width: 90%;}
+						.wr-input {
+							margin: 0; padding: 0; width: 713px;
+							@include respond-to(md) {width: calc(100% - 66px);}
+							@include respond-to(xs) {width: calc(100% - 50px;)}
+							input {
+								@include font-type($CormacB, 21px, 21px, 0px); color: #000;
+								height: 62px; padding: 17px 10px 7px 24px;
+								border-top-right-radius: 0; border-bottom-right-radius: 0;
+								@include respond-to(xs) {font-size: 16px; line-height: 16px;}
+							}
+							label {
+								@include font-type($CormacB, 21px, 21px, 0px); color: #b3c6d5;
+								left: 26px; top: 21px;
+								@include respond-to(xs) {
+									font-size: 16px; line-height: 16px;
+									left: 20px; top: 29px;
+								}
+							}
+							input:valid ~ label {
+								font-size: 14px; color: #F3F6FA;
+								top: -22px; left: 0;
+							}
+						}
+						
+						.btn-search {
+							width: 66px; height: 62px;
+							background: $btn-color; border: none; border-bottom-right-radius: 5px; border-top-right-radius: 5px;
+							@include respond-to(xs) {width: 50px;}
+						}
+					}
+				}
+			}
+
 			footer {
 				position: absolute; top: 180px; right: 40px;
 				@include respond-to(md) {right: -5px; padding-left: 50px;}
 				@include respond-to(sm) {position: static; padding-top: 60px; padding-left: 40px;}
+				.main-landing & {
+					top: 132px; right: 30px;
+				}
 
 				p {
 					@include font-type($HelveticaL, 26px, 26px, 0px); text-transform: uppercase; font-weight: bold;
@@ -441,7 +522,7 @@
 	}
 
 	.pet & {
-		section {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
+		& > section {background: url('../img/index/intro2.png') no-repeat center; background-size: cover;}
 		nav > ul li {
 			&.decoration {background: #96be46; color: #fff;}
 			&.hovered {a, i {color: white;}}
@@ -452,7 +533,7 @@
 	}
 
 	.children & {
-		section {
+		& > section {
 			background: url('../img/index/intro1.png') no-repeat right center; background-size: cover;
 			@media (max-width: 360px) {background: url('../img/index/intro1.png') no-repeat -890px center; background-size: cover;}
 		}
@@ -466,7 +547,7 @@
 	}
 
 	.dobro & {
-		section {
+		& > section {
 			background: url('../img/index/intro3.png') no-repeat center; background-size: cover;
 			@include respond-to(sm) {height: 625px;}
 			@include respond-to(sm) {height: 700px;}
@@ -531,18 +612,217 @@
 	}
 
 	.fashion & {
-		section {
+		& > section {
 			background: url('../img/index/fashion-header.png') no-repeat right center; background-size: cover;
 			@media (max-width: 360px) {background: url('../img/index/fashion-header.png') no-repeat -890px center; background-size: cover;}
 		}
 	}
 	.art & {
-		section {
+		& > section {
 			background: url('../img/index/art-header.png') no-repeat right center; background-size: cover;
 			@media (max-width: 360px) {background: url('../img/index/art-header.png') no-repeat -890px center; background-size: cover;}
 		}
 	}
+
+	.main-landing & {
+		& > section {
+			background: url('../img/index/main-bg.png') no-repeat right center; background-size: cover;
+			height: 650px;
+			@include respond-to(sm) {height: 700px;}
+			@include respond-to(xs) {height: 770px;}
+			@media (max-width: 360px) {background: url('../img/index/main-bg.png') no-repeat -890px center; background-size: cover;}
+		}
+	}
+	.auction & {
+		& > section {
+			background: url('../img/index/auction-bg.png') no-repeat right center; background-size: cover;
+			height: 420px;
+			@media (max-width: 360px) {background: url('../img/index/auction-bg.png') no-repeat -890px center; background-size: cover;}
+		}
+	}
+
+	.stars & {
+		& > section {
+			background: url('../img/index/stars-bg.png') no-repeat right center; background-size: cover;
+			height: 420px;
+			@media (max-width: 360px) {background: url('../img/index/auction-bg.png') no-repeat -890px center; background-size: cover;}
+		}
+	}
 }
+
+
+//http://prntscr.com/hh6zaw
+.involvement-wrapp {
+	position: relative; top: -90px; z-index: 2;
+}
+
+//http://prntscr.com/hha40x
+article.involvement {
+	display: flex; flex-direction: column; justify-content: space-between;
+	height: 100%; padding-top: 36px; padding-bottom: 40px;
+	header {
+		width: 100%; padding-bottom: 30px; 
+		border-bottom: 1px solid #f4f4f4;
+		@include respond-to(md) {padding-bottom: 25px;}
+		h2 {
+			@include font-type($CormacB, 24px, 24px, 0.3px); color: #515c6e; text-align: center;
+			margin-bottom: 0;
+			@include respond-to(md) {font-size: 22px; line-height: 24px;}
+		}
+	}
+	section {
+		padding: 35px 10px 43px 10px;
+		p {
+			@include font-type($HelveticaR, 22px, 31px, 0.3px); color: #000; text-align: center;
+			margin-bottom: 0;
+			@include respond-to(md) {
+				    font-size: 18px; line-height: 26px;
+			}
+		}
+	}
+	footer {
+		display: flex; justify-content: center;
+		a {
+			padding: 21px 27px;
+			@include respond-to(md) {
+				font-size: 14px;
+				padding: 13px 12px;
+			}
+			@include respond-to(sm) {
+				font-size: 16px;
+				width: 90%; padding: 21px 0;
+			}
+			&.prick {
+				color: #7690a4; @include font-type($CormacB, 16px, 16px, 0); text-align: center;
+				width: 275px; padding: 20px 0;
+				border: 1px solid #c0d1dd; border-radius: 100px;
+				@include respond-to(md) {
+					font-size: 14px; line-height: 14px;
+					width: 90%; padding: 13px 0;
+				}
+				@include respond-to(sm)  {
+					font-size: 16px;
+					padding: 21px 0;
+				}
+			}	
+			i {margin-left: 3px;}		
+		}	
+	}
+}
+
+
+.list {
+	//http://prntscr.com/hh6zaw
+	&-involvement {
+		display: flex; 
+		margin: 0 -10px;
+		@include respond-to(md) {margin: 0 -5px;}
+		@include respond-to(sm) {
+			flex-direction: column;
+			margin: 0 10px;
+		}
+		& > li {
+			width: calc(33.33333% - 20px); margin: 0 10px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); background: #fff;
+			@include respond-to(sm) {width: 100%; margin: 0 0 20px 0;}
+			&:last-child {
+				@include respond-to(sm) {margin-bottom: 0;}
+			}
+		}
+	}
+
+	//http://prntscr.com/hha5hu
+	&-auction {
+		display: flex; flex-wrap: wrap;
+		margin: 0 -10px;
+		& > li {
+			width: calc(33.33333% - 20px); margin: 0 10px 20px 10px;
+			background: #fff;
+			@include respond-to(sm) {width: calc(50% - 20px);}
+			@include respond-to(xs) {width: 100%; margin: 0 0 20px 0;}
+			&:hover {box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+		}
+	}
+}
+
+.auction-wrapp {
+	padding: 27px 0;
+    background: #F3F6FA;
+    .pagination-block {
+    	padding: 10px 0 0 0;
+    }
+}
+
+//http://prntscr.com/hh6zaw
+article.auction-prew {
+	display: flex; flex-direction: column; justify-content: space-between;
+	height: 100%; width: 100%; padding-bottom: 19px;
+	header {
+		a {
+			&:hover {
+				.dark {opacity: 1;}
+			}
+			figure {
+				max-height: 240px; width: 100%; position: relative;
+				.stars & {max-height: 380px;}
+				img {max-width: 100%;}
+				figcaption {
+					width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+					.dark {
+						display: flex; align-items: flex-end;
+						padding: 20px 20px 11px 24px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; 
+						background: rgba(0,0,0,0.7);
+						opacity: 0;
+						transition: .4s ease;
+						& > ul {
+							display: flex;
+							li {
+								margin-right: 12px;
+								&:last-child {margin-right: 0;}
+								p, span {color: #fff;}
+								span {
+									@include font-type($HelveticaR, 12px, 16px, 0);
+								}
+								p {
+									@include font-type($CormacB, 52px, 52px, 0);
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section {
+		padding: 21px 20px 10px 20px;
+		h3 {
+			color: #000; @include font-type($CormacB, 20px, 26px, 0); 
+		}
+		p {
+			color: #000; @include font-type($HelveticaR, 14px, 18px, 0.2px);
+			margin-bottom: 13px;
+		}
+		div {
+			span {
+				color: #000; @include font-type($HelveticaR, 12px, 12px, 0);
+			}
+		}
+	}
+	footer {
+		padding: 0 10px 0 20px;
+		figure {
+			display: flex; align-items: center;
+			img {margin-right: 7px;}
+			figcaption {
+				color: #000; @include font-type($CormacB, 12px, 12px, 0); text-transform: uppercase;
+			}
+		}
+	}
+	
+}
+
 
 .wrapper {
 	padding-bottom: 60px; background: white;
@@ -559,6 +839,14 @@
     	article section p,
     	article section p > i {color: white;}
     	article section p {font-size: 84px; line-height: 84px;}
+    }
+
+    .main-landing & {
+    	background: url('../img/index/counter-main.png') 0 0 no-repeat; background-size: cover;
+    	article p,
+    	article section p,
+    	article section p span i,
+    	article section p > i {color: white;}
     }
 }
 
@@ -707,7 +995,6 @@
 	}
 }
 
- 
 
 .megasale {
 	padding: 25px 0 0 0; background: white;
@@ -721,6 +1008,34 @@
 	.app.index.pet &,  .app.index.children & {
 		padding: 40px 0;
 	}
+}
+
+//http://prntscr.com/hha23v
+.auction-filter {
+	padding-top: 47px; background: #F3F6FA;
+	article {
+		display: flex; justify-content: space-between; align-items: center;
+		padding: 0 3px 0 0;
+		@include respond-to(sm) {flex-direction: column; align-items: start;}
+		h2 {
+			@include font-type($CormacB, 24px, 24px, 0px);
+			margin-bottom: 0;
+			@include respond-to(sm) {margin-bottom: 15px;}
+			sup {
+				font-size: 15px;
+				position: relative; top: -11px; right: 4px; 
+			}
+		}
+		section {
+			display: flex; justify-content: flex-end; align-items: center;
+			padding-top: 10px;
+			.select {
+				margin-left: 23px;
+				&:first-child {margin-left: 0;}
+			}
+		}
+	}
+	
 }
 
 .home_product {
@@ -1221,6 +1536,9 @@
 
 .main-products {
 	position: relative; padding-top: 15px;
+	h2 {
+		@include font-type($CormacB, 24px, 30px, 0);
+	}
 	.fashion &, .art & {
 		h2 {
 			@include font-type($CormacB, 34px, 42px, 0);
