@@ -48,7 +48,6 @@ header.header {
 							}
 						}
 					}
-
 					span {
 						color: #000000; font-family: $CormacB; font-size: 15px; opacity: 0.7;
 						display: inline-block; position: relative;
@@ -60,7 +59,7 @@ header.header {
 						}
 					}
 					i {
-						margin: 0 10px; position: relative; top: 1px;
+						margin-right: 10px; position: relative; top: 1px;
 						&.icon-search {width: 15px; height: 15px; background: url('../images/icons/search-black.svg') center center no-repeat;}
 						&.icon-plus {width: 12px; height: 12px; background: url('../images/icons/plus-black.svg') center center no-repeat;}
 					}

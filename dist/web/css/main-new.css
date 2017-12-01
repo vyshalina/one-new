@@ -16951,7 +16951,7 @@ header.header {
               -webkit-transition: 0.4s ease-out;
               transition: 0.4s ease-out; }
           header.header nav.menu > ul li a i {
-            margin: 0 10px;
+            margin-right: 10px;
             position: relative;
             top: 1px; }
             header.header nav.menu > ul li a i.icon-search {
