@@ -7,8 +7,6 @@ header.header {
 	
 	transition: all 0.3s ease-out;
 	// transform: translateY(-100%); &.active {transform: translateY(0);}
-
-
 	a.logo {
 		width: 106px; height: 100%;
 		position: relative;
@@ -38,25 +36,40 @@ header.header {
 
 			li {
 				margin-right: 45px; height: 100%; &:first-child {margin-right: 30px;}
+				&.active {
+					a {
+						position: relative; cursor: default;
+						&:after {
+							content: '';
+							height: 2px; width: 100%; position: absolute; bottom: 0; left: 0;
+							background: $btn-color;
+						}
+						&:hover {
+							span {color: #000;}
+						}
+					}
+				}
 				a {
 					display: flex; justify-content: center; align-items: center;
 					height: 100%;
 					&:hover {
 						span {
-							&:after {
+							color: $link-color;
+							/*&:after {
 								width: 100%;
-							}
+							}*/
 						}
 					}
 					span {
 						color: #000000; font-family: $CormacB; font-size: 15px; opacity: 0.7;
 						display: inline-block; position: relative;
-						&:after {
+						transition: .4s ease;
+						/*&:after {
 							content: '';
 							position: absolute; left: 50%; bottom: -1px; height: 2px; width: 0%; transform: translateX(-50%);
 							background: #000000;
 							transition: 0.4s ease-out;
-						}
+						}*/
 					}
 					i {
 						margin-right: 10px; position: relative; top: 1px;
@@ -162,7 +175,16 @@ nav.menu-open {
 				&:hover {background: #EBEEF3;}
 			}
 
-			&.active {a {background: #EBEEF3;}}
+			&.active {
+				a { 
+					position: relative;
+					&:before {
+						content: '';
+						display: block; width: 2px; height: 100%; position: absolute; left: 1px; top: 0;
+						background: $btn-color;
+					}
+				}
+			}
 
 			&.languages, &.login {
 				padding: 20px 30px;

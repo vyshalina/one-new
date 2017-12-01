@@ -1,3 +1,9 @@
+//Правка картинок в галлереи на странице продукта
+#galery_wrapp {
+	figure {
+		width: auto; float: left;
+	}
+}
 .alert {
 	font-family: Cormac-Book, sans-serif; width: 100%; padding: 15px 30px; border-radius: 10px;
 	margin-bottom: 20px; margin-top: 20px;

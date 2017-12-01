@@ -9,10 +9,15 @@
 .play-video {
 	display: flex; align-items: center;
 	color: #fff; @include font-type($CormacB, 18px, 18px, 0);
-	&:hover {color: #fff;}
+
+	&:hover {
+		color: #fff;
+		& > span {background: #629CFF;}
+	}
 	& > span {
 		display: inline-block; width: 37px; height: 37px; margin-left: 15px; position: relative; top: 3px;
 		background: $btn-color; border-radius: 50%;
+		transition: .4s ease;
 		i {
 			color: #fff; font-size: 14px;
 			position: absolute !important; top: 12px; left: 14px;
@@ -386,6 +391,8 @@
 						.btn-search {
 							width: 66px; height: 62px;
 							background: $btn-color; border: none; border-bottom-right-radius: 5px; border-top-right-radius: 5px;
+							transition: .4s ease;
+							&:hover {background: #629CFF;}
 							@include respond-to(xs) {width: 50px;}
 						}
 					}
