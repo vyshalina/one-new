@@ -627,14 +627,14 @@
 
 	.fashion & {
 		& > section {
-			background: url('../img/index/fashion-header.png') no-repeat right center; background-size: cover;
+			background: url('../img/index/fashion-header.png') no-repeat right top; background-size: cover;
 			@media (max-width: 360px) {background: url('../img/index/fashion-header.png') no-repeat -890px center; background-size: cover;}
 		}
 	}
 	.art & {
 		& > section {
-			background: url('../img/index/art-header.png') no-repeat right center; background-size: cover;
-			@media (max-width: 360px) {background: url('../img/index/art-header.png') no-repeat -890px center; background-size: cover;}
+			background: url('../img/index/art-header.jpg') no-repeat right center; background-size: cover;
+			@include respond-to(xs) {background: url('../img/index/art-header.jpg') no-repeat 85% center; background-size: cover;}
 		}
 	}
 

@@ -14448,7 +14448,7 @@ button.close {
     background: #000; } }
 
 .fashion .intro > section {
-  background: url("../img/index/fashion-header.png") no-repeat right center;
+  background: url("../img/index/fashion-header.png") no-repeat right top;
   background-size: cover; }
   @media (max-width: 360px) {
     .fashion .intro > section {
@@ -14456,11 +14456,11 @@ button.close {
       background-size: cover; } }
 
 .art .intro > section {
-  background: url("../img/index/art-header.png") no-repeat right center;
+  background: url("../img/index/art-header.jpg") no-repeat right center;
   background-size: cover; }
-  @media (max-width: 360px) {
+  @media (max-width: 480px) {
     .art .intro > section {
-      background: url("../img/index/art-header.png") no-repeat -890px center;
+      background: url("../img/index/art-header.jpg") no-repeat 85% center;
       background-size: cover; } }
 
 .main-landing .intro > section {
@@ -18879,7 +18879,20 @@ a {
       margin-bottom: 35px;
       position: relative;
       left: -11px;
-      padding: 15px 120px 20px 0; }
+      padding: 15px 120px 20px 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
       @media (max-width: 767px) {
         .product-body > section .company {
           display: inline-block;
