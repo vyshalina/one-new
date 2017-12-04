@@ -10373,21 +10373,15 @@ button.close {
     cursor: pointer; }
 
 .company_logo {
-  display: block;
-  margin: 42px auto;
-  min-width: 199px;
-  min-height: 199px;
-  max-width: 200px;
-  max-height: 200px;
+  display: inline-block;
+  margin: 42px 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   position: relative; }
   .company_logo img {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    max-height: 260px; }
   .company_logo figure figcaption {
     font-family: "Cormac Extra Light", sans-serif;
     font-size: 16px;
@@ -13793,7 +13787,7 @@ button.close {
   .app.index.dobro .footer-contacts > ul > li ul.soc li a:hover i {
     color: #7A3FBF; }
   .app.index.fashion .promotion section p > i, .app.index.art .promotion section p > i {
-    color: #89a1b3; }
+    color: #000; }
   .app.index.fashion .container .btn-white, .app.index.art .container .btn-white {
     background: #000; }
   .app.index.fashion .carousel .navigation li.active, .app.index.fashion .carousel .navigation li:hover, .app.index.fashion .carousel .owl-dots .owl-dot.active, .app.index.fashion .carousel .owl-dots .owl-dot:hover, .app.index.art .carousel .navigation li.active, .app.index.art .carousel .navigation li:hover, .app.index.art .carousel .owl-dots .owl-dot.active, .app.index.art .carousel .owl-dots .owl-dot:hover {
@@ -13808,6 +13802,8 @@ button.close {
     .app.index.fashion .subscription .form .btn:hover, .app.index.fashion .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.fashion .subscription .form button:hover, .app.index.art .subscription .form .btn:hover, .app.index.art .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.art .subscription .form button:hover {
       background: #fff;
       color: #000; }
+  .app.index.fashion .footer-contacts > ul > li ul.soc li a:hover i, .app.index.art .footer-contacts > ul > li ul.soc li a:hover i {
+    color: #000; }
   .app.index .list-people {
     display: -webkit-box;
     display: -webkit-flex;

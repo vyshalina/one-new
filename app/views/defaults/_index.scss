@@ -204,7 +204,7 @@
 
 		//меняем цвет стрелочек сверху - http://prntscr.com/hbsz10
 		.promotion {
-			section p > i {color: #89a1b3}
+			section p > i {color: #000}
 		}
 
 		//меняем цвет кнопок в контенте - http://prntscr.com/hbrtu8
@@ -224,6 +224,12 @@
 			&:hover {
 				background: #fff; color: #000;
 			}
+		}
+
+		.footer {
+			&-contacts > ul > li ul.soc li a {
+				&:hover { i {color: #000;}}
+			}  
 		}
 	}
 
