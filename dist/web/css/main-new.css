@@ -752,7 +752,7 @@ td, th {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, .new_post-confirm li button > .caret, .dropup > .btn > .caret, .new_post-confirm li .dropup > button > .caret {
+  .btn > .caret, .new_post-confirm li button > .caret, .btn-transparent > .caret, .dropup > .btn > .caret, .new_post-confirm li .dropup > button > .caret, .dropup > .btn-transparent > .caret {
     border-top-color: #000 !important; }
   .label {
     border: 1px solid #000; }
@@ -2999,7 +2999,7 @@ select[multiple].input-lg, textarea.input-lg {
     padding-top: 6px;
     font-size: 12px; } }
 
-.btn, .new_post-confirm li button {
+.btn, .new_post-confirm li button, .btn-transparent {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -3021,28 +3021,28 @@ select[multiple].input-lg, textarea.input-lg {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
 
-.btn.active.focus, .new_post-confirm li button.active.focus, .btn.active:focus, .new_post-confirm li button.active:focus, .btn.focus, .new_post-confirm li button.focus, .btn:active.focus, .new_post-confirm li button:active.focus, .btn:active:focus, .new_post-confirm li button:active:focus, .btn:focus, .new_post-confirm li button:focus {
+.btn.active.focus, .new_post-confirm li button.active.focus, .active.focus.btn-transparent, .btn.active:focus, .new_post-confirm li button.active:focus, .active.btn-transparent:focus, .btn.focus, .new_post-confirm li button.focus, .focus.btn-transparent, .btn:active.focus, .new_post-confirm li button:active.focus, .btn-transparent:active.focus, .btn:active:focus, .new_post-confirm li button:active:focus, .btn-transparent:active:focus, .btn:focus, .new_post-confirm li button:focus, .btn-transparent:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
-.btn.focus, .new_post-confirm li button.focus, .btn:focus, .new_post-confirm li button:focus, .btn:hover, .new_post-confirm li button:hover {
+.btn.focus, .new_post-confirm li button.focus, .focus.btn-transparent, .btn:focus, .new_post-confirm li button:focus, .btn-transparent:focus, .btn:hover, .new_post-confirm li button:hover, .btn-transparent:hover {
   color: #333;
   text-decoration: none; }
 
-.btn.active, .new_post-confirm li button.active, .btn:active, .new_post-confirm li button:active {
+.btn.active, .new_post-confirm li button.active, .active.btn-transparent, .btn:active, .new_post-confirm li button:active, .btn-transparent:active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 
-.btn.disabled, .new_post-confirm li button.disabled, .btn[disabled], .new_post-confirm li button[disabled], fieldset[disabled] .btn, fieldset[disabled] .new_post-confirm li button, .new_post-confirm li fieldset[disabled] button {
+.btn.disabled, .new_post-confirm li button.disabled, .disabled.btn-transparent, .btn[disabled], .new_post-confirm li button[disabled], [disabled].btn-transparent, fieldset[disabled] .btn, fieldset[disabled] .new_post-confirm li button, .new_post-confirm li fieldset[disabled] button, fieldset[disabled] .btn-transparent {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
   box-shadow: none;
   opacity: .65; }
 
-a.btn.disabled, fieldset[disabled] a.btn {
+a.btn.disabled, a.disabled.btn-transparent, fieldset[disabled] a.btn, fieldset[disabled] a.btn-transparent {
   pointer-events: none; }
 
 .btn-default {
@@ -3284,21 +3284,21 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #777;
   text-decoration: none; }
 
-.btn-group-lg > .btn, .new_post-confirm li .btn-group-lg > button, .btn-lg {
+.btn-group-lg > .btn, .new_post-confirm li .btn-group-lg > button, .btn-group-lg > .btn-transparent, .btn-lg {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   -webkit-border-radius: 6px;
   border-radius: 6px; }
 
-.btn-group-sm > .btn, .new_post-confirm li .btn-group-sm > button, .btn-sm {
+.btn-group-sm > .btn, .new_post-confirm li .btn-group-sm > button, .btn-group-sm > .btn-transparent, .btn-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
-.btn-group-xs > .btn, .new_post-confirm li .btn-group-xs > button, .btn-xs {
+.btn-group-xs > .btn, .new_post-confirm li .btn-group-xs > button, .btn-group-xs > .btn-transparent, .btn-xs {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -3483,39 +3483,39 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle; }
 
-.btn-group-vertical > .btn, .new_post-confirm li .btn-group-vertical > button, .btn-group > .btn, .new_post-confirm li .btn-group > button {
+.btn-group-vertical > .btn, .new_post-confirm li .btn-group-vertical > button, .btn-group-vertical > .btn-transparent, .btn-group > .btn, .new_post-confirm li .btn-group > button, .btn-group > .btn-transparent {
   position: relative;
   float: left; }
 
-.btn-group-vertical > .btn.active, .new_post-confirm li .btn-group-vertical > button.active, .btn-group-vertical > .btn:active, .new_post-confirm li .btn-group-vertical > button:active, .btn-group-vertical > .btn:focus, .new_post-confirm li .btn-group-vertical > button:focus, .btn-group-vertical > .btn:hover, .new_post-confirm li .btn-group-vertical > button:hover, .btn-group > .btn.active, .new_post-confirm li .btn-group > button.active, .btn-group > .btn:active, .new_post-confirm li .btn-group > button:active, .btn-group > .btn:focus, .new_post-confirm li .btn-group > button:focus, .btn-group > .btn:hover, .new_post-confirm li .btn-group > button:hover {
+.btn-group-vertical > .btn.active, .new_post-confirm li .btn-group-vertical > button.active, .btn-group-vertical > .active.btn-transparent, .btn-group-vertical > .btn:active, .new_post-confirm li .btn-group-vertical > button:active, .btn-group-vertical > .btn-transparent:active, .btn-group-vertical > .btn:focus, .new_post-confirm li .btn-group-vertical > button:focus, .btn-group-vertical > .btn-transparent:focus, .btn-group-vertical > .btn:hover, .new_post-confirm li .btn-group-vertical > button:hover, .btn-group-vertical > .btn-transparent:hover, .btn-group > .btn.active, .new_post-confirm li .btn-group > button.active, .btn-group > .active.btn-transparent, .btn-group > .btn:active, .new_post-confirm li .btn-group > button:active, .btn-group > .btn-transparent:active, .btn-group > .btn:focus, .new_post-confirm li .btn-group > button:focus, .btn-group > .btn-transparent:focus, .btn-group > .btn:hover, .new_post-confirm li .btn-group > button:hover, .btn-group > .btn-transparent:hover {
   z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .new_post-confirm li button + .btn, .new_post-confirm li .btn-group button + .btn, .btn-group .new_post-confirm li .btn + button, .new_post-confirm li .btn-group .btn + button, .btn-group .new_post-confirm li button + button, .new_post-confirm li .btn-group button + button, .btn-group .btn + .btn-group, .btn-group .new_post-confirm li button + .btn-group, .new_post-confirm li .btn-group button + .btn-group, .btn-group .btn-group + .btn, .btn-group .new_post-confirm li .btn-group + button, .new_post-confirm li .btn-group .btn-group + button, .btn-group .btn-group + .btn-group {
+.btn-group .btn + .btn, .btn-group .new_post-confirm li button + .btn, .new_post-confirm li .btn-group button + .btn, .btn-group .btn-transparent + .btn, .btn-group .new_post-confirm li .btn + button, .new_post-confirm li .btn-group .btn + button, .btn-group .new_post-confirm li button + button, .new_post-confirm li .btn-group button + button, .btn-group .new_post-confirm li .btn-transparent + button, .new_post-confirm li .btn-group .btn-transparent + button, .btn-group .btn + .btn-transparent, .btn-group .new_post-confirm li button + .btn-transparent, .new_post-confirm li .btn-group button + .btn-transparent, .btn-group .btn-transparent + .btn-transparent, .btn-group .btn + .btn-group, .btn-group .new_post-confirm li button + .btn-group, .new_post-confirm li .btn-group button + .btn-group, .btn-group .btn-transparent + .btn-group, .btn-group .btn-group + .btn, .btn-group .new_post-confirm li .btn-group + button, .new_post-confirm li .btn-group .btn-group + button, .btn-group .btn-group + .btn-transparent, .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
 .btn-toolbar {
   margin-left: -5px; }
 
-.btn-toolbar .btn, .btn-toolbar .new_post-confirm li button, .new_post-confirm li .btn-toolbar button, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+.btn-toolbar .btn, .btn-toolbar .new_post-confirm li button, .new_post-confirm li .btn-toolbar button, .btn-toolbar .btn-transparent, .btn-toolbar .btn-group, .btn-toolbar .input-group {
   float: left; }
 
-.btn-toolbar > .btn, .new_post-confirm li .btn-toolbar > button, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+.btn-toolbar > .btn, .new_post-confirm li .btn-toolbar > button, .btn-toolbar > .btn-transparent, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
   margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .new_post-confirm li .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .new_post-confirm li .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn-transparent:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   -webkit-border-radius: 0;
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .new_post-confirm li .btn-group > button:first-child {
+.btn-group > .btn:first-child, .new_post-confirm li .btn-group > button:first-child, .btn-group > .btn-transparent:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .new_post-confirm li .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .new_post-confirm li .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-transparent:first-child:not(:last-child):not(.dropdown-toggle) {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .new_post-confirm li .btn-group > button:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+.btn-group > .btn:last-child:not(:first-child), .new_post-confirm li .btn-group > button:last-child:not(:first-child), .btn-group > .btn-transparent:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -3524,17 +3524,17 @@ tbody.collapse.in {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .new_post-confirm li .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .new_post-confirm li .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-transparent {
   -webkit-border-radius: 0;
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .new_post-confirm li .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .new_post-confirm li .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn-transparent:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .new_post-confirm li .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .new_post-confirm li .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn-transparent:first-child {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -3543,7 +3543,7 @@ tbody.collapse.in {
 .btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, .new_post-confirm li .btn-group > button + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .new_post-confirm li .btn-group > button + .dropdown-toggle, .btn-group > .btn-transparent + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px; }
 
@@ -3559,7 +3559,7 @@ tbody.collapse.in {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.btn .caret, .new_post-confirm li button .caret {
+.btn .caret, .new_post-confirm li button .caret, .btn-transparent .caret {
   margin-left: 0; }
 
 .btn-lg .caret {
@@ -3569,24 +3569,24 @@ tbody.collapse.in {
 .dropup .btn-lg .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .new_post-confirm li .btn-group-vertical > button, .btn-group-vertical > .btn-group, .btn-group-vertical > .btn-group > .btn, .new_post-confirm li .btn-group-vertical > .btn-group > button {
+.btn-group-vertical > .btn, .new_post-confirm li .btn-group-vertical > button, .btn-group-vertical > .btn-transparent, .btn-group-vertical > .btn-group, .btn-group-vertical > .btn-group > .btn, .new_post-confirm li .btn-group-vertical > .btn-group > button, .btn-group-vertical > .btn-group > .btn-transparent {
   display: block;
   float: none;
   width: 100%;
   max-width: 100%; }
 
-.btn-group-vertical > .btn-group > .btn, .new_post-confirm li .btn-group-vertical > .btn-group > button {
+.btn-group-vertical > .btn-group > .btn, .new_post-confirm li .btn-group-vertical > .btn-group > button, .btn-group-vertical > .btn-group > .btn-transparent {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .new_post-confirm li .btn-group-vertical > button + .btn, .new_post-confirm li .btn-group-vertical > .btn + button, .new_post-confirm li .btn-group-vertical > button + button, .btn-group-vertical > .btn + .btn-group, .new_post-confirm li .btn-group-vertical > button + .btn-group, .btn-group-vertical > .btn-group + .btn, .new_post-confirm li .btn-group-vertical > .btn-group + button, .btn-group-vertical > .btn-group + .btn-group {
+.btn-group-vertical > .btn + .btn, .new_post-confirm li .btn-group-vertical > button + .btn, .btn-group-vertical > .btn-transparent + .btn, .new_post-confirm li .btn-group-vertical > .btn + button, .new_post-confirm li .btn-group-vertical > button + button, .new_post-confirm li .btn-group-vertical > .btn-transparent + button, .btn-group-vertical > .btn + .btn-transparent, .new_post-confirm li .btn-group-vertical > button + .btn-transparent, .btn-group-vertical > .btn-transparent + .btn-transparent, .btn-group-vertical > .btn + .btn-group, .new_post-confirm li .btn-group-vertical > button + .btn-group, .btn-group-vertical > .btn-transparent + .btn-group, .btn-group-vertical > .btn-group + .btn, .new_post-confirm li .btn-group-vertical > .btn-group + button, .btn-group-vertical > .btn-group + .btn-transparent, .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .new_post-confirm li .btn-group-vertical > button:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .new_post-confirm li .btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > .btn-transparent:not(:first-child):not(:last-child) {
   -webkit-border-radius: 0;
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .new_post-confirm li .btn-group-vertical > button:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .new_post-confirm li .btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > .btn-transparent:first-child:not(:last-child) {
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -3596,7 +3596,7 @@ tbody.collapse.in {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .new_post-confirm li .btn-group-vertical > button:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .new_post-confirm li .btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > .btn-transparent:last-child:not(:first-child) {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
@@ -3606,17 +3606,17 @@ tbody.collapse.in {
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .new_post-confirm li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .new_post-confirm li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-transparent {
   -webkit-border-radius: 0;
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .new_post-confirm li .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .new_post-confirm li .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-transparent:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .new_post-confirm li .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .new_post-confirm li .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-transparent:first-child {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
@@ -3628,18 +3628,18 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate; }
 
-.btn-group-justified > .btn, .new_post-confirm li .btn-group-justified > button, .btn-group-justified > .btn-group {
+.btn-group-justified > .btn, .new_post-confirm li .btn-group-justified > button, .btn-group-justified > .btn-transparent, .btn-group-justified > .btn-group {
   display: table-cell;
   float: none;
   width: 1%; }
 
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .new_post-confirm li button, .new_post-confirm li .btn-group-justified > .btn-group button {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .new_post-confirm li button, .new_post-confirm li .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .btn-transparent {
   width: 100%; }
 
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto; }
 
-[data-toggle=buttons] > .btn input[type=checkbox], .new_post-confirm li [data-toggle=buttons] > button input[type=checkbox], [data-toggle=buttons] > .btn input[type=radio], .new_post-confirm li [data-toggle=buttons] > button input[type=radio], [data-toggle=buttons] > .btn-group > .btn input[type=checkbox], .new_post-confirm li [data-toggle=buttons] > .btn-group > button input[type=checkbox], [data-toggle=buttons] > .btn-group > .btn input[type=radio], .new_post-confirm li [data-toggle=buttons] > .btn-group > button input[type=radio] {
+[data-toggle=buttons] > .btn input[type=checkbox], .new_post-confirm li [data-toggle=buttons] > button input[type=checkbox], [data-toggle=buttons] > .btn-transparent input[type=checkbox], [data-toggle=buttons] > .btn input[type=radio], .new_post-confirm li [data-toggle=buttons] > button input[type=radio], [data-toggle=buttons] > .btn-transparent input[type=radio], [data-toggle=buttons] > .btn-group > .btn input[type=checkbox], .new_post-confirm li [data-toggle=buttons] > .btn-group > button input[type=checkbox], [data-toggle=buttons] > .btn-group > .btn-transparent input[type=checkbox], [data-toggle=buttons] > .btn-group > .btn input[type=radio], .new_post-confirm li [data-toggle=buttons] > .btn-group > button input[type=radio], [data-toggle=buttons] > .btn-group > .btn-transparent input[type=radio] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -3664,7 +3664,7 @@ tbody.collapse.in {
 .input-group .form-control:focus {
   z-index: 3; }
 
-.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .new_post-confirm li .input-group-lg > .input-group-btn > button {
+.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .new_post-confirm li .input-group-lg > .input-group-btn > button, .input-group-lg > .input-group-btn > .btn-transparent {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -3672,14 +3672,14 @@ tbody.collapse.in {
   -webkit-border-radius: 6px;
   border-radius: 6px; }
 
-select.input-group-lg > .form-control, select.input-group-lg > .input-group-addon, select.input-group-lg > .input-group-btn > .btn, .new_post-confirm li select.input-group-lg > .input-group-btn > button {
+select.input-group-lg > .form-control, select.input-group-lg > .input-group-addon, select.input-group-lg > .input-group-btn > .btn, .new_post-confirm li select.input-group-lg > .input-group-btn > button, select.input-group-lg > .input-group-btn > .btn-transparent {
   height: 46px;
   line-height: 46px; }
 
-select[multiple].input-group-lg > .form-control, select[multiple].input-group-lg > .input-group-addon, select[multiple].input-group-lg > .input-group-btn > .btn, .new_post-confirm li select[multiple].input-group-lg > .input-group-btn > button, textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-addon, textarea.input-group-lg > .input-group-btn > .btn, .new_post-confirm li textarea.input-group-lg > .input-group-btn > button {
+select[multiple].input-group-lg > .form-control, select[multiple].input-group-lg > .input-group-addon, select[multiple].input-group-lg > .input-group-btn > .btn, .new_post-confirm li select[multiple].input-group-lg > .input-group-btn > button, select[multiple].input-group-lg > .input-group-btn > .btn-transparent, textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-addon, textarea.input-group-lg > .input-group-btn > .btn, .new_post-confirm li textarea.input-group-lg > .input-group-btn > button, textarea.input-group-lg > .input-group-btn > .btn-transparent {
   height: auto; }
 
-.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn, .new_post-confirm li .input-group-sm > .input-group-btn > button {
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn, .new_post-confirm li .input-group-sm > .input-group-btn > button, .input-group-sm > .input-group-btn > .btn-transparent {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -3687,11 +3687,11 @@ select[multiple].input-group-lg > .form-control, select[multiple].input-group-lg
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
-select.input-group-sm > .form-control, select.input-group-sm > .input-group-addon, select.input-group-sm > .input-group-btn > .btn, .new_post-confirm li select.input-group-sm > .input-group-btn > button {
+select.input-group-sm > .form-control, select.input-group-sm > .input-group-addon, select.input-group-sm > .input-group-btn > .btn, .new_post-confirm li select.input-group-sm > .input-group-btn > button, select.input-group-sm > .input-group-btn > .btn-transparent {
   height: 30px;
   line-height: 30px; }
 
-select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm > .input-group-addon, select[multiple].input-group-sm > .input-group-btn > .btn, .new_post-confirm li select[multiple].input-group-sm > .input-group-btn > button, textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-addon, textarea.input-group-sm > .input-group-btn > .btn, .new_post-confirm li textarea.input-group-sm > .input-group-btn > button {
+select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm > .input-group-addon, select[multiple].input-group-sm > .input-group-btn > .btn, .new_post-confirm li select[multiple].input-group-sm > .input-group-btn > button, select[multiple].input-group-sm > .input-group-btn > .btn-transparent, textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-addon, textarea.input-group-sm > .input-group-btn > .btn, .new_post-confirm li textarea.input-group-sm > .input-group-btn > button, textarea.input-group-sm > .input-group-btn > .btn-transparent {
   height: auto; }
 
 .input-group .form-control, .input-group-addon, .input-group-btn {
@@ -3733,7 +3733,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .input-group-addon input[type=checkbox], .input-group-addon input[type=radio] {
   margin-top: 0; }
 
-.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .new_post-confirm li .input-group-btn:first-child > button, .input-group-btn:first-child > .btn-group > .btn, .new_post-confirm li .input-group-btn:first-child > .btn-group > button, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .new_post-confirm li .input-group-btn:last-child > .btn-group:not(:last-child) > button, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .new_post-confirm li .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle) {
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .new_post-confirm li .input-group-btn:first-child > button, .input-group-btn:first-child > .btn-transparent, .input-group-btn:first-child > .btn-group > .btn, .new_post-confirm li .input-group-btn:first-child > .btn-group > button, .input-group-btn:first-child > .btn-group > .btn-transparent, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .new_post-confirm li .input-group-btn:last-child > .btn-group:not(:last-child) > button, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn-transparent, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .new_post-confirm li .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-transparent:not(:last-child):not(.dropdown-toggle) {
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -3742,7 +3742,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .input-group-addon:first-child {
   border-right: 0; }
 
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .new_post-confirm li .input-group-btn:first-child > .btn-group:not(:first-child) > button, .input-group-btn:first-child > .btn:not(:first-child), .new_post-confirm li .input-group-btn:first-child > button:not(:first-child), .input-group-btn:last-child > .btn, .new_post-confirm li .input-group-btn:last-child > button, .input-group-btn:last-child > .btn-group > .btn, .new_post-confirm li .input-group-btn:last-child > .btn-group > button, .input-group-btn:last-child > .dropdown-toggle {
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .new_post-confirm li .input-group-btn:first-child > .btn-group:not(:first-child) > button, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn-transparent, .input-group-btn:first-child > .btn:not(:first-child), .new_post-confirm li .input-group-btn:first-child > button:not(:first-child), .input-group-btn:first-child > .btn-transparent:not(:first-child), .input-group-btn:last-child > .btn, .new_post-confirm li .input-group-btn:last-child > button, .input-group-btn:last-child > .btn-transparent, .input-group-btn:last-child > .btn-group > .btn, .new_post-confirm li .input-group-btn:last-child > .btn-group > button, .input-group-btn:last-child > .btn-group > .btn-transparent, .input-group-btn:last-child > .dropdown-toggle {
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -3756,19 +3756,19 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   font-size: 0;
   white-space: nowrap; }
 
-.input-group-btn > .btn, .new_post-confirm li .input-group-btn > button {
+.input-group-btn > .btn, .new_post-confirm li .input-group-btn > button, .input-group-btn > .btn-transparent {
   position: relative; }
 
-.input-group-btn > .btn + .btn, .new_post-confirm li .input-group-btn > button + .btn, .new_post-confirm li .input-group-btn > .btn + button, .new_post-confirm li .input-group-btn > button + button {
+.input-group-btn > .btn + .btn, .new_post-confirm li .input-group-btn > button + .btn, .input-group-btn > .btn-transparent + .btn, .new_post-confirm li .input-group-btn > .btn + button, .new_post-confirm li .input-group-btn > button + button, .new_post-confirm li .input-group-btn > .btn-transparent + button, .input-group-btn > .btn + .btn-transparent, .new_post-confirm li .input-group-btn > button + .btn-transparent, .input-group-btn > .btn-transparent + .btn-transparent {
   margin-left: -1px; }
 
-.input-group-btn > .btn:active, .new_post-confirm li .input-group-btn > button:active, .input-group-btn > .btn:focus, .new_post-confirm li .input-group-btn > button:focus, .input-group-btn > .btn:hover, .new_post-confirm li .input-group-btn > button:hover {
+.input-group-btn > .btn:active, .new_post-confirm li .input-group-btn > button:active, .input-group-btn > .btn-transparent:active, .input-group-btn > .btn:focus, .new_post-confirm li .input-group-btn > button:focus, .input-group-btn > .btn-transparent:focus, .input-group-btn > .btn:hover, .new_post-confirm li .input-group-btn > button:hover, .input-group-btn > .btn-transparent:hover {
   z-index: 2; }
 
-.input-group-btn:first-child > .btn, .new_post-confirm li .input-group-btn:first-child > button, .input-group-btn:first-child > .btn-group {
+.input-group-btn:first-child > .btn, .new_post-confirm li .input-group-btn:first-child > button, .input-group-btn:first-child > .btn-transparent, .input-group-btn:first-child > .btn-group {
   margin-right: -1px; }
 
-.input-group-btn:last-child > .btn, .new_post-confirm li .input-group-btn:last-child > button, .input-group-btn:last-child > .btn-group {
+.input-group-btn:last-child > .btn, .new_post-confirm li .input-group-btn:last-child > button, .input-group-btn:last-child > .btn-transparent, .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px; }
 
@@ -4539,7 +4539,7 @@ a.label:focus, a.label:hover {
 .label:empty {
   display: none; }
 
-.btn .label, .new_post-confirm li button .label {
+.btn .label, .new_post-confirm li button .label, .btn-transparent .label {
   position: relative;
   top: -1px; }
 
@@ -4597,11 +4597,11 @@ a.label:focus, a.label:hover {
 .badge:empty {
   display: none; }
 
-.btn .badge, .new_post-confirm li button .badge {
+.btn .badge, .new_post-confirm li button .badge, .btn-transparent .badge {
   position: relative;
   top: -1px; }
 
-.btn-group-xs > .btn .badge, .new_post-confirm li .btn-group-xs > button .badge, .btn-xs .badge {
+.btn-group-xs > .btn .badge, .new_post-confirm li .btn-group-xs > button .badge, .btn-group-xs > .btn-transparent .badge, .btn-xs .badge {
   top: 0;
   padding: 1px 5px; }
 
@@ -5455,11 +5455,11 @@ button.close {
   text-align: right;
   border-top: 1px solid #e5e5e5; }
 
-.modal-footer .btn + .btn, .modal-footer .new_post-confirm li button + .btn, .new_post-confirm li .modal-footer button + .btn, .modal-footer .new_post-confirm li .btn + button, .new_post-confirm li .modal-footer .btn + button, .modal-footer .new_post-confirm li button + button, .new_post-confirm li .modal-footer button + button {
+.modal-footer .btn + .btn, .modal-footer .new_post-confirm li button + .btn, .new_post-confirm li .modal-footer button + .btn, .modal-footer .btn-transparent + .btn, .modal-footer .new_post-confirm li .btn + button, .new_post-confirm li .modal-footer .btn + button, .modal-footer .new_post-confirm li button + button, .new_post-confirm li .modal-footer button + button, .modal-footer .new_post-confirm li .btn-transparent + button, .new_post-confirm li .modal-footer .btn-transparent + button, .modal-footer .btn + .btn-transparent, .modal-footer .new_post-confirm li button + .btn-transparent, .new_post-confirm li .modal-footer button + .btn-transparent, .modal-footer .btn-transparent + .btn-transparent {
   margin-bottom: 0;
   margin-left: 5px; }
 
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .new_post-confirm li button + .btn, .new_post-confirm li .modal-footer .btn-group button + .btn, .modal-footer .btn-group .new_post-confirm li .btn + button, .new_post-confirm li .modal-footer .btn-group .btn + button, .modal-footer .btn-group .new_post-confirm li button + button, .new_post-confirm li .modal-footer .btn-group button + button {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .new_post-confirm li button + .btn, .new_post-confirm li .modal-footer .btn-group button + .btn, .modal-footer .btn-group .btn-transparent + .btn, .modal-footer .btn-group .new_post-confirm li .btn + button, .new_post-confirm li .modal-footer .btn-group .btn + button, .modal-footer .btn-group .new_post-confirm li button + button, .new_post-confirm li .modal-footer .btn-group button + button, .modal-footer .btn-group .new_post-confirm li .btn-transparent + button, .new_post-confirm li .modal-footer .btn-group .btn-transparent + button, .modal-footer .btn-group .btn + .btn-transparent, .modal-footer .btn-group .new_post-confirm li button + .btn-transparent, .new_post-confirm li .modal-footer .btn-group button + .btn-transparent, .modal-footer .btn-group .btn-transparent + .btn-transparent {
   margin-left: -1px; }
 
 .modal-footer .btn-block + .btn-block {
@@ -5907,7 +5907,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
 
-.carousel-caption .btn, .carousel-caption .new_post-confirm li button, .new_post-confirm li .carousel-caption button {
+.carousel-caption .btn, .carousel-caption .new_post-confirm li button, .new_post-confirm li .carousel-caption button, .carousel-caption .btn-transparent {
   text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -10431,7 +10431,7 @@ button.close {
       position: absolute;
       bottom: 32px;
       width: 100%; }
-      .company-me figure figcaption .btn, .company-me figure figcaption .new_post-confirm li button, .new_post-confirm li .company-me figure figcaption button {
+      .company-me figure figcaption .btn, .company-me figure figcaption .new_post-confirm li button, .new_post-confirm li .company-me figure figcaption button, .company-me figure figcaption .btn-transparent {
         line-height: 35px;
         letter-spacing: 0;
         height: 60px;
@@ -11568,7 +11568,7 @@ button.close {
             float: left; } }
         .user-ads tr.open.mark .reaction .bottom a {
           display: inline-block; }
-          .user-ads tr.open.mark .reaction .bottom a.btn {
+          .user-ads tr.open.mark .reaction .bottom a.btn, .user-ads tr.open.mark .reaction .bottom a.btn-transparent {
             margin-left: 20px; }
     @media (max-width: 991px) {
       .user-ads tr.open td {
@@ -11610,9 +11610,9 @@ button.close {
             color: #ff455c;
             display: block;
             margin-top: 20px; }
-            .user-ads tr.open td:first-child > div .reaction a.btn {
+            .user-ads tr.open td:first-child > div .reaction a.btn, .user-ads tr.open td:first-child > div .reaction a.btn-transparent {
               color: #fff; }
-              .user-ads tr.open td:first-child > div .reaction a.btn:hover {
+              .user-ads tr.open td:first-child > div .reaction a.btn:hover, .user-ads tr.open td:first-child > div .reaction a.btn-transparent:hover {
                 color: #4489ff; }
             @media (max-width: 767px) {
               .user-ads tr.open td:first-child > div .reaction a {
@@ -11832,7 +11832,7 @@ button.close {
             float: left; } }
         .user-goods tr.open.mark .reaction .bottom a {
           display: inline-block; }
-          .user-goods tr.open.mark .reaction .bottom a.btn {
+          .user-goods tr.open.mark .reaction .bottom a.btn, .user-goods tr.open.mark .reaction .bottom a.btn-transparent {
             margin-left: 20px; }
     @media (max-width: 991px) {
       .user-goods tr.open td {
@@ -11874,9 +11874,9 @@ button.close {
             color: #ff455c;
             display: block;
             margin-top: 20px; }
-            .user-goods tr.open td:first-child > div .reaction a.btn {
+            .user-goods tr.open td:first-child > div .reaction a.btn, .user-goods tr.open td:first-child > div .reaction a.btn-transparent {
               color: #fff; }
-              .user-goods tr.open td:first-child > div .reaction a.btn:hover {
+              .user-goods tr.open td:first-child > div .reaction a.btn:hover, .user-goods tr.open td:first-child > div .reaction a.btn-transparent:hover {
                 color: #4489ff; }
             @media (max-width: 767px) {
               .user-goods tr.open td:first-child > div .reaction a {
@@ -12887,7 +12887,7 @@ button.close {
     .found-about header address {
       letter-spacing: 0.1px;
       line-height: 22px; }
-    .found-about header a.btn {
+    .found-about header a.btn, .found-about header a.btn-transparent {
       font-size: 16px;
       letter-spacing: 0.2px;
       padding: 10px 30px;
@@ -13290,13 +13290,13 @@ button.close {
           .booking-proc section .form-btn-group {
             display: block;
             text-align: center; } }
-        .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button {
+        .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button, .booking-proc section .form-btn-group .btn-transparent {
           margin-right: 40px;
           left: 3px;
           right: auto;
           padding: 12px 0; }
           @media (max-width: 767px) {
-            .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button {
+            .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button, .booking-proc section .form-btn-group .btn-transparent {
               display: inline-block;
               margin-right: 0; } }
         .booking-proc section .form-btn-group a {
@@ -13573,12 +13573,12 @@ button.close {
       @media (max-width: 767px) {
         .booking-proc section .info .btn-gr {
           text-align: center; } }
-      .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button {
+      .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button, .booking-proc section .info .btn-gr .btn-transparent {
         font-family: "Cormac Extra Light", sans-serif;
         margin-right: 33px;
         padding: 15px 28px; }
         @media (max-width: 767px) {
-          .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button {
+          .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button, .booking-proc section .info .btn-gr .btn-transparent {
             margin-bottom: 20px;
             margin-right: 0; } }
       .booking-proc section .info .btn-gr a {
@@ -13603,7 +13603,7 @@ button.close {
         .booking-proc section .info .btn-gr a:hover:after {
           width: 50%; }
 
-.btn.white, .new_post-confirm li button.white {
+.btn.white, .new_post-confirm li button.white, .white.btn-transparent {
   color: #000;
   background: #fff;
   border-color: #fff; }
@@ -13734,10 +13734,10 @@ button.close {
     background: #96be46; }
     .app.index.pet .container .btn-white:hover {
       background: #abca6d; }
-  .app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button {
+  .app.index.pet .subscription .form .btn, .app.index.pet .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.pet .subscription .form button, .app.index.pet .subscription .form .btn-transparent {
     background: #96be46;
     border-color: #96be46; }
-    .app.index.pet .subscription .form .btn:hover, .app.index.pet .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.pet .subscription .form button:hover {
+    .app.index.pet .subscription .form .btn:hover, .app.index.pet .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.pet .subscription .form button:hover, .app.index.pet .subscription .form .btn-transparent:hover {
       background: #fff;
       color: #96be46; }
   .app.index.pet .footer-contacts > ul > li ul.soc li a:hover i {
@@ -13752,10 +13752,10 @@ button.close {
     background: #E8B194; }
     .app.index.children .container .btn-white:hover {
       background: #efc3ac; }
-  .app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button {
+  .app.index.children .subscription .form .btn, .app.index.children .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.children .subscription .form button, .app.index.children .subscription .form .btn-transparent {
     background: #e8b194;
     border-color: #e8b194; }
-    .app.index.children .subscription .form .btn:hover, .app.index.children .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.children .subscription .form button:hover {
+    .app.index.children .subscription .form .btn:hover, .app.index.children .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.children .subscription .form button:hover, .app.index.children .subscription .form .btn-transparent:hover {
       background: #fff;
       color: #e8b194; }
   .app.index.children .footer-contacts > ul > li ul.soc li a:hover i {
@@ -13778,10 +13778,10 @@ button.close {
     background: #7A3FBF; }
   .app.index.dobro .container .btn-white {
     background: #7A3FBF; }
-  .app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button {
+  .app.index.dobro .subscription .form .btn, .app.index.dobro .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.dobro .subscription .form button, .app.index.dobro .subscription .form .btn-transparent {
     background: #7A3FBF;
     border-color: #7A3FBF; }
-    .app.index.dobro .subscription .form .btn:hover, .app.index.dobro .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.dobro .subscription .form button:hover {
+    .app.index.dobro .subscription .form .btn:hover, .app.index.dobro .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.dobro .subscription .form button:hover, .app.index.dobro .subscription .form .btn-transparent:hover {
       background: #fff;
       color: #7A3FBF; }
   .app.index.dobro .footer-contacts > ul > li ul.soc li a:hover i {
@@ -13792,14 +13792,14 @@ button.close {
     background: #000; }
   .app.index.fashion .carousel .navigation li.active, .app.index.fashion .carousel .navigation li:hover, .app.index.fashion .carousel .owl-dots .owl-dot.active, .app.index.fashion .carousel .owl-dots .owl-dot:hover, .app.index.art .carousel .navigation li.active, .app.index.art .carousel .navigation li:hover, .app.index.art .carousel .owl-dots .owl-dot.active, .app.index.art .carousel .owl-dots .owl-dot:hover {
     background: #414141; }
-  .app.index.fashion .subscription .form .btn, .app.index.fashion .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.fashion .subscription .form button, .app.index.art .subscription .form .btn, .app.index.art .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.art .subscription .form button {
+  .app.index.fashion .subscription .form .btn, .app.index.fashion .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.fashion .subscription .form button, .app.index.fashion .subscription .form .btn-transparent, .app.index.art .subscription .form .btn, .app.index.art .subscription .form .new_post-confirm li button, .new_post-confirm li .app.index.art .subscription .form button, .app.index.art .subscription .form .btn-transparent {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     background: #000;
     border-color: #000; }
-    .app.index.fashion .subscription .form .btn:hover, .app.index.fashion .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.fashion .subscription .form button:hover, .app.index.art .subscription .form .btn:hover, .app.index.art .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.art .subscription .form button:hover {
+    .app.index.fashion .subscription .form .btn:hover, .app.index.fashion .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.fashion .subscription .form button:hover, .app.index.fashion .subscription .form .btn-transparent:hover, .app.index.art .subscription .form .btn:hover, .app.index.art .subscription .form .new_post-confirm li button:hover, .new_post-confirm li .app.index.art .subscription .form button:hover, .app.index.art .subscription .form .btn-transparent:hover {
       background: #fff;
       color: #000; }
   .app.index.fashion .footer-contacts > ul > li ul.soc li a:hover i, .app.index.art .footer-contacts > ul > li ul.soc li a:hover i {
@@ -14153,6 +14153,9 @@ button.close {
 .intro nav {
   margin-top: -32px;
   background: white; }
+  @media (max-width: 1199px) {
+    .intro nav {
+      padding: 0 15px; } }
   .intro nav > ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -14493,6 +14496,517 @@ button.close {
   height: 420px; }
   @media (max-width: 360px) {
     .stars .intro > section {
+      background: url("../img/index/auction-bg.png") no-repeat -890px center;
+      background-size: cover; } }
+
+.intro-new > section {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), color-stop(40%, rgba(0, 0, 0, 0.3)), to(rgba(5, 171, 224, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(5, 171, 224, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(5, 171, 224, 0) 100%);
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  background: url("../img/index/bg.jpg") no-repeat center;
+  background-size: cover; }
+  @media (max-width: 480px) {
+    .intro-new > section {
+      height: 575px; } }
+  .intro-new > section article {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-transition: height .6s, opacity .4s ease-out;
+    transition: height .6s, opacity .4s ease-out;
+    width: 100%;
+    padding: 143px 15px 0;
+    min-height: 570px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none; }
+    @media (max-width: 991px) {
+      .intro-new > section article {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    @media (max-width: 480px) {
+      .intro-new > section article {
+        min-height: 500px;
+        padding-top: 105px; } }
+    .intro-new > section article.active {
+      opacity: 1;
+      pointer-events: auto; }
+    .intro-new > section article header {
+      max-width: 50%; }
+      @media (max-width: 991px) {
+        .intro-new > section article header {
+          max-width: none;
+          width: 100%;
+          margin-bottom: 50px; } }
+      @media (max-width: 767px) {
+        .intro-new > section article header {
+          margin-bottom: 30px; } }
+      .main-landing .intro-new > section article header {
+        padding-left: 0;
+        margin-top: 176px; }
+      .auction .intro-new > section article header, .stars .intro-new > section article header {
+        text-align: center;
+        padding-left: 0;
+        margin-top: 134px; }
+      .intro-new > section article header hgroup > *:last-child {
+        margin-bottom: 0; }
+      .intro-new > section article header hgroup:last-child {
+        margin-bottom: 0; }
+      .intro-new > section article header hgroup h2 {
+        color: #fff;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 74px;
+        line-height: 70px;
+        letter-spacing: -1px;
+        margin-bottom: 20px; }
+        @media (max-width: 767px) {
+          .intro-new > section article header hgroup h2 {
+            font-size: 58px;
+            line-height: 54px; } }
+        @media (max-width: 480px) {
+          .intro-new > section article header hgroup h2 {
+            font-size: 40px;
+            line-height: 44px; } }
+      .intro-new > section article header hgroup h3 {
+        color: #fff;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 44px;
+        line-height: 48px;
+        letter-spacing: -1px; }
+        @media (max-width: 767px) {
+          .intro-new > section article header hgroup h3 {
+            font-size: 28px;
+            line-height: 38px; } }
+        @media (max-width: 480px) {
+          .intro-new > section article header hgroup h3 {
+            font-size: 20px;
+            line-height: 26px; } }
+      .intro-new > section article header p {
+        font-family: Cormac-Book, sans-serif;
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        margin-bottom: 86px; }
+        @media (max-width: 767px) {
+          .intro-new > section article header p {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 42px; } }
+        @media (max-width: 480px) {
+          .intro-new > section article header p {
+            margin-left: -10px; } }
+        .auction .intro-new > section article header p, .stars .intro-new > section article header p {
+          margin-bottom: 26px; }
+          @media (max-width: 480px) {
+            .auction .intro-new > section article header p, .stars .intro-new > section article header p {
+              font-size: 16px; } }
+    .intro-new > section article footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      @media (max-width: 991px) {
+        .intro-new > section article footer {
+          width: 100%;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+          justify-content: flex-end; } }
+      .intro-new > section article footer p {
+        font-family: "HelveticaLight", sans-serif;
+        font-size: 26px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative; }
+        @media (max-width: 991px) {
+          .intro-new > section article footer p {
+            margin-bottom: 30px;
+            padding-left: 26px; } }
+        .intro-new > section article footer p span {
+          position: relative;
+          left: -26px;
+          display: block;
+          font-family: Cormac-Book, sans-serif;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 0;
+          text-transform: none; }
+          .intro-new > section article footer p span i {
+            margin-right: 11px; }
+
+.intro-new nav {
+  margin-top: -32px;
+  background: white; }
+  @media (max-width: 1199px) {
+    .intro-new nav {
+      padding: 0 15px; } }
+  .intro-new nav > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 984px;
+    height: 64px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 767px) {
+      .intro-new nav > ul {
+        width: 100%; } }
+    .intro-new nav > ul li {
+      height: 100%;
+      width: 26.3%;
+      position: relative;
+      z-index: 1; }
+      @media (max-width: 767px) {
+        .intro-new nav > ul li {
+          width: 100%;
+          height: 64px; } }
+      .intro-new nav > ul li.decoration, .intro-new nav > ul li:nth-child(2) {
+        width: 24.6%; }
+        @media (max-width: 767px) {
+          .intro-new nav > ul li.decoration, .intro-new nav > ul li:nth-child(2) {
+            width: 100%;
+            height: 64px; } }
+        .intro-new nav > ul li.decoration a, .intro-new nav > ul li:nth-child(2) a {
+          -webkit-box-pack: start;
+          -webkit-justify-content: start;
+          -ms-flex-pack: start;
+          justify-content: start;
+          padding-left: 50px; }
+          .intro-new nav > ul li.decoration a i, .intro-new nav > ul li:nth-child(2) a i {
+            right: 24px; }
+      .intro-new nav > ul li a, .intro-new nav > ul li i {
+        -webkit-transition: color 1s ease, padding .2s linear;
+        transition: color 1s ease, padding .2s linear; }
+      .intro-new nav > ul li a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #4489FF;
+        font-family: Cormac-Book, sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding-right: 50px;
+        padding-left: 32px;
+        position: relative; }
+        .intro-new nav > ul li a i {
+          color: #4489FF;
+          font-size: 30px;
+          position: absolute;
+          right: 0;
+          top: 16px; }
+      .intro-new nav > ul li:last-child {
+        width: 22.6%; }
+        .intro-new nav > ul li:last-child a {
+          padding-right: 0 !important; }
+          .intro-new nav > ul li:last-child a i {
+            display: none; }
+      .intro-new nav > ul li.hovered a, .intro-new nav > ul li.hovered i {
+        color: white; }
+      .intro-new nav > ul li.decoration {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #4489FF;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+        -webkit-transition: width .4s ease;
+        transition: width .4s ease; }
+  @media (max-width: 1199px) {
+    .intro-new nav > ul {
+      width: 100%; }
+      .intro-new nav > ul li {
+        width: 25%; }
+        .intro-new nav > ul li a {
+          padding-right: 20px; }
+        .intro-new nav > ul li.selectedLava a {
+          padding-right: 20px; } }
+  @media (max-width: 767px) {
+    .intro-new nav {
+      margin-top: 25px; }
+      .intro-new nav > ul {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        width: 120px;
+        height: 10px;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+        .intro-new nav > ul li {
+          width: 25% !important;
+          height: 100% !important; }
+          .intro-new nav > ul li.decoration {
+            display: none; }
+          .intro-new nav > ul li a {
+            padding: 0 !important;
+            display: block;
+            width: 19px;
+            height: 8px;
+            margin: 0 5px;
+            background: #d9deea;
+            -webkit-border-radius: 10px;
+            border-radius: 10px; }
+            .intro-new nav > ul li a span {
+              display: none; }
+            .intro-new nav > ul li a i {
+              display: none; }
+          .intro-new nav > ul li.hovered a {
+            background: #4489FF; } }
+
+.pet .intro-new > section {
+  background: url("../img/index/intro2.png") no-repeat center;
+  background-size: cover; }
+
+.pet .intro-new nav > ul li.decoration {
+  background: #96be46;
+  color: #fff; }
+
+.pet .intro-new nav > ul li.hovered a, .pet .intro-new nav > ul li.hovered i {
+  color: white; }
+
+.pet .intro-new nav > ul li a, .pet .intro-new nav > ul li i {
+  color: #96be46; }
+
+@media (max-width: 767px) {
+  .pet .intro-new nav > ul li.hovered a {
+    background: #96be46; } }
+
+.children .intro-new > section {
+  background: url("../img/index/intro1.png") no-repeat right center;
+  background-size: cover; }
+  @media (max-width: 360px) {
+    .children .intro-new > section {
+      background: url("../img/index/intro1.png") no-repeat -890px center;
+      background-size: cover; } }
+
+.children .intro-new nav > ul li.decoration {
+  background: #E8B194;
+  color: #fff; }
+
+.children .intro-new nav > ul li.hovered a, .children .intro-new nav > ul li.hovered i {
+  color: white; }
+
+.children .intro-new nav > ul li a, .children .intro-new nav > ul li i {
+  color: #E8B194; }
+
+@media (max-width: 767px) {
+  .children .intro-new nav > ul li.hovered a {
+    background: #E8B194; } }
+
+.dobro .intro-new > section {
+  background: url("../img/index/intro3.png") no-repeat center;
+  background-size: cover; }
+  @media (max-width: 767px) {
+    .dobro .intro-new > section {
+      height: 625px; } }
+  @media (max-width: 767px) {
+    .dobro .intro-new > section {
+      height: 700px; } }
+  .dobro .intro-new > section article header {
+    padding-left: 199px;
+    margin-top: 228px;
+    position: relative; }
+    @media (max-width: 1199px) {
+      .dobro .intro-new > section article header {
+        margin-top: 155px; } }
+    @media (max-width: 991px) {
+      .dobro .intro-new > section article header {
+        padding-left: 100px; } }
+    @media (max-width: 767px) {
+      .dobro .intro-new > section article header {
+        margin-top: 100px;
+        padding-left: 0; } }
+    .dobro .intro-new > section article header figure {
+      position: absolute;
+      top: -17px;
+      left: 60px; }
+      @media (max-width: 991px) {
+        .dobro .intro-new > section article header figure {
+          left: 0; } }
+      @media (max-width: 767px) {
+        .dobro .intro-new > section article header figure {
+          position: static;
+          margin-bottom: 30px; } }
+    .dobro .intro-new > section article header p {
+      margin-bottom: 0;
+      padding-left: 3px;
+      letter-spacing: 0.1px; }
+    .dobro .intro-new > section article header h2 {
+      margin-bottom: 74px;
+      letter-spacing: -1px; }
+      @media (max-width: 767px) {
+        .dobro .intro-new > section article header h2 {
+          font-size: 34px; } }
+    .dobro .intro-new > section article header a {
+      padding: 18px 25px;
+      border: 2px solid white;
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+      .dobro .intro-new > section article header a:after {
+        display: none; }
+      .dobro .intro-new > section article header a:hover {
+        background: white;
+        color: #7A3FBF; }
+  .dobro .intro-new > section article footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    top: 97px;
+    right: 17px;
+    padding-top: 4px;
+    padding-left: 28px;
+    background: url("../images/dobro-duga.svg") no-repeat center; }
+    @media (max-width: 1199px) {
+      .dobro .intro-new > section article footer {
+        position: relative;
+        float: right;
+        top: -41px; } }
+    @media (max-width: 991px) {
+      .dobro .intro-new > section article footer {
+        top: -110px; } }
+    @media (max-width: 767px) {
+      .dobro .intro-new > section article footer {
+        position: absolute;
+        top: 77px; } }
+    .dobro .intro-new > section article footer p {
+      font-family: Cormac-Book, sans-serif;
+      font-size: 32px;
+      margin-bottom: 0; }
+      .dobro .intro-new > section article footer p span {
+        display: block;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 8px;
+        position: relative;
+        top: auto;
+        left: 1px; }
+
+.fashion .intro-new nav > ul li.decoration, .art .intro-new nav > ul li.decoration {
+  background: #000;
+  color: #fff; }
+
+.fashion .intro-new nav > ul li.hovered a, .fashion .intro-new nav > ul li.hovered i, .art .intro-new nav > ul li.hovered a, .art .intro-new nav > ul li.hovered i {
+  color: white; }
+
+.fashion .intro-new nav > ul li a, .fashion .intro-new nav > ul li i, .art .intro-new nav > ul li a, .art .intro-new nav > ul li i {
+  color: #000; }
+
+@media (max-width: 767px) {
+  .fashion .intro-new nav > ul li.hovered a, .art .intro-new nav > ul li.hovered a {
+    background: #000; } }
+
+.fashion .intro-new > section {
+  background: url("../img/index/fashion-header.png") no-repeat center top;
+  background-size: cover; }
+
+.art .intro-new > section {
+  background: url("../img/index/art-header.jpg") no-repeat right center;
+  background-size: cover; }
+  @media (max-width: 480px) {
+    .art .intro-new > section {
+      background: url("../img/index/art-header.jpg") no-repeat 85% center;
+      background-size: cover; } }
+
+.main-landing .intro-new > section {
+  background: url("../img/index/main-bg.png") no-repeat right center;
+  background-size: cover;
+  height: 650px; }
+  @media (max-width: 767px) {
+    .main-landing .intro-new > section {
+      height: 700px; } }
+  @media (max-width: 480px) {
+    .main-landing .intro-new > section {
+      height: 770px; } }
+  @media (max-width: 360px) {
+    .main-landing .intro-new > section {
+      background: url("../img/index/main-bg.png") no-repeat -890px center;
+      background-size: cover; } }
+
+.auction .intro-new > section {
+  background: url("../img/index/auction-bg.png") no-repeat right center;
+  background-size: cover;
+  height: 420px; }
+  @media (max-width: 360px) {
+    .auction .intro-new > section {
+      background: url("../img/index/auction-bg.png") no-repeat -890px center;
+      background-size: cover; } }
+
+.stars .intro-new > section {
+  background: url("../img/index/stars-bg.png") no-repeat right center;
+  background-size: cover;
+  height: 420px; }
+  @media (max-width: 360px) {
+    .stars .intro-new > section {
       background: url("../img/index/auction-bg.png") no-repeat -890px center;
       background-size: cover; } }
 
@@ -15262,7 +15776,7 @@ article.auction-prew {
         @media (max-width: 767px) {
           .subscription .form > span input {
             width: 100%; } }
-    .subscription .form .btn, .subscription .form .new_post-confirm li button, .new_post-confirm li .subscription .form button {
+    .subscription .form .btn, .subscription .form .new_post-confirm li button, .new_post-confirm li .subscription .form button, .subscription .form .btn-transparent {
       width: 203px;
       padding: 20px; }
 
@@ -15583,13 +16097,13 @@ article.auction-prew {
       background: #fff; }
     .join .form label {
       color: #000; }
-    .join .form .btn, .join .form .new_post-confirm li button, .new_post-confirm li .join .form button {
+    .join .form .btn, .join .form .new_post-confirm li button, .new_post-confirm li .join .form button, .join .form .btn-transparent {
       color: #000;
       font-family: Cormac-Book, sans-serif;
       font-size: 16px;
       line-height: 1;
       letter-spacing: 0; }
-      .join .form .btn:hover, .join .form .new_post-confirm li button:hover, .new_post-confirm li .join .form button:hover {
+      .join .form .btn:hover, .join .form .new_post-confirm li button:hover, .new_post-confirm li .join .form button:hover, .join .form .btn-transparent:hover {
         background: #000;
         color: #fff; }
   @media (max-width: 767px) {
@@ -15998,7 +16512,7 @@ article.auction-prew {
     font-size: 34px;
     line-height: 42px;
     letter-spacing: 0; }
-  .main-products .btn, .main-products .new_post-confirm li button, .new_post-confirm li .main-products button {
+  .main-products .btn, .main-products .new_post-confirm li button, .new_post-confirm li .main-products button, .main-products .btn-transparent {
     font-family: Cormac-Book, sans-serif;
     font-size: 16px;
     line-height: 16px;
@@ -16010,7 +16524,7 @@ article.auction-prew {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-    .dobro .main-products .btn, .dobro .main-products .new_post-confirm li button, .new_post-confirm li .dobro .main-products button {
+    .dobro .main-products .btn, .dobro .main-products .new_post-confirm li button, .new_post-confirm li .dobro .main-products button, .dobro .main-products .btn-transparent {
       background: #7A3FBF;
       border: none; }
 
@@ -18239,7 +18753,7 @@ a {
 /*********************************/
 /*********** Buttons *************/
 /*********************************/
-.btn, .new_post-confirm li button {
+.btn, .new_post-confirm li button, .btn-transparent {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out; }
 
@@ -18793,12 +19307,12 @@ a {
               outline: none;
               background: transparent;
               width: 130px; }
-          .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button {
+          .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button, .product-body > section .auction-rate .btn-gr .btn-grey .btn-transparent {
             margin-right: 0;
             padding: 23px 36px;
             letter-spacing: 0.7px; }
             @media (max-width: 480px) {
-              .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button {
+              .product-body > section .auction-rate .btn-gr .btn-grey .btn, .product-body > section .auction-rate .btn-gr .btn-grey .new_post-confirm li button, .new_post-confirm li .product-body > section .auction-rate .btn-gr .btn-grey button, .product-body > section .auction-rate .btn-gr .btn-grey .btn-transparent {
                 width: 100%; } }
         .product-body > section .auction-rate .btn-gr a {
           font-family: Cormac-Book, sans-serif;
@@ -18889,10 +19403,10 @@ a {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center; }
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
       @media (max-width: 767px) {
         .product-body > section .company {
           display: inline-block;
@@ -19042,7 +19556,7 @@ a {
       outline: none;
       border-top: 1px solid #f2f2f2;
       border-bottom: 1px solid #f2f2f2; }
-      .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button {
+      .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button, .product-body > section > .btn-gr .btn-transparent {
         font-family: "Cormac Extra Light", sans-serif;
         font-size: 16px;
         line-height: 1;
@@ -19052,7 +19566,7 @@ a {
         padding: 20px 0;
         margin-right: 57px; }
         @media (max-width: 991px) {
-          .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button {
+          .product-body > section > .btn-gr .btn, .product-body > section > .btn-gr .new_post-confirm li button, .new_post-confirm li .product-body > section > .btn-gr button, .product-body > section > .btn-gr .btn-transparent {
             width: 100%;
             margin-bottom: 25px; } }
       .product-body > section > .btn-gr a {
@@ -19307,7 +19821,7 @@ a {
             transition: 0.2s ease-out; }
             .new_post-dropdown > ul.action li a:hover {
               border: solid 1px #4489ff; }
-            .new_post-dropdown > ul.action li a.btn {
+            .new_post-dropdown > ul.action li a.btn, .new_post-dropdown > ul.action li a.btn-transparent {
               color: #ffffff;
               padding: 11px 23px 12px;
               background: #4489ff;
@@ -19316,7 +19830,7 @@ a {
               border-radius: 100px;
               -webkit-transition: 0.2s ease-out;
               transition: 0.2s ease-out; }
-              .new_post-dropdown > ul.action li a.btn:hover {
+              .new_post-dropdown > ul.action li a.btn:hover, .new_post-dropdown > ul.action li a.btn-transparent:hover {
                 color: #4489ff;
                 background: #ffffff; }
   .new_post-participants {
@@ -21241,7 +21755,7 @@ a {
 /* 
 	<a href="#" class="btn">www.fonddar.ru</a> 
 */
-.btn, .new_post-confirm li button {
+.btn, .new_post-confirm li button, .btn-transparent {
   color: #ffffff;
   font-family: Cormac-Book, sans-serif;
   font-size: 16px;
@@ -21255,28 +21769,28 @@ a {
   border: solid 1px #4489ff;
   -webkit-border-radius: 100px;
   border-radius: 100px; }
-  .btn:hover, .new_post-confirm li button:hover {
+  .btn:hover, .new_post-confirm li button:hover, .btn-transparent:hover {
     color: #4489ff;
     background: #fff; }
-  .btn:focus, .new_post-confirm li button:focus {
+  .btn:focus, .new_post-confirm li button:focus, .btn-transparent:focus {
     color: #ffffff;
     background: #4489ff;
     outline: none; }
-    .btn:focus:hover, .new_post-confirm li button:focus:hover {
+    .btn:focus:hover, .new_post-confirm li button:focus:hover, .btn-transparent:focus:hover {
       color: #4489ff;
       background: #fff;
       outline: none; }
-  .btn.shadow, .new_post-confirm li button.shadow {
+  .btn.shadow, .new_post-confirm li button.shadow, .shadow.btn-transparent {
     -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
-  .btn.white, .new_post-confirm li button.white {
+  .btn.white, .new_post-confirm li button.white, .white.btn-transparent {
     font-family: "Cormac Extra Light", sans-serif;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.5px;
     color: #4489ff;
     background: #fff; }
-    .btn.white:hover, .new_post-confirm li button.white:hover {
+    .btn.white:hover, .new_post-confirm li button.white:hover, .white.btn-transparent:hover {
       color: #fff;
       background: #4489ff; }
   .btn-reserve {
@@ -21302,6 +21816,17 @@ a {
     transition: .4s all ease; }
     .btn-reserve:hover {
       background: #f4f7fb; }
+  .btn-transparent {
+    background: transparent;
+    border-color: #ffffff;
+    border-width: 2px; }
+    .btn-transparent:hover {
+      color: #000000;
+      background: #ffffff; }
+
+[class^='btn'].disabled {
+  opacity: 0.8;
+  pointer-events: none; }
 
 /*********************************************/
 /* 
@@ -21790,24 +22315,24 @@ span.form-warning {
     padding-bottom: 13px; }
   .form .form-btn-group {
     margin-top: 52px; }
-    .form .form-btn-group .btn, .form .form-btn-group .new_post-confirm li button, .new_post-confirm li .form .form-btn-group button {
+    .form .form-btn-group .btn, .form .form-btn-group .new_post-confirm li button, .new_post-confirm li .form .form-btn-group button, .form .form-btn-group .btn-transparent {
       font-family: "Cormac Extra Light", sans-serif;
       font-size: 16px;
       width: 220px;
       position: relative;
       right: -2px; }
-      .form .form-btn-group .btn.white, .form .form-btn-group .new_post-confirm li button.white, .new_post-confirm li .form .form-btn-group button.white {
+      .form .form-btn-group .btn.white, .form .form-btn-group .new_post-confirm li button.white, .new_post-confirm li .form .form-btn-group button.white, .form .form-btn-group .white.btn-transparent {
         color: #4489ff;
         width: 294px;
         left: -4px;
         border: 2px solid #4489ff;
         -webkit-transition: 0.4s all ease;
         transition: 0.4s all ease; }
-        .form .form-btn-group .btn.white:hover, .form .form-btn-group .new_post-confirm li button.white:hover, .new_post-confirm li .form .form-btn-group button.white:hover {
+        .form .form-btn-group .btn.white:hover, .form .form-btn-group .new_post-confirm li button.white:hover, .new_post-confirm li .form .form-btn-group button.white:hover, .form .form-btn-group .white.btn-transparent:hover {
           color: #fff;
           background: #4489ff; }
       @media (max-width: 767px) {
-        .form .form-btn-group .btn, .form .form-btn-group .new_post-confirm li button, .new_post-confirm li .form .form-btn-group button {
+        .form .form-btn-group .btn, .form .form-btn-group .new_post-confirm li button, .new_post-confirm li .form .form-btn-group button, .form .form-btn-group .btn-transparent {
           display: block;
           margin: 10px auto;
           position: static; } }
