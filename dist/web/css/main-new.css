@@ -21823,6 +21823,11 @@ a {
     .btn-transparent:hover {
       color: #000000;
       background: #ffffff; }
+    .btn-transparent:focus {
+      background: transparent; }
+      .btn-transparent:focus:hover {
+        color: #000000;
+        background: #ffffff; }
 
 [class^='btn'].disabled {
   opacity: 0.8;

@@ -66,6 +66,13 @@
 			color: #000000;
 			background: #ffffff;
 		}
+		&:focus {
+			background: transparent;
+			&:hover {
+				color: #000000;
+				background: #ffffff;
+			}
+		}
 	}
 }
 // неактивная полупрозрачная кнопка с помощью класса disabled для всех кнопок
