@@ -2069,12 +2069,12 @@ article.auction-prew {
 	padding: 26px 0 21px 0; position: relative;
 
 	&-wr {
-		display: flex; justify-content: space-between; align-items: flex-start;
+		display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: -20px;
 		@include respond-to(md) {flex-direction: column;}
 	}
 	
 	&-item {
-		width: 32%;
+		width: 32%; margin-bottom: 20px;
 		background: #fff; cursor: pointer;
 		@include respond-to(md) {display: flex;}
 
