@@ -1,10 +1,11 @@
 //Новые селекты - http://prntscr.com/h1v8wr
 .select {
 	position: relative; display: inline-block;
-
+	margin-right: 30px;
+	@include respond-to(sm) {margin-right: 0;}
 	& > a {
 		display: block;
-		@include font-type($CormacB, 16px, 16px, 0); color: #000000; font-weight: 600px;
+		@include font-type($CormacB, 16px, 16px, 0); color: #000000;
 		position: relative; padding-right: 20px;
 		i {
 			display: block;

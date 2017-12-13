@@ -102,8 +102,7 @@
 			flex-direction: column;
 		}
 		li {
-			margin-right: 30px;
-			@include respond-to(lg) {
+			@include respond-to(sm) {
 				margin-bottom: 25px;
 				&:last-child {margin-bottom: 0;}
 			}

@@ -10756,15 +10756,6 @@ button.close {
   @media (max-width: 480px) {
     .filter .select:last-child {
       margin-bottom: 0; } }
-  .filter .select > a {
-    font-family: "Cormac Extra Light", sans-serif;
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 0;
-    color: #000; }
-    .filter .select > a i {
-      border-color: #afaba1;
-      top: 12px; }
   .filter .select > div.active {
     width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px); }
@@ -21727,13 +21718,11 @@ a {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
-  .categories ul li {
-    margin-right: 30px; }
-    @media (max-width: 1199px) {
-      .categories ul li {
-        margin-bottom: 25px; }
-        .categories ul li:last-child {
-          margin-bottom: 0; } }
+  @media (max-width: 767px) {
+    .categories ul li {
+      margin-bottom: 25px; }
+      .categories ul li:last-child {
+        margin-bottom: 0; } }
 
 .range {
   width: 400px;
@@ -22151,7 +22140,11 @@ a {
 
 .select {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 30px; }
+  @media (max-width: 767px) {
+    .select {
+      margin-right: 0; } }
   .select > a {
     display: block;
     font-family: Cormac-Book, sans-serif;
@@ -22159,7 +22152,6 @@ a {
     line-height: 16px;
     letter-spacing: 0;
     color: #000000;
-    font-weight: 600px;
     position: relative;
     padding-right: 20px; }
     .select > a i {
