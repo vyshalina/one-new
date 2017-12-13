@@ -22210,9 +22210,14 @@ a {
           background: #fff; }
           .select > div ul li a:hover {
             background: #f5f5f5; }
+        .select > div ul li a:hover + ul {
+          display: block; }
         .select > div ul li ul {
           padding-left: 30px;
-          min-width: 0; }
+          min-width: 0;
+          display: none; }
+          .select > div ul li ul:hover {
+            display: block; }
           .select > div ul li ul li {
             margin-right: 0; }
             .select > div ul li ul li:last-child {
