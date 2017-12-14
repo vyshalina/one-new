@@ -27,19 +27,18 @@
 	}
 
 	& > div {
-		height: 0; min-height: 0; overflow: hidden; width: calc(100% + 20px); min-width: 170px; position: absolute; z-index: 100;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); background: #fff;
+		display: none; padding-top: 45px; height: auto; min-height: 0; width: calc(100% + 20px); min-width: 170px; position: absolute; left: -10px; top: -11px; z-index: 100;
+		border-radius: 5px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); background: #fff;
 
 		&.active {
-			padding-top: 45px; height: auto; 
-			left: -10px; top: -11px;
-			border-radius: 5px;
+			display: block;
 		}
 
 		ul {
 			min-width: 170px;
 
 			li {
+				position: relative;
 				border-bottom: 1px solid #d6dde4;
 
 				a {
@@ -54,7 +53,8 @@
 					display: block;
 				}
 				ul {
-					padding-left: 30px; min-width: 0; display: none;
+					display: none; position: absolute; right: 0; top: 0; transform: translateX(100%);
+					border: 1px solid #d6dde4;
 					&:hover {
 						display: block;
 					}

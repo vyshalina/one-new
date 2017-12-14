@@ -21711,14 +21711,14 @@ a {
       -webkit-align-items: start;
       -ms-flex-align: start;
       align-items: start; } }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .categories ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .categories ul li {
       margin-bottom: 25px; }
       .categories ul li:last-child {
@@ -21978,6 +21978,64 @@ a {
         .main-pagination li a {
           font-size: 14px; } }
 
+@media (max-width: 991px) {
+  .items-categories .desktop-cat {
+    display: none; } }
+
+.items-categories .mobile-cat {
+  display: none; }
+  @media (max-width: 991px) {
+    .items-categories .mobile-cat {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
+  .items-categories .mobile-cat .select-wrap {
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 23px;
+    left: -4px;
+    max-width: 100%; }
+    .items-categories .mobile-cat .select-wrap:last-child {
+      margin-bottom: 0; }
+    .items-categories .mobile-cat .select-wrap:after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 10px;
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background: #ffffff url(../images/angle_down.svg) center center no-repeat;
+      pointer-events: none; }
+
+.items-categories select {
+  color: #000000;
+  font-family: Cormac-Book, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  max-width: 100%;
+  border: none; }
+  .items-categories select:focus {
+    outline: none; }
+
 .btn-white {
   font-family: Cormac-Book, sans-serif;
   font-size: 16px;
@@ -22181,27 +22239,28 @@ a {
         -ms-transform: rotate(180deg) translateY(50%);
         transform: rotate(180deg) translateY(50%); }
   .select > div {
-    height: 0;
+    display: none;
+    padding-top: 45px;
+    height: auto;
     min-height: 0;
-    overflow: hidden;
     width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px);
     min-width: 170px;
     position: absolute;
+    left: -10px;
+    top: -11px;
     z-index: 100;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     background: #fff; }
     .select > div.active {
-      padding-top: 45px;
-      height: auto;
-      left: -10px;
-      top: -11px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px; }
+      display: block; }
     .select > div ul {
       min-width: 170px; }
       .select > div ul li {
+        position: relative;
         border-bottom: 1px solid #d6dde4; }
         .select > div ul li a {
           color: #000;
@@ -22213,9 +22272,14 @@ a {
         .select > div ul li a:hover + ul {
           display: block; }
         .select > div ul li ul {
-          padding-left: 30px;
-          min-width: 0;
-          display: none; }
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          -webkit-transform: translateX(100%);
+          -ms-transform: translateX(100%);
+          transform: translateX(100%);
+          border: 1px solid #d6dde4; }
           .select > div ul li ul:hover {
             display: block; }
           .select > div ul li ul li {

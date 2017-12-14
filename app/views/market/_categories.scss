@@ -1,0 +1,36 @@
+.items-categories {
+	.desktop-cat {
+		@include respond-to(md) {
+			display: none;
+		}
+	}
+
+	.mobile-cat {
+		display: none;
+		@include respond-to(md) {
+			display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+		}
+		.select-wrap {
+			position: relative; padding-right: 10px; margin-bottom: 23px; left: -4px; max-width: 100%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:after {
+				content: '';
+				display: block; width: 15px; height: 10px; position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+				background: #ffffff url(../images/angle_down.svg) center center no-repeat;
+				pointer-events: none;
+			}
+		}
+	}
+
+	select {
+		color: #000000; @include font-type($CormacB, 16px, 16px,0);
+		max-width: 100%;
+		border: none;
+		
+		&:focus {
+			outline: none;
+		}
+	}
+}

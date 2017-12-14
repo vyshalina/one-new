@@ -98,11 +98,11 @@
 	& > .container {@include respond-to(sm) {flex-direction: column-reverse; align-items: start;}}
 	
 	ul {
-		@include respond-to(sm) {
+		@include respond-to(md) {
 			flex-direction: column;
 		}
 		li {
-			@include respond-to(sm) {
+			@include respond-to(md) {
 				margin-bottom: 25px;
 				&:last-child {margin-bottom: 0;}
 			}
