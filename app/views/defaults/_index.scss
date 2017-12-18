@@ -2093,12 +2093,6 @@ article.auction-prew {
 			img {width: 100%;}
 		}
 
-		&:first-of-type {
-			section {
-				h4 {max-width: 220px;}
-			}
-		}
-
 		section {
 			padding: 40px 27px 40px;
 			@include respond-to(md) {padding: 15px 20px;}

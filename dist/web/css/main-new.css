@@ -16833,8 +16833,6 @@ article.auction-prew {
       overflow: hidden; }
       .doings-item figure img {
         width: 100%; }
-    .doings-item:first-of-type section h4 {
-      max-width: 220px; }
     .doings-item section {
       padding: 40px 27px 40px; }
       @media (max-width: 991px) {
